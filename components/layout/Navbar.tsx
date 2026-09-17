@@ -29,11 +29,9 @@ export function Navbar({ onToggleSidebar, onOpenPrintModal }: NavbarProps) {
           </button>
 
           <div className="flex items-center gap-2.5">
-            <img
-              src="/logo.png"
-              alt="Logo"
-              className="w-10 h-10 rounded-xl object-cover object-right shrink-0 shadow-md shadow-purple-500/20 border border-purple-500/30"
-            />
+            <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-brand-600 to-purple-600 flex items-center justify-center text-white shadow-md shadow-brand-500/20 shrink-0">
+              <i className="fa-solid fa-brain text-base"></i>
+            </div>
 
             {/* Desktop Title & Subtitle */}
             <div className="hidden md:block">
