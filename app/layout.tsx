@@ -41,7 +41,7 @@ export default function RootLayout({
       lang="ar"
       dir="rtl"
       suppressHydrationWarning
-      className={`${cairo.variable} ${inter.variable} ${firaCode.variable} dark h-full antialiased`}
+      className={`${cairo.variable} ${inter.variable} ${firaCode.variable} light h-full antialiased`}
     >
       <head>
         <link rel="icon" href="/logo.png" type="image/png" />

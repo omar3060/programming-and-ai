@@ -21,10 +21,18 @@
   * {
     box-sizing: border-box;
     transition: background-color 0.2s ease, border-color 0.2s ease;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
   }
 
   body {
     font-family: var(--font-cairo), 'Cairo', system-ui, sans-serif;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
   }
 
   html[lang="en"] body {

@@ -26,7 +26,7 @@ const AppContext = createContext<AppContextType | undefined>(undefined);
 
 export function AppProviders({ children }: { children: React.ReactNode }) {
   const [lang, setLang] = useState<Language>('ar');
-  const [theme, setTheme] = useState<Theme>('dark');
+  const [theme, setTheme] = useState<Theme>('light');
   const [soundEnabled, setSoundEnabled] = useState<boolean>(true);
   const [activeLesson, setActiveLessonState] = useState<LessonViewId>('lesson-1-1');
   const [isPrintModalOpen, setIsPrintModalOpen] = useState<boolean>(false);
