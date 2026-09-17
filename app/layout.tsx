@@ -24,6 +24,11 @@ const firaCode = Fira_Code({
 export const metadata: Metadata = {
   title: "منهج البرمجة والذكاء الاصطناعي ثانيه بكالوريا — الصف الثاني الثانوي | م/ عمر محمود",
   description: "منصة تعليمية وتفاعلية متكاملة لمنهج البرمجة والذكاء الاصطناعي للصف الثاني الثانوي - الوحدة الأولى (تكنولوجيا المعلومات والمجتمع) إشراف م/ عمر محمود 01012306019",
+  icons: {
+    icon: "/my%20image.JPG",
+    shortcut: "/my%20image.JPG",
+    apple: "/my%20image.JPG",
+  },
 };
 
 export default function RootLayout({
@@ -38,6 +43,9 @@ export default function RootLayout({
       className={`${cairo.variable} ${inter.variable} ${firaCode.variable} dark h-full antialiased`}
     >
       <head>
+        <link rel="icon" href="/my%20image.JPG" type="image/jpeg" />
+        <link rel="shortcut icon" href="/my%20image.JPG" type="image/jpeg" />
+        <link rel="apple-touch-icon" href="/my%20image.JPG" />
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
