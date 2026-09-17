@@ -25,12 +25,8 @@ export const metadata: Metadata = {
   title: "منهج البرمجة والذكاء الاصطناعي ثانيه بكالوريا — الصف الثاني الثانوي | م/ عمر محمود",
   description: "منصة تعليمية وتفاعلية متكاملة لمنهج البرمجة والذكاء الاصطناعي للصف الثاني الثانوي - الوحدة الأولى (تكنولوجيا المعلومات والمجتمع) إشراف م/ عمر محمود 01012306019",
   icons: {
-    icon: [
-      { url: "/favicon.ico" },
-      { url: "/favicon.png", type: "image/png" },
-      { url: "/my-image.jpg", type: "image/jpeg" },
-    ],
-    shortcut: "/favicon.ico",
+    icon: "/my-image.jpg",
+    shortcut: "/my-image.jpg",
     apple: "/my-image.jpg",
   },
 };
@@ -48,8 +44,8 @@ export default function RootLayout({
       className={`${cairo.variable} ${inter.variable} ${firaCode.variable} dark h-full antialiased`}
     >
       <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" href="/my-image.jpg" type="image/jpeg" />
+        <link rel="shortcut icon" href="/my-image.jpg" type="image/jpeg" />
         <link rel="apple-touch-icon" href="/my-image.jpg" />
         <link
           rel="stylesheet"
