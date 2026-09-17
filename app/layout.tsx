@@ -55,7 +55,7 @@ export default function RootLayout({
           referrerPolicy="no-referrer"
         />
       </head>
-      <body suppressHydrationWarning className="min-h-full flex flex-col antialiased">
+      <body suppressHydrationWarning className="min-h-full flex flex-col antialiased select-none">
         <AppProviders>{children}</AppProviders>
       </body>
     </html>
