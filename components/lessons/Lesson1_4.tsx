@@ -176,12 +176,24 @@ export function Lesson1_4() {
           </strong>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div className="p-3.5 rounded-xl bg-slate-900 border border-slate-700/60 space-y-1">
-              <strong className="text-rose-300 block font-bold">1. بيانات التدريب المتحيزة (Biased Training Data):</strong>
-              <p className="text-sub">بيانات غير كافية عن سمات معينة، أو انعكاس نزعات تمييزية سابقة وتاريخية موجودة في البيانات الأساسية.</p>
+              <strong className="text-rose-300 block font-bold">
+                <span className="lang-ar">1. بيانات التدريب المتحيزة (Biased Training Data):</span>
+                <span className="lang-en">1. Biased Training Data:</span>
+              </strong>
+              <p className="text-sub">
+                <span className="lang-ar">بيانات غير كافية عن سمات معينة، أو انعكاس نزعات تمييزية سابقة وتاريخية موجودة في البيانات الأساسية.</span>
+                <span className="lang-en">Training data is biased (e.g., insufficient data on certain attributes; past discriminatory tendencies are reflected in the data).</span>
+              </p>
             </div>
             <div className="p-3.5 rounded-xl bg-slate-900 border border-slate-700/60 space-y-1">
-              <strong className="text-amber-300 block font-bold">2. طريقة بناء النظام والمتغيرات البديلة (Proxy Variables):</strong>
-              <p className="text-sub">اختيار غير مناسب للمتغيرات، أو استخدام <strong>متغير بديل (Proxy Variable)</strong> يمثل بشكل غير مباشر سمة محمية (مثل استخدام الرمز البريدي لاستنتاج العرق أو المستوى الاجتماعي)، أو تصميم النموذج نفسه.</p>
+              <strong className="text-amber-300 block font-bold">
+                <span className="lang-ar">2. طريقة بناء النظام والمتغيرات البديلة (Proxy Variables):</span>
+                <span className="lang-en">2. System Design and Proxy Variables:</span>
+              </strong>
+              <p className="text-sub">
+                <span className="lang-ar">اختيار غير مناسب للمتغيرات، أو استخدام <strong>متغير بديل (Proxy Variable)</strong> يمثل بشكل غير مباشر سمة محمية (مثل استخدام الرمز البريدي لاستنتاج العرق أو المستوى الاجتماعي)، أو تصميم النموذج نفسه.</span>
+                <span className="lang-en">Bias can also enter through the way the system is built — for example, an inappropriate choice of variables, a <strong>proxy variable</strong> that indirectly stands in for a protected attribute, or the design of the model itself.</span>
+              </p>
             </div>
           </div>
         </div>
@@ -216,11 +228,13 @@ export function Lesson1_4() {
             }`}>
               {biasResult.isUnbalanced ? (
                 <>
-                  ⚠️ <strong>رصد تحيز خوارزمي صارخ (Algorithmic Bias):</strong> النموذج رفض تلقائياً 92% من السير الذاتية للإناث بغض النظر عن خبراتهن ورتبهن الأكاديمية! هذا يثبت أن الـ AI يكرر تحيزات البشر التاريخية إذا لم يُدقق بوعي.
+                  <span className="lang-ar">⚠️ <strong>رصد تحيز خوارزمي صارخ (Algorithmic Bias):</strong> النموذج رفض تلقائياً 92% من السير الذاتية للإناث بغض النظر عن خبراتهن ورتبهن الأكاديمية! هذا يثبت أن الـ AI يكرر تحيزات البشر التاريخية إذا لم يُدقق بوعي.</span>
+                  <span className="lang-en">⚠️ <strong>Flagged Algorithmic Bias:</strong> The model systematically rejected 92% of female applicants regardless of credentials! Demonstrates that AI replicates historical human biases if not actively audited.</span>
                 </>
               ) : (
                 <>
-                  ✅ <strong>نظام عادل ومحايد (Fairness-Aware AI):</strong> بعد إزالة المؤشرات الضمنية وإعادة موازنة البيانات، أصبحت نسبة القبول تعتمد 100% على الدرجات الأكاديمية والمهارات العملية دون النظر للنوع!
+                  <span className="lang-ar">✅ <strong>نظام عادل ومحايد (Fairness-Aware AI):</strong> بعد إزالة المؤشرات الضمنية وإعادة موازنة البيانات، أصبحت نسبة القبول تعتمد 100% على الدرجات الأكاديمية والمهارات العملية دون النظر للنوع!</span>
+                  <span className="lang-en">✅ <strong>Fairness-Aware AI System:</strong> After stripping proxy variables and balancing data, acceptance is 100% based on academic qualifications and verifiable skills regardless of gender.</span>
                 </>
               )}
             </div>
@@ -283,29 +297,54 @@ export function Lesson1_4() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs leading-relaxed">
           {/* XAI */}
           <div className="p-4 rounded-2xl bg-cyan-950/20 border border-cyan-500/40 space-y-2">
-            <strong className="text-cyan-300 text-sm block font-bold">1. XAI (القابل للتفسير):</strong>
-            <p className="text-sub">"أساليب تساعد البشر على فهم العوامل التي أسهمت في وصول النظام إلى مخرج أو قرار معين. وعندما تكون آلية الوصول للنتيجة غير واضحة (الصندوق الأسود)، يصعب تقييمها واكتشاف الأخطاء."</p>
+            <strong className="text-cyan-300 text-sm block font-bold">
+              <span className="lang-ar">1. XAI (القابل للتفسير):</span>
+              <span className="lang-en">1. Explainable AI (XAI):</span>
+            </strong>
+            <p className="text-sub">
+              <span className="lang-ar">"أساليب تساعد البشر على فهم العوامل التي أسهمت في وصول النظام إلى مخرج أو قرار معين. وعندما تكون آلية الوصول للنتيجة غير واضحة (الصندوق الأسود)، يصعب تقييمها واكتشاف الأخطاء."</span>
+              <span className="lang-en">"Technology that makes it possible for humans to understand why an AI made a particular judgment. When an AI's decision-making process is opaque (a black box), it is difficult to verify whether the result is correct."</span>
+            </p>
           </div>
 
           {/* Responsibility */}
           <div className="p-4 rounded-2xl bg-blue-950/20 border border-blue-500/40 space-y-2">
-            <strong className="text-blue-300 text-sm block font-bold">2. المسؤولية (Responsibility):</strong>
-            <p className="text-sub">"تحديد أدوار وواجبات الأطراف المرتبطة بتطوير النظام وتشغيله واستخدامه (المطور، الجهة المشغلة، المستخدم). ولا يوجد توزيع واحد يصلح لكل السياقات بل يختلف بحسب النظام."</p>
+            <strong className="text-blue-300 text-sm block font-bold">
+              <span className="lang-ar">2. المسؤولية (Responsibility):</span>
+              <span className="lang-en">2. Responsibility:</span>
+            </strong>
+            <p className="text-sub">
+              <span className="lang-ar">"تحديد أدوار وواجبات الأطراف المرتبطة بتطوير النظام وتشغيله واستخدامه (المطور، الجهة المشغلة، المستخدم). ولا يوجد توزيع واحد يصلح لكل السياقات بل يختلف بحسب النظام."</span>
+              <span className="lang-en">"The question of who is responsible when an AI makes an incorrect judgment. Views on responsibility differ depending on whether one is the developer, the user, the operator, etc."</span>
+            </p>
           </div>
 
           {/* Accountability */}
           <div className="p-4 rounded-2xl bg-amber-950/20 border border-amber-500/40 space-y-2">
-            <strong className="text-amber-300 text-sm block font-bold">3. المساءلة (Accountability):</strong>
-            <p className="text-sub">"تحديد الجهات المسؤولة عن النظام وقراراته وآثاره، وإمكان محاسبتها وفق أدوارها."</p>
+            <strong className="text-amber-300 text-sm block font-bold">
+              <span className="lang-ar">3. المساءلة (Accountability):</span>
+              <span className="lang-en">3. Accountability:</span>
+            </strong>
+            <p className="text-sub">
+              <span className="lang-ar">"تحديد الجهات المسؤولة عن النظام وقراراته وآثاره، وإمكان محاسبتها وفق أدوارها."</span>
+              <span className="lang-en">"Being answerable for the AI's decisions and designating responsible entities for system outcomes."</span>
+            </p>
             <div className="p-2 rounded-lg bg-amber-500/10 text-amber-300 text-[11px] font-bold border border-amber-500/20">
-              📌 <strong>ملاحظة كتاب الوزارة:</strong> المساءلة ليست القدرة على شرح القرار (تلك وظيفة XAI)، بل تحديد من يُحاسب على النتيجة.
+              <span className="lang-ar">📌 <strong>ملاحظة كتاب الوزارة:</strong> المساءلة ليست القدرة على شرح القرار (تلك وظيفة XAI)، بل تحديد من يُحاسب على النتيجة.</span>
+              <span className="lang-en">📌 <strong>Textbook Note:</strong> Accountability means being answerable for decisions, distinct from explaining internal workings (Transparency/XAI).</span>
             </div>
           </div>
 
           {/* Transparency */}
           <div className="p-4 rounded-2xl bg-emerald-950/20 border border-emerald-500/40 space-y-2">
-            <strong className="text-emerald-300 text-sm block font-bold">4. الشفافية (Transparency):</strong>
-            <p className="text-sub">"إتاحة معلومات واضحة ومناسبة عن النظام واستخدامه وعملية اتخاذ القرار وحدوده للجمهور والمستخدمين."</p>
+            <strong className="text-emerald-300 text-sm block font-bold">
+              <span className="lang-ar">4. الشفافية (Transparency):</span>
+              <span className="lang-en">4. Transparency:</span>
+            </strong>
+            <p className="text-sub">
+              <span className="lang-ar">"إتاحة معلومات واضحة ومناسبة عن النظام واستخدامه وعملية اتخاذ القرار وحدوده للجمهور والمستخدمين."</span>
+              <span className="lang-en">"Showing the AI's decision-making process and inner workings clearly to users."</span>
+            </p>
           </div>
         </div>
 
@@ -323,34 +362,70 @@ export function Lesson1_4() {
           </h3>
         </div>
 
-        {/* Official Textbook Table Representation */}
-        <div className="overflow-x-auto">
-          <table className="w-full text-xs text-start border-collapse">
-            <thead>
-              <tr className="bg-slate-800/80 text-white font-bold border-b border-slate-700">
-                <th className="p-3 text-start w-1/4">المبدأ (Principle)</th>
-                <th className="p-3 text-start">الوصف الرسمي في كتاب الوزارة (Official Textbook Description)</th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-slate-800 text-sub">
-              <tr className="hover:bg-slate-800/30">
-                <td className="p-3 font-bold text-emerald-400">1. العدالة (Fairness)</td>
-                <td className="p-3">عدم التمييز ظلماً ضد أي شخص أو مجموعة بعينها.</td>
-              </tr>
-              <tr className="hover:bg-slate-800/30">
-                <td className="p-3 font-bold text-brand-400">2. الشفافية (Transparency)</td>
-                <td className="p-3">إتاحة معلومات واضحة ومناسبة عن النظام واستخدامه وعملية اتخاذ القرار وحدوده.</td>
-              </tr>
-              <tr className="hover:bg-slate-800/30">
-                <td className="p-3 font-bold text-purple-400">3. حماية الخصوصية (Privacy)</td>
-                <td className="p-3">التعامل مع المعلومات الشخصية بشكل مناسب وحماية الخصوصية.</td>
-              </tr>
-              <tr className="hover:bg-slate-800/30">
-                <td className="p-3 font-bold text-amber-400">4. المساءلة (Accountability)</td>
-                <td className="p-3">تحديد الجهات المسؤولة عن النظام وقراراته وآثاره، وإمكان محاسبتها وفق أدوارها.</td>
-              </tr>
-            </tbody>
-          </table>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
+          {/* 1. Fairness */}
+          <div className="p-5 rounded-2xl theme-subpanel border border-emerald-500/30 space-y-2.5 hover:border-emerald-500 transition shadow-md">
+            <div className="w-8 h-8 rounded-xl bg-emerald-500/20 text-emerald-400 font-bold flex items-center justify-center text-sm">
+              <span className="lang-ar">١</span>
+              <span className="lang-en">1</span>
+            </div>
+            <h4 className="font-bold text-sm text-emerald-300">
+              <span className="lang-ar">العدالة (Fairness)</span>
+              <span className="lang-en">Fairness</span>
+            </h4>
+            <p className="text-sub leading-relaxed">
+              <span className="lang-ar">عدم التمييز ظلماً ضد أي شخص أو مجموعة بعينها في مخرجات النظام، وتكافؤ التقييم والفرص.</span>
+              <span className="lang-en">Not unjustly discriminating against any particular person or group.</span>
+            </p>
+          </div>
+
+          {/* 2. Transparency */}
+          <div className="p-5 rounded-2xl theme-subpanel border border-brand-500/30 space-y-2.5 hover:border-brand-500 transition shadow-md">
+            <div className="w-8 h-8 rounded-xl bg-brand-500/20 text-brand-400 font-bold flex items-center justify-center text-sm">
+              <span className="lang-ar">٢</span>
+              <span className="lang-en">2</span>
+            </div>
+            <h4 className="font-bold text-sm text-brand-400">
+              <span className="lang-ar">الشفافية (Transparency)</span>
+              <span className="lang-en">Transparency</span>
+            </h4>
+            <p className="text-sub leading-relaxed">
+              <span className="lang-ar">إتاحة معلومات واضحة ومناسبة عن النظام واستخدامه وعملية اتخاذ القرار ومصادر بياناته وحدوده.</span>
+              <span className="lang-en">Showing the AI's decision-making process and inner workings clearly.</span>
+            </p>
+          </div>
+
+          {/* 3. Privacy Protection */}
+          <div className="p-5 rounded-2xl theme-subpanel border border-purple-500/30 space-y-2.5 hover:border-purple-500 transition shadow-md">
+            <div className="w-8 h-8 rounded-xl bg-purple-500/20 text-purple-300 font-bold flex items-center justify-center text-sm">
+              <span className="lang-ar">٣</span>
+              <span className="lang-en">3</span>
+            </div>
+            <h4 className="font-bold text-sm text-purple-300">
+              <span className="lang-ar">حماية الخصوصية</span>
+              <span className="lang-en">Privacy Protection</span>
+            </h4>
+            <p className="text-sub leading-relaxed">
+              <span className="lang-ar">التعامل مع المعلومات الشخصية بشكل مناسب وحماية الخصوصية ومنع التتبع دون إذن صريح.</span>
+              <span className="lang-en">Handling personal information appropriately and protecting privacy.</span>
+            </p>
+          </div>
+
+          {/* 4. Accountability */}
+          <div className="p-5 rounded-2xl theme-subpanel border border-amber-500/30 space-y-2.5 hover:border-amber-500 transition shadow-md">
+            <div className="w-8 h-8 rounded-xl bg-amber-500/20 text-amber-400 font-bold flex items-center justify-center text-sm">
+              <span className="lang-ar">٤</span>
+              <span className="lang-en">4</span>
+            </div>
+            <h4 className="font-bold text-sm text-amber-300">
+              <span className="lang-ar">المساءلة (Accountability)</span>
+              <span className="lang-en">Accountability</span>
+            </h4>
+            <p className="text-sub leading-relaxed">
+              <span className="lang-ar">تحديد الجهات المسؤولة عن النظام وقراراته وآثاره، وإمكان محاسبتها وفق أدوارها.</span>
+              <span className="lang-en">Being answerable for the AI's decisions.</span>
+            </p>
+          </div>
         </div>
       </div>
 
@@ -492,9 +567,18 @@ export function Lesson1_4() {
                 <span className="lang-en">Official Engineering Protocol (Textbook p. 29):</span>
               </strong>
               <div className="space-y-1.5 text-sub">
-                <p>1. <strong>الحالة الموثقة:</strong> أداة التوظيف الآلية لشركة Amazon عام 2018 التي ظهر أنها تميز ضد النساء لأنها دُرّبت على سير ذاتية لـ 10 سنوات سابقة كانت أغلبها لذكور.</p>
-                <p>2. <strong>توزيع المسؤولية (Responsibility):</strong> <br />• <strong>المطور:</strong> مسؤول عن جودة الخوارزمية وتوازن بيانات التدريب. <br />• <strong>الشركة والجهة المشغلة:</strong> مسؤولة عن القرار النهائي وتطبيق الفحص البشري ومنع الاعتماد الأعمى على النظام.</p>
-                <p>3. <strong>القاعدة الواحدة المقترحة:</strong> <em>"حظر اتخاذ قرار الرفض أو القبول التلقائي النهائي بالكامل دون مراجعة وإقرار من لجنة توظيف بشرية، مع التدقيق الدوري الأسبوعي لنسب القبول بين الفئات (Human-in-the-loop)."</em></p>
+                <p>
+                  <span className="lang-ar">1. <strong>الحالة الموثقة:</strong> أداة التوظيف الآلية لشركة Amazon عام 2018 التي ظهر أنها تميز ضد النساء لأنها دُرّبت على سير ذاتية لـ 10 سنوات سابقة كانت أغلبها لذكور.</span>
+                  <span className="lang-en">1. <strong>Documented Case:</strong> Amazon's 2018 AI hiring tool was found to penalize female applicants because it was trained on 10 years of male-dominated resumes.</span>
+                </p>
+                <p>
+                  <span className="lang-ar">2. <strong>توزيع المسؤولية (Responsibility):</strong> <br />• <strong>المطور:</strong> مسؤول عن جودة الخوارزمية وتوازن بيانات التدريب. <br />• <strong>الشركة والجهة المشغلة:</strong> مسؤولة عن القرار النهائي وتطبيق الفحص البشري ومنع الاعتماد الأعمى على النظام.</span>
+                  <span className="lang-en">2. <strong>Responsibility:</strong> <br />• <strong>Developer:</strong> Responsible for algorithmic integrity & dataset balance. <br />• <strong>Company & Operator:</strong> Responsible for final hiring decisions and enforcing human oversight.</span>
+                </p>
+                <p>
+                  <span className="lang-ar">3. <strong>القاعدة الواحدة المقترحة:</strong> <em>"حظر اتخاذ قرار الرفض أو القبول التلقائي النهائي بالكامل دون مراجعة وإقرار من لجنة توظيف بشرية، مع التدقيق الدوري الأسبوعي لنسب القبول بين الفئات (Human-in-the-loop)."</em></span>
+                  <span className="lang-en">3. <strong>Proposed Rule:</strong> <em>"Prohibit fully automated rejections without mandatory human review, while regularly auditing selection rates across demographics (Human-in-the-loop)."</em></span>
+                </p>
               </div>
             </div>
           )}
@@ -525,8 +609,14 @@ export function Lesson1_4() {
                 <span className="lang-en">Model School Attendance Analysis (Textbook p. 29):</span>
               </strong>
               <div className="space-y-1.5 text-sub">
-                <p>1. <strong>الفائدة العملية:</strong> سرعة ودقة تسجيل الحضور وتوفير وقت الحصة وفقدان الكروت. <br /><strong>مصدر القلق بالخصوصية:</strong> تخزين البصمات البيومترية للطلاب في قاعدة بيانات واحتتمال تسريبها أو تتبع حركتهم دون إذن الوالدين.</p>
-                <p>2. <strong>من المسؤول عند الخطأ:</strong> <br />• <strong>المدرسة:</strong> هي المسؤولة عن النتيجة الإدارية (كخصم درجات أو تسجيل غياب خاطئ)؛ لأن المراجعة البشرية واجبة قبل رصد العقوبة. <br />• <strong>الشركة المصنعة:</strong> مسؤولة عن إرسال تحديث فني ومعالجة الخلل إذا ثبت أن خوارزمية التعرف تعاني من عيب تصنيعي في النموذج.</p>
+                <p>
+                  <span className="lang-ar">1. <strong>الفائدة العملية:</strong> سرعة ودقة تسجيل الحضور وتوفير وقت الحصة وفقدان الكروت. <br /><strong>مصدر القلق بالخصوصية:</strong> تخزين البصمات البيومترية للطلاب في قاعدة بيانات واحتتمال تسريبها أو تتبع حركتهم دون إذن الوالدين.</span>
+                  <span className="lang-en">1. <strong>Practical Benefit:</strong> Fast, automated attendance tracking without class disruption. <br /><strong>Privacy Concern:</strong> Storing biometric facial templates in a database with risks of leaks or unauthorized tracking.</span>
+                </p>
+                <p>
+                  <span className="lang-ar">2. <strong>من المسؤول عند الخطأ:</strong> <br />• <strong>المدرسة:</strong> هي المسؤولة عن النتيجة الإدارية (كخصم درجات أو تسجيل غياب خاطئ)؛ لأن المراجعة البشرية واجبة قبل رصد العقوبة. <br />• <strong>الشركة المصنعة:</strong> مسؤولة عن إرسال تحديث فني ومعالجة الخلل إذا ثبت أن خوارزمية التعرف تعاني من عيب تصنيعي في النموذج.</span>
+                  <span className="lang-en">2. <strong>Responsibility for Errors:</strong> <br />• <strong>School:</strong> Responsible for administrative consequences (e.g., incorrect absence records) as human verification is required. <br />• <strong>Manufacturer:</strong> Responsible for resolving technical bugs if model misidentification stems from algorithm flaws.</span>
+                </p>
               </div>
             </div>
           )}
@@ -557,9 +647,18 @@ export function Lesson1_4() {
                 <span className="lang-en">Official Mark Scheme (6/6 Marks):</span>
               </strong>
               <ol className="space-y-1.5 list-decimal rtl:pr-4 ltr:pl-4 text-sub">
-                <li><strong>كيفية نشأة التحيز [درجتان]:</strong> ينشأ التحيز الخوارزمي عندما تكون <strong>بيانات التدريب متحيزة أو غير كافية</strong> (مثل احتواؤها على ندرة في تمثيل بعض الفئات، أو انعكاس نزعات تمييزية سابقة في المجتمع)، أو نتيجة طريقة بناء النموذج واختيار متغيرات بديلة غير مناسبة.</li>
-                <li><strong>دور مبدأ العدالة (Fairness) [درجتان]:</strong> يضمن مبدأ العدالة عدم التمييز ظلماً ضد أي شخص أو مجموعة، ويحث المهندسين على <strong>إعادة موازنة بيانات التدريب</strong> وتضمين كفاءات متنوعة ليكون التقييم متكافئاً.</li>
-                <li><strong>دور مبدأ الشفافية (Transparency) [درجتان]:</strong> يضمن مبدأ الشفافية <strong>إتاحة معلومات واضحة عن عمل النظام</strong> ومصادر البيانات وحدوده، مما يسهل على البشر وخبراء XAI فحص الخوارزمية واكتشاف التحيز الخفي وتصحيحه قبل النشر.</li>
+                <li>
+                  <span className="lang-ar"><strong>كيفية نشأة التحيز [درجتان]:</strong> ينشأ التحيز الخوارزمي عندما تكون <strong>بيانات التدريب متحيزة أو غير كافية</strong> (مثل احتواؤها على ندرة في تمثيل بعض الفئات، أو انعكاس نزعات تمييزية سابقة في المجتمع)، أو نتيجة طريقة بناء النموذج واختيار متغيرات بديلة غير مناسبة.</span>
+                  <span className="lang-en"><strong>How Bias Arises [2 Marks]:</strong> Algorithmic bias occurs when <strong>training data is biased or insufficient</strong> (reflecting historical discrimination or underrepresenting groups) or through improper proxy variable selection in model design.</span>
+                </li>
+                <li>
+                  <span className="lang-ar"><strong>دور مبدأ العدالة (Fairness) [درجتان]:</strong> يضمن مبدأ العدالة عدم التمييز ظلماً ضد أي شخص أو مجموعة، ويحث المهندسين على <strong>إعادة موازنة بيانات التدريب</strong> وتضمين كفاءات متنوعة ليكون التقييم متكافئاً.</span>
+                  <span className="lang-en"><strong>Role of Fairness [2 Marks]:</strong> Fairness requires no unjust discrimination against any group, compelling engineers to <strong>rebalance datasets</strong> and ensure equal evaluation opportunities.</span>
+                </li>
+                <li>
+                  <span className="lang-ar"><strong>دور مبدأ الشفافية (Transparency) [درجتان]:</strong> يضمن مبدأ الشفافية <strong>إتاحة معلومات واضحة عن عمل النظام</strong> ومصادر البيانات وحدوده، مما يسهل على البشر وخبراء XAI فحص الخوارزمية واكتشاف التحيز الخفي وتصحيحه قبل النشر.</span>
+                  <span className="lang-en"><strong>Role of Transparency [2 Marks]:</strong> Transparency ensures <strong>disclosing decision processes</strong> and data sources, enabling auditors and XAI tools to detect and fix hidden bias before deployment.</span>
+                </li>
               </ol>
             </div>
           )}

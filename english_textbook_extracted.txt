@@ -1,0 +1,4403 @@
+=== PAGE 1 ===
+ 
+ 
+ 
+ 
+  
+Programming and Ar tiﬁcial Intelligence
+ 
+Part One
+An Introduction to
+Information and Communication Technology   
+Egyptian Baccalaureate
+2nd Year
+11
+
+=== PAGE 2 ===
+The International Baccalaureate™
+has reviewed the pedagogical and assessment approaches underpinning this textbook.
+© 2026 Ministry of Education and Technical Education
+All rights reserved.
+Copyrights and accountability for the content of this textbook remain with the Ministry of Education and 
+Technical Education.
+No part of this publication may be reproduced, stored in a retrieval system,
+or transmitted in any form or by any means - electronic, mechanical, photocopying, recording,
+or otherwise - without the prior written permission of the copyright holders.
+Ministry of Education and Technical Education
+New Administrative Capital
+Cairo, Egypt
+INTERNATIONAL
+ BACCALAUREATE ®
+/gid00034/gid00067/gid00085/gid00072/gid00082/gid00068/gid00067/gid00001/gid00065/gid00088
+Egyptian Baccalaureate
+ 2nd  Year
+Programming and Artiﬁcial Intelligence
+
+=== PAGE 3 ===
+Introduction
+In light of Egypt’s Vision 2030 and the state’s ongoing efforts to develop
+education, the Ministry of Education and Technical Education places great
+emphasis on updating school curriculums — particularly in information and
+communication technology — due to its vital role in fostering critical thinking skills,
+problem-solving abilities, and a focus on building a deep understanding of
+fundamental concepts, moving away from rote memorization, especially in the early
+stages. The content is organized in a gradual and systematic manner that enables
+students to progress smoothly from simple to complex concepts, linking technical
+concepts to real-life situations, and relying on interactive methods that include
+teamwork and discussion, making learning more enjoyable.
+In this context, the Ministry has been keen to benefit from successful international
+experiences. This has led to collaboration between the Egyptian and Japanese sides
+in developing information and communication technology curriculums, given
+Japan’s global excellence in this field, as evidenced by its notable achievements in
+international competitions, which reflect the strength of its curriculums and teaching
+methods.
+From this concern, this book is the result of the contribution between the Ministry
+of Education and Technical Education and the Japanese side.
+This book represents a first step within a comprehensive plan to develop
+information and communication technology curriculums across all grade levels, with
+the aim of building an integrated educational system that combines the best
+international practices with Egypt’s authentic identity.
+The Ministry of Education and Technical Education firmly believes that developing
+education is a true investment in the nation’s future, and that updating curriculums
+is not an end in itself, but rather a means to build an aware, creative generation,
+capable of keeping pace with scientific and technological changes in today’s world.
+
+=== PAGE 4 ===
+Contents
+1 Information Technology and Society 4
+1-1 Development of Information Technology and Social Transformation 4
+1-2 How AI Works 12
+1-3 AI in Daily Life and Industry 19
+1-4 Ethical Issues with AI 26
+2 Cybersecurity 33
+2-1 Cryptographic Technologies and Authentication 33
+2-2 Network Security Design 41
+2-3 Incident Response and Risk Management 48
+3 Web Applications 55
+3-1 The Overall Structure of Web Applications 55
+3-2 Web Application Communication Methods 62
+3-3 Fundamentals of Frontend Technology 68
+4 Web and Media Design 75
+4-1 Types and Characteristics of Media 75
+4-2 Information Design and User Experience for Websites 81
+4-3 Methods for Evaluating Websites 88
+4-4 The Iterative Improvement Process for Websites 95
+
+=== PAGE 5 ===
+1-1 — Development of Information Technology and Social Transformation
+41-1 — Development of Information Technology and Social Transformation
+Learning Objectives
+Explain the major stages in the development of information technology and their impact
+on society.
+•
+Give examples of social changes and emerging technologies brought about by
+information technology, and explain their characteristics.
+•
+Lesson 1-1
+Development of
+Information
+Technology and
+Social
+Transformation
+
+=== PAGE 6 ===
+1-1 — Development of Information Technology and Social Transformation
+51-1 — Development of Information Technology and Social Transformation
+Key Fact:
+At each stage,
+information technology
+introduced a new
+technology or service and
+also changed how society
+communicates, works,
+and does business.
+Key Concepts:
+Moore's Law
+SNS
+e-commerce
+remote work
+online learning
+cashless payment
+edge computing
+autonomous driving
+AR / VR
+quantum computing
+IT advanced in stages, each
+smaller and more connected.
+The first computers filled a
+whole room.
+? Guiding question: How has information technology developed
+through its major stages, and how has each stage changed society?
+✎  Explore (in pairs)
+With a partner, look at the five time periods in the table below before
+you read on. For each period, name one device or service from that era
+that you still use or hear about today. Then predict which stage
+changed daily life the most, and give one reason.
+📌Point!
+1. The History of Information Technology (IT)
+(1)  The major stages in the development of information technology are
+summarized in the table below.
+Time
+period
+Major technologies and
+events Impact on society
+1940s-60s Birth of the computer (ENIAC,
+vacuum tubes)
+Mainly used for military and scientific
+computation
+1970s-80s Spread of personal computers
+(PCs)
+Beginning of personal computer use
+1990s Commercialization of the
+Internet; the Web
+Globalization of information; spread
+of email
+2000s Rise of smartphones (iPhone,
+etc.)
+Explosive spread of mobile Internet
+2010s
+onward
+Spread of cloud computing Large-scale data analysis and AI; "IT as
+a service" becomes widespread
+(2)  (Moore's Law)...the empirical observation that "the number of
+transistors on an integrated circuit doubles approximately every two years."
+On an ordinary day, a student in Egypt checks messages on an SNS app,
+pays for breakfast with a cashless app, joins a lesson through online
+learning, and orders a book from an e-commerce (EC) shop. Twenty years
+ago, most of this was not possible. Information technology has developed
+through a series of stages — from the first computers to cloud computing
+— and at each stage it has changed the way people communicate, work,
+learn, and pay.
+
+=== PAGE 7 ===
+1-1 — Development of Information Technology and Social Transformation
+61-1 — Development of Information Technology and Social Transformation
+Moore's Law — the
+observation that the
+number of transistors on a
+chip roughly doubles about
+every two years.
+This is “the cloud” — real
+machines in a real place.
+💡 PAUSE & THINK
+Of these five changes, which
+would be hardest to give up
+— and why?
+This remained largely accurate for many years, and computing power
+increased dramatically.
+Moore's Law: transistor count over time
+2. Social Changes Resulting from Information Technology
+(1)  (SNS (Social Networking Service))...services that allow users to
+connect with each other and post and share information. They are highly
+effective at spreading information rapidly.
+(2)  (E-commerce (EC))...buying and selling goods and services through the
+Internet.
+e.g., online shops such as Amazon and eBay
+(3)  (Remote work)...a working style in which work is performed from home
+or other remote locations using the Internet.
+(4)  (Online learning)...a learning style in which classes and study materials
+are delivered using the Internet.
+(5)  (Cashless payment)...a system for making payments using electronic
+money, QR codes, etc., without using cash.
+e.g., credit cards, debit cards, mobile payment apps
+Five social changes driven by information technology.
+However, in recent years, miniaturization of transistors has been
+approaching a physical limit. If circuits are made any smaller, problems
+arise such as the quantum tunneling effect, in which electrons slip
+through barriers, and leakage current, in which current escapes
+unintentionally, making it difficult to achieve both higher performance
+and lower power consumption at the same time. In response, new
+directions for performance improvement are being pursued, such as
+parallel processing using multiple processor cores, and quantum
+computers based on the principles of quantum mechanics.
+KEY TERMS
+
+=== PAGE 8 ===
+1-1 — Development of Information Technology and Social Transformation
+71-1 — Development of Information Technology and Social Transformation
+edge computing —
+processing data on the
+device itself, instantly,
+instead of sending it to the
+cloud.
+💡 PAUSE & THINK
+In autonomous driving, why
+is it necessary to process data
+instantly on the vehicle side
+using edge computing, rather
+than sending the data to the
+cloud for judgment? Explain
+your answer.
+3. Notable Emerging Technologies
+(1)  (Autonomous driving)...a technology that uses AI to drive a vehicle
+without human operation. It uses cameras and sensors to recognize the
+surroundings, makes driving decisions, and controls a vehicle. Because a
+delay of even 0.1 seconds can lead to an accident, edge computing, in
+which processing is performed instantly on the vehicle itself rather than
+sending data to the cloud for judgment, is used.
+A self-driving car decides on board (edge computing), without waiting for the cloud.
+(2)  AR / VR
+①  (AR (Augmented Reality))...a technology that overlays digital
+information on real-world images.
+②  (VR (Virtual Reality))...a technology that allows users to immerse
+themselves in a virtual space generated by a computer.
+AR adds digital layers to the real world; VR replaces it with a virtual one.
+(3)  (Quantum computing)...a technology expected to dramatically speed
+up computations that are difficult or impossible for traditional computers,
+by using the principles of quantum mechanics.
+A classical bit holds one state; a qubit uses superposition.
+KEY TERMS
+
+=== PAGE 9 ===
+1-1 — Development of Information Technology and Social Transformation
+81-1 — Development of Information Technology and Social Transformation
+KEY TERMS
+Moore's Law —
+transistors per chip roughly
+double every two years.
+edge computing — data
+processed on the device
+itself, instantly.
+✎  Worked Example
+(1)  From the following options (A–D), choose the one that lists the
+stages of information technology (IT) development in the correct
+chronological order.
+A Birth of the computer → Rise of smartphones →
+Commercialization of the Internet → Spread of cloud computing
+B Birth of the computer → Commercialization of the Internet →
+Rise of smartphones → Spread of cloud computing
+C Commercialization of the Internet → Birth of the computer →
+Spread of cloud computing → Rise of smartphones
+D Rise of smartphones → Commercialization of the Internet → Birth
+of the computer → Spread of cloud computing
+(2)  Mark each statement (A–D) with ○ if true or × if false.
+A Moore's Law is the empirical observation that "the number of
+transistors on an integrated circuit doubles approximately every
+two years."
+B Moore's Law has been said to be approaching a physical limit in
+recent years.
+C SNS is highly effective at spreading information rapidly.
+D E-commerce (EC) refers to purchasing goods at physical stores
+using cash.
+(3)  Match each description (a–c) with the most appropriate
+technology from the choices below (A–C).
+a A technology that overlays digital information on real-world
+images
+b A technology that uses AI to drive a vehicle without human
+operation
+c A technology that allows users to immerse themselves in a virtual
+space generated by a computer
+[Choices]   A Autonomous driving    B AR    C VR
+✓  Solution
+(1)  The correct order is "Birth of the computer (1940s-60s) →
+Commercialization of the Internet (1990s) → Rise of smartphones
+(2000s) → Spread of cloud computing (2010s onward)." Therefore, B.
+(2)
+A Correct definition of Moore's Law. Therefore, ○.
+B It has been said to be approaching a physical limit in recent
+years. Therefore, ○.
+C SNS is a service highly effective at spreading information rapidly.
+Therefore, ○.
+D E-commerce refers to buying and selling through the Internet,
+not purchases at physical stores using cash. Therefore, ×.
+
+=== PAGE 10 ===
+1-1 — Development of Information Technology and Social Transformation
+91-1 — Development of Information Technology and Social Transformation
+📝 EXAM-STYLE
+QUESTION
+KEY TERMS
+remote work — working
+from home or another
+remote location using the
+Internet.
+online learning — classes
+and materials delivered
+over the Internet.
+(3)
+a: Overlaying digital information on real-world images is AR
+(Augmented Reality). B
+b: Driving a vehicle without human operation is autonomous
+driving. A
+c: Immersing oneself in a virtual space is VR (Virtual Reality). C
+Try
+1   Answer the following questions.
+1. What is the name of the empirical observation that "the number of
+transistors on an integrated circuit doubles approximately every two
+years"?
+2. What is the term for the buying and selling of goods and services using
+the Internet?
+3. What is the term for the working style in which one works from home
+or other remote locations using the Internet?
+4. What is the term for the system for making payments using electronic
+money, QR codes, etc., without using cash?
+5. What is the term for the technology that uses AI to drive a vehicle
+without human operation?
+2   Answer the following questions.
+(1)  For each of a–d, indicate which of the following is most closely related:
+A Changes in daily life, B Changes in industry and the economy, C Changes
+in healthcare and education.
+a
+b Paying for purchases using a mobile payment app on a smartphone.
+c Sharing photos with friends on SNS.
+d A company introducing a work-from-home system.
+(2)  From the following options (A–D), choose the one that is NOT an
+appropriate description of an emerging technology.
+A Autonomous driving uses AI to drive a vehicle without human
+operation.
+B AR is a technology that overlays digital information on real-world
+images.
+C VR is a technology that dramatically improves the processing speed of
+a computer.
+D Quantum computing is expected to speed up computations that are
+difficult for traditional computers.
+Analyze how the spread of
+cloud computing (from the
+2010s onward) has changed
+the way information
+technology is used. [6] In
+your answer, refer to:
+large-scale data analysis, AI,
+and "IT as a service".
+Taking classes through online learning.
+
+=== PAGE 11 ===
+1-1 — Development of Information Technology and Social Transformation
+101-1 — Development of Information Technology and Social Transformation
+💡  PAUSE & THINK
+Cashless payment is
+spreading in many countries.
+If a fully cashless society were
+realized, choose one
+advantage and one possible
+concern, and briefly explain
+the reason for each.
+KEY TERMS
+cloud computing — IT
+delivered as a service over
+the Internet.
+e-commerce — buying
+and selling through the
+Internet.
+⚙  Think as an Engineer — Investigate & Decide
+Start from the advantage and concern you named in the Pause & Think
+note, then investigate further and decide.
+1 · Collect data. Survey ten classmates: do they usually pay with cash
+or with a cashless method (card, mobile app, or QR code)? Record the
+results in a table and identify the most common response.
+2 · Analyze the stakeholders. Using your survey and your own
+reasoning, note one benefit and one drawback of a fully cashless
+society for each group below.
+Group Benefit Drawback
+A customer paying
+A small shop owner
+A person with no bank card
+or smartphone
+3 · Decide. Using your survey and your table, decide: should your
+community move toward cashless payment? Recommend one step
+and give two reasons.
+Stuck? Start with the customer — one benefit is speed of payment;
+one drawback is needing a card or a phone.
+🌍   In a New Context
+A village that has never had Internet access is connected to high-speed
+Internet and cashless payment for the first time. Using the stages and
+social changes you studied, predict two ways daily life in the village will
+change, and identify one new problem the village may face.
+❓   Lesson Question — Answered
+The lesson question asked how information technology developed and
+how each stage changed society. Information technology advanced
+through a series of stages rather than in a single step, and each stage
+changed much more than the technology itself. As computing spread,
+information became global and then mobile, many everyday activities
+moved online, and information technology grew into a service that
+supports large-scale data analysis and AI. Each stage also brought
+social changes in how people communicate, work, learn, and make
+payments. Overall, the development of information technology is not
+only about faster machines; at every stage it has reshaped daily life,
+industry, and the way society handles information.
+
+=== PAGE 12 ===
+1-1 — Development of Information Technology and Social Transformation
+111-1 — Development of Information Technology and Social Transformation
+⭐ REFLECT & CHALLENGE
+KEY TERMS
+SNS — connects users to
+post and share information.
+cashless payment —
+payment without cash (e-
+money, QR).
+⭐ Key takeaway
+Remember:
+Information technology
+developed in stages —
+computers, the Internet,
+smartphones, and cloud
+computing. At each stage
+it introduced a new
+technology or service and
+also changed how society
+communicates, works,
+learns, and pays.
+Exercise
+1   Cover the Point! section with a red plastic sheet and quiz
+yourself in your notebook in numerical order.
+2   Read the following passage and answer each question.
+Computers were invented in the 1940s and were initially used mainly for
+military and scientific computation. Later, in the 1970s and 1980s, ( a )
+became widespread, allowing individuals to use computers. In the 1990s, ( b
+) was commercialized, advancing the globalization of information. In the
+2000s, ( c ) emerged, leading to the explosive spread of mobile Internet.
+2. What technology, which spread from the 2010s onward, supports large-
+scale data analysis and the use of AI?
+3   Answer the following questions.
+A Email    B Autonomous driving    C Personal computers    D AR    E
+VR    F Quantum computing
+A A service that allows users to connect with each other and post and
+share information, and is highly effective at spreading information
+rapidly.
+B A service for buying and selling goods and services through the
+Internet.
+C A working style in which one works from home or other remote
+locations.
+D A system for making payments using electronic money or QR codes
+without using cash.
+Reflect: Which stage of
+information technology do
+you think will matter most in
+the next ten years? Give one
+reason. Was your prediction
+at the start of the lesson
+correct? What changed your
+mind? Challenge: Choose
+one emerging technology
+from this lesson
+(autonomous driving, AR, VR,
+or quantum computing).
+Suggest one way it could
+help solve a real problem,
+and state one risk.
+(2)  From the following options (A–D), choose the one that most
+appropriately describes the characteristics of SNS.
+(1)  From the following options (A–F), choose all that are emerging
+technologies.
+1. Fill in the blanks (a)–(c).
+3. According to Moore's Law, about how often does the number of
+transistors on an integrated circuit double?
+
+=== PAGE 13 ===
+1-2 — How AI Works
+121-2 — How AI Works
+Learning Objectives
+Explain what AI is.•
+Explain how generative AI is positioned within AI technologies.•
+Lesson 1-2
+How AI Works
+
+=== PAGE 14 ===
+1-2 — How AI Works
+131-2 — How AI Works
+Three everyday AI examples:
+speech, image, translation.
+Today's AI is narrow — expert at
+one task only.
+💡 THINK IT THROUGH
+Spam filters and product
+recommendations are both
+examples of machine learning,
+but the tasks they perform are
+completely different. From the
+perspective of how AI works,
+explain what these two
+applications have in common.
+When you use a phone, AI is often at work. A spam filter sorts your email, a store
+recommends products you might buy, a translation app changes one language
+into another, and ChatGPT generates text from a prompt. These are all examples
+of AI, but they are not all the same kind. AI includes machine learning, within
+machine learning is deep learning, and today's generative AI systems are built on
+deep learning — a series of nested technologies, each more specialized than the
+last.
+? Guiding question: What is AI, and how are machine learning, deep
+learning, and generative AI related?
+✎  Explore · In Pairs
+With a partner, list three tasks a phone or computer does for you that seem
+to need "intelligence" (for example, sorting spam, recommending a video,
+or translating text). Then predict: does the computer follow fixed rules, or
+does it learn from examples? Give one reason.
+📌Point!
+(1)  (AI (Artificial Intelligence))…a general term for technologies that reproduce
+or perform intelligent human behavior (learning, reasoning, judgment, etc.) on a
+computer.
+e.g., speech recognition, image recognition, translation
+2. The Relationship between AI and Machine Learning
+(1)  Within AI technologies, there is machine learning; within machine learning,
+there is deep learning; and within deep learning, there is generative AI. The
+broad field of AI includes increasingly specialized technologies as a series of
+nested categories.
+1. What is Artificial Intelligence (AI)?
+
+=== PAGE 15 ===
+1-2 — How AI Works
+141-2 — How AI Works
+Fixed hand-written rules versus
+rules learned from data.
+💡  PAUSE & THINK
+Deep learning needs large-
+scale data to learn. Why might
+an AI struggle with something
+it has rarely seen in its data?
+KEY TERMS
+neural network — a system
+modeled after the nerve cells
+(neurons) of the human
+brain, used to learn from data
+and make complex
+judgments.
+KEY TERMS
+generative AI — AI that uses
+deep learning to generate
+new data such as text,
+images, and audio.
+Hierarchy of AI Technologies
+(2)  (Machine Learning)…one of the learning technologies that makes AI work. It
+learns patterns from data to make predictions and judgments.
+e.g., spam filters, product recommendations
+(3)  (Deep Learning)…an advanced technology within machine learning that
+uses neural networks. It learns complex patterns using large-scale data.
+e.g., image analysis for autonomous driving, speech synthesis
+(4)  (Neural network)…a system modeled after the workings of the nerve cells
+(neurons) of the human brain. By connecting many components, it learns from
+data and becomes capable of making complex judgments. It is the core
+technology supporting recent advances in AI.
+A neural network connects many simple components.
+(5)  (Generative AI)…AI technology that uses deep learning to generate new
+data (text, images, audio, programs, etc.).
+e.g., ChatGPT, image generation AIs
+Generative AI creates new text, images, and audio.
+
+=== PAGE 16 ===
+1-2 — How AI Works
+151-2 — How AI Works
+KEY TERMS
+machine learning — learns
+patterns from data.
+deep learning — uses neural
+networks on large-scale data.
+✎  Worked Example
+(1)  Mark each statement (A–D) with ○  if true or × if false.
+A Machine learning is one of the technologies that makes AI work.
+B Deep learning is a completely different technology from machine
+learning.
+C Generative AI is a technology that uses deep learning to generate new
+data.
+D AI and machine learning have the same meaning.
+(2)  Match each description (a–c) with the most appropriate term from the
+choices below (A–C).
+a A technology that learns patterns from data to make predictions and
+judgments
+b A technology that uses neural networks to learn complex patterns
+c AI technology that generates new data such as text and images
+[Choices]   A Machine learning    B Deep learning    C Generative AI
+✓  Solution
+(1)
+A Machine learning is one of the learning technologies that makes AI
+work. Therefore, ○ .
+B Deep learning is a type of machine learning (an advanced technology
+within machine learning). Therefore, ×.
+C Correct description of generative AI. Therefore, ○ .
+D AI is a broad concept, and machine learning is one of the
+technologies within it. They do not have the same meaning.
+Therefore, ×.
+(2)
+a: Learning patterns from data is machine learning. A
+b: Using neural networks is deep learning. B
+c: Generating new data is generative AI. C
+
+=== PAGE 17 ===
+1-2 — How AI Works
+161-2 — How AI Works
+📝 EXAM-STYLE QUESTION
+💡 THINK IT THROUGH
+Generative AI can produce text
+that sounds plausible but is
+factually incorrect (a
+"hallucination"). Explain why it
+is dangerous to use such
+output as the answer to a
+school report as-is, and state
+what learners should do
+instead.
+Try
+1   Answer the following questions.
+1. What is the general term, expressed by a two-letter abbreviation, for
+technologies that reproduce or perform intelligent human behavior on a
+computer?
+2. What is the term for the learning technology that makes AI work by learning
+patterns from data to make predictions and judgments?
+3. What is the term for the advanced technology within machine learning that
+uses neural networks?
+4. What is the term for the AI technology that uses deep learning to generate
+new data?
+2   Answer the following questions.
+(1)  From the following options (A–D), choose the one that correctly describes the
+relationship between AI, machine learning, deep learning, and generative AI.
+A AI > Deep Learning > Machine Learning > Generative AI
+B Machine Learning > AI > Generative AI > Deep Learning
+C AI > Machine Learning > Deep Learning > Generative AI
+D Generative AI > Deep Learning > Machine Learning > AI
+(2)  From the following options (A–D), choose the one that is NOT an appropriate
+example of generative AI.
+A ChatGPT
+B Image generation AI
+C Spam filter
+D Audio generation AI
+⚙ Think as an Engineer — Investigate & Decide
+Starting from the Think It Through note about hallucination, investigate
+further and decide.
+1 · Investigate. Find one documented example where a generative AI gave
+an answer that sounded correct but was actually wrong (a "hallucination").
+Record its source — a news article, an official report, or a prompt you tested
+yourself with a screenshot — and note where you found it. Do not rely on an
+example recalled from memory without a source.
+2 · Weigh it up. Note one benefit and one risk of using generative AI to
+write a school report — for the student, and for the teacher.
+3 · Decide. Should generative AI be allowed for homework in your school?
+Recommend one rule and give two reasons.
+Analyze the relationship
+between AI, machine learning,
+deep learning, and generative
+AI. [6] In your answer: use the
+idea of nested categories, and
+give one example of each.
+
+=== PAGE 18 ===
+1-2 — How AI Works
+171-2 — How AI Works
+KEY TERMS
+deep learning — uses neural
+networks to learn complex
+patterns.
+generative AI — uses deep
+learning to generate new
+data.
+⭐  REFLECT & CHALLENGE
+Reflect: Before this lesson, did
+you think AI was one single
+technology? How has your idea
+changed? Which of the four —
+AI, machine learning, deep
+learning, generative AI — was
+hardest to tell apart, and why?
+Challenge: Generative AI can
+create text, images, and audio.
+Suggest one helpful use and
+one possible misuse, and say
+how the misuse could be
+reduced.
+Stuck? One benefit is speed; one risk is that the answer may be
+factually incorrect, so it must be checked.
+🌍   In a New Context
+A farmer wants to use AI to distinguish healthy crops from diseased ones in
+photographs. Using what you learned about deep learning and image
+analysis, explain what the AI would need to learn from, and identify one
+reason its judgment might be wrong.
+❓   Lesson Question — Answered
+The lesson question asked what AI is and how machine learning, deep
+learning, and generative AI are related. AI is a general term for technologies
+that reproduce or perform intelligent human behavior on a computer, and
+machine learning, deep learning, and generative AI are increasingly
+specialized fields nested within it rather than parallel to it. The key idea
+from this lesson is that these are not four separate technologies to learn in
+isolation, but one broad field understood at different levels of
+specialization.
+Exercise
+1   Cover the Point! section with a red plastic sheet and quiz yourself in
+your notebook in numerical order.
+2   Read the following passage and answer each question.
+The general term for technologies that reproduce or perform intelligent human
+behavior on a computer is ( a ). One of the learning technologies that makes ( a )
+work by learning patterns from data is ( b ). Within ( b ), an advanced technology
+that uses neural networks is ( c ). Furthermore, the technology that uses ( c ) to
+generate new data is ( d ).
+1. Fill in the blanks (a)–(d).
+
+=== PAGE 19 ===
+1-2 — How AI Works
+181-2 — How AI Works
+⭐  Key takeaway
+Remember:
+AI is the broad field;
+machine learning sits
+inside it, deep learning
+inside machine learning,
+and today's generative AI is
+built on deep learning —
+from the broadest idea to
+the most specialized.
+3   Answer the following questions.
+(1)  For each example (a–d), indicate which of the following is most closely
+related: A Machine learning, B Deep learning, C Generative AI.
+a Automatically sorting spam emails
+b Recognizing pedestrians on the road in autonomous driving
+c Automatically generating new images from text
+d Recommending products based on a user's purchase history
+(2)  From the following options (A–D), choose the one that most appropriately
+describes the relationship between AI, machine learning, deep learning, and
+generative AI.
+A Machine learning is a type of AI, and deep learning is a type of machine
+learning.
+B AI is a type of machine learning, and generative AI is a type of AI.
+C Deep learning and machine learning are completely different technologies.
+D Generative AI is a technology that generates data without using machine
+learning.
+
+=== PAGE 20 ===
+1-3 — AI in Daily Life and Industry
+191-3 — AI in Daily Life and Industry
+Learning Objectives
+Give examples of how AI is used in daily life and various industries.•
+Explain what AI is good at and what requires caution when using AI.•
+Lesson 1-3
+AI in Daily Life
+and Industry
+
+=== PAGE 21 ===
+1-3 — AI in Daily Life and Industry
+201-3 — AI in Daily Life and Industry
+Key Fact:
+AI is good at finding
+patterns in data, but
+human judgment is still
+needed where ethics,
+privacy, and responsibility
+are involved.
+Key Concepts:
+recommendation system
+voice assistant
+machine translation
+face recognition
+image-diagnosis AI
+predictive maintenance
+black-box problem
+hallucination
+Recommenders match new items
+to your past choices.
+KEY TERMS
+recommendation system —
+a system that predicts
+preferences from past
+behavior data and displays
+recommendations.
+AI is already part of many everyday services. A video site recommends the next
+clip, a voice assistant answers a spoken question, a translation tool converts text
+on a foreign menu, and a phone unlocks by recognizing your face. In industry, AI
+analyzes medical images, predicts when a machine will fail, and plans delivery
+routes. AI is effective at identifying patterns in data, but it is not suited to every
+task, and some uses require caution.
+? Guiding question: Where is AI used in daily life and industry, what is AI
+good at, and what needs caution?
+✎
+With a partner, list three services you used this week that you think used AI
+(for example, a video recommendation, a voice assistant, or a translation).
+For each, predict what data the AI needed to do its job. Then decide
+together: which one would matter most if it made a mistake?
+📌Point!
+1. Use of AI in Daily Life
+(1)  Various AI technologies are already in use around us.
+Service Role of AI Examples
+Recommendation
+systems
+Predict preferences from past behavior
+data and display recommendations.
+YouTube, Amazon,
+Spotify, etc.
+Voice assistants Recognize a voice, understand
+commands, and execute them.
+Siri, Google
+Assistant, etc.
+Machine translation Automatically translate text into different
+languages.
+Google Translate,
+DeepL, etc.
+Face recognition Automatically detect and identify human
+faces in photographs.
+Smartphone
+unlocking, etc.
+Four everyday-life AI services
+ Explore · In Pairs
+
+=== PAGE 22 ===
+1-3 — AI in Daily Life and Industry
+211-3 — AI in Daily Life and Industry
+In industry, AI flags what humans
+might miss.
+💡 THINK IT THROUGH
+A hospital is considering using
+image-diagnosis AI to detect
+diseases from X-ray images.
+Explain why the final diagnosis
+should be confirmed by a
+human doctor rather than left
+to AI alone.
+💡 PAUSE & THINK
+AI services often use your
+personal data — what you
+watch, buy, or say. Why does
+this raise privacy concerns, and
+who should decide how your
+data is used?
+KEY TERMS
+black-box problem — when
+it is unclear how an AI
+reached its judgment.
+2. Use of AI in Industry
+(1)  AI technologies are also being introduced in various industries.
+Industry Examples of AI use
+Healthcare Image-diagnosis AI (detecting diseases from X-ray and CT images),
+drug-discovery support
+Agriculture Predicting harvest timing, detecting pests and diseases
+Manufacturing Automation of product quality inspection, predictive maintenance
+Logistics Optimization of delivery routes
+Four industries where AI is used
+3. Characteristics of AI and Cautions for Use
+(1)  What AI is good at
+Finding and classifying patterns in complex data such as images and text
+Recognition and generation of images, audio, and text
+Probabilistic reasoning and prediction based on data
+(2)  What requires caution when using AI
+Ethical judgments (may lead to discrimination or prejudice)
+Judgments involving personal information or privacy
+Final decision-making (who is responsible for the result)
+Accuracy of judgments when training data is biased
+Generating content that differs from the facts (hallucination)
+Issues of rights when using copyrighted works as training data
+Loss of clarity about how a judgment was made (the black-box problem)
+✎ Worked Example
+a YouTube recommends videos that match the user's preferences
+b Speaking to a smartphone to check the weather
+c Translating a foreign-language website into one's native language
+d A smartphone camera automatically detects a person's face
+[Choices]   A Recommendation system    B Voice assistant    C
+Machine translation    D Face recognition
+(1)  For each of a-d, match the AI technology used in the service with the
+most appropriate term from the choices below (A–D).
+
+=== PAGE 23 ===
+1-3 — AI in Daily Life and Industry
+221-3 — AI in Daily Life and Industry
+AI can be confidently wrong —
+verify its output.
+📝 EXAM-STYLE QUESTION
+A AI is good at probabilistic reasoning and prediction based on data.
+B AI is good at recognizing images and audio.
+C It is fine to leave ethical judgments entirely to AI.
+D AI judgments can become inaccurate when training data is biased.
+✓ Solution
+(1)
+a: Recommendations matched to preferences come from a
+recommendation system. A
+b: Operating by speaking is a voice assistant. B
+c: Translating a foreign language into one's native language is machine
+translation. C
+d: Detecting a person's face is face recognition. D
+(2)
+A AI is good at probabilistic reasoning and prediction based on data.
+Therefore, ○.
+B AI is good at recognizing images, audio, and text. Therefore, ○.
+C AI judgments can lead to discrimination or prejudice, so ethical
+judgments should not be left entirely to AI. Therefore, ×.
+D Bias in training data affects the accuracy of AI judgments. Therefore,
+○.
+Try
+1   Answer the following questions.
+1. What is the term for the system that predicts preferences from past behavior
+data and displays recommendations?
+2. What is the term for the AI technology that recognizes a voice, understands
+commands, and executes them?
+3. In which industry are image-diagnosis AIs used?
+4. In manufacturing, what is the term for the system that predicts product
+failures in advance?
+Analyze why AI is well suited to
+some tasks but requires
+caution in others. [6] In your
+answer: refer to what AI is
+good at (finding patterns,
+recognition, prediction) and to
+what needs caution (ethical
+judgments, privacy, final
+decision-making).
+(2)  Mark each statement (A–D) with ○ if true or × if false.
+
+=== PAGE 24 ===
+1-3 — AI in Daily Life and Industry
+231-3 — AI in Daily Life and Industry
+💡 THINK IT THROUGH
+In agriculture, give one realistic
+advantage of introducing AI
+and one concern that should
+be considered before
+introduction, and briefly
+explain the reason for each.
+2   Answer the following questions.
+A Ethical judgments
+B Finding and classifying patterns
+C Judgments involving personal information or privacy
+D Final decision-making
+a Optimizing delivery routes
+b Detecting diseases from X-ray images
+c Detecting pests and diseases
+d Automating product quality inspection
+⚙ Think as an Engineer — Investigate & Decide
+You have just discussed agriculture in the Think It Through note. Now
+investigate a different industry and decide.
+1 · Investigate. Choose one industry from the lesson other than agriculture
+— healthcare, manufacturing, or logistics. Find one real, documented
+example of AI being used in it, and record the source you used.
+2 · Weigh it up. Note one benefit and one caution of using AI in that
+industry, using the ideas of what AI is good at and what needs caution.
+3 · Decide. Should this industry use AI for this task on its own, or with a
+human checking the result? Recommend one approach and give two
+reasons.
+Stuck? AI is good at finding patterns quickly; but a human is needed
+where a wrong result could harm someone or involve responsibility.
+🌍  In a New Context
+A school library wants to use AI to recommend books to students based on
+what they have borrowed before. Using what you learned about
+recommendation systems and what AI is good at, explain how the AI would
+work, and identify one caution the school should consider.
+(1)  From the following options (A–D), choose the one that does NOT belong to
+"what requires caution when using AI."
+(2)  For each AI usage example (a–d), indicate which industry is most closely
+related: A Healthcare, B Agriculture, C Manufacturing, D Logistics.
+
+=== PAGE 25 ===
+1-3 — AI in Daily Life and Industry
+241-3 — AI in Daily Life and Industry
+⭐ REFLECT & CHALLENGE
+❓  Lesson Question — Answered
+AI is used widely in daily life — in recommendation systems, voice
+assistants, machine translation, and face recognition — and in industry,
+across fields such as healthcare, agriculture, manufacturing, and logistics.
+AI is good at finding and classifying patterns in data, recognizing and
+generating images, audio, and text, and making probabilistic predictions
+from data. However, it needs caution where ethical judgments, personal
+information and privacy, and final decision-making are involved, and
+where training data is biased. So AI is a powerful tool for pattern-based
+tasks, but human judgment is still needed for responsibility, ethics, and
+fairness.
+Exercise
+1   Cover the Point! section with a red plastic sheet and quiz yourself in
+your notebook in numerical order.
+2   Answer the following questions.
+(1)  Select all options that AI excels at.
+A Ethical judgments
+B Finding features in images and text and classifying them
+C Judgments involving personal information
+D Probabilistic reasoning and prediction based on data
+E Decision-making that bears responsibility for results
+F Recognition and generation of images, audio, and text
+A A recommendation system predicts preferences from past behavior data
+and displays recommendations.
+B A voice assistant recognizes a voice, understands commands, and executes
+them.
+C Machine translation is a system in which humans manually translate
+foreign languages.
+D Face recognition automatically detects and identifies human faces in
+photographs.
+3   Read the following passage and answer each question.
+AI is widely used in our daily lives. For example, recommendations of videos that
+match one's preferences on a video site come from a ( a ) system. Also, AI
+Reflect: Which use of AI in this
+lesson surprised you most?
+Where in your own life do you
+think AI is making decisions
+about you? Challenge: Choose
+one task where AI needs
+caution (ethics, privacy, or final
+decisions). Suggest one rule
+that would make using AI for
+that task safer.
+(2)  From the following options (A–D), choose the one that is NOT an appropriate
+description of services that use AI.
+
+=== PAGE 26 ===
+1-3 — AI in Daily Life and Industry
+251-3 — AI in Daily Life and Industry
+⭐ Key takeaway
+Remember:
+AI is good at finding and
+classifying patterns in data
+— recommendations,
+voice, translation, face
+recognition, and many
+industry tasks — but
+human judgment is still
+needed where ethics,
+privacy, and responsibility
+are involved.
+technology is used in ( b ), with which one can speak to a smartphone to operate
+it, and in ( c ), which converts foreign-language text into one's native language.
+a High-speed processing of large amounts of data
+b Ethical judgments
+c Judgments involving personal information or privacy
+d Recognition of images and audio
+(2)  From the following (a–d), choose all that require caution when using AI.
+1. Fill in the blanks (a)–(c).
+
+=== PAGE 27 ===
+1-4 — Ethical Issues with AI
+261-4 — Ethical Issues with AI
+Learning Objectives
+Explain what algorithmic bias is and describe its main causes.•
+Connect the basic principles of AI ethics (fairness, transparency, privacy protection, and
+accountability) to specific situations.
+•
+Lesson 1-4
+Ethical Issues
+with AI
+
+=== PAGE 28 ===
+1-4 — Ethical Issues with AI
+271-4 — Ethical Issues with AI
+Key Fact:
+If the training data is
+biased, an AI can reproduce
+that bias in its judgments;
+using AI responsibly means
+checking for bias, being
+able to explain decisions,
+and knowing who is
+accountable.
+Key Concepts:
+algorithmic bias
+training data
+face recognition
+privacy
+explainable AI (XAI)
+black-box problem
+responsibility
+fairness
+transparency
+privacy protection
+accountability
+KEY TERMS
+algorithmic bias — bias in AI
+judgments caused by bias in
+the training data.
+AI now helps make real decisions about people: selecting candidates for job
+interviews, identifying individuals through face recognition, and determining
+how personal data is used. But an AI can be unfair if the data it learned from was
+biased, and it can be hard to know why it made a decision at all. As AI spreads,
+questions arise about how to keep it fair, transparent, and accountable, and
+about who is responsible when it produces an incorrect or unfair result.
+? Guiding question: What ethical issues arise as AI spreads, and what
+principles should guide how we use it?
+✎
+With a partner, look at this situation: a face-recognition AI is more likely to
+misidentify people from some ethnic groups than others. Before you read
+on, predict who could be harmed by this, and how. Give a reason.
+📌Point!
+1. Algorithmic Bias
+(1)  (Algorithmic bias)…bias in AI judgments caused by bias in the training data.
+e.g., a hiring AI unfairly evaluating a particular gender; a face-recognition AI being
+more likely to misidentify particular ethnic groups
+(2)  Main causes of bias
+Training data is biased (e.g., insufficient data on certain attributes; past
+discriminatory tendencies are reflected in the data). Bias can also enter
+through the way the system is built — for example, an inappropriate choice of
+variables, a proxy variable that indirectly stands in for a protected attribute,
+or the design of the model itself.
+ Explore · In Pairs
+
+=== PAGE 29 ===
+1-4 — Ethical Issues with AI
+281-4 — Ethical Issues with AI
+💡 THINK IT THROUGH
+When face-recognition
+technology is used in public
+spaces, safety and convenience
+may improve, but privacy
+concerns also arise. Explain
+how convenience, safety, and
+privacy protection should be
+balanced, and state which
+basic principle of AI ethics is
+most closely related to your
+view.
+Privacy: control which personal
+data is shared.
+KEY TERMS
+explainable AI (XAI) —
+technology that makes it
+possible for humans to
+understand why an AI made a
+particular judgment.
+Explainable AI reveals the
+reasons behind a decision.
+Biased training data leads to biased AI judgments
+2. Privacy Issues
+(1)  The development of AI technology has given rise to new issues concerning
+(privacy).
+①  Surveillance through face-recognition technology…cameras in public
+spaces can identify and track individuals.
+②  Mass collection of personal data…large amounts of online behavior data
+are collected and analyzed.
+3. Explainable AI (XAI) and Responsibility
+(1)  (Explainable AI (XAI))…technology that makes it possible for humans to
+understand why an AI made a particular judgment.
+When an AI's decision-making process is opaque (a black box), it is difficult to
+verify whether the result is correct.
+(2)  (Responsibility)…the question of who is responsible when an AI makes an
+incorrect judgment.
+Views on responsibility differ depending on whether one is the developer, the
+user, the operator, etc.
+4. Basic Principles of AI Ethics
+(1)  The following basic principles are considered important for using AI
+appropriately.
+Principle Description
+Fairness Not unjustly discriminating against any particular person or
+group
+Transparency Showing the AI's decision-making process and inner workings
+clearly
+Privacy protection Handling personal information appropriately and protecting
+privacy
+Accountability Being answerable for the AI's decisions
+
+=== PAGE 30 ===
+1-4 — Ethical Issues with AI
+291-4 — Ethical Issues with AI
+💡 PAUSE & THINK
+If no one can explain why an AI
+rejected someone's job
+application, is that fair? Which
+principle of AI ethics is missing?
+KEY TERMS
+The four principles of AI ethics
+✎ Worked Example
+(1)  Mark each statement (A–D) with ○ if true or × if false.
+A Algorithmic bias is bias in AI judgments caused by bias in the training
+data.
+B Even if an AI's decision-making process is opaque, there is no
+problem as long as the result is correct.
+C Explainable AI (XAI) is a technology that makes it possible for humans
+to understand the AI's reasoning.
+D When an AI makes an incorrect judgment, who is responsible has
+already been clearly determined.
+(2)  Match each description (a–d) with the most appropriate AI ethics basic
+principle from the choices below (A–D).
+a
+b
+c
+d
+[Choices]   A Fairness    B Transparency    C Privacy protection    D
+Accountability
+✓ Solution
+(1)
+A Correct definition of algorithmic bias. Therefore, ○.
+B When an AI's decision-making process is opaque, it is difficult to
+verify whether the result is correct. Therefore, ×.
+C Correct description of Explainable AI (XAI). Therefore, ○.
+D Views on responsibility when an AI makes an incorrect judgment
+differ depending on whether one is the developer, the user, the
+operator, etc., and have not yet been clearly determined. Therefore,
+×.
+(2)
+a: Not discriminating is fairness. A
+fairness — no unjust
+discrimination against a
+person or group.
+accountability — being
+answerable for the AI's
+decisions.
+Not unjustly discriminating against any particular person or group
+Showing the AI's decision-making process and inner workings clearly
+Handling personal information appropriately and protecting privacy
+Being answerable for the AI's decisions
+
+=== PAGE 31 ===
+1-4 — Ethical Issues with AI
+301-4 — Ethical Issues with AI
+KEY TERMS
+privacy — appropriate
+handling and protection of
+personal data.
+responsibility — who
+answers when an AI
+judgment is wrong.
+📝 EXAM-STYLE QUESTION
+b: Showing the decision-making process is transparency. B
+c: Protecting privacy is privacy protection. C
+d:
+Try
+1   Answer the following questions.
+1. What is the term for the phenomenon in which bias arises in AI judgments
+due to bias in the training data?
+2. What is the term for the technology that makes it possible for humans to
+understand why an AI made a particular judgment? Also, give its three-letter
+abbreviation.
+3. Among the basic principles of AI ethics, what is the term for the principle
+that requires not unjustly discriminating against any particular person or
+group?
+4. Among the basic principles of AI ethics, what is the term for the principle
+that requires handling personal information appropriately?
+2   Answer the following questions.
+(1)  From the following options (A–D), choose the one that is NOT an appropriate
+cause of algorithmic bias.
+A Training data is biased.
+B Past discriminatory tendencies are reflected in the data.
+C The processing speed of the computer is slow.
+D There is insufficient data on certain attributes.
+(2)  From the following options (A–D), choose all that are privacy issues
+associated with AI.
+A Individuals are identified and tracked through face-recognition technology.
+B Online behavior data is collected and analyzed in large quantities.
+C AI creates creative works.
+D AI computation speed improves.
+⚙ Think as an Engineer — Investigate & Decide
+Building on the hiring-AI case in the Think It Through note, investigate a
+real example and decide on a rule.
+1 · Investigate. Find one documented case where an AI system was
+accused of being unfair or biased, and record the source you used (a news
+report, study, or official statement). What group did it affect, and what data
+might have caused it?
+Analyze how algorithmic bias
+can arise in an AI system, and
+how it can be reduced. [6] In
+your answer: refer to the
+cause of bias (biased or
+insufficient training data) and
+to how the principles of
+fairness and transparency help
+address it.
+Being answerable for decisions is accountability. D
+
+=== PAGE 32 ===
+1-4 — Ethical Issues with AI
+311-4 — Ethical Issues with AI
+💡  THINK IT THROUGH
+A hiring AI was found to rate
+applicants of a particular
+gender lower. Using the ideas
+of algorithmic bias and the
+basic principles of AI ethics,
+explain the most likely cause
+and one possible measure to
+address it. There can be more
+than one reasonable view. Give
+the basis for your answer.
+KEY TERMS
+transparency — showing the
+AI's decision-making process
+clearly.
+privacy protection —
+handling personal
+information appropriately.
+2 · Consider responsibility. When an AI makes an unfair decision, who is
+responsible — the developer, the company using it, or the operator? Note
+the responsibility each one holds.
+3 · Decide. Before a company uses a hiring AI, what one rule should it
+follow to make the system fairer? Justify your rule using the principles of AI
+ethics.
+Stuck? If the training data reflects past bias, the AI can repeat it — one
+fix is to check the data and test the AI's results across different groups.
+🌍   In a New Context
+A school wants to use face-recognition cameras at its gate to record
+attendance automatically. Identify one practical benefit for the school and
+one privacy concern. Then, if the camera misidentifies a student, who
+should be responsible — the school, or the company that made the AI? Give
+a reason.
+❓   Lesson Question — Answered
+The lesson question asked what ethical issues arise as AI spreads and what
+principles should guide how we use it. Because AI now makes decisions
+that affect people, three concerns stand out: an AI can be unfair when it
+learns from biased data; it can put people's privacy at risk; and it can be
+difficult to understand, or to hold anyone answerable for, its decisions.
+Handling these well takes more than accuracy. The lesson sets out four
+principles to aim for — fairness, transparency, privacy protection, and
+accountability — and keeping AI fair, transparent, privacy-respecting, and
+accountable is what makes its use responsible.
+Exercise
+1   Cover the Point! section with a red plastic sheet and quiz yourself in
+your notebook in numerical order.
+2   Read the following passage and answer each question.
+As AI technology spreads widely in society, attention has been drawn to various
+ethical issues. For example, there is the issue of ( a ), in which bias arises in AI
+judgments due to bias in the training data. Also, for the "black-box" problem—
+where it is unclear why an AI made a particular judgment—a technology called (
+
+=== PAGE 33 ===
+1-4 — Ethical Issues with AI
+321-4 — Ethical Issues with AI
+⭐ REFLECT & CHALLENGE
+Reflect: Has this lesson
+changed how much you would
+trust an AI decision about you?
+Which of the four principles do
+you think is hardest to
+guarantee, and why?
+Challenge: Choose one place
+AI is used (hiring, face
+recognition, or
+recommendations). Suggest
+one rule based on the AI ethics
+principles that would make it
+more trustworthy.
+⭐ Key takeaway
+Remember:
+If training data is biased, an
+AI can reproduce that bias;
+using AI responsibly means
+checking for bias, being
+able to explain decisions,
+and knowing who is
+accountable — guided by
+fairness, transparency,
+privacy protection, and
+accountability.
+b ) is being researched. Furthermore, when an AI makes an incorrect judgment, (
+c ) is questioned, but no clear standard has yet been established among
+developers, users, and operators.
+3   Answer the following questions.
+(1)  For each of a-d, indicate which AI ethics basic principle is most closely
+related: A Fairness, B Transparency, C Privacy protection, D Accountability.
+a Ensuring that a hiring AI evaluates fairly regardless of gender.
+b Disclosing the AI's decision-making process to users in an easy-to-
+understand way.
+c Not using collected personal data for purposes other than as originally
+intended.
+d
+(2)  From the following options (A–D), choose the one that most appropriately
+describes ethical issues with AI.
+A There are no ethical issues with AI.
+B Algorithmic bias is caused by the AI's processing speed.
+C Bias in training data can cause discriminatory bias in AI judgments.
+D Even if an AI's decision-making process is opaque, there is no problem for
+users.
+Being answerable when an AI's diagnostic result turns out to be wrong.
+1. Fill in the blanks (a)–(c).
+
+=== PAGE 34 ===
+2-1 — Cryptographic Technologies and Authentication
+332-1 — Cryptographic Technologies and Authentication
+Learning Objectives
+Explain how HTTPS secures communication: how the TLS handshake uses public-key
+cryptography to share a key safely, and how common-key cryptography then protects the data
+that follows.
+•
+Describe how authentication, including multi-factor authentication, is used in real services,
+and explain why security technologies are combined.
+•
+Lesson 2-1
+Cryptographic
+Technologies
+and
+Authentication
+
+=== PAGE 35 ===
+2-1 — Cryptographic Technologies and Authentication
+342-1 — Cryptographic Technologies and Authentication
+Key Fact:
+Secure online
+communication and
+services depend on
+combining cryptography
+and authentication — not
+on any single technology.
+Key Concepts:
+HTTPS
+common-key
+cryptography
+public-key cryptography
+TLS handshake
+multi-factor
+authentication
+digital signature
+digital certificate
+non-repudiation
+KEY TERMS
+Every time you log in to a bank app, buy something online, or open a website
+with a small padlock in the address bar, hidden technologies are working to
+keep your information safe. Messages are scrambled so no one else can read
+them, the website proves that it is genuine, and your identity is checked before
+you are granted access. Without these protections, passwords could be stolen
+and private data could be read by unauthorized people.
+? Guiding question: How do cryptographic technologies and
+authentication work together to keep online communication and services
+secure?
+📌Point!
+1. How HTTPS Communication Works
+Stage What happens Cryptographic
+method used
+①  Connection The web server sends a digital certificate and a
+public key to the browser. The browser verifies
+the server's authenticity through a certificate
+authority (CA).
+Public-key
+cryptography
+②  Key exchange The browser creates a common key for
+communication, encrypts it with the server's
+public key, and sends it. The server decrypts it
+with its private key to obtain the common key.
+Public-key
+cryptography
+③  Data
+communication
+Data is encrypted and exchanged using the
+shared common key.
+Common-key
+cryptography
+(1)  (HTTPS (HTTP Secure))…a communication protocol that adds TLS
+encryption to HTTP. By providing encryption, detection of tampering, and
+verification of the communication partner, it protects users from threats such
+as eavesdropping, tampering, and impersonation. The procedure for
+establishing a secure communication is called the TLS handshake.
+HTTPS — HTTP with TLS
+encryption added
+(encryption, tamper
+detection, and partner
+verification).(2)  HTTPS combines common-key (symmetric-key) cryptography and public-key
+cryptography as follows, taking advantage of the strengths of both methods.
+Note: the exchange above shows one way a common key can be shared. Current
+versions of TLS use Diffie-Hellman key agreement instead.
+A public key locks; a different
+private key unlocks. In a digital
+signature the direction reverses:
+the private key signs and the
+public key verifies.
+
+=== PAGE 36 ===
+2-1 — Cryptographic Technologies and Authentication
+352-1 — Cryptographic Technologies and Authentication
+Strong login combines two or
+more different factors.
+KEY TERMS
+multi-factor authentication
+— combining two or more of
+the three factors: knowledge,
+possession, biometric.
+HTTPS Communication Flow
+(3)  Public-key cryptography is used to "share keys safely," and common-key
+cryptography is used to "exchange large amounts of data quickly." This division
+of roles makes it possible to achieve both security and communication speed.
+2. Use of Authentication in Real Services
+(1)  Many services adopt (multi-factor authentication), in which two or more of
+the three factors of authentication (knowledge, possession, biometric) are
+combined.
+(2)  When only one factor is used, an unauthorized party can gain access if that
+factor is broken. By combining multiple factors, even if one is broken, another
+can still prevent access.
+e.g., If only a password (knowledge) is used, an unauthorized login is possible once
+the password is leaked. However, if a notification to a smartphone (possession) is
+also required, an attacker cannot log in without the device, even if the password is
+leaked.
+(3)  The following examples of multi-factor authentication are used in various
+services.
+Service Examples of authentication used
+Online banking Password (knowledge) + one-time password (possession)
+SNS login Password (knowledge) + SMS authentication (possession)
+Online shopping
+3. Combinations of Security Technologies
+(1)  Safe communication and services are achieved not by a single technology,
+but by combining multiple security technologies.
+Company laptop login Smart card (possession) + fingerprint authentication (biometric)
+Password (knowledge) + one-time code from 3-D Secure
+(possession)
+
+=== PAGE 37 ===
+2-1 — Cryptographic Technologies and Authentication
+362-1 — Cryptographic Technologies and Authentication
+KEY TERMS
+digital signature — detects
+tampering and
+impersonation, and provides
+non-repudiation.
+A certificate authority vouches
+that a site is genuine.
+💡 PAUSE & THINK
+If a password is leaked, why
+can a second factor sent to a
+phone still keep the account
+safe?
+KEY TERMS
+public-key cryptography —
+shares a key safely.
+common-key cryptography
+— exchanges data quickly.
+Technology Effect
+Encryption (common-
+key, public-key)
+Prevents communication content from being read by third
+parties
+Digital signature Detects data tampering or impersonation of the sender, and
+makes it impossible for the sender to deny having sent the data
+afterward (non-repudiation)
+Digital certificate Verifies that the communication partner is authentic
+Multi-factor
+authentication
+Prevents unauthorized logins
+           
+      
+          
+        
+           
+     
+         
+      
+            
+      
+  
+✎ Worked Example
+(1)  Mark each statement (A–D) with ○ if true or × if false.
+A HTTPS communication uses both public-key cryptography and
+common-key cryptography.
+B HTTPS communication exchanges all data using public-key
+cryptography.
+C Multi-factor authentication is a method that combines two or more of
+the three factors of authentication.
+D An example of multi-factor authentication is setting two passwords.
+(2)  Match each threat (a–c) with the most appropriate security technology
+from the choices below (A–C).
+a I want to prevent communication content from being read by third
+parties.
+b I want to verify that data has not been altered during
+communication.
+(2 )  For  example,  when  purchasing  a  product  through  online  shopping,  these 
+technologies  are  combined  and  used  as  follows.
+①  When  you  access  the  site,  HTTPS  communication  begins,  and 
+(encryption)  prevents  communication  content  from  being  read  by  third 
+parties.
+②  The  browser  checks  the  (digital  certificate)  to  confirm  that  the 
+destination  is  the  genuine  shopping  site.
+③  For  account  login,  (multi-factor  authentication)  combining  a  password 
+and  SMS  authentication,  etc.,  prevents  unauthorized  logins.
+④  When sending order details, a  (digital signature)  can also be used so that
+tampering during communication can be detected.
+(3)  By  combining  multiple  technologies  in  this  way,  various  threats  such  as
+"eavesdropping, " "tampering, " "impersonation, " and  "unauthorized  login"  can 
+be  addressed  simultaneously.
+
+=== PAGE 38 ===
+2-1 — Cryptographic Technologies and Authentication
+372-1 — Cryptographic Technologies and Authentication
+📝 EXAM-STYLE QUESTION
+c I want to verify that the communication partner is authentic.
+[Choices]   A Encryption    B Digital signature    C Digital certificate
+✓ Solution
+(1)
+A HTTPS communication uses public-key cryptography for key
+exchange and common-key cryptography for data communication.
+Therefore, ○.
+B Exchanging all data using public-key cryptography would be slow, so
+common-key cryptography is used for data communication.
+Therefore, ×.
+C Correct definition of multi-factor authentication. Therefore, ○.
+D Even if two passwords are set, both are "knowledge" factors, so this
+does not constitute multi-factor authentication (it is two-step
+authentication using the same factor). Therefore, ×.
+(2)
+a: Preventing reading of communication content is encryption. A
+b: Detecting data tampering is a digital signature. B
+c: Verifying the authenticity of the communication partner is a digital
+certificate. C
+Try
+1   Answer the following questions.
+1. In HTTPS communication, what cryptographic method is used so that the
+browser and server can safely share a common key?
+2. In HTTPS communication, what cryptographic method is used for data
+communication after the common key has been shared?
+3. Briefly explain the reason for combining the cryptographic methods in (1)
+and (2), based on the characteristics of each method.
+2   Answer the following questions.
+(1)  For each service (a–d), indicate which combination of authentication factors
+is used: A Knowledge + possession, B Knowledge + biometric, C Biometric +
+possession.
+a Password + one-time password
+b Password + fingerprint authentication
+Explain why HTTPS uses
+public-key cryptography to
+share the key but common-key
+cryptography to exchange the
+data. [6] Refer to: security and
+speed.
+
+=== PAGE 39 ===
+2-1 — Cryptographic Technologies and Authentication
+382-1 — Cryptographic Technologies and Authentication
+c Password + SMS authentication
+d
+(2)  From the following options (A–D), choose the one that is NOT an appropriate
+description of combinations of security technologies.
+A Encryption is a technology that prevents communication content from
+being read by third parties.
+B Digital signatures are a technology that improves communication speed.
+C Digital certificates are a system for verifying that the communication
+partner is authentic.
+D By combining multiple security technologies, various threats can be
+addressed.
+⚙ Think as an Engineer — Investigate & Decide
+A school in your city is building an online portal where students check their
+grades and pay fees. You must choose how students log in. Which is the
+better choice for this service?
+☐ A password
+only
+☐ A password plus a one-time password sent to the
+phone
+1 · Collect data. Ask ten classmates which login methods they use and
+trust (password, one-time password, SMS, fingerprint or face). Record the
+results in a table and find the most common answer.
+2 · Analyze the stakeholders. For each group — a student, the school, and
+a student with no smartphone — note one benefit and one drawback of
+requiring a second factor.
+3 · Decide. Recommend one login method for the portal and give two
+reasons based on your survey and your table. In pairs, compare your
+recommendations and agree together on the single strongest reason before
+you write it down.
+Give evidence for your answer.
+Stuck? Start with the user: a password alone fails once it leaks; adding
+a possession factor (a one-time password) still blocks the login.
+Face recognition + smart card
+
+=== PAGE 40 ===
+2-1 — Cryptographic Technologies and Authentication
+392-1 — Cryptographic Technologies and Authentication
+KEY TERMS
+digital certificate — proves a
+site is genuine.
+multi-factor authentication
+— blocks unauthorized
+logins.
+⭐  REFLECT & CHALLENGE
+Reflect: Which of these
+protections do you rely on
+most when you go online?
+Challenge: Suggest one extra
+security measure an online
+shop could add, and one threat
+it would still not remove.
+KEY TERMS
+encryption — keeps content
+private.
+digital signature — detects
+tampering; gives non-
+repudiation.
+🌍   In a New Context
+A small online shop wants to secure both customer login and payment.
+Using what you learned, name two security technologies it should use and
+say where each one helps, then identify one threat that could still remain.
+❓   Lesson Question — Answered
+The lesson asked how cryptographic technologies and authentication keep
+communication and services secure. HTTPS combines public-key
+cryptography — used to share a key safely — with common-key
+cryptography — used to exchange data quickly — so communication is both
+secure and fast. Beyond communication, services stay safe by combining
+several technologies: encryption hides content, digital certificates prove a
+site is genuine, digital signatures detect tampering, and multi-factor
+authentication blocks unauthorized logins. Security online therefore comes
+from layering these technologies so that many threats are addressed at the
+same time.
+Exercise
+1   Cover the Point! section with a red plastic sheet and quiz yourself in
+your notebook in numerical order.
+2   Read the following passage and answer each question.
+HTTPS communication, used to access websites safely, combines multiple
+cryptographic technologies. First, the web server sends a ( a ) and a public key to
+the browser. The browser verifies whether the server is authentic through ( b ).
+Next, the browser creates a ( c ) for communication and encrypts it with the
+server's public key before sending. After this, all data communication is
+encrypted using this ( c ).
+1. Fill in the blanks (a)–(c).
+2. Briefly explain the reason for using common-key cryptography rather than
+public-key cryptography for data communication.
+
+=== PAGE 41 ===
+2-1 — Cryptographic Technologies and Authentication
+402-1 — Cryptographic Technologies and Authentication
+⭐ Key takeaway
+Remember:
+HTTPS uses public-key
+cryptography to share a key
+safely and common-key
+cryptography to move data
+quickly. Services stay safe
+by layering encryption,
+certificates, signatures, and
+multi-factor
+authentication.
+3   Answer the following questions.
+(1)  For each threat (a–d), indicate which technology is primarily used to address
+it: A Encryption, B Digital signature, C Digital certificate, D Multi-factor
+authentication.
+a A password is leaked and unauthorized login occurs.
+b Data is altered during communication.
+c A user is led to a fake website.
+d Communication content is intercepted by a third party.
+(2)  From the following options (A–D), choose the one that is NOT an appropriate
+example of multi-factor authentication.
+A Password + smartphone notification
+B Password + secret question
+C
+D Password + SMS authentication
+Fingerprint authentication + smart card
+
+=== PAGE 42 ===
+2-2 — Network Security Design
+412-2 — Network Security Design
+Learning Objectives
+Explain the roles of firewalls, VPNs, and DMZs in protecting a network.•
+Describe defense in depth and zero trust, and explain why layered, verified access is stronger
+than a single barrier.
+•
+Lesson 2-2
+Network
+Security Design
+
+=== PAGE 43 ===
+2-2 — Network Security Design
+422-2 — Network Security Design
+Key Fact:
+Strong network security
+comes from layering
+measures — firewall, VPN,
+DMZ, endpoint protection
+— and from verifying every
+access (zero trust), not
+from a single barrier.
+Key Concepts:
+firewall
+VPN
+DMZ
+defense in depth
+zero trust
+perimeter
+KEY TERMS
+firewall — allows or denies
+communication at a
+network's entry/exit point
+based on preset rules.
+A firewall allows or blocks traffic
+by rules.
+A VPN tunnels data safely
+through a hostile network.
+KEY TERMS
+DMZ — a zone for public-
+facing servers, separated
+from the internal network.
+An organization's network holds confidential data — customer records, financial
+files, and private messages. Attackers constantly look for a way in. A single lock
+on the front door is not enough: if it is picked, everything inside is exposed. For
+this reason, modern network security uses several layers, so that even when one
+defense is breached, the next one still protects the system.
+? Guiding question: How can an organization design its network so that,
+even if one defense is breached, the system stays protected?
+📌Point!
+1. The Role of Firewalls
+(1)  (Firewall)…a system installed at the entry/exit point of a network that
+allows or denies communication based on rules set in advance.
+e.g., Allow access to the web server, but deny direct external access to the
+database server.
+2. VPN (Virtual Private Network)
+(1)  (VPN)…a technology that creates an encrypted virtual private line (tunnel)
+over the Internet, allowing safe connection to a network from a remote location.
+(2)  Main uses of VPN
+①   Remote work…connecting safely to an organization's network from home
+or while away.
+②   Connecting branches…connecting offices in different locations safely.
+(3)  Because communication content is encrypted when using a VPN, the risk of
+eavesdropping is reduced even when using public Wi-Fi.
+3. DMZ (Demilitarized Zone)
+(1)  (DMZ)…an area where servers exposed to the external network (web servers,
+mail servers, etc.) are placed separately from the internal network.
+(2)  By providing a DMZ, even if a public-facing server is attacked, damage to the
+internal network can be prevented.
+
+=== PAGE 44 ===
+2-2 — Network Security Design
+432-2 — Network Security Design
+💡  PAUSE & THINK
+Why is it safer to place a public
+web server in a DMZ rather
+than inside the internal
+network?
+Defense in depth: if one layer
+falls, the next holds.
+DMZ Network Configuration
+4. Defense in Depth
+(1)  (Defense in depth)…the concept of layering multiple security measures so
+that, even if one measure is breached, the next can still protect the system.
+(2)  In network security, multiple measures are combined as follows.
+Layer Examples of measures
+Layer 1: Network entry Block unauthorized communication using a firewall
+Layer 2: Communication
+path
+Encrypt communication using a VPN
+Layer 3: Server placement Separate public-facing servers from the internal network
+using a DMZ
+Layer 4: Endpoints Install antivirus software and keep the OS updated
+5. The Concept of Zero Trust
+(1)  (Zero trust)…a security concept that means the system does not trust any
+communication, including from within the organization's network, and always
+verifies it.
+e.g., Even for access from inside the organization, identity verification and access
+permission checks are performed every time.
+(2)  Conventional network security was designed mainly around protecting a
+perimeter, based on the premise that "inside the organization's network is safe,
+and outside is dangerous." However, with the spread of cloud services and
+remote work, the boundary between "inside" and "outside" has become
+blurred, and designs that protect only the perimeter have become insufficient.
+
+=== PAGE 45 ===
+2-2 — Network Security Design
+442-2 — Network Security Design
+KEY TERMS
+defense in depth — layering
+measures.
+zero trust — verify every
+access.
+Traditional vs. Zero Trust
+✎  Worked Example
+(1)  Mark each statement (A–D) with ○  if true or × if false.
+A A firewall allows or denies communication based on rules set in
+advance.
+B Using a VPN can reduce the risk of eavesdropping even on public Wi-
+Fi.
+C A DMZ is a system that exposes all servers to the outside.
+D Defense in depth is the concept of layering multiple security
+measures.
+(2)  Match each description (a–c) with the most appropriate term from the
+choices below (A–C).
+a A technology that creates an encrypted virtual private line over the
+Internet for safe connection from a remote location
+b An area where servers exposed to the outside are placed separately
+from the internal network
+c A system that allows or denies communication based on rules set in
+advance
+[Choices]   A Firewall    B VPN    C DMZ
+✓  Solution
+(1)
+A A firewall controls communication based on rules. Therefore, ○ .
+B A VPN encrypts communication, reducing the risk of eavesdropping
+on public Wi-Fi. Therefore, ○ .
+C A DMZ is an area where public-facing servers are placed separately
+from the internal network, not a system that exposes all servers.
+Therefore, ×.
+
+=== PAGE 46 ===
+2-2 — Network Security Design
+452-2 — Network Security Design
+📝 EXAM-STYLE QUESTION
+D Correct definition of defense in depth. Therefore, ○.
+(2)
+a: An encrypted virtual private line is a VPN. B
+b: An area where public-facing servers are isolated is a DMZ. C
+c: A system that allows or denies communication is a firewall. A
+Try
+1   Answer the following questions.
+1. What is the term for the system installed at the entry/exit point of a network
+that allows or denies communication based on rules?
+2. What is the three-letter abbreviation for the technology that creates an
+encrypted virtual private line over the Internet for safe communication?
+3. What is the three-letter abbreviation for the area where servers exposed to
+the outside are placed separately from the internal network?
+4. What is the term for the concept of layering multiple security measures?
+2   Answer the following questions.
+(1)  From the following options (A–D), choose the one that is NOT an appropriate
+use of a VPN.
+A Connecting safely from home to an organization's network
+B Connecting offices in different locations safely
+C Automatically deleting files infected with viruses
+D Encrypting communication content on public Wi-Fi
+(2)  For each of the security measures (a–d), indicate which layer of defense in
+depth (A–D) it belongs to.
+a Blocking unauthorized communication with a firewall
+b Encrypting communication with a VPN
+c Installing antivirus software
+d Separating public-facing servers from the internal network using a DMZ
+[Layers]   A Network entry    B Communication path    C Server placement   
+D Endpoints
+⚙ Think as an Engineer — Investigate & Decide
+A company in your city is setting up its office network. It has a public
+website, staff who work from home, and confidential customer data. You
+advise on the security design.
+Explain why layering several
+security measures (defense in
+depth) protects an organization
+better than relying on a firewall
+alone. [6] Refer to: what
+happens if one measure is
+breached.
+
+=== PAGE 47 ===
+2-2 — Network Security Design
+462-2 — Network Security Design
+KEY TERMS
+perimeter — the old "inside
+is safe" boundary that cloud
+and remote work have
+blurred.
+☐  A
+firewall
+only
+☐  A layered design (firewall + VPN + DMZ + endpoints) that
+also verifies every access (zero trust)
+1 · Collect data. List the company's three assets (public website, remote
+staff, customer database) and the main threat to each.
+2 · Rank the layers. For this company, rank the four defense-in-depth
+layers (network entry, communication path, server placement, endpoints)
+from most to least critical, and justify your top choice.
+3 · Decide. Recommend a design and give two reasons why layering is safer
+than a single firewall. In pairs, compare your designs and agree together
+on the strongest reason before you write it down.
+Give evidence for your answer.
+Stuck? Start with the most exposed asset — the public website — and
+place it in a DMZ so that an attack there cannot reach the internal
+database.
+🌍   In a New Context
+A hospital moves its patient records to a cloud service and lets doctors
+access them from home. Using zero trust and defense in depth, suggest two
+measures it should apply and say where each one helps, then identify one
+risk that could still remain.
+❓   Lesson Question — Answered
+The lesson asked how to design a network so that one breach does not
+expose everything. The answer is layering. A firewall controls what enters
+and leaves the network; a VPN encrypts communication from remote
+locations; a DMZ separates public-facing servers so that an attack on them
+cannot reach internal data; and endpoint measures protect each device.
+Because cloud services and remote work have blurred the line between
+"inside" and "outside," zero trust adds a further principle: no access is
+trusted automatically, and every request is verified. Together, defense in
+depth and zero trust keep the network protected even when a single
+measure fails.
+
+=== PAGE 48 ===
+2-2 — Network Security Design
+472-2 — Network Security Design
+⭐  REFLECT & CHALLENGE
+Reflect: Which layer of defense
+do you think is easiest for an
+attacker to get past, and why?
+Challenge: Suggest one
+measure a small company
+could add beyond a firewall,
+and one threat it would still not
+remove.
+⭐  Key takeaway
+Remember:
+Layer your defenses —
+firewall, VPN, DMZ,
+endpoints — and verify
+every access (zero trust).
+One breach is then far less
+likely to expose the whole
+network.
+Exercise
+1   Cover the Point! section with a red plastic sheet and quiz yourself in
+your notebook in numerical order.
+2   Read the following passage and answer each question.
+To protect an organization's network, it is important to combine multiple
+security measures. First, a ( a ) is installed at the entry/exit point of the network
+to block unauthorized communication based on rules. Web servers and other
+servers exposed to the outside are placed in a ( b ), separated from the internal
+network. To connect safely from outside, such as with remote work,
+communication is encrypted using a ( c ). The concept of layering multiple
+measures in this way is called ( d ).
+1. Fill in the blanks (a)–(d).
+3   Answer the following questions.
+(1)  From the following options (A–D), choose the most appropriate reason for
+providing a DMZ.
+A To improve communication speed.
+B To expose all servers to the outside.
+C To prevent damage to the internal network even if a public-facing server is
+attacked.
+D To automatically detect and remove viruses.
+(2)  From the following options (A–D), choose the one that most appropriately
+describes the concept of zero trust.
+A Access from within the organization's network is safe, so verification is
+unnecessary.
+B A firewall alone is sufficient to protect the network.
+C No communication is trusted and is always verified.
+D Only access from outside needs to be monitored.
+
+=== PAGE 49 ===
+2-3 — Incident Response and Risk Management
+482-3 — Incident Response and Risk Management
+Learning Objectives
+Explain what a security incident is and describe the stages of incident response in the correct
+order.
+•
+Apply the idea of risk assessment by prioritizing risks according to their impact and likelihood.•
+Lesson 2-3
+Incident
+Response and
+Risk
+Management
+
+=== PAGE 50 ===
+2-3 — Incident Response and Risk Management
+492-3 — Incident Response and Risk Management
+Key Fact:
+Incident response follows
+six ordered stages, and risk
+assessment prioritizes risks
+by impact × likelihood — so
+an organization acts in the
+right order and on the right
+risks first.
+Key Concepts:
+security incident
+the six stages
+containment /
+eradication
+risk = impact × likelihood
+KEY TERMS
+security incident — a
+situation in which actual
+damage occurs due to an
+information security
+problem.
+Contain first: isolate the infected
+machine.
+Even a well-protected system can be attacked. When a security incident happens
+— data leaked, files tampered with, or a service knocked offline — a rushed and
+unplanned reaction only makes the damage worse. Organizations follow a clear,
+ordered response so that damage is contained, the cause is removed, and the
+same problem does not return. They also decide in advance which risks to guard
+against first, because no team can fix everything at once.
+? Guiding question: When a security incident happens, how should an
+organization respond in order — and how does it decide which risks to
+address first?
+📌Point!
+1. What is a Security Incident
+(1)  (Security incident)…a situation in which actual damage occurs due to an
+information security problem.
+(2)  Typical examples of security incidents
+Type Description
+Information
+leak
+Personal information or confidential information is leaked to the
+outside
+Data tampering Data within a system is altered without authorization
+Service outage A service becomes unavailable due to attacks on the server, etc.
+2. The Flow of Incident Response
+(1)  When a security incident occurs, response proceeds through the following six
+stages.
+Stage Description
+①  Preparation Establish response procedures and structures in advance, in
+preparation for incidents
+②  Detection Discover and confirm that an incident has occurred
+③  Containment Limit the scope of impact so that damage does not spread
+further
+④  Eradication Remove the cause of the incident (e.g., remove malware)
+⑤  Recovery Return systems and services to their normal state
+⑥  Prevention of
+recurrence
+Analyze the cause and take measures so that the same incident
+does not occur again
+
+=== PAGE 51 ===
+2-3 — Incident Response and Risk Management
+502-3 — Incident Response and Risk Management
+Recover: restore a clean system
+from backup.
+💡  PAUSE & THINK
+Why must containment come
+before eradication in the six-
+stage response?
+Rank risks by impact and
+likelihood; fix the worst first.
+KEY TERMS
+impact — how much damage
+if a risk occurs.
+likelihood — how probable
+the risk is.
+Incident Response: 6 Phases
+(2)  It is important to proceed through the six stages of incident response in
+order. For example, if recovery is performed without identifying the cause, the
+same incident may occur again.
+3. The Concept of Risk Assessment
+(1)  (Risk)…the possibility of an information security problem occurring in the
+future, and its impact.
+(2)  The size of a risk is determined by the following two factors.
+Risk size = Impact × Likelihood
+①   (Impact)…how much damage occurs if the risk actually materializes.
+②   (Likelihood)…how high the probability is that the risk will actually
+materialize.
+Risk Evaluation Matrix
+(3)  Risks with both high impact and high likelihood should be addressed first.
+Since it is difficult to address all risks at the same time, it is important to set
+priorities and take measures systematically.
+✎  Worked Example
+(1)  Mark each statement (A–D) with ○  if true or × if false.
+A A security incident is a situation in which actual damage occurs due
+to an information security problem.
+
+=== PAGE 52 ===
+2-3 — Incident Response and Risk Management
+512-3 — Incident Response and Risk Management
+📝 EXAM-STYLE QUESTION
+B In incident response, it is important to first prevent the spread of
+damage before removing the cause.
+C The size of a risk can be determined by impact alone.
+D The final stage of incident response is prevention of recurrence.
+(2)  For each of a–d, indicate which stage of the six stages of incident
+response (A–D) it belongs to.
+a Establishing response procedures in advance, in preparation for
+incidents
+b Disconnecting a malware-infected computer from the network
+c Removing the malware infection
+d Analyzing the cause and taking measures so that the same incident
+does not occur again
+[Choices]   A Preparation    B Containment    C Eradication    D
+Prevention of recurrence
+✓ Solution
+(1)
+A Correct definition of a security incident. Therefore, ○.
+B Containment (preventing the spread of damage) is performed before
+eradication (removing the cause). Therefore, ○.
+C The size of a risk is determined by both impact and likelihood.
+Therefore, ×.
+D The final stage of the six stages is prevention of recurrence.
+Therefore, ○.
+(2)
+a: Preparing in advance is preparation. A
+b: Disconnecting from the network to prevent the spread of damage is
+containment. B
+c: Removing malware is eradication. C
+d: Cause analysis and countermeasures are prevention of recurrence. D
+Explain why the six stages of
+incident response must be
+carried out in order, using
+recovery and eradication as an
+example. [6] Refer to: what
+happens if the cause is not
+removed.
+
+=== PAGE 53 ===
+2-3 — Incident Response and Risk Management
+522-3 — Incident Response and Risk Management
+Try
+1   Answer the following questions.
+1. What is the term for a situation in which actual damage occurs due to an
+information security problem?
+2. Name the six stages of incident response in order.
+3. What are the two factors used to determine the size of a risk?
+2   Answer the following questions.
+(1)  From the following options (A–D), choose the one that is NOT an appropriate
+example of a security incident.
+A Data was encrypted by a ransomware infection.
+B Customer information was leaked to the outside through unauthorized
+access.
+C A software update was performed to add new features.
+D A web service became unavailable due to an attack on the server.
+(2)  From the following options (A–D), choose the one that most appropriately
+describes the concept of risk assessment.
+A It is enough to address only risks with large impact.
+B It is enough to address only risks with high likelihood.
+C Risks with both high impact and high likelihood should be addressed first.
+D All risks must be addressed simultaneously.
+⚙  Think as an Engineer — Investigate & Decide
+A school's student-records system is hit by ransomware: files are encrypted
+and staff cannot log in. You lead the response.
+☐  Restore from backup
+immediately
+☐  Follow the six-stage response in
+order
+1 · Respond from here. This incident has just been detected — files are
+encrypted and staff are locked out. Starting from where the school is now,
+list the stages still to carry out, and say what each one means for this
+specific incident.
+2 · Assess the risks. For two risks the school faces — (i) another
+ransomware attack, (ii) a brief power cut — estimate impact and likelihood,
+and say which to address first.
+3 · Decide. Recommend the first three actions the school should take, and
+give one reason why order matters. In pairs, compare your orders and
+agree together on the single most important first step.
+
+=== PAGE 54 ===
+2-3 — Incident Response and Risk Management
+532-3 — Incident Response and Risk Management
+KEY TERMS
+containment — limit the
+spread of damage.
+eradication — remove the
+cause.
+⭐ REFLECT & CHALLENGE
+Give evidence for your answer.
+Stuck? If you recover before you eradicate the cause, the malware is
+still there — and the same incident can happen again.
+🌍  In a New Context
+An online shop has just detected that customer data has been leaked.
+Using the six-stage response and risk assessment, name the next two
+stages it should carry out and why, and identify one risk it should prioritize
+afterward.
+❓  Lesson Question — Answered
+The lesson asked how to respond to an incident in order, and how to
+prioritize risks. A security incident is any situation where real damage
+occurs. The response follows six stages in a fixed order — preparation,
+detection, containment, eradication, recovery, and prevention of
+recurrence — because acting out of order (for example, recovering before
+removing the cause) lets the same incident return. To decide what to guard
+against first, an organization assesses each risk by its size = impact ×
+likelihood, and addresses high-impact, high-likelihood risks first, since no
+team can fix everything at once. Responding in order and prioritizing by
+risk together keep damage small and prevent repeats.
+Exercise
+1   Cover the Point! section with a red plastic sheet and quiz yourself in
+your notebook in numerical order.
+2   Read the following passage and answer each question.
+A situation in which actual damage occurs due to an information security
+problem is called ( a ). When ( a ) occurs, ( b ), which prevents the spread of
+damage, is performed first, followed by ( c ), which removes the cause of the
+incident. After that, ( d ), which returns the system to its normal state, is
+performed, and finally ( e ), in which the cause is analyzed to prevent recurrence,
+is performed.
+Reflect: Which stage of
+incident response do you think
+is hardest to do well under
+pressure, and why? Challenge:
+Suggest one thing an
+organization could prepare in
+advance (stage 1) that would
+make the other phases faster.
+
+=== PAGE 55 ===
+2-3 — Incident Response and Risk Management
+542-3 — Incident Response and Risk Management
+⭐ Key takeaway
+Remember:
+Follow the six stages in
+order (prepare → detect →
+contain → eradicate →
+recover → prevent), and
+prioritize risks by impact ×
+likelihood.
+1. Fill in the blanks (a)–(e).
+3   Answer the following questions.
+(1)  Reorder the risks (a–d) from highest priority to lowest priority based on the
+concept of risk assessment (impact × likelihood).
+a
+b
+c
+d
+(2)  From the following options (A–D), choose the one that most appropriately
+describes the order of incident response.
+A Detection → Eradication → Containment → Recovery
+B Preparation → Detection → Containment → Eradication → Recovery →
+Prevention of recurrence
+C Detection → Recovery → Containment → Prevention of recurrence
+D Containment → Detection → Eradication → Preparation
+Impact: large (3), Likelihood: high (3)
+Impact: small (1), Likelihood: high (3)
+Impact: large (3), Likelihood: medium (2)
+Impact: small (1), Likelihood: low (1)
+
+=== PAGE 56 ===
+3-1 — The Overall Structure of Web Applications
+553-1 — The Overall Structure of Web Applications
+Learning Objectives
+Explain what a web application is and describe the roles of its three tiers: frontend, backend,
+and database.
+•
+Trace how the three tiers cooperate to turn a user's action into a result, using familiar services
+as examples.
+•
+Lesson 3-1
+The Overall
+Structure of
+Web
+Applications
+
+=== PAGE 57 ===
+3-1 — The Overall Structure of Web Applications
+563-1 — The Overall Structure of Web Applications
+Key Fact:
+A web application is built
+from three tiers —
+frontend, backend, and
+database — that cooperate
+to turn a user's action into
+a result.
+Key Concepts:
+web application
+frontend
+backend
+database
+three-tier architecture
+KEY TERMS
+web application — an
+application used through a
+web browser, with no
+dedicated software to install.
+The data tier stores and serves
+the records.
+Three tiers: presentation, logic,
+and data.
+Every time you search on YouTube, buy on Amazon, or open Gmail, you are using
+a web application — a program you use through your browser, with nothing to
+install. Behind the simple screen, three tiers work together: the page you interact
+with, the hidden server that processes the request, and the database that holds
+all the data. Understanding these three tiers explains how almost every online
+service is built.
+? Guiding question: How is a web application structured, and how do its
+three tiers work together to respond to what a user does?
+📌Point!
+(1)  (Web application)…an application used through a web browser. It can be
+used as long as you have a browser, without needing to install dedicated
+software.
+e.g., YouTube, Amazon, Gmail, Google Maps
+2. The Three Tiers of a Web Application
+(1)  A web application is broadly composed of the following three tiers.
+Tier Role Examples
+Frontend The screen component that users see
+directly. It runs on the browser and
+accepts user input.
+Search screen, product listing
+pages, input forms, etc.
+Backend The server-side processing that users do
+not see. It processes data and makes
+decisions.
+Searching for products that
+match search criteria, login
+authentication, etc.
+Database A system that organizes, stores, and
+manages data. It retrieves data when
+needed and records new data.
+Product information, user
+information, order history, etc.
+Three-Tier Web Application Architecture
+3. The Flow of How the Three Tiers Cooperate
+(1)  When a user operates a web application, the three tiers cooperate to perform
+the processing to make it work.
+1. What is a Web Application?
+
+=== PAGE 58 ===
+3-1 — The Overall Structure of Web Applications
+573-1 — The Overall Structure of Web Applications
+💡  PAUSE & THINK
+When you type in a search box
+and see results, which tier
+collected your input, and which
+tier found the answer?
+A request flows down the tiers
+and a reply returns.
+KEY TERMS
+frontend — the screen users
+see and interact with.
+backend — the hidden
+server-side processing.
+database — where data is
+stored and managed.
+💡  PAUSE & THINK
+In the table, every service uses
+the same three tiers — what
+changes from one service to
+the next?
+e.g., Searching for a product on an online shopping site
+①   The frontend receives the search keywords entered by the user.
+②   The frontend sends the search keywords to the backend.
+③   The backend searches the database for products that match the criteria.
+④   The database returns the data of matching products to the backend.
+⑤   The backend organizes the search results and returns them to the
+frontend.
+⑥   The frontend displays the search results on the user's screen.
+How the Three Layers Work Together
+4. Familiar Web Application Configurations
+(1)  All familiar web applications also operate on this three-tier architecture.
+Service
+Frontend
+(display and
+interaction)
+Backend
+(processing and
+control)
+Database
+(storage and
+management)
+Video
+sharing site
+Display of video
+playback and search
+screens; reception of
+user operations
+Selection of
+recommended videos;
+aggregation of view
+counts
+Storage of video data,
+user information, and
+viewing history
+SNS Display of timelines and
+post screens; sending of
+input content
+Determining the
+audience for posts;
+control of push
+notifications
+Storage of post data,
+follow relationships, and
+messages
+E-
+commerce
+site
+Display of product
+listings and cart
+screens; reception of
+order operations
+Stock checking;
+execution of payment
+systems
+Storage of product
+information, order
+history, and customer
+information
+✎  Worked Example
+(1)  Mark each statement (A–D) with ○  if true or × if false.
+A The frontend is the screen component that users see directly.
+B The backend is the part that runs on the browser.
+C A database is a system that organizes, stores, and manages data.
+D A web application operates with the frontend alone.
+
+=== PAGE 59 ===
+3-1 — The Overall Structure of Web Applications
+583-1 — The Overall Structure of Web Applications
+📝 EXAM-STYLE QUESTION
+(2)  Match each description (a–c) with the most appropriate term from the
+choices below (A–C).
+a The part responsible for server-side processing that users do not see
+b The screen component that users interact with directly
+c A system that organizes, stores, and manages data
+[Choices]   A Frontend    B Backend    C Database
+✓ Solution
+(1)
+A The frontend is the screen component that users see directly.
+Therefore, ○.
+B The backend is the part that runs on the server, not on the browser.
+Therefore, ×.
+C Correct definition of a database. Therefore, ○.
+D A web application operates with three tiers: frontend, backend, and
+database. Therefore, ×.
+(2)
+a: Server-side processing is the backend. B
+b: The screen that users interact with is the frontend. A
+c: Storing and managing data is the database. C
+Try
+1   Answer the following questions.
+1. What is the term for an application used through a web browser?
+2. What is the term for the screen component that users see directly?
+3. What is the term for the part responsible for server-side processing that
+users do not see?
+4. What is the term for a system that organizes, stores, and manages data?
+2   Answer the following questions.
+(1)  When searching for a product on an online shopping site, which of the
+following is responsible for searching through data for products that match the
+search keywords: A Frontend, B Backend, C Database?
+Explain how the three tiers of a
+web application cooperate
+when a user posts a photo on a
+social media app. [6] Refer to:
+the role of the frontend,
+backend, and database.
+
+=== PAGE 60 ===
+3-1 — The Overall Structure of Web Applications
+593-1 — The Overall Structure of Web Applications
+KEY TERMS
+three-tier architecture —
+frontend + backend +
+database cooperating.
+(2)  For each of a–f, indicate which tier of an e-commerce site it belongs to: A
+Frontend, B Backend, C Database.
+a Product listing page
+b Stock checking processing
+c Storage of customer information
+d Cart screen
+e Payment processing
+f Storage of order history
+⚙  Think as an Engineer — Investigate & Decide
+A clinic wants a web app where patients book appointments, check which
+time slots are free, and see their past visits. You plan its three tiers.
+☐  Put everything in one
+program
+☐  Separate the frontend, backend, and
+database
+1 · Assign the work. For three features — the booking form, checking
+which time slots are free, and storing past visits — say which tier (frontend,
+backend, or database) should handle each, and why.
+2 · Diagnose a fault. The booking page opens normally, but no free slots
+appear on screen. Which tier is clearly working, and which one has
+probably failed? Explain your reasoning.
+3 · Decide. Recommend whether the clinic should separate its app into
+three tiers, and give two reasons. In pairs, compare your assignments and
+agree together on where checking free time slots belongs.
+Give evidence for your answer.
+Stuck? The frontend shows and collects; the backend decides and
+processes; the database stores and retrieves.
+🌍   In a New Context
+A weather app lets users type a city and see the forecast. Using the three-
+tier model, name which tier does each job — taking the city name, looking
+up the forecast data, and storing past forecasts — and identify one job the
+frontend cannot do on its own.
+
+=== PAGE 61 ===
+3-1 — The Overall Structure of Web Applications
+603-1 — The Overall Structure of Web Applications
+⭐ REFLECT & CHALLENGE
+⭐ Key takeaway
+Remember:
+Frontend shows and
+collects, backend decides
+and processes, database
+stores and retrieves —
+three tiers cooperating
+make a web application
+work.
+❓  Lesson Question — Answered
+The lesson asked how a web application is structured and how its tiers
+cooperate. A web application runs in a browser and is built from three tiers.
+The frontend is the screen the user sees and interacts with; the backend is
+the hidden server-side processing that makes decisions; and the database
+organizes, stores, and manages the data. When a user acts — for example,
+searching for a product — the frontend collects the input and passes it to
+the backend, the backend queries the database, the database returns the
+data, and the backend sends the organized result back to the frontend to
+display. Overall, a web application works not through one part but through
+three tiers cooperating, each with a clear role.
+Exercise
+1   Cover the Point! section with a red plastic sheet and quiz yourself in
+your notebook in numerical order.
+2   Read the following passage and answer each question.
+A web application is broadly composed of three tiers. The screen component
+that users see directly is called the ( a ). The part responsible for server-side
+processing that users do not see is called the ( b ). A system that organizes,
+stores, and manages data is called the ( c ). In response to user actions, these
+three tiers cooperate to perform processing.
+1. Fill in the blanks (a)–(c).
+3   Answer the following questions.
+(1)  For each of a–f, indicate which tier of an SNS it belongs to: A Frontend, B
+Backend, C Database.
+a Timeline screen
+b Processing that determines the audience for a post
+c Storage of post data
+d Post screen
+e Notification processing
+f Storage of follow relationships
+Reflect: Which tier do you
+think fails most noticeably to a
+user when something goes
+wrong, and why? Challenge:
+Name one online service you
+use and describe what its
+frontend, backend, and
+database each do.
+
+=== PAGE 62 ===
+3-1 — The Overall Structure of Web Applications
+613-1 — The Overall Structure of Web Applications
+(2)  From the following options (A–D), choose the one that most appropriately
+describes the three-tier architecture of a web application.
+A The frontend has the role of storing and managing data.
+B The backend is the part that users interact with directly on the browser.
+C In response to user actions, the frontend, backend, and database cooperate
+to perform processing.
+D The database has the role of displaying screens to users.
+
+=== PAGE 63 ===
+3-2 — Web Application Communication Methods
+623-2 — Web Application Communication Methods
+Learning Objectives
+Explain the client and server model and the difference between HTTP and HTTPS.•
+Describe how HTTP requests and responses work, and explain the role of an API in exchanging
+data.
+•
+Lesson 3-2
+Web
+Application
+Communication
+Methods
+
+=== PAGE 64 ===
+3-2 — Web Application Communication Methods
+633-2 — Web Application Communication Methods
+Key Fact:
+Web applications work by a
+client sending requests and
+a server returning
+responses, using protocols
+(HTTP/HTTPS) and often
+APIs that exchange data in
+formats like JSON.
+Key Concepts:
+client / server
+HTTP / HTTPS
+HTTP method
+status code
+API / JSON
+KEY TERMS
+client — the side that
+requests data or processing.
+server — the side that
+processes requests and
+returns responses.
+Many clients request; one server
+responds.
+💡 PAUSE & THINK
+Why should a login page use
+HTTPS rather than plain HTTP?
+When you click a link or press “search,” your device does not hold the whole
+website — it asks a distant computer for it. Your browser is the client that makes
+the request; a server somewhere answers with a response. This exchange,
+governed by shared rules called protocols, is how every web application
+communicates. Knowing how requests, responses, and APIs work explains what
+happens between your click and the page you see.
+? Guiding question: How do the client and server communicate to make a
+web application work, and what rules and messages do they use?
+📌Point!
+1. Client and Server
+(1)  (Client)…the side that requests data or processing from the server. Web
+browsers and smartphone apps fall into this category.
+(2)  (Server)…the side that receives requests from clients, processes them, and
+returns responses.
+(3)  A web application operates by the client sending a request and the server
+returning a response.
+Client-Server Communication
+2. HTTP and HTTPS
+(3)  Websites whose URLs begin with “https://” use HTTPS communication.
+3. HTTP Requests and Responses
+(1)  Requests sent from the client to the server include information called an
+HTTP method that indicates “what kind of operation is desired.”
+(2)  (HTTPS (HTTP Secure))…a communication protocol that adds TLS
+encryption to HTTP. Because communication content is encrypted, the risk of
+its being read by third parties is reduced.
+(1)  (HTTP (HyperText Transfer Protocol))…a communication protocol for
+exchanging data between clients (browsers and apps) and servers.
+
+=== PAGE 65 ===
+3-2 — Web Application Communication Methods
+643-2 — Web Application Communication Methods
+KEY TERMS
+HTTP method — says what is
+wanted (GET, POST).
+status code — reports the
+result (200, 404, 500).
+One HTTP request, one matching
+response.
+An API is a fixed contract for
+exchanging data.
+Method Role Examples
+GET Retrieve data from the
+server
+Displaying a web page, retrieving search results
+POST Send data to the server Sending login information, submitting form
+contents
+(2)  Responses returned from the server to the client include a number indicating
+the result of processing, called a status code. Some typical examples are as
+follows.
+Status code Meaning
+200 Success (the request was processed successfully)
+404 Page not found (the specified URL does not exist)
+500 Server error (a problem occurred on the server side)
+4. API (Application Programming Interface)
+(1)  (API)…a system for exchanging data between different pieces of software.
+(2)  In web applications, the frontend often sends requests to the backend
+through an API and receives data.
+(3)  Data exchanged through an API is often described in a format called (JSON
+(JavaScript Object Notation)). JSON is a data format that is both easy for
+humans to read and for computers to process.
+✎  Worked Example
+(1)  Mark each statement (A–D) with ○  if true or × if false.
+A The client is the side that requests data or processing from the server,
+and the server is the side that returns the response.
+B HTTPS is a communication protocol that adds encryption to HTTP.
+C The GET method is for sending data to the server.
+D Status code 404 indicates that the page is not found.
+(2)  Match each description (a–c) with the most appropriate term from the
+choices below (A–C).
+a A communication protocol for exchanging data between web
+browsers and servers
+b A system for exchanging data between different pieces of software
+c A communication protocol that adds encryption to HTTP
+[Choices]   A HTTP    B API    C HTTPS
+
+=== PAGE 66 ===
+3-2 — Web Application Communication Methods
+653-2 — Web Application Communication Methods
+📝 EXAM-STYLE QUESTION
+💡 PAUSE & THINK
+If a browser receives status
+code 404, what should it tell
+the user — and whose side had
+the problem?
+✓ Solution
+(1)
+A Correct description of the roles of client and server. Therefore, ○.
+B HTTPS adds SSL/TLS encryption to HTTP. Therefore, ○.
+C The GET method is for retrieving data from the server and the POST
+method is for sending data. Therefore, ×.
+D 404 is a status code indicating that the page is not found. Therefore,
+○.
+(2)
+a: The web communication protocol is HTTP. A
+b: Data exchange between pieces of software is API. B
+c: HTTP with added encryption is HTTPS. C
+Try
+1   Answer the following questions.
+1. What is the term for the side that requests data or processing from the
+server (e.g., a web browser)?
+2. What is the term for the side that receives requests from clients, processes
+them, and returns responses?
+3. What is the term for the communication protocol that adds encryption to
+HTTP?
+4. What is the term for the HTTP method for retrieving data from the server?
+5. What is the term for the system for exchanging data between different pieces
+of software?
+2   Answer the following questions.
+(1)  From the following options (A–D), choose the combination of status code and
+meaning that is NOT appropriate.
+A 200 — The request was processed successfully
+B 404 — Page not found
+C 500 — The request was processed successfully
+D 500 — A problem occurred on the server side
+Explain what happens, step by
+step, when a browser requests
+a web page and the server
+responds. [6] Refer to: client,
+request, HTTP method,
+response, status code.
+
+=== PAGE 67 ===
+3-2 — Web Application Communication Methods
+663-2 — Web Application Communication Methods
+KEY TERMS
+API — lets different software
+exchange data.
+JSON — a readable data
+format.
+(2)  From the following options (A–D), choose the one that most appropriately
+describes an API.
+A A technology for adjusting the appearance of web pages
+B A system for exchanging data between different pieces of software
+C A technology for encrypting data and sending it safely
+D An HTTP method for retrieving data from the server
+⚙  Think as an Engineer — Investigate & Decide
+A school in your city wants a web app where students log in, view their
+timetable, and download a PDF. You plan how the client and server
+communicate.
+☐  Send everything over
+plain HTTP
+☐  Use HTTPS and the right method for
+each action
+1 · Choose the method. For three actions — loading a student's grade
+history, submitting the login form, and requesting today's schedule from
+another school system — say whether GET or POST fits, and for the last say
+whether an API is involved.
+2 · Choose the protocol. Decide whether the login should use HTTP or
+HTTPS, and give the reason.
+3 · Decide. Recommend the communication design and give two reasons.
+In pairs, compare your method choices and agree together on which action
+must use POST.
+Give evidence for your answer.
+Stuck? GET retrieves and shows; POST sends data such as a login;
+HTTPS encrypts so passwords are not intercepted.
+🌍   In a New Context
+A weather service offers an API that returns today's forecast when a client
+sends a request. Using what you learned, name which HTTP method the
+client would use to retrieve the forecast, why the service should use HTTPS,
+and one advantage of receiving the data as JSON.
+
+=== PAGE 68 ===
+3-2 — Web Application Communication Methods
+673-2 — Web Application Communication Methods
+⭐ REFLECT & CHALLENGE
+⭐ Key takeaway
+Remember:
+Client requests, server
+responds — over
+HTTP/HTTPS, with a
+method (GET/POST), a
+status code, and often an
+API returning JSON.
+❓  Lesson Question — Answered
+The lesson asked how the client and server communicate and what rules
+and messages they use. A web application works when a client — a browser
+or app — sends a request and a server processes it and returns a response.
+They communicate through a protocol: HTTP carries the messages, and
+HTTPS adds SSL/TLS encryption so the content is not easily intercepted.
+Each request carries an HTTP method that says what is wanted — GET to
+retrieve, POST to send — and each response carries a status code that
+reports the result, such as 200 for success or 404 for not found. Often the
+frontend and backend exchange data through an API, frequently in the
+JSON format, which is easy for both people and computers to read. Overall,
+communication in a web application is an organized exchange of requests
+and responses, shaped by protocols, methods, status codes, and APIs.
+Exercise
+1   Cover the Point! section with a red plastic sheet and quiz yourself in
+your notebook in numerical order.
+2   Read the following passage and answer each question.
+A web application operates by communication between a ( a ), which requests
+data or processing from the server, and a ( b ), which receives the request,
+processes it, and returns a response. This communication uses a protocol called
+( c ). The protocol that adds SSL/TLS encryption to ( c ) is called ( d ).
+1. Fill in the blanks (a)–(d).
+3   Answer the following questions.
+(1)  For each of operations (a–d), indicate which HTTP method is used: A GET, B
+POST.
+a Displaying a web page
+b Entering an ID and password into a login form and submitting them
+c Displaying search results
+d Submitting the contents of a contact form
+(2)  From the following options (A–D), choose the one that most appropriately
+describes HTTPS.
+A A method for retrieving data from the server
+B A system for exchanging data between different pieces of software
+C A communication protocol that adds SSL/TLS encryption to HTTP
+D A status code indicating that a problem has occurred on the server side
+Reflect: When a page fails to
+load, which status code would
+help you most to understand
+why, and what would it tell you?
+Challenge: Name one app you
+use and describe one request it
+sends and the response it
+expects.
+
+=== PAGE 69 ===
+3-3 — Fundamentals of Frontend Technology
+683-3 — Fundamentals of Frontend Technology
+Learning Objectives
+Explain the distinct roles of HTML, CSS, and JavaScript in building a web page.•
+Describe how semantic HTML, responsive design, and frameworks improve a modern frontend.•
+Lesson 3-3
+Fundamentals
+of Frontend
+Technology
+
+=== PAGE 70 ===
+3-3 — Fundamentals of Frontend Technology
+693-3 — Fundamentals of Frontend Technology
+Key Fact:
+A web page is built from
+HTML (structure), CSS
+(appearance), and
+JavaScript (behavior); a
+modern frontend adds
+semantic HTML, responsive
+design, and frameworks.
+Key Concepts:
+HTML / CSS / JavaScript
+semantic HTML
+accessibility / SEO
+responsive design
+framework
+KEY TERMS
+HTML — structure.
+CSS — appearance.
+JavaScript — behavior.
+HTML structures, CSS styles, JS
+adds behavior.
+Open any web page and you are seeing three technologies at work together.
+HTML builds the structure — the headings, paragraphs, and links, like the frame
+of a building. CSS adds the appearance — colors, layout, and fonts, like a
+building's interior. JavaScript adds behavior — search boxes that respond,
+buttons that count, screens that update. A modern frontend goes further: it
+makes pages meaningful, adaptable to every screen, and faster to build.
+? Guiding question: How do HTML, CSS, and JavaScript work together to
+build a web page, and what makes a modern frontend meaningful,
+adaptable, and efficient to build?
+📌Point!
+1. The Roles of HTML, CSS, and JavaScript
+(1)  Web pages are mainly based on the following three technologies.
+Technology Role Analogy
+HTML Defines the structure (skeleton) of a web page.
+Describes elements such as headings,
+paragraphs, images, and links.
+The frame of a
+building
+CSS Specifies the appearance of a web page (colors,
+layout, size, fonts, etc.).
+The interior and
+exterior of a building
+JavaScript The electrical and
+plumbing systems of
+a building
+Roles of HTML, CSS, and JavaScript
+(2)  These three technologies each have independent roles, and a web page is
+created using all of them in combination.
+Adds behavior and interactivity to a web page.
+Activates responses when buttons are pressed and
+updates only part of the screen.
+
+=== PAGE 71 ===
+3-3 — Fundamentals of Frontend Technology
+703-3 — Fundamentals of Frontend Technology
+💡  PAUSE & THINK
+On a page you use often, which
+parts are structure (HTML),
+which are style (CSS), and
+which react to you
+(JavaScript)?
+Responsive design re-flows to
+each screen size.
+KEY TERMS
+responsive design — layout
+adapts to screen size.
+framework — ready-made
+functions for efficient
+development.
+Frameworks assemble pages
+from ready-made parts.
+2. Semantic HTML
+(1)  (Semantic HTML)…the concept of describing each part of a web page using
+element names (tags) that indicate their meaning.
+e.g., Use <header> at the top of the page, <nav> for navigation, <main> for the
+body, and <footer> at the bottom of the page.
+(2)  Benefits of using semantic HTML
+①   Improved (accessibility)…screen reader software can correctly
+understand the structure of the page. Information becomes easier to convey
+to users with visual impairments.
+②   Improved (SEO (Search Engine Optimization))…search engines can
+more easily understand the content of a web page correctly, making it more
+likely to be displayed appropriately in search results.
+3. Responsive Design
+(1)  (Responsive design)…a design concept in which the layout is automatically
+adjusted according to different screen sizes such as PCs, smartphones, and
+tablets.
+(2)  With a single web page, a display that is easy to view from any device can be
+achieved.
+(3)  As of 2026, websites are frequently accessed from smartphones, and support
+for responsive design is widely required. Against this backdrop, the (mobile-
+first) concept—prioritizing small screens such as smartphones from the design
+stage—has also become widespread.
+4. Frameworks
+(1)  (Framework)…a structure that provides commonly used functions and
+components in advance, in order to make web application development more
+efficient.
+(2)  By using a framework, developers do not need to write all code from scratch
+and can develop more efficiently.
+(3)  Major frontend frameworks
+Framework
+name Characteristics
+React Developed by Meta (formerly Facebook). It can efficiently update only
+part of the screen and is suited to large-scale web applications.
+Vue Has a simple structure and allows web applications to be built
+incrementally from small features.
+Next.js In addition to React's features, includes mechanisms to speed up page
+display.
+
+=== PAGE 72 ===
+3-3 — Fundamentals of Frontend Technology
+713-3 — Fundamentals of Frontend Technology
+💡 PAUSE & THINK
+Why does a screen reader
+understand a page better when
+it uses <header>, <nav>, and
+<main> instead of plain boxes?
+📝 EXAM-STYLE QUESTION
+✎ Worked Example
+(1)  Mark each statement (A–D) with ○ if true or × if false.
+A HTML is a technology that defines the structure (skeleton) of a web
+page.
+B CSS is a technology that adds behavior to a web page.
+C Responsive design is a concept in which the layout is automatically
+adjusted according to different screen sizes.
+D Using a framework eliminates the need to write all code from scratch
+and allows efficient development.
+(2)  Match each role (a–c) with the most appropriate technology from the
+choices below (A–C).
+a Defines the structure of a web page
+b Specifies the appearance of a web page
+c Adds behavior and interactivity to a web page
+[Choices]   A HTML    B CSS    C JavaScript
+✓ Solution
+(1)
+A HTML defines the structure of a web page. Therefore, ○.
+B CSS is a technology that specifies the appearance of a web page.
+Adding behavior is JavaScript. Therefore, ×.
+C Correct definition of responsive design. Therefore, ○.
+D Correct description of the benefit of frameworks. Therefore, ○.
+(2)
+a: Defining structure is HTML. A
+b: Specifying appearance is CSS. B
+c: Adding behavior is JavaScript. C
+Explain how HTML, CSS, and
+JavaScript each contribute to a
+library page that lists books, is
+styled, and filters the results as
+the user types. [6] Refer to:
+structure, appearance,
+behavior.
+
+=== PAGE 73 ===
+3-3 — Fundamentals of Frontend Technology
+723-3 — Fundamentals of Frontend Technology
+💡  PAUSE & THINK
+Which of the benefits below is
+about how the page looks, and
+which is about how well others
+can find and read it?
+Try
+1   Answer the following questions.
+1. What is the four-letter abbreviation for the technology that defines the
+structure (skeleton) of a web page?
+2. What is the three-letter abbreviation for the technology that specifies the
+appearance of a web page (colors, layout, size, etc.)?
+3. What is the term for the technology that adds behavior and interactivity to a
+web page?
+4. What is the term for the design concept in which the layout is automatically
+adjusted according to different screen sizes?
+2   Answer the following questions.
+(1)  From the following options (A–D), choose the one that is NOT an appropriate
+benefit of using semantic HTML.
+A Screen reader software can correctly understand the structure of the page.
+B Search engines can more easily understand the content of a web page.
+C The display speed of a web page necessarily becomes faster.
+D Information becomes easier to convey to users with visual impairments.
+(2)  From the following options (A–D), choose the one that most appropriately
+describes a framework.
+A A language for defining the structure of a web page
+B A structure for making web application development more efficient
+C A technology for encrypting data and sending it safely
+D A design concept for supporting different screen sizes
+⚙  Think as an Engineer — Investigate & Decide
+A student club wants a simple web page that lists its events, is styled in the
+club's colors, and has a button showing how many people have signed up.
+☐  Write everything in
+one file
+☐  Use HTML, CSS, and JavaScript for their
+proper roles
+1 · Observe first. Open one web page you use often and note two things on
+it that change when you click or type. Then, for three features of the club
+page — the list of events, the club's colors and layout, and the live sign-up
+counter — say which technology (HTML, CSS, or JavaScript) does each, and
+why.
+2 · Make it reach everyone. Name one change that would make the page
+easier to read on a phone (responsive design), and one semantic-HTML
+choice that would help a screen reader.
+
+=== PAGE 74 ===
+3-3 — Fundamentals of Frontend Technology
+733-3 — Fundamentals of Frontend Technology
+KEY TERMS
+accessibility — usable by
+people with impairments.
+SEO — being found by search
+engines.
+⭐ REFLECT & CHALLENGE
+3 · Decide. Recommend whether the club should separate HTML, CSS, and
+JavaScript, and give two reasons. In pairs, compare your role assignments
+and agree together on what the sign-up counter needs.
+Give evidence for your answer.
+Stuck? HTML holds the content; CSS styles it; JavaScript makes it react
+and update.
+🌍  In a New Context
+A news site must look good on phones and be found easily by search
+engines. Using what you learned, name one responsive-design choice and
+one semantic-HTML choice it should make, and say what each one
+improves.
+❓  Lesson Question — Answered
+The lesson asked how HTML, CSS, and JavaScript work together and what
+makes a modern frontend strong. A web page is built from three
+technologies with independent roles: HTML defines the structure, CSS
+specifies the appearance, and JavaScript adds behavior and interactivity —
+combined, they create the page. A modern frontend goes further: semantic
+HTML uses meaningful tags so screen readers and search engines
+understand the page (improving accessibility and SEO); responsive design
+adjusts the layout to any screen size, with a mobile-first approach; and
+frameworks such as React, Vue, and Next.js provide ready-made functions
+so developers build efficiently without writing everything from scratch. A
+modern web page is therefore not one technology but a combination —
+structured, styled, interactive, meaningful, adaptable, and efficient to
+build.
+Exercise Reflect: Of structure, style, and
+behavior, which do you notice
+most when a web page is badly
+made, and why? Challenge:
+Name one website you use and
+describe one thing HTML, CSS,
+and JavaScript each do on it.
+
+=== PAGE 75 ===
+3-3 — Fundamentals of Frontend Technology
+743-3 — Fundamentals of Frontend Technology
+⭐  Key takeaway
+Remember:
+HTML structures, CSS
+styles, JavaScript behaves
+— and semantic HTML,
+responsive design, and
+frameworks make a
+modern frontend
+meaningful, adaptable, and
+efficient.
+1   Cover the Point! section with a red plastic sheet and quiz yourself in
+your notebook in numerical order.
+2   Read the following passage and answer each question.
+Web pages are mainly composed of three technologies: ( a ), which defines the
+structure of the page; ( b ), which specifies the appearance; and ( c ), which adds
+behavior and interactivity. The concept of adjusting the layout according to
+different screen sizes such as PCs, smartphones, and tablets is called ( d ).
+1. Fill in the blanks (a)–(d).
+3   Answer the following questions.
+(1)  For each of tasks (a–f), indicate which technology is used to achieve it: A
+HTML, B CSS, C JavaScript.
+a Describing the structure of headings and paragraphs
+b Changing the color and size of text
+c Updating part of the screen when a button is pressed
+d Placing images and links
+e Setting the background color of the entire page
+f Validating the contents entered into a form
+(2)  From the following options (A–D), choose the one that most appropriately
+describes the reason responsive design is needed.
+A To improve the display speed of websites
+B Because websites are accessed from various devices such as PCs,
+smartphones, and tablets
+C To raise rankings in search engines
+D To add behavior to web pages
+
+=== PAGE 76 ===
+4-1 — Types and Characteristics of Media
+754-1 — Types and Characteristics of Media
+Learning Objectives
+Compare the characteristics of different media, and explain the strengths and constraints of
+websites.
+•
+Choose suitable media for a given purpose and audience, and justify the choice.•
+Lesson 4-1
+Types and
+Characteristics
+of Media
+
+=== PAGE 77 ===
+4-1 — Types and Characteristics of Media
+764-1 — Types and Characteristics of Media
+Key Fact:
+Each medium has different
+strengths and constraints;
+choosing the right medium
+— often several combined
+— depends on the purpose
+and the target audience.
+Key Concepts:
+TV / radio / newspaper
+website / SNS
+one-way / two-way
+strengths / constraints
+combining media
+KEY TERMS
+one-way — from sender to
+receiver only.
+two-way — users can
+respond and share.
+Traditional and digital media,
+side by side.
+Before building a website, it helps to ask: why a website at all? TV reaches
+millions at once but only one way. Radio can be received almost anywhere but
+conveys sound only. A newspaper lasts on paper without the Internet. A website
+combines text, images, and video, updates at any time, and can even respond
+through forms — while SNS (social networking services) spreads news the fastest
+of all. Each medium has its own strengths and constraints, so the smart choice
+depends on the message and the audience.
+? Guiding question: What are the strengths and constraints of different
+media, and how do you choose the right one for a purpose and audience?
+📌Point!
+1. Comparison of the Characteristics of Different Media
+(1)  Each medium for conveying information has different characteristics. When
+planning a website, it is important to understand the differences from other
+media.
+Medium Information
+conveyed Characteristics
+TV Video + audio Reaches many people simultaneously. Appeals to sight
+and hearing. One-way, from sender to receiver.
+Radio Audio
+Newspaper Text + images Remains physically as a printed medium. Can be read
+without an Internet connection. One-way.
+Website Text + images +
+video + audio
+Diverse information can be combined. Can be updated
+at any time. Basically one-way, but two-way
+interaction is also possible through forms, comments,
+etc.
+SNS Text + images +
+video + audio
+Highly effective at spreading information rapidly. Users
+can post and share information. Two-way.
+2. Strengths and Constraints of Websites
+(1)  Strengths of websites
+①  Diverse information such as text, images, and video can be combined and
+presented.
+②  Information can be updated at any time.
+③  Can be accessed from almost anywhere in the world.
+④  Two-way interaction with users is possible through forms, comments, etc.
+⑤  Can be used with just a browser; no dedicated app installation is required.
+Appeals only to hearing. Can be received almost
+anywhere and alongside other tasks. One-way.
+
+=== PAGE 78 ===
+4-1 — Types and Characteristics of Media
+774-1 — Types and Characteristics of Media
+A website combines strengths
+one-way media lack.
+💡 PAUSE & THINK
+Which medium would you
+choose to reach the most
+people at once — and which to
+let them respond to you?
+Match the medium to the purpose
+and audience.
+(2)  Constraints of websites
+②  Information does not reach users unless they actively access it.
+③  Display and loading speed may differ depending on the user's device and
+network environment.
+3. Choosing Media According to Purpose
+(1)  When conveying information, it is important to choose the most suitable
+medium according to the purpose and target audience.
+Purpose Examples of
+suitable media Reason
+Inform many people at once TV, SNS ads Wide reach
+Provide detailed
+information
+Website No limit on information volume;
+can be viewed at any time
+Deliver information directly
+to specific people
+Email, direct
+messages
+Can be delivered individually
+Spread by word of mouth SNS Users can voluntarily share and
+spread information
+(2)  In practice, multiple media are often used in combination.
+e.g., A TV commercial directs viewers to a website, and the website encourages
+spreading information through SNS.
+✎ Worked Example
+(1)  Mark each statement (A–D) with ○ if true or × if false.
+A A website can present diverse information such as text, images, and
+video in combination.
+B TV is a medium that allows two-way interaction with users.
+C SNS is a medium highly effective at spreading information rapidly.
+D          A  website normally can  be  viewed  even  without  an  Internet  connection.
+(2)  Match each purpose (a–c) with the most suitable medium from the
+choices below (A–C).
+a Make detailed information viewable at any time
+b Have users spread information by word of mouth
+c Inform many people at once with video
+[Choices]   A TV    B Website    C SNS
+①  Normally requires an Internet connection (unless the page is cached).
+
+=== PAGE 79 ===
+4-1 — Types and Characteristics of Media
+784-1 — Types and Characteristics of Media
+📝 EXAM-STYLE QUESTION
+💡 PAUSE & THINK
+For each situation below, ask
+first: is the goal wide reach, full
+detail, spreading, or a direct
+message?
+(1)
+A
+B
+C
+D
+(2)
+a: A website allows detailed information to be viewed at any time. B
+b: SNS spreads easily by word of mouth. C
+c: TV reaches many people with video. A
+Try
+1   Answer the following questions.
+1. Name two strengths of websites.
+2. Name two constraints of websites.
+2   Answer the following questions.
+(1)  From the following options (A–D), choose the one that is NOT an appropriate
+characteristic of websites.
+A Information can be updated at any time.
+B Information automatically reaches users without them actively accessing it.
+C Text, images, and video can be combined and presented.
+D Two-way interaction is possible through forms and comments.
+(2)  For each situation (a–d), indicate which medium is most suitable: A TV, B
+Website, C SNS, D Email.
+a Make the detailed specifications and usage of a new product available at
+any time.
+b Have users spread information about a new product by word of mouth.
+c Deliver video of a new product to many people at once.
+d Send campaign information directly to existing customers.
+⚙ Think as an Engineer — Investigate & Decide
+A public library in your city wants to tell people about a new free reading
+program. You advise on which media to use.
+☐ Use one medium only ☐ Combine media by purpose
+1 · Collect data. Survey ten classmates or family members: where do they
+actually notice local announcements — a printed poster, Facebook,
+Explain why an organization
+might use a website, TV, and
+SNS together rather than only
+one, to promote a new service.
+[6] Refer to: reach, depth, and
+spreading by word of mouth.
+Correct as a strength of websites. Therefore,  ○. 
+TV is a one-way medium from sender to receiver. Therefore, ×. 
+Correct description of the characteristics of SNS. Therefore,  ○. 
+A website normally requires an Internet connection. Therefore, ×.
+✓ Solution
+
+=== PAGE 80 ===
+4-1 — Types and Characteristics of Media
+794-1 — Types and Characteristics of Media
+KEY TERMS
+website strengths —
+diverse, updatable, global,
+two-way.
+website constraints —
+needs Internet; users must
+seek it.
+WhatsApp, or local radio? Record the results in a table and find the most
+common channel.
+2 · Analyze the audience. For each group — a family with no home
+Internet, a student, and the librarian — note one benefit and one drawback
+of using a website as the library's main channel.
+3 · Decide. Using your survey and your table, recommend a media plan
+(which media, in what roles) and give two reasons. In pairs, compare your
+plans and agree together on the single best medium for reaching families
+who may not be online.
+Give evidence for your answer.
+Stuck? Start from the audience your survey shows is hardest to reach —
+which medium already reaches them where they are?
+🌍   In a New Context
+A hospital wants to inform patients about new opening hours and let them
+ask questions. Name one medium for reaching many people quickly and
+one that allows two-way interaction, and say why each one fits.
+❓   Lesson Question — Answered
+The lesson asked about the strengths and constraints of different media
+and how to choose. Each medium has its own character: TV reaches many
+at once but one-way; radio is sound only but reaches anywhere; a
+newspaper lasts on paper without the Internet; a website combines text,
+images, and video, updates any time, and allows two-way interaction,
+though it needs an Internet connection and only reaches those who seek it;
+and SNS spreads information fastest and is two-way. Because no single
+medium is best for everything, the right choice depends on the purpose
+and the target audience — wide reach, full detail, direct delivery, or word-
+of-mouth — and in practice several media are combined so each does what
+it does best.
+Exercise
+
+=== PAGE 81 ===
+4-1 — Types and Characteristics of Media
+804-1 — Types and Characteristics of Media
+⭐  REFLECT & CHALLENGE
+Reflect: Which medium do you
+personally trust most for
+important news, and why?
+Challenge: Plan the media mix
+for announcing a school event
+on a budget that rules out TV —
+then name one audience your
+mix might still miss, and why.
+⭐  Key takeaway
+Remember:
+No medium is best for
+everything — match the
+medium to the purpose
+and audience, and
+combine media so each
+does what it does best.
+1   Cover the Point! section with a red plastic sheet and quiz yourself in
+your notebook in numerical order.
+2   Read the following passage and answer each question.
+Each medium for conveying information has different characteristics. A website
+has the strengths of being able to present diverse information such as text,
+images, and video, and being updatable at any time. On the other hand, it has
+the constraints that it cannot be viewed without an ( a ) connection, and that
+information does not reach users unless they actively ( b ) it. In actual
+information dissemination, ( c ) media are often combined, such as directing
+viewers from a TV commercial to a website.
+1. Fill in the blanks (a)–(c).
+3   Answer the following questions.
+(1)  From the following options (A–D), choose the one that most appropriately
+describes the characteristics of media.
+A Radio is a medium that conveys information through video and audio.
+B Newspapers are media highly effective at spreading information rapidly.
+C SNS is a medium that allows users to post and share information.
+D TV is a medium that allows two-way interaction with users.
+(2)  From the following options (A–D), choose the one that most appropriately
+describes the choice of media.
+A Information dissemination should always use only one medium.
+B Regardless of purpose or target audience, a website is sufficient.
+C It is important to choose the most suitable medium according to the
+purpose and target audience.
+D With SNS, TV and websites are not needed.
+
+=== PAGE 82 ===
+81
+Learning Objectives
+Explain how personas and wireframes are used to plan a website before designing its
+appearance.
+•
+Apply the four principles of design (contrast, repetition, alignment, proximity) and explain the
+idea of user-centered design.
+•
+Lesson 4-2
+Information
+Design and
+User
+Experience for
+Websites
+4-2 — Information Design and User Experience for Websites
+4-2 — Information Design and User Experience for Websites
+
+=== PAGE 83 ===
+82
+Key Fact:
+Good web design starts
+from the user: a persona
+clarifies who they are, a
+wireframe fixes what goes
+where, the CRAP principles
+make it clear, and user-
+centered design keeps
+every choice on the user's
+side.
+Key Concepts:
+persona
+wireframe
+contrast / repetition
+alignment / proximity
+user-centered design
+KEY TERMS
+persona — a typical user
+pictured as a concrete
+person.
+wireframe — a layout
+blueprint before any color or
+decoration.
+A persona captures one target
+user's goals.
+A wireframe grows into a finished
+design.
+A website that makes sense to its designer can still confuse its visitors. Good
+design therefore begins with the user, not the creator. Designers first picture a
+real user (a persona), sketch where information will go before choosing any
+colors (a wireframe), and follow four simple principles — contrast, repetition,
+alignment, and proximity — so the page is clear at a glance. This user-first
+mindset is called user-centered design.
+? Guiding question: How do designers plan a website around its users,
+and what principles make a page clear and easy to use?
+📌Point!
+1. Persona
+(1)  (Persona)…a typical user image of those who will use the website, set up as
+a concrete person. Details such as age, occupation, purpose, and challenges are
+selected.
+(2)  By setting up a persona, designers can think specifically about “what this
+user needs,” and the direction of the design becomes less likely to drift.
+e.g., Person in their 30s, an office worker, wants to compare products on a
+smartphone during commute, wants to obtain information in a short time.
+2. Wireframe
+(1)  (Wireframe)…a rough blueprint of the layout of a web page. It does not
+include color or design decoration; it is created to determine the placement and
+priority of information.
+(2)  By using a wireframe, “what information to place where” can be considered
+separately from visual design. If decorations such as colors and fonts are decided
+first, discussions tend to drift toward personal preferences in appearance, so
+finalizing the placement and priority of information first makes it easier for
+stakeholders to reach agreement.
+Wireframe Example
+4-2 — Information Design and User Experience for Websites
+4-2 — Information Design and User Experience for Websites
+
+=== PAGE 84 ===
+83
+💡 PAUSE & THINK
+Why decide where information
+goes (wireframe) before
+choosing colors and fonts?
+KEY TERMS
+CRAP — contrast, repetition,
+alignment, proximity.
+user-centered design —
+designing from the user's
+perspective.
+3. The Four Principles of Design (CRAP Principles)
+(1)  Designs that are easy to view and understand follow these four principles.
+Principle Description (purpose) Specific techniques and
+examples
+(Contrast) Make the priority of information clear and
+immediately highlight the most important
+elements
+• Make headings large and
+bold to differentiate them
+from body text
+• Use accent colors for
+important buttons (e.g.,
+purchase)
+(Repetition)      
+     
+   
+Repeat  specific  characteristics  so  that  the
+whole design has  consistency,  allowing  
+users  to navigate  without  getting  lost
+• Standardize the color, size,
+and font of headings on each
+page
+• Match the design of bullet
+point icons
+(Alignment) Align the position of each element to a
+common baseline, giving order to the entire
+screen
+• Align the left edges of text
+and images precisely
+• Make a consistent rule for
+whether to use center or left
+alignment
+(Proximity) Place related information close together so
+that it can be perceived as a single group at a
+glance
+• Group product images,
+names, and prices together
+• Leave appropriate spacing
+(margins) between items
+CRAP Design Principles
+4. User-Centered Design (UCD)
+(1)  (User-Centered Design (UCD))…a design approach that designs websites
+and services from the perspective of the user, rather than the convenience of the
+creator.
+(2)  In UCD, design begins from “what the user needs” and “in what situation it
+will be used.” Setting up a persona is one specific way of practicing UCD; by
+4-2 — Information Design and User Experience for Websites
+4-2 — Information Design and User Experience for Websites
+
+=== PAGE 85 ===
+84
+User-centered design loops
+around the real user.
+💡 PAUSE & THINK
+Which principle groups related
+items together, and which
+makes the most important
+item stand out?
+clarifying the user image, design decisions can be kept consistently aligned with
+the user's perspective.
+(3)  Improving usability for users and accessibility for a wide range of people are
+important goals of UCD.
+✎ Worked Example
+(1)  Mark each statement (A–D) with ○ if true or × if false.
+A A persona is a typical user image of those who will use the website,
+set up as a concrete person.
+B A wireframe is a final-version design that includes color and design
+decoration.
+C “Proximity” in the four principles of design means grouping related
+information close together.
+D User-centered design is a design approach that prioritizes the
+convenience of the creator.
+(2)  Match each description (a–d) with the most appropriate principle of
+design from the choices below (A–D).
+a Highlight important information and visually indicate priority
+b Repeat the same style to give a unified appearance
+c Align the positions of elements to give an organized look
+d Group related information close together
+[Choices]   A Contrast    B Repetition    C Alignment    D Proximity
+✓ Solution
+(1)
+A Correct definition of a persona. Therefore, ○.
+B A wireframe is a blueprint for determining the placement and priority
+of information, without including color or design decoration.
+Therefore, ×.
+C Correct definition of proximity. Therefore, ○.
+D User-centered design is a design approach from the perspective of
+the user. Therefore, ×.
+(2)
+a: Highlighting information is contrast. A
+b: Creating a unified appearance is repetition. B
+c: Aligning positions is alignment. C
+d: Grouping related information is proximity. D
+4-2 — Information Design and User Experience for Websites
+4-2 — Information Design and User Experience for Websites
+
+=== PAGE 86 ===
+85
+📝 EXAM-STYLE QUESTION
+💡 PAUSE & THINK
+For each improvement below,
+ask: does it highlight, unify,
+order, or group?
+Try
+1   Answer the following questions.
+1. What is the term for a typical user image of those who will use the website,
+set up as a concrete person?
+2. What is the term for a blueprint that shows the placement and priority of
+information on a web page?
+3. What are the four principles of design called when expressed by their
+English initials?
+4. What is the term for the design approach that designs websites and services
+from the perspective of the user? Also give its three-letter abbreviation.
+2   Answer the following questions.
+(1)  From the following options (A–D), choose the one that is NOT an appropriate
+piece of information to include in setting up a persona.
+A The user's age and occupation
+B The user's purpose for using the website
+C The performance of the website's server
+D The challenges the user faces
+(2)  For each of design improvements (a–d), indicate which of the four principles
+of design (A–D) it corresponds to.
+a Making headings large and bold to distinguish them from body text
+b Grouping product names, prices, and photos close together
+c Aligning the left edges of text and images
+d Standardizing the font and color of headings across all pages
+A Contrast    B Repetition    C Alignment    D Proximity
+⚙ Think as an Engineer — Investigate & Decide
+A community clinic in your city wants a simple website so patients can find
+opening hours, services, and directions. You lead the design.
+☐ Start by choosing colors and
+fonts
+☐ Start from the user, then
+design
+1 · Collect data. Ask about eight to ten classmates: “If you opened a
+community clinic's website, what is the one thing you would look for first?”
+Record the answers in a tally table.
+2 · Analyze your users. Group the answers into user types. Include at least
+one user who is not a typical smartphone visitor — for example an elderly
+Explain why a designer creates
+a persona and a wireframe
+before choosing colors and
+fonts. [6] Refer to: the user's
+needs and reaching agreement
+with stakeholders.
+4-2 — Information Design and User Experience for Websites
+4-2 — Information Design and User Experience for Websites
+
+=== PAGE 87 ===
+86
+KEY TERMS
+usability — how easily users
+can use the site.
+accessibility — usable by a
+wide range of people.
+patient with low vision, or someone with no home Internet using a library
+computer. Write what each type needs most.
+3 · Decide from your data. Using your tally, decide the priority order of the
+four home-page blocks and justify each position from your data, not your
+taste. Then choose one CRAP principle and say exactly how you would
+apply it for the user type you added. In pairs, compare tables and agree on
+the top block.
+Give evidence for your answer.
+Stuck? Start with your tally: which need appeared most? Put that block
+at the top. Then ask of each block — highlight, unify, order, or group?
+Pick the CRAP principle that fixes the weakest spot for the user you
+added.
+🌍  In a New Context
+A school wants to redesign its cluttered results page so parents can find
+their child's grades quickly. Name the persona you would define, one
+wireframe decision, and one CRAP principle you would apply, and say what
+each one improves.
+❓  Lesson Question — Answered
+The lesson asked how designers plan a website around its users and what
+makes a page clear. Design begins from the user, not the creator. A persona
+pictures a typical user as a concrete person — age, occupation, purpose,
+and challenges — so the team can focus on what that user needs. A
+wireframe then fixes the placement and priority of information before any
+color or decoration, which keeps discussion on structure and helps
+stakeholders agree. To make the page clear, four principles are applied:
+contrast to highlight priority, repetition for consistency, alignment for
+order, and proximity to group related items. All of this is guided by user-
+centered design (UCD), which starts from what the user needs and aims to
+improve usability and accessibility. Good design, therefore, is planned from
+the user inward — who they are, what goes where, and how to make it
+clear.
+4-2 — Information Design and User Experience for Websites
+4-2 — Information Design and User Experience for Websites
+
+=== PAGE 88 ===
+87
+⭐ REFLECT & CHALLENGE
+⭐ Key takeaway
+Remember:
+Persona (who) → wireframe
+(where) → CRAP (make it
+clear) → UCD (decide for
+the user). Design from the
+user inward.
+Exercise
+1   Cover the Point! section with a red plastic sheet and quiz yourself in
+your notebook in numerical order.
+2   Read the following passage and answer each question.
+When designing a website, it is important to view it from the user's perspective.
+First, create a ( a ), in which a typical user image is set up as a concrete person,
+and clarify “what this user needs.” Next, create a ( b ), a blueprint for determining
+the placement and priority of information. In design, to improve viewability and
+clarity, the ( c )—contrast, repetition, alignment, and proximity—should be kept
+in mind.
+1. Fill in the blanks (a)–(c).
+3   Answer the following questions.
+(1)  From the following options (A–D), choose the one that is NOT included in the
+four principles of design (CRAP principles).
+A Contrast
+B Encryption
+C Alignment
+D Proximity
+(2)  From the following options (A–D), choose the one that most appropriately
+describes the concept of user-centered design.
+A Prioritize the design that the developer finds easy to use.
+B Place the highest importance on visual design.
+C Begin the design from what the user needs.
+D Use as many of the latest technologies as possible.
+Reflect: On a website you find
+confusing, which CRAP
+principle seems most broken,
+and why? Challenge: Your
+clinic can fund only one
+accessibility improvement this
+year. For the low-vision or
+no-Internet user you identified,
+choose one CRAP principle to
+apply — and say what you
+would give up (a decoration or
+feature) to make room for it,
+and why that trade-off serves
+the user better.
+4-2 — Information Design and User Experience for Websites
+4-2 — Information Design and User Experience for Websites
+
+=== PAGE 89 ===
+4-3 — Methods for Evaluating Websites
+884-3 — Methods for Evaluating Websites
+Learning Objectives
+Distinguish qualitative from quantitative evaluation, and explain the major indicators used in
+web analytics.
+•
+Explain how heuristic evaluation works, and why combining both approaches gives a clearer
+picture of a website.
+•
+Lesson 4-3
+Methods for
+Evaluating
+Websites
+
+=== PAGE 90 ===
+4-3 — Methods for Evaluating Websites
+894-3 — Methods for Evaluating Websites
+Key Fact:
+Websites are evaluated
+qualitatively (why —
+usability tests, interviews,
+heuristic checks) and
+quantitatively (how much
+— web analytics: PV,
+bounce rate, CVR);
+combining both gives the
+clearest picture.
+Key Concepts:
+qualitative evaluation
+quantitative evaluation
+web analytics
+PV / bounce rate / CVR
+heuristic evaluation
+KEY TERMS
+qualitative evaluation —
+the “why” from users' voices
+and behavior.
+quantitative evaluation —
+the “how much” from
+numerical data.
+Qualitative watches users;
+quantitative reads numbers.
+💡 PAUSE & THINK
+Would counting visits tell you
+why people leave a page?
+Which method would?
+How do you know whether a website works well for its users? You can watch real
+users try it and ask what confuses them — that is qualitative evaluation. Or you
+can count how many people visit, how long they stay, and how many buy — that
+is quantitative evaluation. Numbers tell you how much is happening; users'
+voices tell you why. The best teams use both, together with expert checks, to see
+a site clearly and improve it.
+? Guiding question: How can a website be evaluated, and why is it useful
+to combine numbers with users' voices?
+📌Point!
+1. Qualitative and Quantitative Evaluation
+Evaluation
+method Description (purpose) Specific techniques
+Qualitative
+evaluation
+Explore in depth the “reasons” behind
+users' psychology and behavior, and
+evaluate qualitative aspects that cannot
+be expressed in numbers.
+• Usability testing: observe
+actual operations to identify
+points that are hard to use.
+• Interviews: hear users' direct
+voices to understand their
+needs and dissatisfactions.
+Quantitative
+evaluation
+Use numerical data such as access
+counts and time, and evaluate the
+current state objectively and statistically.
+• Web analytics: analyze
+metrics such as PV count and
+time spent.
+• A/B testing: compare two
+options to verify which leads to
+better results.
+(2)  Qualitative evaluation is suited to exploring the cause of “why is it hard to
+use,” while quantitative evaluation is suited to grasping the overall trend of “how
+much is it being used.” By combining both, more accurate evaluation is possible.
+2. Major Indicators in Web Analytics
+(1)  (Web analytics)…a technique for analyzing how a website is accessed using
+numerical values; it is the central method of quantitative evaluation for
+websites. The following indicators are commonly used.
+(1)  Methods for evaluation generally fall into two main categories: (qualitative
+evaluation) and (quantitative evaluation). These evaluation methods are used
+in a wide range of applications, and the same concepts apply to website
+evaluation.
+
+=== PAGE 91 ===
+4-3 — Methods for Evaluating Websites
+904-3 — Methods for Evaluating Websites
+Analytics tracks visits, bounce,
+and conversions.
+KEY TERMS
+PV — total page views.
+bounce rate — the share of
+visits that end after only one
+page.
+CVR — the share of visits that
+reach the target action.
+Heuristic review checks a site
+against usability rules.
+💡 PAUSE & THINK
+Match the question to the
+method: “how many?” vs
+“why?”
+Indicator Meaning Description
+(PV (Page
+View))
+The total number of times a
+page has been viewed.
+A basic indicator that measures how
+widely the site is seen and how much
+exposure it gets.
+(Bounce rate) An indicator of whether the page
+content matched the user's
+expectations and whether further
+actions were prompted.
+(Conversion
+rate (CVR))
+A very important indicator that
+measures how much the site
+contributes to business results (profits).
+3. Heuristic Evaluation
+(1)  (Heuristic evaluation)…a method in which experts identify problems in a
+website's UI (user interface) based on rules of thumb (heuristics). It is a form of
+qualitative evaluation, used along with usability testing and other methods to
+investigate the causes of usability problems.
+(2)  Major evaluation perspectives
+①  Consistency…whether the design and operations are unified across the
+site.
+②  Error prevention…whether the design makes it hard for users to make
+mistakes.
+③  Visibility of system status…whether system status is clearly indicated to
+users (e.g., processing indicators, input error messages).
+✎ Worked Example
+(1)  Mark each statement (A–D) with ○ if true or × if false.
+A Qualitative evaluation is a method that uses numerical data to
+evaluate quantitatively.
+B PV (Page View) is an indicator showing the number of times a page
+has been viewed.
+C
+D Heuristic evaluation is a method in which experts identify UI
+problems based on rules of thumb.
+(2)  Match each description (a–c) with the most appropriate indicator from
+the choices below (A–C).
+a The number of times a page has been viewed
+b
+page
+c
+[Choices]   A PV (Page View)    B Bounce rate    C Conversion rate
+✓ Solution
+The proportion of visits that
+ended after viewing only the
+first page.
+The proportion of visits that
+achieved a target action
+(purchase, registration, etc.).
+The bounce rate is an indicator showing the proportion of visits that
+achieved a target action.
+The proportion of visits that ended after viewing only the first
+The proportion of visits that achieved a target action
+
+=== PAGE 92 ===
+4-3 — Methods for Evaluating Websites
+914-3 — Methods for Evaluating Websites
+📝 EXAM-STYLE QUESTION
+💡 PAUSE & THINK
+Which of the four above rely on
+numbers, and which on
+people's words?
+(1)
+A Qualitative evaluation observes user voices and behavior to evaluate
+qualitatively. Using numerical data is quantitative evaluation.
+Therefore, ×.
+B Correct definition of PV. Therefore, ○.
+C
+achievement is the conversion rate. Therefore, ×.
+D Correct definition of heuristic evaluation. Therefore, ○.
+(2)
+a: The number of page views is PV. A
+b: The proportion who left after only the first page is the bounce rate. B
+c: The proportion who achieved a target is the conversion rate. C
+Try
+1   Answer the following questions.
+1. What is the term for the method that evaluates qualitatively by observing
+user voices and behavior?
+2. What is the term for the method that evaluates quantitatively using
+numerical data?
+3. What is the two-letter abbreviation for the indicator showing the number of
+times a page has been viewed?
+4. What is the term for the method in which experts identify UI problems based
+on rules of thumb?
+2   Answer the following questions.
+(1)  From the following options (A–D), choose all terms that are part of
+quantitative evaluation methods.
+A Usability testing
+B Web analytics
+C Interviews
+D A/B testing
+Explain why a website team
+should use both qualitative
+and quantitative evaluation
+rather than only one. [6] Refer
+to: what numbers show and
+what users' voices show.
+The bounce rate is the proportion of visits that ended after viewing only
+the first page. The proportion of target action
+
+=== PAGE 93 ===
+4-3 — Methods for Evaluating Websites
+924-3 — Methods for Evaluating Websites
+(2)  From the following options (A–D), choose the one that most appropriately
+describes the conversion rate.
+A The proportion of times a page has been viewed
+B
+C
+member registration, etc.)
+D The proportion of viewed pages relative to the total number of pages on
+the site
+⚙ Think as an Engineer — Investigate & Decide
+A small online bookstore in your city wants to know whether its website
+really works for customers. You plan how to evaluate it.
+☐ Rely on the owner's
+opinion
+☐ Use both quantitative and qualitative
+methods
+1 · Collect data. Ask five classmates who have used an online bookstore to
+visit any online shop and, for each, record one number you could measure
+(e.g., how many pages they viewed) and one thing they said was confusing.
+Put the results in a small table.
+2 · Analyze the signals. Suppose the bookstore's PV is high but its
+conversion rate is very low. What might that mean — and which method
+(quantitative or qualitative) would tell you why? Then consider one
+customer the data may hide — for example, someone shopping only on a
+small phone screen, or a first-time visitor — and note one difficulty they
+might face that a raw PV count would never show.
+3 · Decide. Recommend which two evaluation methods the bookstore
+should use first and give two reasons drawn from the table you built in step
+1. In pairs, compare your choices and agree together on the single most
+useful indicator to track.
+Give evidence for your answer.
+Stuck? Start from the gap in the data: a high PV with a low CVR means
+people arrive but don't act — so the numbers only point to where to
+look. Pick the qualitative method (a short usability test or an interview)
+that answers the exact question your numbers raised.
+The proportion of visits that ended after viewing only the first page
+The proportion of visits that achieved a target action (product purchase,
+
+=== PAGE 94 ===
+4-3 — Methods for Evaluating Websites
+934-3 — Methods for Evaluating Websites
+KEY TERMS
+web analytics — numbers on
+how a site is accessed.
+heuristic evaluation —
+experts check the UI by rules
+of thumb.
+⭐ REFLECT & CHALLENGE
+Reflect: If you could see only
+one metric for a site you use,
+would you choose PV, bounce
+rate, or CVR — and why?
+Challenge: A page has a high
+bounce rate. Design a short
+qualitative test that would
+reveal the cause, and say what
+you would change first.
+🌍  In a New Context
+A school's new website gets many visits, but most people leave after the
+first page. Name one quantitative indicator that reveals this problem, one
+qualitative method to find its cause, and one likely fix.
+❓  Lesson Question — Answered
+The lesson asked how a website can be evaluated and why numbers and
+users' voices are combined. Evaluation falls into two kinds. Quantitative
+evaluation uses numerical data — through web analytics indicators such as
+PV (how many views), bounce rate (how many leave after the first page),
+and CVR (how many reach a target action) — to show how much a site is
+used. Qualitative evaluation explores the reasons behind users' behavior
+through usability testing, interviews, and heuristic evaluation, in which
+experts check the UI against rules of thumb. Numbers reveal what is
+happening but not why; users' voices and expert checks reveal the causes.
+Combining both — the “how much” and the “why” — gives the most
+accurate evaluation and the clearest path to improvement.
+Exercise
+1   Cover the Point! section with a red plastic sheet and quiz yourself in
+your notebook in numerical order.
+2   Read the following passage and answer each question.
+1. Fill in the blanks (a)–(e).
+3   Answer the following questions.
+(1)  For each of evaluation methods (a–c), indicate which it falls under: A
+Qualitative evaluation, B Quantitative evaluation.
+a Have users actually explore the website and observe its usability
+b Tally the access counts and page views of the website
+c Interview users to hear their impressions and improvement requests
+Methods for evaluating a website include ( a ) evaluation, which observes user
+voices and behavior, and ( b ) evaluation, which analyzes using numerical data.
+Typical indicators used in ( b ) evaluation are ( c ), which shows the number of
+times a page has been viewed; ( d ), which shows the proportion of visits that
+ended after viewing only the first page; and ( e ), which shows the proportion of
+visits that achieved a target action.
+
+=== PAGE 95 ===
+4-3 — Methods for Evaluating Websites
+944-3 — Methods for Evaluating Websites
+⭐  Key takeaway
+Remember:
+Quantitative (PV, bounce
+rate, CVR) shows how
+much; qualitative (usability
+tests, interviews, heuristic
+checks) shows why.
+Combine both to evaluate a
+site clearly.
+(2)  From the following options (A–D), choose the one that most appropriately
+describes heuristic evaluation.
+A A method in which users explore the site and usability is observed
+B A method in which numerical data is tallied and site usage is analyzed
+C A method in which experts identify UI problems based on rules of thumb
+D A method in which two patterns are prepared and compared with data to
+see which is more effective
+
+=== PAGE 96 ===
+4-4 — The Iterative Improvement Process for Websites
+954-4 — The Iterative Improvement Process for Websites
+Learning Objectives
+Explain the PDCA cycle and the steps of design thinking as ways of improving a website.•
+Describe how A/B testing compares two options using real data, and explain why improvement
+is repeated in cycles.
+•
+Lesson 4-4
+The Iterative
+Improvement
+Process for
+Websites
+
+=== PAGE 97 ===
+4-4 — The Iterative Improvement Process for Websites
+964-4 — The Iterative Improvement Process for Websites
+Key Fact:
+Websites improve through
+repeated cycles: PDCA
+(Plan, Do, Check, Act)
+drives continuous
+improvement; design
+thinking finds problems
+from the user's side; A/B
+testing compares two
+options with real data.
+Key Concepts:
+PDCA cycle
+Plan / Do / Check / Act
+design thinking
+A/B testing
+KEY TERMS
+PDCA cycle —
+Plan → Do → Check → Act,
+repeated.
+continuous improvement —
+getting better a little at a
+time.
+Each Plan-Do-Check-Act cycle
+improves the site.
+A website is never truly finished. The first version is only a best guess, and a team
+learns what truly works only after real people use it. That is why good teams
+improve in loops: they plan a change, make it, measure the result, and act on
+what they learn — the PDCA cycle. They also design from the user's side (design
+thinking) and test real choices with data (A/B testing). Small, repeated
+improvements are better than waiting for one perfect launch.
+? Guiding question: Why is improving a website a repeated loop rather
+than a one-time job, and how do teams decide what to change?
+📌Point!
+1. The PDCA Cycle
+(1)  (PDCA cycle)…a method that continuously advances improvement by
+repeating the following four steps. It is used widely in fields such as business
+improvement and quality management, not just websites.
+Step Description Example in website improvement
+Plan Set goals and create a plan for
+improvement
+Set the goal “reduce bounce rate by 10%” and
+plan a redesign of the homepage
+Do Execute according to the plan Change the design of the homepage
+Check Measure results and evaluate the
+level of goal achievement
+Measure the bounce rate after the change and
+evaluate whether the goal (10% reduction) was
+achieved
+Act Based on the evaluation,
+consider the next improvement
+measures
+If the effect is sufficient, continue; if not,
+consider next steps such as revising headings or
+image placement
+
+=== PAGE 98 ===
+4-4 — The Iterative Improvement Process for Websites
+974-4 — The Iterative Improvement Process for Websites
+💡  PAUSE & THINK
+Which PDCA step tells you
+whether your change actually
+worked?
+Design thinking: ideate,
+prototype, test, repeat.
+A/B testing compares two
+versions with real users.
+The PDCA cycle as a continuous improvement loop
+(2)  The important point of the PDCA cycle is not to aim for completion in one
+round, but to gradually improve through repetition.
+2. Design Thinking
+(1)  (Design thinking)…a way of thinking that leads to discovering problems and
+generating solutions from the perspective of the user. It proceeds through the
+following five steps.
+Step Description
+①  Empathize Put yourself in the user's position and understand their challenges and
+needs
+②  Define Based on the information gleaned from empathy, clarify the problem to be
+solved
+③  Ideate Generate many ideas to solve the problem
+④  Prototype Quickly create a prototype based on the ideas
+⑤  Test Have users try the prototype and obtain feedback from them
+(2)  Based on test results, one may go back to the empathize or define stage.
+Improvement proceeds back and forth, not one-way.
+3. A/B Testing
+(1)  (A/B testing)…a method in which two patterns (option A and option B) are
+prepared, each is shown to actual users, and data is examined to determine
+which is more effective.
+e.g., Compare option A with a red purchase button and option B with a blue
+purchase button to see which gets clicked more.
+(2)  Key points of A/B testing
+
+=== PAGE 99 ===
+4-4 — The Iterative Improvement Process for Websites
+984-4 — The Iterative Improvement Process for Websites
+KEY TERMS
+design thinking — solve
+from the user's view in five
+steps.
+A/B testing — compare two
+options with real data.
+💡  PAUSE & THINK
+In A/B testing, why change only
+one element at a time?
+①   Change only one element at a time (if multiple elements are changed, it is
+unclear which change produced the effect).
+②   Make decisions only after collecting a sufficient amount of data.
+✎  Worked Example
+(1)  Mark each statement (A–D) with ○  if true or × if false.
+A The PDCA cycle is a method that repeats the four steps
+Plan → Do → Check → Act.
+B Design thinking is a way of thinking that solves problems from the
+developer's perspective.
+C In A/B testing, it is important to change only one element at a time.
+D The PDCA cycle is a method that is complete after one execution.
+(2)  For each of a–e, indicate which of the five steps of design thinking (A–E)
+it corresponds to.
+a Understand the user's challenges and needs.
+b Clarify the problem to be solved.
+c Generate many ideas.
+d Quickly create a prototype.
+e Have users try the prototype.
+A Empathize    B Define    C Ideate    D Prototype    E Test
+✓  Solution
+(1)
+A Correct definition of the PDCA cycle. Therefore, ○ .
+B Design thinking is a way of thinking from the user's perspective.
+Therefore, ×.
+C It is important to limit the changed element to one in A/B testing.
+Therefore, ○ .
+D The PDCA cycle is meaningful when repeated. Therefore, ×.
+(2)
+a: Understanding the user is empathize. A
+b: Clarifying the problem is define. B
+c: Generating ideas is ideate. C
+d: Creating a prototype is prototype. D
+e: Having users try is test. E
+
+=== PAGE 100 ===
+4-4 — The Iterative Improvement Process for Websites
+994-4 — The Iterative Improvement Process for Websites
+📝 EXAM-STYLE QUESTION
+💡 PAUSE & THINK
+Match each option above to a
+PDCA step: which is Plan, Do,
+Check, Act?
+Try
+1   Answer the following questions.
+1. What is the term for the improvement method that repeats the four steps
+Plan→Do→Check→Act?
+2. What is the term for the way of thinking for discovering problems and
+generating solutions from the perspective of the user?
+3. What is the term for the method in which two patterns are prepared and
+compared with data to see which is more effective?
+4. Name the five steps of design thinking in order.
+2   Answer the following questions.
+(1)  From the following options (A–D), choose the one that corresponds to
+“Check” in the PDCA cycle.
+A Set the goal of reducing the bounce rate by 10%.
+B Change the design of the homepage.
+C Measure the bounce rate after the change.
+D Consider another improvement measure.
+(2)  From the following options (A–D), choose the one that is NOT an appropriate
+way of conducting A/B testing.
+A Prepare two patterns and compare them.
+B Change multiple elements at the same time.
+C Make decisions only after collecting a sufficient amount of data.
+D Show each pattern to actual users.
+⚙ Think as an Engineer — Investigate & Decide
+Your school club runs a web page for its yearly event, but few students sign
+up through it. You lead one round of improvement using the PDCA cycle.
+☐ Redesign everything at
+once
+☐ Improve in one measured PDCA
+loop
+1 · Collect data (Check first). Decide one number you could measure now
+— for example, how many of ten classmates find the “sign up” link within
+five seconds. Record the result as your starting point.
+2 · Plan one change. From the users you watched, name the single biggest
+obstacle (for a specific group, such as a student opening the page on a
+small phone screen) and plan one change to fix it. State the goal as a
+number (e.g., “8 of 10 find it in five seconds”).
+Explain why a website team
+improves in repeated PDCA
+cycles instead of trying to build
+a perfect site in one go. [6]
+Refer to: measuring results
+and acting on them.
+
+=== PAGE 101 ===
+4-4 — The Iterative Improvement Process for Websites
+1004-4 — The Iterative Improvement Process for Websites
+KEY TERMS
+prototype — a quick,
+testable draft.
+iterate — repeat the loop to
+improve.
+3 · Do, Check, Act — and decide. Describe how you would make the
+change, measure again, and decide the next step. Choose one element to
+settle with an A/B test, and say why you change only that one element. In
+pairs, compare plans and agree on the single change to try first.
+Give evidence for your answer.
+Stuck? Start from your measured number (Check), pick the one
+obstacle it exposes, plan a single fix (Plan), then loop — do not change
+everything at once.
+🌍   In a New Context
+An online shop finds that its “buy” button is rarely clicked. Describe how
+you would use one A/B test (changing only one element) and one PDCA
+loop to improve it, and say which number would tell you it worked.
+❓   Lesson Question — Answered
+The lesson asked why improving a website is a repeated loop and how
+teams decide what to change. A first version is only a guess, so teams
+improve continuously rather than once. The PDCA cycle repeats four steps
+— Plan (set a goal and plan a change), Do (make it), Check (measure the
+result), and Act (decide the next step) — and its point is not completion in
+one round but gradual improvement through repetition. To decide what to
+change, design thinking works from the user's side through five steps
+(Empathize, Define, Ideate, Prototype, Test), moving back and forth rather
+than one-way, while A/B testing compares two options with real data,
+changing only one element at a time and deciding only after enough data.
+Together they make improvement small, measured, and repeatable.
+Exercise
+
+=== PAGE 102 ===
+4-4 — The Iterative Improvement Process for Websites
+1014-4 — The Iterative Improvement Process for Websites
+⭐ REFLECT & CHALLENGE
+Reflect: Think of a website you
+use often. Which one small
+change do you think would
+help most, and how would you
+measure whether it worked?
+Challenge: You may run only
+one A/B test this month on the
+event page. Choose the single
+element to test, predict which
+option will win and why, and
+say what number would prove
+you right or wrong.
+⭐ Key takeaway
+Remember:
+Improve in loops: PDCA
+(Plan, Do, Check, Act) for
+continuous improvement,
+design thinking
+(Empathize, Define, Ideate,
+Prototype, Test) from the
+user's side, and A/B testing
+to settle one change with
+data.
+1   Cover the Point! section with a red plastic sheet and quiz yourself in
+your notebook in numerical order.
+2   Read the following passage and answer each question.
+1. Fill in the blanks (a)–(f).
+3   Answer the following questions.
+(1)  From the following options (A–D), choose the one that most appropriately
+describes design thinking.
+A A method that uses numerical data to analyze website usage.
+B A way of thinking that leads to discovering problems and generating
+solutions from the perspective of the user.
+C A method in which experts identify UI problems based on rules of thumb.
+D A method of creating a blueprint that roughly shows the layout of a web
+page.
+(2)  From the following options (A–D), choose the one that most appropriately
+describes the concept of the website improvement process.
+A If a perfect website is built initially, no improvement is needed.
+B It is enough to improve only the visual design.
+C It is important to gradually improve by repeating evaluation and
+improvement.
+D All improvements should be done with A/B testing alone.
+As a method for improving websites, there is the ( a ) cycle. It repeats four steps: (
+b ), in which goals are set; ( c ), in which the plan is executed; ( d ), in which
+results are measured; and ( e ), in which improvement measures are considered.
+Also, ( f ), in which two patterns are prepared and compared with data to see
+which is more effective, is a useful method.
+
+=== PAGE 103 ===
+Editorial Team 
+ 
+ 
+ 
+The  Central Administration for Curriculum  Development 
+General Supervision 
+Dr. Gebriel Anwer Hemieda 
+Head of the Central Administration for Curriculum Development 
+All Rights Reserved ©Ministry of Education and Technical Education - 2026 / 2027 
+No part of this publication may be reproduced, stored in a retrieval system, or transmitted 
+in any form or by any means-electronic, photocopying, recording, or otherwise-without 
+prior written permission of the Ministry of Education and Technical Education. 
+Project Lead & Editorial Director
+Masaki Iisaka
+Editors & Writers
+Biichi Nakajima
+Hiromi Fujii
+Reviewers
+Prof. Mohamed Sayed Farag.
+Prof. Eman Serag El-Din Bakr.
+Dr. Abeer Hamed Ahmed.
+Dr. Taher Abdel Hamid El-Adly
+Dr. Manal Ziada Abdel Fadil.
+
+=== PAGE 104 ===
+CACD
+ﺞﻫﺎﻨﻤﻟا ﺮﻳﻮ ﻄ ﺘﻟ ﺔ ﻳﺰﻛ ﺮﻤ ﻟا ةرادlamalefhamzabelowisolatedarabiا
+Central Administration Of  Curriculum Development
+class name
+EDUCATION SPRINGS NEW LIFE
+
