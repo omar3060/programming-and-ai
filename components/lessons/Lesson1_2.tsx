@@ -9,20 +9,20 @@ import { RuleBasedVsMLSimulator } from '@/components/simulators/RuleBasedVsMLSim
 
 const ringDetails = {
   ai: {
-    title: { ar: "1. الذكاء الاصطناعي (Artificial Intelligence - AI)", en: "1. Artificial Intelligence (AI)" },
-    desc: { ar: "المظلة الفكرية والهندسية الكبرى التي تضم كل النظم والتقنيات التي تمكن الآلات والحواسيب من محاكاة السلوك البشري الذكي مثل التفكير، التخطيط، التعلم، واستنتاج القرارات. تشمل النظم القائمة على القواعد التقاليدية وتطوراتها.", en: "The overarching domain encompassing all systems and techniques enabling machines to simulate cognitive human intelligence." }
+    title: { ar: "1. الذكاء الاصطناعي (AI)", en: "1. Artificial Intelligence (AI)" },
+    desc: { ar: "مصطلح عام للتقنيات التي تعيد إنتاج أو تؤدي السلوك البشري الذكي (التعلم، الاستنتاج، التقييم، إلخ) على الحاسوب. (مثل: التعرف على الكلام، التعرف على الصور، الترجمة).", en: "A general term for technologies that reproduce or perform intelligent human behavior (learning, reasoning, judgment, etc.) on a computer. (e.g., speech recognition, image recognition, translation)." }
   },
   ml: {
-    title: { ar: "2. التعلّم الآلي (Machine Learning - ML)", en: "2. Machine Learning (ML)" },
-    desc: { ar: "فرع رئيسي داخل الذكاء الاصطناعي لا يعتمد على البرمجة الصريحة للقواعد يدوياً، بل يعتمد على خوارزميات رياضية وإحصائية تتعلم الأنماط والروابط من البيانات السابقة تلقائياً لتستنتج التوقعات المستقبلية.", en: "A major AI subset relying on mathematical and statistical algorithms to extract predictive patterns directly from historical data without hardcoded rules." }
+    title: { ar: "2. التعلم الآلي (Machine Learning)", en: "2. Machine Learning" },
+    desc: { ar: "إحدى تقنيات التعلم التي تجعل الذكاء الاصطناعي يعمل. يتعلم الأنماط من البيانات لإجراء التوقعات والأحكام. (مثل: تصفية البريد العشوائي، توصيات المنتجات).", en: "One of the learning technologies that makes AI work. It learns patterns from data to make predictions and judgments. (e.g., spam filters, product recommendations)." }
   },
   dl: {
-    title: { ar: "3. التعلم العميق (Deep Learning - DL)", en: "3. Deep Learning (DL)" },
-    desc: { ar: "أسلوب متخصص داخل التعلّم الآلي يستخدم شبكات عصبية اصطناعية عميقة (Deep ANNs) تتألف من عشرات أو مئات الطبقات المخفية المعقدة، مما يمنحها قدرة فائقة على تحليل البيانات الضخمة غير المهيكلة كالصوت والصور والفيديو.", en: "A highly specialized ML approach utilizing deep artificial neural networks with multiple hidden layers to process high-dimensional unstructured data." }
+    title: { ar: "3. التعلم العميق (Deep Learning)", en: "3. Deep Learning" },
+    desc: { ar: "تقنية متقدمة داخل التعلم الآلي تستخدم الشبكات العصبية. تتعلم الأنماط المعقدة باستخدام بيانات واسعة النطاق. (مثل: تحليل الصور للقيادة الذاتية، تركيب الكلام).", en: "An advanced technology within machine learning that uses neural networks. It learns complex patterns using large-scale data. (e.g., image analysis for autonomous driving, speech synthesis)." }
   },
   genai: {
-    title: { ar: "4. الذكاء الاصطناعي التوليدي (Generative AI - GenAI)", en: "4. Generative AI (GenAI)" },
-    desc: { ar: "أحدث طفرة داخل التعلم العميق، لا يقتصر على تحليل البيانات وتصنيفها، بل يبتكر ويبتكر محتوى جديداً بالكامل لم يكن موجوداً من قبل (مثل كتابة المقالات، توليد الصور الفنية، وتأليف الأكواد والبرامج) بناءً على النماذج اللغوية الضخمة (LLMs).", en: "The modern frontier of Deep Learning capable of synthesizing entirely novel text, imagery, audio, and code via Large Language Models (LLMs)." }
+    title: { ar: "4. الذكاء الاصطناعي التوليدي (Generative AI)", en: "4. Generative AI" },
+    desc: { ar: "تقنية ذكاء اصطناعي تستخدم التعلم العميق لتوليد بيانات جديدة (نصوص، صور، صوت، برامج، إلخ). (مثل: ChatGPT، الذكاء الاصطناعي لتوليد الصور).", en: "AI technology that uses deep learning to generate new data (text, images, audio, programs, etc.). (e.g., ChatGPT, image generation AIs)." }
   }
 };
 
@@ -244,20 +244,19 @@ export function Lesson1_2() {
               <span className="lang-en">Official Learning Objectives:</span>
             </strong>
             <ul className="space-y-1 text-sub">
-              <li>• <span className="lang-ar">التفريق الدقيق بين مفاهيم: AI و ML و DL و GenAI من حيث النطاق والآلية.</span><span className="lang-en">Differentiate AI, ML, DL, and GenAI across scopes and mechanisms.</span></li>
-              <li>• <span className="lang-ar">شرح تشريح الشبكة العصبية (طبقة الإدخال، المخفية، الإخراج، الأوزان والانحياز).</span><span className="lang-en">Explain neural network anatomy (Input, Hidden, Output, Weights, and Bias).</span></li>
-              <li>• <span className="lang-ar">تحليل ظاهرة الهلوسة في الذكاء التوليدي وتطبيق بروتوكول التحقق الصارم.</span><span className="lang-en">Analyze generative hallucination and apply cross-checking verification protocols.</span></li>
+              <li>• <span className="lang-ar">اشرح ما هو الذكاء الاصطناعي.</span><span className="lang-en">Explain what AI is.</span></li>
+              <li>• <span className="lang-ar">اشرح موقع الذكاء الاصطناعي التوليدي ضمن تقنيات الذكاء الاصطناعي.</span><span className="lang-en">Explain how generative AI is positioned within AI technologies.</span></li>
             </ul>
           </div>
           <div className="p-4 rounded-2xl theme-subpanel border space-y-1.5">
             <strong className="text-amber-400 block font-bold flex items-center gap-1.5">
               <i className="fa-solid fa-circle-question"></i>
-              <span className="lang-ar">السؤال التوجيهي للدرس (كتاب الوزارة ص 11):</span>
-              <span className="lang-en">Guiding Question (Textbook p. 11):</span>
+              <span className="lang-ar">السؤال التوجيهي للدرس (كتاب الوزارة ص 12):</span>
+              <span className="lang-en">Guiding Question (Textbook p. 12):</span>
             </strong>
             <p className="text-slate-200 font-medium leading-relaxed">
-              <span className="lang-ar">"ما العلاقة بين الذكاء الاصطناعي، والتعلم الآلي، والتعلم العميق، والذكاء التوليدي؟ وكيف تعمل الشبكة العصبية في تحويل البيانات إلى قرارات؟"</span>
-              <span className="lang-en">"How do AI, ML, DL, and GenAI relate conceptually, and how does a neural network convert inputs into decisions?"</span>
+              <span className="lang-ar">"ما هو الذكاء الاصطناعي، وكيف ترتبط تقنيات التعلم الآلي، والتعلم العميق، والذكاء الاصطناعي التوليدي ببعضها البعض؟"</span>
+              <span className="lang-en">"What is AI, and how are machine learning, deep learning, and generative AI related?"</span>
             </p>
           </div>
         </div>

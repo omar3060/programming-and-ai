@@ -10,24 +10,24 @@ import { EdgeVsCloudInteractiveLab } from '@/components/simulators/EdgeVsCloudIn
 
 const erasData = [
   {
-    title: { ar: "العصر الأول (1940s-1960s): الحواسيب الأولى الضخمة", en: "Era 1 (1940s-1960s): Mainframes & First Electronic Computers" },
-    desc: { ar: "استخدمت الأجهزة الصمامات المفرغة (Vacuum Tubes) وكانت تشغل غرفاً كاملة وتزن أطناناً (مثل حاسوب ENIAC). واقتصر استخدامها على الأبحاث العسكرية والتعداد السكاني والحكومات. لم تكن مفاهيم الاستخدام الفردي أو البرامج التجارية موجودة بعد.", en: "Utilized vacuum tubes, occupying entire rooms and weighing tons (e.g. ENIAC). Restricted to military research and censuses with zero consumer accessibility." }
+    title: { ar: "1940s-60s: ظهور الحاسوب (ENIAC، الصمامات المفرغة)", en: "1940s-60s: Birth of the computer (ENIAC, vacuum tubes)" },
+    desc: { ar: "استُخدم بشكل رئيسي للحسابات العسكرية والعلمية.", en: "Mainly used for military and scientific computation." }
   },
   {
-    title: { ar: "العصر الثاني (1970s-1980s): الحواسب الشخصية (PC)", en: "Era 2 (1970s-1980s): Personal Computers (PC)" },
-    desc: { ar: "بفضل الترانزستور والدوائر المتكاملة (Integrated Circuits)، تقلصت الحواسيب لتوضع على المكاتب. وظهرت شركات مثل Apple و IBM وانتشرت أنظمة مثل MS-DOS، مما أتاح المعالجة المستقلة للشركات الصغيرة والمنازل.", en: "Integrated circuits enabled desktop form factors. Apple and IBM democratized computing for small businesses and households." }
+    title: { ar: "1970s-80s: انتشار الحواسيب الشخصية (PCs)", en: "1970s-80s: Spread of personal computers (PCs)" },
+    desc: { ar: "بداية استخدام الحواسيب الشخصية.", en: "Beginning of personal computer use." }
   },
   {
-    title: { ar: "العصر الثالث (1990s): تسويق الإنترنت والشبكة العالمية (Web)", en: "Era 3 (1990s): Internet Commercialization & World Wide Web" },
-    desc: { ar: "ربط الحواسيب ببعضها عبر بروتوكولات TCP/IP ومتصفحات الويب الأولى (مثل Netscape). تحول الحاسوب من مجرد أداة حسابية مغلقة إلى نافذة تواصل عالمية وظهرت أولى خدمات البريد والتجارة الإلكترونية.", en: "TCP/IP and web browsers interconnected computers globally, spawning email and early e-commerce." }
+    title: { ar: "1990s: تسويق الإنترنت تجارياً؛ الشبكة العالمية (الويب)", en: "1990s: Commercialization of the Internet; the Web" },
+    desc: { ar: "عولمة المعلومات؛ انتشار البريد الإلكتروني.", en: "Globalization of information; spread of email." }
   },
   {
-    title: { ar: "العصر الرابع (2000s): الهواتف الذكية والتصغير الفائق", en: "Era 4 (2000s): Smartphones & Ubiquitous Mobile Computing" },
-    desc: { ar: "انتقال القدرة الحسابية من المكتب إلى جيب الإنسان بظهور iPhone وشبكات الهاتف المحمول (3G/4G). أصبحت التكنولوجيا ملازمة للإنسان على مدار 24 ساعة وظهور منصات التواصل والتطبيقات الرقمية.", en: "Smartphones and mobile broadband put gigahertz computing into human pockets 24/7." }
+    title: { ar: "2000s: صعود الهواتف الذكية (مثل iPhone)", en: "2000s: Rise of smartphones (iPhone, etc.)" },
+    desc: { ar: "انتشار هائل لإنترنت الهاتف المحمول.", en: "Explosive spread of mobile Internet." }
   },
   {
-    title: { ar: "العصر الخامس (2010s فصاعداً): الحوسبة السحابية والذكاء الاصطناعي", en: "Era 5 (2010s Onward): Cloud Computing & AI Era" },
-    desc: { ar: "الاعتماد على مراكز البيانات العملاقة لمعالجة البيانات الضخمة (Big Data) وتدريب شبكات التعلم العميق والذكاء التوليدي، مع انتشاره في كافة القطاعات الطبية والصناعية والتجارية.", en: "Massive data centers processing Big Data and training deep learning / generative models deployed everywhere." }
+    title: { ar: "2010s فصاعداً: انتشار الحوسبة السحابية", en: "2010s onward: Spread of cloud computing" },
+    desc: { ar: "تحليل البيانات ضخمة الحجم والذكاء الاصطناعي؛ انتشار \"تكنولوجيا المعلومات كخدمة\" (IT as a service).", en: "Large-scale data analysis and AI; \"IT as a service\" becomes widespread." }
   }
 ];
 
@@ -153,9 +153,9 @@ export function Lesson1_1() {
               <span className="lang-en">Official Learning Objectives:</span>
             </strong>
             <ul className="space-y-1 text-sub">
-              <li>• <span className="lang-ar">شرح المراحل الرئيسية لتطور تكنولوجيا المعلومات وتأثير كل مرحلة على المجتمع.</span><span className="lang-en">Explain the major IT development eras and their societal impact.</span></li>
-              <li>• <span className="lang-ar">تقديم أمثلة للتغيرات الاجتماعية والتقنيات الناشئة وشرح خصائصها بدقة.</span><span className="lang-en">Provide concrete examples of societal changes and emerging tech with their characteristics.</span></li>
-              <li>• <span className="lang-ar">تحليل أثر التقنية على فئات المجتمع المختلفة وتبرير القرارات بناءً على أدلة هندسية.</span><span className="lang-en">Analyze tech impacts on diverse societal groups and justify decisions based on evidence.</span></li>
+              <li>• <span className="lang-ar">شرح المراحل الرئيسية في تطور تكنولوجيا المعلومات وأثرها في المجتمع.</span><span className="lang-en">Explain the major stages in the development of information technology and their impact on society.</span></li>
+              <li>• <span className="lang-ar">اذكر أمثلة على التغيرات الاجتماعية والتقنيات الناشئة التي أحدثتها تكنولوجيا المعلومات، واشرح خصائصها.</span><span className="lang-en">Give examples of social changes and emerging technologies brought about by information technology, and explain their characteristics.</span></li>
+              <li>• <span className="lang-ar">حلل أثر إحدى تقنيات المعلومات في فئات مختلفة من المجتمع، وبرر قراراً مستنداً إلى الأدلة.</span><span className="lang-en">Analyze the impact of an information technology on different groups in society, and justify a decision based on evidence.</span></li>
             </ul>
           </div>
           <div className="p-4 rounded-2xl theme-subpanel border space-y-1.5">
@@ -165,8 +165,8 @@ export function Lesson1_1() {
               <span className="lang-en">Guiding Question (Textbook p. 4):</span>
             </strong>
             <p className="text-slate-200 font-medium leading-relaxed">
-              <span className="lang-ar">"كيف تطورت تكنولوجيا المعلومات عبر مراحلها الرئيسية، وكيف غيرت كل مرحلة أسلوب حياة المجتمع وعمله وتواصله؟"</span>
-              <span className="lang-en">"How has information technology developed through its major stages, and how has each stage transformed societal lifestyles, work, and communication?"</span>
+              <span className="lang-ar">"كيف تطورت تكنولوجيا المعلومات عبر مراحلها الرئيسية، وكيف غيرت كل مرحلة المجتمع؟"</span>
+              <span className="lang-en">"How has information technology developed through its major stages, and how has each stage changed society?"</span>
             </p>
           </div>
         </div>
@@ -309,28 +309,28 @@ export function Lesson1_1() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 text-xs">
           <div className="p-4 rounded-2xl theme-subpanel border hover:border-brand-500 transition space-y-2">
             <span className="text-2xl block">💬</span>
-            <strong className="text-white block"><span className="lang-ar">1. التواصل الاجتماعي (SNS)</span><span className="lang-en">1. Social Networks (SNS)</span></strong>
-            <p className="text-sub leading-relaxed"><span className="lang-ar">منصات تتيح الاتصال ومشاركة المحتوى عالمياً فورياً وتشكيل الرأي العام.</span><span className="lang-en">Instant worldwide communication, content distribution, and communities.</span></p>
+            <strong className="text-white block"><span className="lang-ar">1. شبكات التواصل الاجتماعي (SNS)</span><span className="lang-en">1. SNS (Social Networking Service)</span></strong>
+            <p className="text-sub leading-relaxed"><span className="lang-ar">خدمات تتيح للمستخدمين الاتصال ببعضهم البعض ونشر وتشارك المعلومات. وهي فعالة للغاية في نشر المعلومات بسرعة.</span><span className="lang-en">Services that allow users to connect with each other and post and share information. They are highly effective at spreading information rapidly.</span></p>
           </div>
           <div className="p-4 rounded-2xl theme-subpanel border hover:border-brand-500 transition space-y-2">
             <span className="text-2xl block">🛍️</span>
-            <strong className="text-white block"><span className="lang-ar">2. التجارة الإلكترونية</span><span className="lang-en">2. E-Commerce (EC)</span></strong>
-            <p className="text-sub leading-relaxed"><span className="lang-ar">إلغاء الحدود الجغرافية ومواعيد العمل التقليدية؛ تسوق ودفع وتوصيل 24/7.</span><span className="lang-en">Overcoming physical boundaries and store hours with 24/7 trading.</span></p>
+            <strong className="text-white block"><span className="lang-ar">2. التجارة الإلكترونية (EC)</span><span className="lang-en">2. E-commerce (EC)</span></strong>
+            <p className="text-sub leading-relaxed"><span className="lang-ar">شراء وبيع البضائع والخدمات عبر الإنترنت. (مثل المتاجر عبر الإنترنت مثل Amazon و eBay).</span><span className="lang-en">Buying and selling goods and services through the Internet. (e.g., online shops such as Amazon and eBay).</span></p>
           </div>
           <div className="p-4 rounded-2xl theme-subpanel border hover:border-brand-500 transition space-y-2">
             <span className="text-2xl block">🏡</span>
-            <strong className="text-white block"><span className="lang-ar">3. العمل عن بعد</span><span className="lang-en">3. Teleworking / Remote</span></strong>
-            <p className="text-sub leading-relaxed"><span className="lang-ar">أداء المهام الوظيفية من المنزل أو أي موقع، مما خفف الزحام المروري وفتح فرصاً دولية.</span><span className="lang-en">Executing professional duties anywhere, reducing traffic and boosting flexibility.</span></p>
+            <strong className="text-white block"><span className="lang-ar">3. العمل عن بعد</span><span className="lang-en">3. Remote work</span></strong>
+            <p className="text-sub leading-relaxed"><span className="lang-ar">نمط عمل يتم فيه أداء العمل من المنزل أو مواقع بعيدة أخرى باستخدام الإنترنت.</span><span className="lang-en">A working style in which work is performed from home or other remote locations using the Internet.</span></p>
           </div>
           <div className="p-4 rounded-2xl theme-subpanel border hover:border-brand-500 transition space-y-2">
             <span className="text-2xl block">🎓</span>
-            <strong className="text-white block"><span className="lang-ar">4. التعلم عبر الإنترنت</span><span className="lang-en">4. Online Learning</span></strong>
-            <p className="text-sub leading-relaxed"><span className="lang-ar">إتاحة المحاضرات والدورات للجميع، واستمرار التعليم في أوقات الأزمات كالجائحة.</span><span className="lang-en">Democratizing global education and sustaining learning during crises.</span></p>
+            <strong className="text-white block"><span className="lang-ar">4. التعليم عبر الإنترنت</span><span className="lang-en">4. Online learning</span></strong>
+            <p className="text-sub leading-relaxed"><span className="lang-ar">نمط تعلم يتم فيه تقديم الدروس والمواد الدراسية باستخدام الإنترنت.</span><span className="lang-en">A learning style in which classes and study materials are delivered using the Internet.</span></p>
           </div>
           <div className="p-4 rounded-2xl theme-subpanel border hover:border-brand-500 transition space-y-2">
             <span className="text-2xl block">💳</span>
-            <strong className="text-white block"><span className="lang-ar">5. الدفع غير النقدي</span><span className="lang-en">5. Cashless Payment</span></strong>
-            <p className="text-sub leading-relaxed"><span className="lang-ar">المحافظ الرقمية (فودافون كاش)، والبطاقات، ورموز QR، وتقنية NFC الآمنة.</span><span className="lang-en">Mobile wallets, bank cards, QR codes, and contactless NFC transactions.</span></p>
+            <strong className="text-white block"><span className="lang-ar">5. الدفع غير النقدي</span><span className="lang-en">5. Cashless payment</span></strong>
+            <p className="text-sub leading-relaxed"><span className="lang-ar">نظام لإجراء المدفوعات باستخدام النقود الإلكترونية ورموز QR وغيرها دون استخدام النقد الورقي.</span><span className="lang-en">A system for making payments using electronic money, QR codes, etc., without using cash.</span></p>
           </div>
         </div>
       </div>

@@ -101,9 +101,9 @@ export function Lesson1_3() {
               <span className="lang-en">Official Learning Objectives:</span>
             </strong>
             <ul className="space-y-1 text-sub">
-              <li>• <span className="lang-ar">تقديم أمثلة واقعية لتطبيقات الـ AI في الحياة اليومية والقطاعات الصناعية.</span><span className="lang-en">Provide concrete everyday and industrial AI deployments.</span></li>
-              <li>• <span className="lang-ar">توضيح ما يبرع فيه الذكاء الاصطناعي وما يتطلب الحذر والإشراف البشري.</span><span className="lang-en">Differentiate AI competencies from areas requiring human supervision.</span></li>
-              <li>• <span className="lang-ar">شرح دراسة حالة تشخيص الأشعة السينية وأسباب عدم الاستغناء عن الطبيب.</span><span className="lang-en">Explain the X-ray diagnosis case study and why doctors remain indispensable.</span></li>
+              <li>• <span className="lang-ar">إعطاء أمثلة على كيفية استخدام الذكاء الاصطناعي في الحياة اليومية ومختلف الصناعات.</span><span className="lang-en">Give examples of how AI is used in daily life and various industries.</span></li>
+              <li>• <span className="lang-ar">شرح ما يبرع فيه الذكاء الاصطناعي وما يتطلب الحذر عند استخدامه.</span><span className="lang-en">Explain what AI is good at and what requires caution when using AI.</span></li>
+              <li>• <span className="lang-ar">قيم استخداماً للذكاء الاصطناعي في سياق محدد، وبرر الحاجة إلى الإشراف البشري عندما يكون أثر الخطأ أو القرار مرتفعاً.</span><span className="lang-en">Evaluate an AI application in a specific context, and justify the need for human oversight when error impact or decision sensitivity is high.</span></li>
             </ul>
           </div>
           <div className="p-4 rounded-2xl theme-subpanel border space-y-1.5">
@@ -113,8 +113,8 @@ export function Lesson1_3() {
               <span className="lang-en">Guiding Question (Textbook p. 18):</span>
             </strong>
             <p className="text-slate-200 font-medium leading-relaxed">
-              <span className="lang-ar">"أين يُستخدم الذكاء الاصطناعي في حياتنا ومصانعنا، وما الذي يبرع فيه بدقة فائقة وما الذي يتطلب حذراً شديداً وتدخلاً بشرياً؟"</span>
-              <span className="lang-en">"Where is AI deployed across daily life and industry, what are its strengths, and where is human intervention non-negotiable?"</span>
+              <span className="lang-ar">"أين يُستخدم الذكاء الاصطناعي في الحياة اليومية والصناعة، وما الذي يبرع فيه، وما الذي يتطلب الحذر؟"</span>
+              <span className="lang-en">"Where is AI used in daily life and industry, what is AI good at, and what needs caution?"</span>
             </p>
           </div>
         </div>
@@ -140,23 +140,23 @@ export function Lesson1_3() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-xs">
             <div className="p-4 rounded-2xl theme-subpanel border space-y-1.5">
               <span className="text-2xl block">🎯</span>
-              <strong className="text-white block text-sm"><span className="lang-ar">أنظمة التوصية</span><span className="lang-en">Recommenders</span></strong>
-              <p className="text-sub leading-relaxed"><span className="lang-ar">تتنبأ بتفضيلات المستخدم بناءً على سجل مشاهداته وتصفحه (يوتيوب، نتفلكس، أمازون).</span><span className="lang-en">Predicts user preferences from interaction telemetry (YouTube, Netflix).</span></p>
+              <strong className="text-white block text-sm"><span className="lang-ar">أنظمة التوصية</span><span className="lang-en">Recommendation systems</span></strong>
+              <p className="text-sub leading-relaxed"><span className="lang-ar">التنبؤ بالتفضيلات من بيانات السلوك السابق وعرض التوصيات (مثل: يوتيوب، أمازون، سبوتيفاي وغيرها).</span><span className="lang-en">Predict preferences from past behavior data and display recommendations (e.g., YouTube, Amazon, Spotify, etc.).</span></p>
             </div>
             <div className="p-4 rounded-2xl theme-subpanel border space-y-1.5">
               <span className="text-2xl block">🎙️</span>
-              <strong className="text-white block text-sm"><span className="lang-ar">المساعدات الصوتية</span><span className="lang-en">Voice Assistants</span></strong>
-              <p className="text-sub leading-relaxed"><span className="lang-ar">معالجة اللغة الطبيعية والتعرف على الصوت لتنفيذ الأوامر (سيري، أليكسا، جوجل).</span><span className="lang-en">Speech recognition and NLP command execution (Siri, Alexa, Google).</span></p>
+              <strong className="text-white block text-sm"><span className="lang-ar">المساعدات الصوتية</span><span className="lang-en">Voice assistants</span></strong>
+              <p className="text-sub leading-relaxed"><span className="lang-ar">التعرف على الصوت، وفهم الأوامر، وتنفيذها (مثل: سيري Siri، مساعد جوجل وغيرها).</span><span className="lang-en">Recognize a voice, understand commands, and execute them (e.g., Siri, Google Assistant, etc.).</span></p>
             </div>
             <div className="p-4 rounded-2xl theme-subpanel border space-y-1.5">
               <span className="text-2xl block">🌐</span>
-              <strong className="text-white block text-sm"><span className="lang-ar">الترجمة الآلية الفورية</span><span className="lang-en">Machine Translation</span></strong>
-              <p className="text-sub leading-relaxed"><span className="lang-ar">كسر حواجز اللغات وترجمة النصوص والمحادثات المباشرة بدقة سياقية عالية.</span><span className="lang-en">Context-aware translation bridging international language divides.</span></p>
+              <strong className="text-white block text-sm"><span className="lang-ar">الترجمة الآلية</span><span className="lang-en">Machine translation</span></strong>
+              <p className="text-sub leading-relaxed"><span className="lang-ar">ترجمة النص تلقائياً إلى لغات مختلفة (مثل: ترجمة جوجل، DeepL وغيرها).</span><span className="lang-en">Automatically translate text into different languages (e.g., Google Translate, DeepL, etc.).</span></p>
             </div>
             <div className="p-4 rounded-2xl theme-subpanel border space-y-1.5">
               <span className="text-2xl block">👤</span>
-              <strong className="text-white block text-sm"><span className="lang-ar">التعرف على الوجه</span><span className="lang-en">Face Recognition</span></strong>
-              <p className="text-sub leading-relaxed"><span className="lang-ar">كشف معالم الوجه الرقمية لفتح الهواتف، وبوابات المطارات، وتأمين المنشآت.</span><span className="lang-en">Facial biometric landmarking for phone unlocking and passport control.</span></p>
+              <strong className="text-white block text-sm"><span className="lang-ar">التعرف على الوجه</span><span className="lang-en">Face recognition</span></strong>
+              <p className="text-sub leading-relaxed"><span className="lang-ar">الكشف عن وجوه الأشخاص في الصور والتعرف عليها تلقائياً (مثل: فتح الهاتف الذكي وغيرها).</span><span className="lang-en">Automatically detect and identify human faces in photographs (e.g., Smartphone unlocking, etc.).</span></p>
             </div>
           </div>
         </div>
@@ -172,22 +172,22 @@ export function Lesson1_3() {
             <div className="p-4 rounded-2xl bg-cyan-950/20 border border-cyan-500/30 space-y-1.5">
               <span className="text-2xl block">🩺</span>
               <strong className="text-cyan-300 block text-sm"><span className="lang-ar">الرعاية الصحية</span><span className="lang-en">Healthcare</span></strong>
-              <p className="text-sub leading-relaxed"><span className="lang-ar">فحص صور الأشعة السينية (X-rays) والمقطعية، وتحديد الأورام والكسور، وتسريع اكتشاف الأدوية.</span><span className="lang-en">Screening X-rays/CT scans and accelerating pharmacological drug discovery.</span></p>
+              <p className="text-sub leading-relaxed"><span className="lang-ar">الذكاء الاصطناعي للتشخيص بالصور (الكشف عن الأمراض من صور الأشعة السينية والتصوير المقطعي)، ودعم اكتشاف الأدوية.</span><span className="lang-en">Image-diagnosis AI (detecting diseases from X-ray and CT images), drug-discovery support.</span></p>
             </div>
             <div className="p-4 rounded-2xl bg-emerald-950/20 border border-emerald-500/30 space-y-1.5">
               <span className="text-2xl block">🌾</span>
-              <strong className="text-emerald-300 block text-sm"><span className="lang-ar">الزراعة الذكية</span><span className="lang-en">Smart Agriculture</span></strong>
-              <p className="text-sub leading-relaxed"><span className="lang-ar">طائرات الدرون وكاميرات التحليل الطيفي لرصد آفات المحاصيل وتحديد الري والتسميد بدقة.</span><span className="lang-en">Drone multispectral cameras monitoring crop diseases and optimizing fertilization.</span></p>
+              <strong className="text-emerald-300 block text-sm"><span className="lang-ar">الزراعة</span><span className="lang-en">Agriculture</span></strong>
+              <p className="text-sub leading-relaxed"><span className="lang-ar">التنبؤ بموعد الحصاد، والكشف عن الآفات والأمراض.</span><span className="lang-en">Predicting harvest timing, detecting pests and diseases.</span></p>
             </div>
             <div className="p-4 rounded-2xl bg-purple-950/20 border border-purple-500/30 space-y-1.5">
               <span className="text-2xl block">🏭</span>
-              <strong className="text-purple-300 block text-sm"><span className="lang-ar">التصنيع الذكي</span><span className="lang-en">Manufacturing</span></strong>
-              <p className="text-sub leading-relaxed"><span className="lang-ar">الفحص البصري التلقائي لعيوب المنتجات، والصيانة التنبؤية (Predictive Maintenance) للآلات.</span><span className="lang-en">Automated optical defect inspection and predictive maintenance of machines.</span></p>
+              <strong className="text-purple-300 block text-sm"><span className="lang-ar">التصنيع</span><span className="lang-en">Manufacturing</span></strong>
+              <p className="text-sub leading-relaxed"><span className="lang-ar">أتمتة فحص جودة المنتج، والصيانة التنبؤية.</span><span className="lang-en">Automation of product quality inspection, predictive maintenance.</span></p>
             </div>
             <div className="p-4 rounded-2xl bg-amber-950/20 border border-amber-500/30 space-y-1.5">
               <span className="text-2xl block">🚚</span>
-              <strong className="text-amber-300 block text-sm"><span className="lang-ar">الخدمات اللوجستية</span><span className="lang-en">Logistics & Supply</span></strong>
-              <p className="text-sub leading-relaxed"><span className="lang-ar">خوارزميات تحسين مسارات شاحنات التوزيع والتنبؤ بالطلب وإدارة مستودعات البضائع.</span><span className="lang-en">Delivery routing optimization, demand forecasting, and warehouse robotics.</span></p>
+              <strong className="text-amber-300 block text-sm"><span className="lang-ar">الخدمات اللوجستية</span><span className="lang-en">Logistics</span></strong>
+              <p className="text-sub leading-relaxed"><span className="lang-ar">تحسين مسارات التوصيل.</span><span className="lang-en">Optimization of delivery routes.</span></p>
             </div>
           </div>
         </div>
@@ -198,26 +198,30 @@ export function Lesson1_3() {
         <div className="p-5 rounded-3xl theme-panel border border-emerald-500/30 space-y-3">
           <strong className="text-emerald-400 text-sm flex items-center gap-2 font-bold">
             <i className="fa-solid fa-circle-check"></i>
-            <span className="lang-ar">ما يبرع فيه الذكاء الاصطناعي (النقاط القوية):</span>
-            <span className="lang-en">Where AI Excels (Core Competencies):</span>
+            <span className="lang-ar">ما يبرع فيه الذكاء الاصطناعي:</span>
+            <span className="lang-en">What AI is good at:</span>
           </strong>
           <ul className="space-y-2 text-sub leading-relaxed">
-            <li>• <strong>إيجاد وتصنيف الأنماط المعقدة:</strong> تحليل ملايين الصور الطبية أو السجلات البنكية في ثوانٍ لاستخراج العلاقات الخفية.</li>
-            <li>• <strong>التنبؤ الاحتمالي السريع:</strong> التنبؤ بحركة الأسواق والطقس وأعطال الماكينات استناداً لسجلات تاريخية ضخمة.</li>
-            <li>• <strong>المهام الروتينية المتكررة:</strong> أداء المهام المتكررة بدقة وثبات تام على مدار 24 ساعة دون إرهاق أو ملل أو تشتت.</li>
+            <li>• <span className="lang-ar">إيجاد وتصنيف الأنماط في البيانات المعقدة مثل الصور والنصوص.</span><span className="lang-en">Finding and classifying patterns in complex data such as images and text.</span></li>
+            <li>• <span className="lang-ar">التعرف على الصور والصوت والنصوص وتوليدها.</span><span className="lang-en">Recognition and generation of images, audio, and text.</span></li>
+            <li>• <span className="lang-ar">الاستنتاج الاحتمالي والتنبؤ بناءً على البيانات.</span><span className="lang-en">Probabilistic reasoning and prediction based on data.</span></li>
           </ul>
         </div>
 
         <div className="p-5 rounded-3xl theme-panel border border-rose-500/30 space-y-3">
           <strong className="text-rose-400 text-sm flex items-center gap-2 font-bold">
             <i className="fa-solid fa-triangle-exclamation"></i>
-            <span className="lang-ar">ما يتطلب الحذر الشديد والرقابة البشرية (ص 21):</span>
-            <span className="lang-en">Where AI Requires Extreme Caution:</span>
+            <span className="lang-ar">ما يتطلب الحذر عند استخدام الذكاء الاصطناعي:</span>
+            <span className="lang-en">What requires caution when using AI:</span>
           </strong>
-          <ul className="space-y-2 text-sub leading-relaxed">
-            <li>• <strong>القرارات عالية الأثر (High-Stakes):</strong> كالتشخيص الطبي أو الأحكام القضائية حيث يرتبط الخطأ بحياة إنسان أو حريته.</li>
-            <li>• <strong>مشكلة الصندوق الأسود (Black-Box):</strong> عدم قدرة الشبكات العميقة على تبرير أسباب وصولها لقرارها بطريقة مفهومة للبشر.</li>
-            <li>• <strong>الافتقار للحدس والسياق الإنساني:</strong> عجز الـ AI عن فهم المشاعر، الأخلاق، والظروف الاستثنائية التي يدركها الإنسان.</li>
+          <ul className="space-y-1.5 text-sub leading-relaxed">
+            <li>• <span className="lang-ar">الأحكام الأخلاقية (قد تؤدي إلى التمييز أو التحيز).</span><span className="lang-en">Ethical judgments (may lead to discrimination or prejudice).</span></li>
+            <li>• <span className="lang-ar">الأحكام التي تتضمن معلومات شخصية أو خصوصية.</span><span className="lang-en">Judgments involving personal information or privacy.</span></li>
+            <li>• <span className="lang-ar">اتخاذ القرار النهائي (من المسؤول عن النتيجة).</span><span className="lang-en">Final decision-making (who is responsible for the result).</span></li>
+            <li>• <span className="lang-ar">دقة الأحكام عندما تكون بيانات التدريب متحيزة.</span><span className="lang-en">Accuracy of judgments when training data is biased.</span></li>
+            <li>• <span className="lang-ar">توليد محتوى يختلف عن الحقائق (الهلوسة).</span><span className="lang-en">Generating content that differs from the facts (hallucination).</span></li>
+            <li>• <span className="lang-ar">قضايا الحقوق عند استخدام الأعمال المحمية بحقوق الطبع والنشر كبيانات تدريب.</span><span className="lang-en">Issues of rights when using copyrighted works as training data.</span></li>
+            <li>• <span className="lang-ar">فقدان الوضوح حول كيفية التوصل إلى الحكم (مشكلة الصندوق الأسود).</span><span className="lang-en">Loss of clarity about how a judgment was made (the black-box problem).</span></li>
           </ul>
         </div>
       </div>
