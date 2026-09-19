@@ -243,7 +243,39 @@ export function Lesson1_4() {
           <span className="text-xs text-sub font-mono">ص 26 - ص 30</span>
         </div>
 
-        {/* 1. Pause & Think (1) */}
+        {/* 1. Explore (استكشف في ثنائيات ص 25) */}
+        <div onClick={() => handleToggleCard('explore-1-4')} className="p-5 rounded-2xl theme-subpanel border border-rose-500/30 space-y-3 cursor-pointer select-none group hover:border-rose-500 transition">
+          <div className="flex items-center justify-between">
+            <span className="px-3 py-1 rounded-full bg-rose-500/20 text-rose-400 text-xs font-bold flex items-center gap-1.5">
+              <i className="fa-solid fa-people-arrows"></i>
+              <span className="lang-ar">✎ استكشف في ثنائيات (كتاب الوزارة ص 25)</span>
+              <span className="lang-en">✎ Explore in Pairs (Textbook p. 25)</span>
+            </span>
+            <button onClick={(e) => { e.stopPropagation(); handleToggleCard('explore-1-4'); }} className="text-xs font-bold text-rose-400 hover:underline flex items-center gap-1 cursor-pointer">
+              <span className="lang-ar">{expandedCards['explore-1-4'] ? 'إخفاء الإجابة' : 'عرض التوقع والتحليل المنهجي'}</span>
+              <span className="lang-en">{expandedCards['explore-1-4'] ? 'Hide Answer' : 'Reveal Analysis'}</span>
+              <i className={`fa-solid fa-chevron-down text-[10px] transition-transform ${expandedCards['explore-1-4'] ? 'rotate-180' : ''}`}></i>
+            </button>
+          </div>
+          <p className="text-xs font-bold text-slate-200">
+            <span className="lang-ar">"مع زميل، انظرا إلى هذا الموقف: ذكاء اصطناعي للتعرف على الوجه أكثر عرضة لإساءة التعرف على أشخاص من بعض المجموعات العرقية مقارنة بغيرها. توقعا من قد يتضرر من هذا وكيف؟ واذكرا سبباً."</span>
+            <span className="lang-en">"Consider this scenario: A facial recognition AI is more prone to misidentifying individuals from certain ethnic groups compared to others. Predict who might be harmed and how, stating one reason."</span>
+          </p>
+          {expandedCards['explore-1-4'] && (
+            <div onClick={(e) => e.stopPropagation()} className="p-4 rounded-xl bg-slate-900 border border-rose-500/40 text-xs leading-relaxed text-slate-300 space-y-2 animate-fadeIn cursor-auto select-text">
+              <strong className="text-rose-400 block font-bold">
+                <span className="lang-ar">💡 التحليل والسبب المنهجي (كتاب الوزارة ص 25):</span>
+                <span className="lang-en">💡 Methodological Analysis & Reason (Textbook p. 25):</span>
+              </strong>
+              <p>
+                <span className="lang-ar"><strong>من يتضرر:</strong> أفراد المجموعات الأقل تمثيلاً في بيانات التدريب والأبرياء الذين قد يتعرضون للتوقيف الخاطئ في المعابر الأمنية أو المطارات. <br /><strong>السبب:</strong> لأن بيانات تدريب النظام كانت تحتوي على عدد غير كافٍ من صور تلك الفئات العرقية (بيانات تدريب غير ممثلة)، مما خفض دقة النظام معهم وأدى إلى نتائج تمييزية غير عادلة.</span>
+                <span className="lang-en"><strong>Who is harmed:</strong> Underrepresented demographic groups and innocent individuals facing false security flagging. <br /><strong>Reason:</strong> Imbalanced training datasets lacking sufficient representation of those facial features, reducing model accuracy.</span>
+              </p>
+            </div>
+          )}
+        </div>
+
+        {/* 2. Pause & Think (1) - ص 26 */}
         <div onClick={() => handleToggleCard('pause-think-1-4-1')} className="p-5 rounded-2xl theme-subpanel border border-brand-500/30 space-y-3 cursor-pointer select-none group hover:border-brand-500 transition">
           <div className="flex items-center justify-between">
             <span className="px-3 py-1 rounded-full bg-brand-500/20 text-brand-400 text-xs font-bold flex items-center gap-1.5">
@@ -258,24 +290,24 @@ export function Lesson1_4() {
             </button>
           </div>
           <p className="text-xs font-bold text-slate-200">
-            <span className="lang-ar">"إذا تسببت سيارة ذاتية القيادة في حادث سير أودى بحياة شخص، فمن يتحمل المسؤولية قانونياً وأخلاقياً وفق مبدأ المساءلة (Accountability): مالك السيارة، أم الشركة المصنعة للسيارة، أم المبرمج الذي كتب الخوارزمية؟"</span>
-            <span className="lang-en">"Who bears legal and moral responsibility in a fatal autonomous car collision: owner, automaker, or algorithm programmer?"</span>
+            <span className="lang-ar">"عند استخدام تقنية التعرف على الوجه في الأماكن العامة، قد تتحسن السلامة والراحة، لكن تنشأ أيضاً مخاوف بشأن الخصوصية. اشرح كيف ينبغي الموازنة بين الراحة والسلامة وحماية الخصوصية، واذكر أي مبدأ أساسي من مبادئ أخلاقيات الذكاء الاصطناعي يرتبط ارتباطاً وثيقاً برأيك؟"</span>
+            <span className="lang-en">"When using facial recognition in public spaces, safety and convenience improve, but privacy concerns arise. How should convenience, safety, and privacy be balanced, and which core AI ethics principle connects most closely to your view?"</span>
           </p>
           {expandedCards['pause-think-1-4-1'] && (
             <div onClick={(e) => e.stopPropagation()} className="p-4 rounded-xl bg-slate-900 border border-brand-500/40 text-xs leading-relaxed text-slate-300 space-y-2 animate-fadeIn cursor-auto select-text">
               <strong className="text-brand-400 block font-bold">
-                <span className="lang-ar">💡 التحليل القانوني والأخلاقي المعتمد (م/ عمر محمود):</span>
-                <span className="lang-en">💡 Legal & Ethical Engineering Analysis:</span>
+                <span className="lang-ar">💡 الموازنة والمبدأ الأخلاقي المرتبط (كتاب الوزارة ص 26):</span>
+                <span className="lang-en">💡 Balance & Related Core Principle (Textbook p. 26):</span>
               </strong>
               <p>
-                <span className="lang-ar">تُوزع المسؤولية بناءً على <strong>مستوى التحكم والسبب الجذري</strong>؛ فإذا كان الحادث ناتجاً عن خلل برمجي في التعرف على العوائق أثناء التشغيل التلقائي المعتمد، تقع المسؤولية القانونية على <strong>الشركة المصنعة والمطورة للنظام</strong> (مسؤولية عيوب المنتج Product Liability). أما إذا كان المالك قد عطل أنظمة الأمان أو تجاهل تنبيهات استلام المقود يدوياً، تقع المسؤولية على <strong>السائق المالك</strong>. ولا يُحاسب المبرمج كفرد بشكل شخصي ما دام التزم بالمعايير المهنية للمؤسسة.</span>
-                <span className="lang-en">Liability depends on control hierarchy: Manufacturer bears product liability for algorithmic perception defects, while the driver/owner answers if safety overrides or manual intervention warnings were ignored.</span>
+                <span className="lang-ar"><strong>كيفية الموازنة:</strong> باقتصار استخدام التقنية على المراقبة الضرورية للسلامة العامة في الأماكن عالية الخطورة فقط، مع تشفير البيانات وتحديد مدة الاحتفاظ بها وعدم استخدامها في التتبع الشخصي التجاري دون موافقة. <br /><strong>المبدأ الأخلاقي المرتبط:</strong> مبدأ <strong>"حماية الخصوصية (Privacy Protection)"</strong> ومبدأ <strong>"الشفافية (Transparency)"</strong> بإعلام المواطنين بوجود الكاميرات وآلية التعامل مع بياناتهم.</span>
+                <span className="lang-en"><strong>Balancing Approach:</strong> Restricting facial recognition strictly to high-risk safety zones, encrypting biometric features, limiting data retention, and prohibiting commercial tracking. <br /><strong>Core Principles:</strong> <strong>Privacy Protection</strong> and <strong>Transparency</strong>.</span>
               </p>
             </div>
           )}
         </div>
 
-        {/* 2. Pause & Think (2) */}
+        {/* 3. Pause & Think (2) - ص 28 */}
         <div onClick={() => handleToggleCard('pause-think-1-4-2')} className="p-5 rounded-2xl theme-subpanel border border-purple-500/30 space-y-3 cursor-pointer select-none group hover:border-purple-500 transition">
           <div className="flex items-center justify-between">
             <span className="px-3 py-1 rounded-full bg-purple-500/20 text-purple-400 text-xs font-bold flex items-center gap-1.5">
@@ -290,98 +322,95 @@ export function Lesson1_4() {
             </button>
           </div>
           <p className="text-xs font-bold text-slate-200">
-            <span className="lang-ar">"كيف يمكن لنظام ذكاء اصطناعي لتقييم الائتمان ومنح القروض في البنوك أن يكون غير عادل ومتحيزاً ضد فئات معينة، حتى لو تم حذف بيانات العرق والنوع من قاعدة البيانات عمداً؟"</span>
-            <span className="lang-en">"How can bank credit scoring AI exhibit bias even when gender and race variables are deliberately omitted?"</span>
+            <span className="lang-ar">"إذا لم يستطع أحد شرح سبب رفض الذكاء الاصطناعي لطلب توظيف شخص ما، فهل هذا عادل؟ أي مبدأ من مبادئ أخلاقيات الذكاء الاصطناعي مفقود؟"</span>
+            <span className="lang-en">"If no one can explain why AI rejected someone's job application, is that fair? Which AI ethics principle is missing?"</span>
           </p>
           {expandedCards['pause-think-1-4-2'] && (
             <div onClick={(e) => e.stopPropagation()} className="p-4 rounded-xl bg-slate-900 border border-purple-500/40 text-xs leading-relaxed text-slate-300 space-y-2 animate-fadeIn cursor-auto select-text">
               <strong className="text-purple-300 block font-bold">
-                <span className="lang-ar">💡 ظاهرة المتغيرات البديلة (Proxy Variables):</span>
-                <span className="lang-en">💡 Proxy Variables Phenomenon:</span>
+                <span className="lang-ar">💡 الشرح والتحليل المنهجي (كتاب الوزارة ص 28):</span>
+                <span className="lang-en">💡 Methodological Analysis (Textbook p. 28):</span>
               </strong>
               <p>
-                <span className="lang-ar">حتى لو تم حذف خانة "النوع" أو "العرق"، يستطيع الذكاء الاصطناعي استنتاجها بشكل غير مباشر من <strong>متغيرات بديلة (Proxy Variables)</strong> مرتبطة بها إحصائياً، مثل: <em>الرمز البريدي للحي السكني، أو مسمى الوظيفة، أو نوع المشتريات السابقة</em>. إذا كانت أحياء سكنية معينة تقطنها فئات أقل دخلاً تاريخياً، فإن النموذج يرفض إقراضهم تلقائياً بناءً على محل سكنهم، مكرراً التمييز غير العادل!</span>
-                <span className="lang-en">Even if protected attributes are removed, AI infers them via correlated "Proxy Variables" such as ZIP codes, job titles, or spending histories, perpetuating historical socio-economic discrimination.</span>
+                <span className="lang-ar"><strong>هل هذا عادل؟</strong> لا، ليس عادلاً؛ لأن عدم القدرة على التفسير تمنع المتقدم من معرفة سبب الرفض أو الاعتراض عليه أو تعديل نقاط ضعفه، وتخفي أي تحيز خوارزمي محتمل داخل النظام (مشكلة الصندوق الأسود). <br /><strong>المبدأ المفقود:</strong> مبدأ <strong>"الشفافية (Transparency)"</strong> ومفهوم <strong>"الذكاء الاصطناعي القابل للتفسير (XAI)"</strong>، بالإضافة لمبدأ <strong>"العدالة (Fairness)"</strong>.</span>
+                <span className="lang-en"><strong>Is it fair?</strong> No, because opacity hides potential bias (Black Box) and deprives candidates of their right to understand or appeal decisions. <br /><strong>Missing Principles:</strong> <strong>Transparency</strong>, <strong>Explainable AI (XAI)</strong>, and <strong>Fairness</strong>.</span>
               </p>
             </div>
           )}
         </div>
 
-        {/* 3. Investigate Like an Engineer */}
-        <div onClick={() => handleToggleCard('investigate-1-4')} className="p-5 rounded-2xl theme-subpanel border border-emerald-500/30 space-y-3 cursor-pointer select-none group hover:border-emerald-500 transition">
-          <div className="flex items-center justify-between">
-            <span className="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-bold flex items-center gap-1.5">
-              <i className="fa-solid fa-code-compare"></i>
-              <span className="lang-ar">🔍 استقصِ كمهندس (كتاب الوزارة ص 25)</span>
-              <span className="lang-en">🔍 Investigate Like an Engineer (p. 25)</span>
-            </span>
-            <button onClick={(e) => { e.stopPropagation(); handleToggleCard('investigate-1-4'); }} className="text-xs font-bold text-emerald-400 hover:underline flex items-center gap-1 cursor-pointer">
-              <span className="lang-ar">{expandedCards['investigate-1-4'] ? 'إخفاء الإجابة' : 'عرض بروتوكول تدقيق وإزالة التحيز'}</span>
-              <span className="lang-en">{expandedCards['investigate-1-4'] ? 'Hide Answer' : 'Reveal Debiasing Protocol'}</span>
-              <i className={`fa-solid fa-chevron-down text-[10px] transition-transform ${expandedCards['investigate-1-4'] ? 'rotate-180' : ''}`}></i>
-            </button>
-          </div>
-          <p className="text-xs font-bold text-slate-200">
-            <span className="lang-ar">"كُلفت كمهندس برمجيات بفحص نظام آلي لفرز السير الذاتية، واكتشفت أنه يرفض طلبات المتقدمات من الإناث بمعدل ضعف الذكور: ما الخطوات البرمجية الخمس الواجب اتخاذها لعلاج هذا التحيز؟"</span>
-            <span className="lang-en">"You audit a recruitment AI rejecting female candidates at twice the male rate: What 5 engineering steps rectify this bias?"</span>
-          </p>
-          {expandedCards['investigate-1-4'] && (
-            <div onClick={(e) => e.stopPropagation()} className="p-4 rounded-xl bg-slate-900 border border-emerald-500/40 text-xs leading-relaxed text-slate-300 space-y-2 animate-fadeIn cursor-auto select-text">
-              <strong className="text-emerald-400 block font-bold">
-                <span className="lang-ar">بروتوكول إزالة التحيز الخوارزمي (Debiasing Roadmap):</span>
-                <span className="lang-en">5-Step Debiasing Roadmap:</span>
-              </strong>
-              <ol className="space-y-1 list-decimal rtl:pr-4 ltr:pl-4 text-sub">
-                <li><strong>تدقيق بيانات التدريب (Data Auditing):</strong> فحص توازن العينات السابقة وتحديد نسب التمثيل التاريخية.</li>
-                <li><strong>إعادة موازنة البيانات (Data Re-balancing):</strong> إضافة عينات متساوية وكفاءات متنوعة لمنع تفضيل أي فئة إحصائياً.</li>
-                <li><strong>حذف المتغيرات البديلة والمؤشرات الجندرية:</strong> إخفاء الأسماء، والأنشطة الرياضية، والمدارس أحادية الجنس من السير الذاتية.</li>
-                <li><strong>تعديل دالة الخسارة (Fairness-aware Loss Function):</strong> إضافة شرط جزائي في خوارزمية التعلم يعاقب النموذج إذا أظهر أي تباين في نسب القبول بين الفئات المؤهلة.</li>
-                <li><strong>التدقيق المستمر واختبار A/B:</strong> إجراء اختبارات دورية أسبوعية للتأكد من ثبات معيار الكفاءة والمهارات دون انحياز.</li>
-              </ol>
-            </div>
-          )}
-        </div>
-
-        {/* 4. Think Like an Engineer */}
+        {/* 4. Think Like an Engineer (فكر كمهندس: ابحث ثم قرر - ص 29) */}
         <div onClick={() => handleToggleCard('think-eng-1-4')} className="p-5 rounded-2xl theme-subpanel border border-amber-500/30 space-y-3 cursor-pointer select-none group hover:border-amber-500 transition">
           <div className="flex items-center justify-between">
             <span className="px-3 py-1 rounded-full bg-amber-500/20 text-amber-400 text-xs font-bold flex items-center gap-1.5">
               <i className="fa-solid fa-user-shield"></i>
-              <span className="lang-ar">💡 فكر كمهندس (كتاب الوزارة ص 29)</span>
-              <span className="lang-en">💡 Think Like an Engineer (p. 29)</span>
+              <span className="lang-ar">⚙️ فكر كمهندس: ابحث ثم قرر (كتاب الوزارة ص 29)</span>
+              <span className="lang-en">⚙️ Think Like an Engineer: Investigate & Decide (p. 29)</span>
             </span>
             <button onClick={(e) => { e.stopPropagation(); handleToggleCard('think-eng-1-4'); }} className="text-xs font-bold text-amber-400 hover:underline flex items-center gap-1 cursor-pointer">
-              <span className="lang-ar">{expandedCards['think-eng-1-4'] ? 'إخفاء الإجابة' : 'عرض بروتوكول حماية الخصوصية'}</span>
-              <span className="lang-en">{expandedCards['think-eng-1-4'] ? 'Hide Answer' : 'Reveal Privacy Architecture'}</span>
+              <span className="lang-ar">{expandedCards['think-eng-1-4'] ? 'إخفاء الإجابة' : 'عرض بروتوكول التوظيف المسؤول'}</span>
+              <span className="lang-en">{expandedCards['think-eng-1-4'] ? 'Hide Answer' : 'Reveal Responsible Hiring Protocol'}</span>
               <i className={`fa-solid fa-chevron-down text-[10px] transition-transform ${expandedCards['think-eng-1-4'] ? 'rotate-180' : ''}`}></i>
             </button>
           </div>
           <p className="text-xs font-bold text-slate-200">
-            <span className="lang-ar">"التوفيق بين حماية الخصوصية وتدريب نماذج الذكاء الاصطناعي الطبية: كيف تصمم كمهندس نظاماً يجمع ملايين السجلات الطبية لتدريب نموذج ينقذ المرضى دون أي مساس بخصوصية المرضى وسرية بياناتهم؟"</span>
-            <span className="lang-en">"Reconcile privacy protection with training life-saving healthcare AI: How do you architect data pipelines preserving anonymity?"</span>
+            <span className="lang-ar">"بناءً على حالة الذكاء الاصطناعي للتوظيف في ملاحظة 'توقف وفكر': 1. استقصِ عن حالة موثقة اتُهم فيها نظام ذكاء اصطناعي بإنتاج نتائج غير عادلة. 2. اعتبر المسؤولية: عندما يتخذ الذكاء الاصطناعي قراراً غير عادل، من المسؤول — المطور أم الشركة أم المشغل؟ 3. قرر: ما القاعدة الواحدة التي ينبغي إتباعها لجعل النظام أكثر عدالة؟"</span>
+            <span className="lang-en">"Based on the AI recruitment hiring bias scenario: 1. Investigate a documented case of unfair AI. 2. Assign responsibility (developer vs company vs operator). 3. Decide 1 rule a company must follow to make the system fair."</span>
           </p>
           {expandedCards['think-eng-1-4'] && (
             <div onClick={(e) => e.stopPropagation()} className="p-4 rounded-xl bg-slate-900 border border-amber-500/40 text-xs leading-relaxed text-slate-300 space-y-2 animate-fadeIn cursor-auto select-text">
               <strong className="text-amber-400 block font-bold">
-                <span className="lang-ar">المعمارية الهندسية للخصوصية (Privacy-Preserving AI):</span>
-                <span className="lang-en">Privacy-Preserving Architecture:</span>
+                <span className="lang-ar">إجابة نشاط "فكر كمهندس" المعتمدة (كتاب الوزارة ص 29):</span>
+                <span className="lang-en">Official Engineering Protocol (Textbook p. 29):</span>
               </strong>
-              <div className="space-y-1 text-sub">
-                <p>• <strong>نزع الهوية وتجريد البيانات (Data Anonymization):</strong> حذف الأسماء والأرقام القومية واستبدالها بمعرفات رقمية عشوائية غير قابلة للعكس.</p>
-                <p>• <strong>التعلّم الموحد (Federated Learning):</strong> لا تجمع بيانات المستشفيات في خادم مركزي واحد، بل يُدرب النموذج داخل كل مستشفى محلياً، وتُرسل التحديثات الرياضية للأوزان فقط دون خروج أي سجل مريض.</p>
-                <p>• <strong>التشويش والخصوصية التفاضلية (Differential Privacy):</strong> إضافة تشويش رياضي ضئيل يمنع أي متسلل من استنتاج هوية أي مريض من مخرجات النموذج.</p>
+              <div className="space-y-1.5 text-sub">
+                <p>1. <strong>الحالة الموثقة:</strong> أداة التوظيف الآلية لشركة Amazon عام 2018 التي ظهر أنها تميز ضد النساء لأنها دُرّبت على سير ذاتية لـ 10 سنوات سابقة كانت أغلبها لذكور.</p>
+                <p>2. <strong>توزيع المسؤولية (Responsibility):</strong> <br />• <strong>المطور:</strong> مسؤول عن جودة الخوارزمية وتوازن بيانات التدريب. <br />• <strong>الشركة والجهة المشغلة:</strong> مسؤولة عن القرار النهائي وتطبيق الفحص البشري ومنع الاعتماد الأعمى على النظام.</p>
+                <p>3. <strong>القاعدة الواحدة المقترحة:</strong> <em>"حظر اتخاذ قرار الرفض أو القبول التلقائي النهائي بالكامل دون مراجعة وإقرار من لجنة توظيف بشرية، مع التدقيق الدوري الأسبوعي لنسب القبول بين الفئات (Human-in-the-loop)."</em></p>
               </div>
             </div>
           )}
         </div>
 
-        {/* 5. Exam Style Question */}
+        {/* 5. Apply What You Learned (طبق ما تعلمته - ص 29) */}
+        <div onClick={() => handleToggleCard('apply-1-4')} className="p-5 rounded-2xl theme-subpanel border border-cyan-500/30 space-y-3 cursor-pointer select-none group hover:border-cyan-500 transition">
+          <div className="flex items-center justify-between">
+            <span className="px-3 py-1 rounded-full bg-cyan-500/20 text-cyan-400 text-xs font-bold flex items-center gap-1.5">
+              <i className="fa-solid fa-earth-americas"></i>
+              <span className="lang-ar">🌍 طبق ما تعلمته (كتاب الوزارة ص 29)</span>
+              <span className="lang-en">🌍 Apply What You Learned (Textbook p. 29)</span>
+            </span>
+            <button onClick={(e) => { e.stopPropagation(); handleToggleCard('apply-1-4'); }} className="text-xs font-bold text-cyan-400 hover:underline flex items-center gap-1 cursor-pointer">
+              <span className="lang-ar">{expandedCards['apply-1-4'] ? 'إخفاء الإجابة' : 'عرض الشرح والموقف العملي'}</span>
+              <span className="lang-en">{expandedCards['apply-1-4'] ? 'Hide Answer' : 'Reveal Solution'}</span>
+              <i className={`fa-solid fa-chevron-down text-[10px] transition-transform ${expandedCards['apply-1-4'] ? 'rotate-180' : ''}`}></i>
+            </button>
+          </div>
+          <p className="text-xs font-bold text-slate-200">
+            <span className="lang-ar">"ترغب مدرسة في استخدام كاميرات التعرف على الوجه عند بوابتها لتسجيل الحضور تلقائياً: 1. حدد فائدة عملية ومصدر قلق يتعلق بالخصوصية. 2. إذا أخطأت الكاميرا في التعرف على طالب، من ينبغي أن يكون مسؤولاً — المدرسة أم الشركة المصنعة؟ اذكر سبباً."</span>
+            <span className="lang-en">"A school considers gate facial recognition for automated attendance: 1. Identify 1 practical benefit & 1 privacy concern. 2. If a student is misidentified, who is responsible — school or manufacturer? State 1 reason."</span>
+          </p>
+          {expandedCards['apply-1-4'] && (
+            <div onClick={(e) => e.stopPropagation()} className="p-4 rounded-xl bg-slate-900 border border-cyan-500/40 text-xs leading-relaxed text-slate-300 space-y-2 animate-fadeIn cursor-auto select-text">
+              <strong className="text-cyan-300 block font-bold">
+                <span className="lang-ar">إجابة النشاط المنهجية (كتاب الوزارة ص 29):</span>
+                <span className="lang-en">Model School Attendance Analysis (Textbook p. 29):</span>
+              </strong>
+              <div className="space-y-1.5 text-sub">
+                <p>1. <strong>الفائدة العملية:</strong> سرعة ودقة تسجيل الحضور وتوفير وقت الحصة وفقدان الكروت. <br /><strong>مصدر القلق بالخصوصية:</strong> تخزين البصمات البيومترية للطلاب في قاعدة بيانات واحتتمال تسريبها أو تتبع حركتهم دون إذن الوالدين.</p>
+                <p>2. <strong>من المسؤول عند الخطأ:</strong> <br />• <strong>المدرسة:</strong> هي المسؤولة عن النتيجة الإدارية (كخصم درجات أو تسجيل غياب خاطئ)؛ لأن المراجعة البشرية واجبة قبل رصد العقوبة. <br />• <strong>الشركة المصنعة:</strong> مسؤولة عن إرسال تحديث فني ومعالجة الخلل إذا ثبت أن خوارزمية التعرف تعاني من عيب تصنيعي في النموذج.</p>
+              </div>
+            </div>
+          )}
+        </div>
+
+        {/* 6. Exam Style Question (سؤال على نمط الامتحان - ص 29) */}
         <div onClick={() => handleToggleCard('exam-style-1-4')} className="p-5 rounded-2xl theme-subpanel border border-rose-500/30 space-y-3 cursor-pointer select-none group hover:border-rose-500 transition">
           <div className="flex items-center justify-between">
             <span className="px-3 py-1 rounded-full bg-rose-500/20 text-rose-400 text-xs font-bold flex items-center gap-1.5">
               <i className="fa-solid fa-file-pen"></i>
-              <span className="lang-ar">📝 سؤال على نمط الامتحان (6 درجات) — كتاب الوزارة</span>
-              <span className="lang-en">📝 Exam-Style Question (6 Marks)</span>
+              <span className="lang-ar">📝 سؤال على نمط الامتحان (6 درجات) — كتاب الوزارة ص 29</span>
+              <span className="lang-en">📝 Exam-Style Question (6 Marks) — Textbook p. 29</span>
             </span>
             <button onClick={(e) => { e.stopPropagation(); handleToggleCard('exam-style-1-4'); }} className="text-xs font-bold text-rose-400 hover:underline flex items-center gap-1 cursor-pointer">
               <span className="lang-ar">{expandedCards['exam-style-1-4'] ? 'إخفاء الإجابة' : 'عرض نموذج الإجابة وتوزيع الدرجات'}</span>
@@ -390,23 +419,19 @@ export function Lesson1_4() {
             </button>
           </div>
           <p className="text-xs font-bold text-slate-200">
-            <span className="lang-ar">"اذكر المبادئ الأربعة الأساسية لأخلاقيات الذكاء الاصطناعي كما وردت في كتاب الوزارة، ثم وضح بالتفصيل كيف يرتبط مبدأ 'الشفافية' بمفهوم 'الذكاء القابل للتفسير (XAI)'؟"</span>
-            <span className="lang-en">"State the four core AI ethics principles from the textbook, then elaborate on how Transparency relates to Explainable AI (XAI)."</span>
+            <span className="lang-ar">"حلل كيف يمكن أن ينشأ التحيز الخوارزمي في نظام ذكاء اصطناعي، وكيف يمكن تقليله. (في إجابتك: أشر إلى سبب التحيز (بيانات تدريب متحيزة أو غير كافية) وإلى كيفية مساعدة مبدأي 'العدالة' و'الشفافية' في معالجته) [6 درجات]"</span>
+            <span className="lang-en">"Analyze how algorithmic bias can arise in an AI system and how it can be reduced. (In your answer: refer to causes (biased or insufficient training data) and how Fairness & Transparency help address it) [6 Marks]"</span>
           </p>
           {expandedCards['exam-style-1-4'] && (
             <div onClick={(e) => e.stopPropagation()} className="p-4 rounded-xl bg-slate-900 border border-rose-500/40 text-xs leading-relaxed text-slate-300 space-y-2 animate-fadeIn cursor-auto select-text">
               <strong className="text-rose-400 block font-bold">
-                <span className="lang-ar">نموذج الإجابة للحصول على الدرجة النهائية (6/6):</span>
-                <span className="lang-en">Model Answer for Full Marks (6/6):</span>
+                <span className="lang-ar">نموذج الإجابة الرسمي للحصول على الدرجة النهائية (6/6):</span>
+                <span className="lang-en">Official Mark Scheme (6/6 Marks):</span>
               </strong>
               <ol className="space-y-1.5 list-decimal rtl:pr-4 ltr:pl-4 text-sub">
-                <li><strong>المبادئ الأربعة [4 درجات]:</strong>
-                  <br />1) <strong>العدالة (Fairness):</strong> عدم التمييز وتكافؤ الفرص في النتائج.
-                  <br />2) <strong>الشفافية (Transparency):</strong> وضوح طريقة اتخاذ القرار ومصادر البيانات والحدود.
-                  <br />3) <strong>حماية الخصوصية (Privacy Protection):</strong> صون البيانات الشخصية ومنع التتبع غير المصرح به.
-                  <br />4) <strong>المساءلة (Accountability):</strong> تحديد المسؤولين عن قرارات النظام وأخطائه وإمكان محاسبتهم.
-                </li>
-                <li><strong>العلاقة بين الشفافية و XAI [درجتان]:</strong> مبدأ الشفافية يفرض حق المستخدم في معرفة "لماذا" اتخذ النظام هذا القرار. وبما أن الشبكات العصبية العميقة تعاني من غموض "الصندوق الأسود"، فإن تقنيات <strong>الذكاء القابل للتفسير (Explainable AI - XAI)</strong> هي الأداة الهندسية الوحيدة التي تفك هذا الغموض وتترجم المعادلات الحسابية المعقدة إلى مبررات واضحة يفهمها البشر، مما يحقق مبدأ الشفافية عملياً.</li>
+                <li><strong>كيفية نشأة التحيز [درجتان]:</strong> ينشأ التحيز الخوارزمي عندما تكون <strong>بيانات التدريب متحيزة أو غير كافية</strong> (مثل احتواؤها على ندرة في تمثيل بعض الفئات، أو انعكاس نزعات تمييزية سابقة في المجتمع)، أو نتيجة طريقة بناء النموذج واختيار متغيرات بديلة غير مناسبة.</li>
+                <li><strong>دور مبدأ العدالة (Fairness) [درجتان]:</strong> يضمن مبدأ العدالة عدم التمييز ظلماً ضد أي شخص أو مجموعة، ويحث المهندسين على <strong>إعادة موازنة بيانات التدريب</strong> وتضمين كفاءات متنوعة ليكون التقييم متكافئاً.</li>
+                <li><strong>دور مبدأ الشفافية (Transparency) [درجتان]:</strong> يضمن مبدأ الشفافية <strong>إتاحة معلومات واضحة عن عمل النظام</strong> ومصادر البيانات وحدوده، مما يسهل على البشر وخبراء XAI فحص الخوارزمية واكتشاف التحيز الخفي وتصحيحه قبل النشر.</li>
               </ol>
             </div>
           )}
