@@ -103,36 +103,35 @@ export function Lesson1_4() {
           <div className="p-4 rounded-2xl theme-subpanel border space-y-1.5">
             <strong className="text-rose-400 block font-bold flex items-center gap-1.5">
               <i className="fa-solid fa-bullseye"></i>
-              <span className="lang-ar">🎯 أهداف التعلم الرسمية للدرس:</span>
-              <span className="lang-en">🎯 Official Learning Objectives:</span>
+              <span className="lang-ar">🎯 أهداف التعلم الرسمية للدرس (ص 24):</span>
+              <span className="lang-en">🎯 Official Learning Objectives (p. 27):</span>
             </strong>
             <ul className="space-y-1 text-sub">
-              <li>• <span className="lang-ar">شرح التحيز الخوارزمي وأسبابه وكيفية الوقاية منه هندسياً.</span><span className="lang-en">Explain algorithmic bias causes, risks, and engineering mitigation strategies.</span></li>
-              <li>• <span className="lang-ar">ربط المبادئ الأربعة لأخلاقيات الذكاء الاصطناعي بمواقف وتطبيقات واقعية.</span><span className="lang-en">Connect the four basic ethical principles to realistic societal scenarios.</span></li>
-              <li>• <span className="lang-ar">توضيح مفهوم الذكاء القابل للتفسير (XAI) ودوره في فك غموض الصندوق الأسود.</span><span className="lang-en">Explain XAI and its role in resolving black-box decision opacity.</span></li>
+              <li>• <span className="lang-ar">شرح مفهوم التحيز الخوارزمي وأسبابه الرئيسية.</span><span className="lang-en">Explain what algorithmic bias is and describe its main causes.</span></li>
+              <li>• <span className="lang-ar">ربط المبادئ الأساسية لأخلاقيات الذكاء الاصطناعي (العدالة، الشفافية، حماية الخصوصية، المساءلة) بمواقف معينة.</span><span className="lang-en">Connect the basic principles of AI ethics (fairness, transparency, privacy protection, and accountability) to specific situations.</span></li>
             </ul>
           </div>
           <div className="p-4 rounded-2xl theme-subpanel border space-y-1.5">
             <strong className="text-amber-400 block font-bold flex items-center gap-1.5">
               <i className="fa-solid fa-circle-question"></i>
               <span className="lang-ar">❓ السؤال التوجيهي للدرس (كتاب الوزارة ص 24):</span>
-              <span className="lang-en">❓ Guiding Question (Textbook p. 24):</span>
+              <span className="lang-en">❓ Guiding Question (Textbook p. 28):</span>
             </strong>
             <p className="text-slate-200 font-medium leading-relaxed">
-              <span className="lang-ar">"ما القضايا الأخلاقية التي تنشأ مع انتشار الذكاء الاصطناعي، وما المبادئ التي ينبغي أن توجه استخدامه المسؤول؟"</span>
-              <span className="lang-en">"What ethical issues emerge as AI expands, and what principles must guide its responsible governance?"</span>
+              <span className="lang-ar">"ما القضايا الأخلاقية التي تنشأ مع انتشار الذكاء الاصطناعي، وما المبادئ التي ينبغي أن توجه استخدامه؟"</span>
+              <span className="lang-en">"What ethical issues arise as AI spreads, and what principles should guide how we use it?"</span>
             </p>
           </div>
         </div>
       </div>
 
-      {/* SECTION 1: Algorithmic Bias & Causes (كتاب الوزارة ص 25) */}
+      {/* SECTION 1: Algorithmic Bias & Causes (كتاب الوزارة ص 25 / ص 28) */}
       <div className="theme-panel border p-6 sm:p-8 rounded-3xl space-y-5">
         <div className="border-b border-slate-800 pb-3">
           <h3 className="text-lg font-black flex items-center gap-2">
             <span className="w-7 h-7 rounded-lg bg-rose-500/20 text-rose-400 flex items-center justify-center text-xs"><span className="lang-ar">١</span><span className="lang-en">1</span></span>
             <span className="lang-ar">1. التحيز الخوارزمي وأسبابه الرئيسية (كتاب الوزارة ص 25)</span>
-            <span className="lang-en">1. Algorithmic Bias & Main Causes (Textbook p. 25)</span>
+            <span className="lang-en">1. Algorithmic Bias & Main Causes (Textbook p. 28)</span>
           </h3>
         </div>
 
@@ -141,28 +140,28 @@ export function Lesson1_4() {
           <div className="p-4 rounded-2xl bg-rose-950/20 border border-rose-500/30 space-y-2">
             <strong className="text-rose-400 text-sm block font-bold flex items-center gap-2">
               <i className="fa-solid fa-scale-unbalanced"></i>
-              <span className="lang-ar">تعريف التحيز في أنظمة الذكاء الاصطناعي:</span>
-              <span className="lang-en">Definition of Algorithmic Bias:</span>
+              <span className="lang-ar">(التحيز في أنظمة الذكاء الاصطناعي Algorithmic bias):</span>
+              <span className="lang-en">(Algorithmic bias):</span>
             </strong>
             <p className="text-slate-200">
               <span className="lang-ar">"انحراف أو نمط قد يؤدي إلى نتائج غير عادلة أو ضارة، ويمكن أن ينشأ من البيانات أو تصميم النظام أو طريقة استخدامه أو السياق البشري والاجتماعي."</span>
-              <span className="lang-en">"A systematic deviation or pattern leading to unfair or harmful outcomes, originating from data, system design, usage context, or human/social factors."</span>
+              <span className="lang-en">"bias in AI judgments caused by bias in the training data."</span>
             </p>
             <p className="text-sub text-[11px]">
-              <span className="lang-ar">📌 <strong>مثال كتاب الوزارة:</strong> نظام توظيف يفضل فئة بصورة غير عادلة، أو نظام تعرف على الوجه تقل دقته مع فئات عرقية معينة.</span>
-              <span className="lang-en">📌 <strong>Textbook Examples:</strong> A hiring system unfairly favoring one demographic, or a facial recognition tool with lower accuracy for specific ethnic groups.</span>
+              <span className="lang-ar">📌 <strong>أمثلة كتاب الوزارة:</strong> نظام توظيف يفضل فئة بصورة غير عادلة، أو نظام تعرف على الوجه تقل دقته مع فئات معينة.</span>
+              <span className="lang-en">📌 <strong>Textbook Examples:</strong> e.g., a hiring AI unfairly evaluating a particular gender; a face-recognition AI being more likely to misidentify particular ethnic groups.</span>
             </p>
           </div>
 
           <div className="p-4 rounded-2xl bg-amber-950/20 border border-amber-500/30 space-y-2">
             <strong className="text-amber-400 text-sm block font-bold flex items-center gap-2">
               <i className="fa-solid fa-database"></i>
-              <span className="lang-ar">مصطلح هام: بيانات التدريب (Training Data):</span>
-              <span className="lang-en">Key Term: Training Data:</span>
+              <span className="lang-ar">مصطلح هام: بيانات التدريب (training data):</span>
+              <span className="lang-en">KEY TERM: training data:</span>
             </strong>
             <p className="text-slate-200">
-              <span className="lang-ar">"هي الأمثلة والنماذج التي يتعلم منها نظام الذكاء الاصطناعي أنماطه قبل استخدامه؛ وكلما قل تمثيلها للواقع زاد احتمال تحيز مخرجاته."</span>
-              <span className="lang-en">"The dataset of examples from which AI models extract patterns prior to deployment. Lower real-world representation increases output bias probability."</span>
+              <span className="lang-ar">"بيانات تُستخدم لتعلم الذكاء الاصطناعي. إذا كانت بيانات التدريب متحيزة، يمكن للذكاء الاصطناعي أن يكرر هذا التحيز في أحكامه."</span>
+              <span className="lang-en">"data used for AI learning. If the training data is biased, an AI can reproduce that bias in its judgments."</span>
             </p>
           </div>
         </div>
@@ -172,27 +171,27 @@ export function Lesson1_4() {
           <strong className="text-white text-sm block font-bold flex items-center gap-2">
             <i className="fa-solid fa-triangle-exclamation text-amber-400"></i>
             <span className="lang-ar">الأسباب الرئيسية للتحيز (كتاب الوزارة ص 25):</span>
-            <span className="lang-en">Main Causes of Algorithmic Bias (Textbook p. 25):</span>
+            <span className="lang-en">Main causes of bias (Textbook p. 28):</span>
           </strong>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div className="p-3.5 rounded-xl bg-slate-900 border border-slate-700/60 space-y-1">
               <strong className="text-rose-300 block font-bold">
-                <span className="lang-ar">1. بيانات التدريب المتحيزة (Biased Training Data):</span>
-                <span className="lang-en">1. Biased Training Data:</span>
+                <span className="lang-ar">1. بيانات التدريب متحيزة (Biased Training Data):</span>
+                <span className="lang-en">1. Training data is biased:</span>
               </strong>
               <p className="text-sub">
-                <span className="lang-ar">بيانات غير كافية عن سمات معينة، أو انعكاس نزعات تمييزية سابقة وتاريخية موجودة في البيانات الأساسية.</span>
-                <span className="lang-en">Training data is biased (e.g., insufficient data on certain attributes; past discriminatory tendencies are reflected in the data).</span>
+                <span className="lang-ar">مثل: بيانات غير كافية عن سمات معينة؛ انعكاس نزعات تمييزية سابقة في البيانات.</span>
+                <span className="lang-en">(e.g., insufficient data on certain attributes; past discriminatory tendencies are reflected in the data).</span>
               </p>
             </div>
             <div className="p-3.5 rounded-xl bg-slate-900 border border-slate-700/60 space-y-1">
               <strong className="text-amber-300 block font-bold">
                 <span className="lang-ar">2. طريقة بناء النظام والمتغيرات البديلة (Proxy Variables):</span>
-                <span className="lang-en">2. System Design and Proxy Variables:</span>
+                <span className="lang-en">2. System construction & proxy variables:</span>
               </strong>
               <p className="text-sub">
-                <span className="lang-ar">اختيار غير مناسب للمتغيرات، أو استخدام <strong>متغير بديل (Proxy Variable)</strong> يمثل بشكل غير مباشر سمة محمية (مثل استخدام الرمز البريدي لاستنتاج العرق أو المستوى الاجتماعي)، أو تصميم النموذج نفسه.</span>
-                <span className="lang-en">Bias can also enter through the way the system is built — for example, an inappropriate choice of variables, a <strong>proxy variable</strong> that indirectly stands in for a protected attribute, or the design of the model itself.</span>
+                <span className="lang-ar">يمكن أن يدخل التحيز أيضاً من خلال طريقة بناء النظام - على سبيل المثال: اختيار غير مناسب للمتغيرات، أو متغير بديل (Proxy Variable) يمثل بشكل غير مباشر سمة محمية، أو تصميم النموذج نفسه.</span>
+                <span className="lang-en">Bias can also enter through the way the system is built — for example, an inappropriate choice of variables, a proxy variable that indirectly stands in for a protected attribute, or the design of the model itself.</span>
               </p>
             </div>
           </div>
@@ -242,55 +241,55 @@ export function Lesson1_4() {
         </div>
       </div>
 
-      {/* SECTION 2: Privacy Issues (كتاب الوزارة ص 26) */}
+      {/* SECTION 2: Privacy Issues (كتاب الوزارة ص 26 / ص 29) */}
       <div className="theme-panel border p-6 sm:p-8 rounded-3xl space-y-4">
         <div className="border-b border-slate-800 pb-3">
           <h3 className="text-lg font-black flex items-center gap-2">
             <span className="w-7 h-7 rounded-lg bg-purple-500/20 text-purple-400 flex items-center justify-center text-xs"><span className="lang-ar">٢</span><span className="lang-en">2</span></span>
-            <span className="lang-ar">2. قضايا الخصوصية في الذكاء الاصطناعي (كتاب الوزارة ص 26)</span>
-            <span className="lang-en">2. Privacy Issues in Artificial Intelligence (Textbook p. 26)</span>
+            <span className="lang-ar">2. قضايا الخصوصية (Privacy Issues) (كتاب الوزارة ص 26)</span>
+            <span className="lang-en">2. Privacy Issues (Textbook p. 29)</span>
           </h3>
         </div>
 
         <p className="text-xs text-sub leading-relaxed">
-          <span className="lang-ar">أدى تطور تقنية الذكاء الاصطناعي إلى ظهور قضايا جديدة ومقلقة تتعلق بالخصوصية وحرية الأفراد، أبرزها القضيتان التاليتان:</span>
-          <span className="lang-en">The expansion of AI introduces critical privacy challenges, highlighted by two main issues:</span>
+          <span className="lang-ar">أدى تطور تقنية الذكاء الاصطناعي إلى ظهور قضايا جديدة تتعلق بـ (الخصوصية).</span>
+          <span className="lang-en">The development of AI technology has given rise to new issues concerning (privacy).</span>
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs leading-relaxed">
           <div className="p-4 rounded-2xl theme-subpanel border border-purple-500/30 space-y-2">
             <strong className="text-purple-300 text-sm block font-bold flex items-center gap-2">
               <i className="fa-solid fa-eye"></i>
-              <span className="lang-ar">1. المراقبة عبر تقنية التعرف على الوجه:</span>
-              <span className="lang-en">1. Facial Recognition Surveillance:</span>
+              <span className="lang-ar">① المراقبة عبر تقنية التعرف على الوجه:</span>
+              <span className="lang-en">① Surveillance through face-recognition technology:</span>
             </strong>
             <p className="text-sub">
-              <span className="lang-ar">يمكن للكاميرات المزودة بالذكاء الاصطناعي في الأماكن العامة التعرف على الأفراد وتتبع تحركاتهم بصفة مستمرة دون إذن صريح منهم.</span>
-              <span className="lang-en">Public AI cameras identifying and tracking individuals' movements continuously without explicit consent.</span>
+              <span className="lang-ar">الكاميرات في الأماكن العامة يمكنها التعرف على الأفراد وتتبعهم.</span>
+              <span className="lang-en">cameras in public spaces can identify and track individuals.</span>
             </p>
           </div>
 
           <div className="p-4 rounded-2xl theme-subpanel border border-cyan-500/30 space-y-2">
             <strong className="text-cyan-300 text-sm block font-bold flex items-center gap-2">
               <i className="fa-solid fa-boxes-packing"></i>
-              <span className="lang-ar">2. الجمع الجماعي للبيانات الشخصية:</span>
-              <span className="lang-en">2. Bulk Personal Data Harvesting:</span>
+              <span className="lang-ar">② الجمع الجماعي للبيانات الشخصية:</span>
+              <span className="lang-en">② Mass collection of personal data:</span>
             </strong>
             <p className="text-sub">
-              <span className="lang-ar">تُجمع وتُحلل كميات هائلة من بيانات السلوك عبر الإنترنت (مواقع الزيارة، المشتريات، الرسائل، التعليقات) لبناء بروفايل شخصي دقيق لكل مستخدم.</span>
-              <span className="lang-en">Collecting and analyzing vast streams of online behavioral data to construct intrusive user profiles.</span>
+              <span className="lang-ar">تُجمع وتُحلل كميات هائلة من بيانات السلوك عبر الإنترنت.</span>
+              <span className="lang-en">large amounts of online behavior data are collected and analyzed.</span>
             </p>
           </div>
         </div>
       </div>
 
-      {/* SECTION 3: Explainable AI (XAI), Responsibility, Accountability & Transparency (كتاب الوزارة ص 26) */}
+      {/* SECTION 3: Explainable AI (XAI) and Responsibility (كتاب الوزارة ص 26 / ص 29) */}
       <div className="theme-panel border p-6 sm:p-8 rounded-3xl space-y-5">
         <div className="border-b border-slate-800 pb-3">
           <h3 className="text-lg font-black flex items-center gap-2">
             <span className="w-7 h-7 rounded-lg bg-cyan-500/20 text-cyan-400 flex items-center justify-center text-xs"><span className="lang-ar">٣</span><span className="lang-en">3</span></span>
-            <span className="lang-ar">3. الذكاء الاصطناعي القابل للتفسير (XAI) والمسؤولية والمساءلة والشفافية (ص 26)</span>
-            <span className="lang-en">3. Explainable AI (XAI), Responsibility, Accountability & Transparency (p. 26)</span>
+            <span className="lang-ar">3. الذكاء الاصطناعي القابل للتفسير (XAI) والمسؤولية (ص 26)</span>
+            <span className="lang-en">3. Explainable AI (XAI) and Responsibility (p. 29)</span>
           </h3>
         </div>
 
@@ -298,12 +297,12 @@ export function Lesson1_4() {
           {/* XAI */}
           <div className="p-4 rounded-2xl bg-cyan-950/20 border border-cyan-500/40 space-y-2">
             <strong className="text-cyan-300 text-sm block font-bold">
-              <span className="lang-ar">1. XAI (القابل للتفسير):</span>
+              <span className="lang-ar">1. الذكاء الاصطناعي القابل للتفسير (XAI):</span>
               <span className="lang-en">1. Explainable AI (XAI):</span>
             </strong>
             <p className="text-sub">
-              <span className="lang-ar">"أساليب تساعد البشر على فهم العوامل التي أسهمت في وصول النظام إلى مخرج أو قرار معين. وعندما تكون آلية الوصول للنتيجة غير واضحة (الصندوق الأسود)، يصعب تقييمها واكتشاف الأخطاء."</span>
-              <span className="lang-en">"Technology that makes it possible for humans to understand why an AI made a particular judgment. When an AI's decision-making process is opaque (a black box), it is difficult to verify whether the result is correct."</span>
+              <span className="lang-ar">"تقنية تتيح للبشر فهم سبب اتخاذ الذكاء الاصطناعي لحكم معين. وعندما تكون عملية اتخاذ القرار في الذكاء الاصطناعي غير شفافة (صندوق أسود)، يصعب التحقق مما إذا كانت النتيجة صحيحة."</span>
+              <span className="lang-en">"technology that makes it possible for humans to understand why an AI made a particular judgment. When an AI's decision-making process is opaque (a black box), it is difficult to verify whether the result is correct."</span>
             </p>
           </div>
 
@@ -314,8 +313,8 @@ export function Lesson1_4() {
               <span className="lang-en">2. Responsibility:</span>
             </strong>
             <p className="text-sub">
-              <span className="lang-ar">"تحديد أدوار وواجبات الأطراف المرتبطة بتطوير النظام وتشغيله واستخدامه (المطور، الجهة المشغلة، المستخدم). ولا يوجد توزيع واحد يصلح لكل السياقات بل يختلف بحسب النظام."</span>
-              <span className="lang-en">"The question of who is responsible when an AI makes an incorrect judgment. Views on responsibility differ depending on whether one is the developer, the user, the operator, etc."</span>
+              <span className="lang-ar">"مسألة من المسؤول عندما يتخذ الذكاء الاصطناعي حكماً خاطئاً. تختلف الآراء حول المسؤولية باختلاف ما إذا كان الشخص هو المطور أو المستخدم أو المشغل، إلخ."</span>
+              <span className="lang-en">"the question of who is responsible when an AI makes an incorrect judgment. Views on responsibility differ depending on whether one is the developer, the user, the operator, etc."</span>
             </p>
           </div>
 
@@ -326,12 +325,12 @@ export function Lesson1_4() {
               <span className="lang-en">3. Accountability:</span>
             </strong>
             <p className="text-sub">
-              <span className="lang-ar">"تحديد الجهات المسؤولة عن النظام وقراراته وآثاره، وإمكان محاسبتها وفق أدوارها."</span>
+              <span className="lang-ar">"الخضوع للمساءلة عن قرارات الذكاء الاصطناعي وتحديد الأطراف المسؤولين عن النتائج."</span>
               <span className="lang-en">"Being answerable for the AI's decisions and designating responsible entities for system outcomes."</span>
             </p>
             <div className="p-2 rounded-lg bg-amber-500/10 text-amber-300 text-[11px] font-bold border border-amber-500/20">
-              <span className="lang-ar">📌 <strong>ملاحظة كتاب الوزارة:</strong> المساءلة ليست القدرة على شرح القرار (تلك وظيفة XAI)، بل تحديد من يُحاسب على النتيجة.</span>
-              <span className="lang-en">📌 <strong>Textbook Note:</strong> Accountability means being answerable for decisions, distinct from explaining internal workings (Transparency/XAI).</span>
+              <span className="lang-ar">📌 <strong>ملاحظة كتاب الوزارة:</strong> المساءلة تعني الخضوع للمساءلة عن القرار وليس مجرد شرح كيفية عمله.</span>
+              <span className="lang-en">📌 <strong>Textbook Note:</strong> accountability — being answerable for the AI's decisions.</span>
             </div>
           </div>
 
@@ -342,8 +341,8 @@ export function Lesson1_4() {
               <span className="lang-en">4. Transparency:</span>
             </strong>
             <p className="text-sub">
-              <span className="lang-ar">"إتاحة معلومات واضحة ومناسبة عن النظام واستخدامه وعملية اتخاذ القرار وحدوده للجمهور والمستخدمين."</span>
-              <span className="lang-en">"Showing the AI's decision-making process and inner workings clearly to users."</span>
+              <span className="lang-ar">"إظهار عملية اتخاذ القرار وآلية العمل الداخلية للذكاء الاصطناعي بوضوح."</span>
+              <span className="lang-en">"Showing the AI's decision-making process and inner workings clearly."</span>
             </p>
           </div>
         </div>
@@ -352,15 +351,20 @@ export function Lesson1_4() {
         <XAIDecisionVisualizer />
       </div>
 
-      {/* SECTION 4: The 4 Core Principles of AI Ethics (كتاب الوزارة ص 27) */}
+      {/* SECTION 4: Basic Principles of AI Ethics (كتاب الوزارة ص 27 / ص 29) */}
       <div className="theme-panel border p-6 sm:p-8 rounded-3xl space-y-5">
         <div className="border-b border-slate-800 pb-3">
           <h3 className="text-lg font-black flex items-center gap-2">
             <span className="w-7 h-7 rounded-lg bg-blue-500/20 text-blue-400 flex items-center justify-center text-xs"><span className="lang-ar">٤</span><span className="lang-en">4</span></span>
-            <span className="lang-ar">4. المبادئ الأربعة الأساسية لأخلاقيات الذكاء الاصطناعي (جدول ص 27)</span>
-            <span className="lang-en">4. The Four Core Principles of AI Ethics (Textbook Table p. 27)</span>
+            <span className="lang-ar">4. المبادئ الأساسية لأخلاقيات الذكاء الاصطناعي (جدول ص 27)</span>
+            <span className="lang-en">4. Basic Principles of AI Ethics (Textbook Table p. 29)</span>
           </h3>
         </div>
+
+        <p className="text-xs text-sub leading-relaxed">
+          <span className="lang-ar">تُعتبر المبادئ الأساسية التالية مهمة لاستخدام الذكاء الاصطناعي بشكل مناسب:</span>
+          <span className="lang-en">The following basic principles are considered important for using AI appropriately:</span>
+        </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
           {/* 1. Fairness */}
@@ -374,8 +378,8 @@ export function Lesson1_4() {
               <span className="lang-en">Fairness</span>
             </h4>
             <p className="text-sub leading-relaxed">
-              <span className="lang-ar">عدم التمييز ظلماً ضد أي شخص أو مجموعة بعينها في مخرجات النظام، وتكافؤ التقييم والفرص.</span>
-              <span className="lang-en">Not unjustly discriminating against any particular person or group.</span>
+              <span className="lang-ar">عدم التمييز ظلماً ضد أي شخص أو مجموعة بعينها</span>
+              <span className="lang-en">Not unjustly discriminating against any particular person or group</span>
             </p>
           </div>
 
@@ -390,8 +394,8 @@ export function Lesson1_4() {
               <span className="lang-en">Transparency</span>
             </h4>
             <p className="text-sub leading-relaxed">
-              <span className="lang-ar">إتاحة معلومات واضحة ومناسبة عن النظام واستخدامه وعملية اتخاذ القرار ومصادر بياناته وحدوده.</span>
-              <span className="lang-en">Showing the AI's decision-making process and inner workings clearly.</span>
+              <span className="lang-ar">إظهار عملية اتخاذ القرار وآلية العمل الداخلية للذكاء الاصطناعي بوضوح</span>
+              <span className="lang-en">Showing the AI's decision-making process and inner workings clearly</span>
             </p>
           </div>
 
@@ -402,12 +406,12 @@ export function Lesson1_4() {
               <span className="lang-en">3</span>
             </div>
             <h4 className="font-bold text-sm text-purple-300">
-              <span className="lang-ar">حماية الخصوصية</span>
-              <span className="lang-en">Privacy Protection</span>
+              <span className="lang-ar">حماية الخصوصية (Privacy protection)</span>
+              <span className="lang-en">Privacy protection</span>
             </h4>
             <p className="text-sub leading-relaxed">
-              <span className="lang-ar">التعامل مع المعلومات الشخصية بشكل مناسب وحماية الخصوصية ومنع التتبع دون إذن صريح.</span>
-              <span className="lang-en">Handling personal information appropriately and protecting privacy.</span>
+              <span className="lang-ar">التعامل مع المعلومات الشخصية بشكل مناسب وحماية الخصوصية</span>
+              <span className="lang-en">Handling personal information appropriately and protecting privacy</span>
             </p>
           </div>
 
@@ -422,8 +426,8 @@ export function Lesson1_4() {
               <span className="lang-en">Accountability</span>
             </h4>
             <p className="text-sub leading-relaxed">
-              <span className="lang-ar">تحديد الجهات المسؤولة عن النظام وقراراته وآثاره، وإمكان محاسبتها وفق أدوارها.</span>
-              <span className="lang-en">Being answerable for the AI's decisions.</span>
+              <span className="lang-ar">الخضوع للمساءلة عن قرارات الذكاء الاصطناعي</span>
+              <span className="lang-en">Being answerable for the AI's decisions</span>
             </p>
           </div>
         </div>
