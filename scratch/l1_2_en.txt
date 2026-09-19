@@ -1,0 +1,266 @@
+1-2 — How AI Works
+121-2 — How AI Works
+Learning Objectives
+Explain what AI is.•
+Explain how generative AI is positioned within AI technologies.•
+Lesson 1-2
+How AI Works
+
+=== PAGE 14 ===
+1-2 — How AI Works
+131-2 — How AI Works
+Three everyday AI examples:
+speech, image, translation.
+Today's AI is narrow — expert at
+one task only.
+💡 THINK IT THROUGH
+Spam filters and product
+recommendations are both
+examples of machine learning,
+but the tasks they perform are
+completely different. From the
+perspective of how AI works,
+explain what these two
+applications have in common.
+When you use a phone, AI is often at work. A spam filter sorts your email, a store
+recommends products you might buy, a translation app changes one language
+into another, and ChatGPT generates text from a prompt. These are all examples
+of AI, but they are not all the same kind. AI includes machine learning, within
+machine learning is deep learning, and today's generative AI systems are built on
+deep learning — a series of nested technologies, each more specialized than the
+last.
+? Guiding question: What is AI, and how are machine learning, deep
+learning, and generative AI related?
+✎  Explore · In Pairs
+With a partner, list three tasks a phone or computer does for you that seem
+to need "intelligence" (for example, sorting spam, recommending a video,
+or translating text). Then predict: does the computer follow fixed rules, or
+does it learn from examples? Give one reason.
+📌Point!
+(1)  (AI (Artificial Intelligence))…a general term for technologies that reproduce
+or perform intelligent human behavior (learning, reasoning, judgment, etc.) on a
+computer.
+e.g., speech recognition, image recognition, translation
+2. The Relationship between AI and Machine Learning
+(1)  Within AI technologies, there is machine learning; within machine learning,
+there is deep learning; and within deep learning, there is generative AI. The
+broad field of AI includes increasingly specialized technologies as a series of
+nested categories.
+1. What is Artificial Intelligence (AI)?
+
+=== PAGE 15 ===
+1-2 — How AI Works
+141-2 — How AI Works
+Fixed hand-written rules versus
+rules learned from data.
+💡  PAUSE & THINK
+Deep learning needs large-
+scale data to learn. Why might
+an AI struggle with something
+it has rarely seen in its data?
+KEY TERMS
+neural network — a system
+modeled after the nerve cells
+(neurons) of the human
+brain, used to learn from data
+and make complex
+judgments.
+KEY TERMS
+generative AI — AI that uses
+deep learning to generate
+new data such as text,
+images, and audio.
+Hierarchy of AI Technologies
+(2)  (Machine Learning)…one of the learning technologies that makes AI work. It
+learns patterns from data to make predictions and judgments.
+e.g., spam filters, product recommendations
+(3)  (Deep Learning)…an advanced technology within machine learning that
+uses neural networks. It learns complex patterns using large-scale data.
+e.g., image analysis for autonomous driving, speech synthesis
+(4)  (Neural network)…a system modeled after the workings of the nerve cells
+(neurons) of the human brain. By connecting many components, it learns from
+data and becomes capable of making complex judgments. It is the core
+technology supporting recent advances in AI.
+A neural network connects many simple components.
+(5)  (Generative AI)…AI technology that uses deep learning to generate new
+data (text, images, audio, programs, etc.).
+e.g., ChatGPT, image generation AIs
+Generative AI creates new text, images, and audio.
+
+=== PAGE 16 ===
+1-2 — How AI Works
+151-2 — How AI Works
+KEY TERMS
+machine learning — learns
+patterns from data.
+deep learning — uses neural
+networks on large-scale data.
+✎  Worked Example
+(1)  Mark each statement (A–D) with ○  if true or × if false.
+A Machine learning is one of the technologies that makes AI work.
+B Deep learning is a completely different technology from machine
+learning.
+C Generative AI is a technology that uses deep learning to generate new
+data.
+D AI and machine learning have the same meaning.
+(2)  Match each description (a–c) with the most appropriate term from the
+choices below (A–C).
+a A technology that learns patterns from data to make predictions and
+judgments
+b A technology that uses neural networks to learn complex patterns
+c AI technology that generates new data such as text and images
+[Choices]   A Machine learning    B Deep learning    C Generative AI
+✓  Solution
+(1)
+A Machine learning is one of the learning technologies that makes AI
+work. Therefore, ○ .
+B Deep learning is a type of machine learning (an advanced technology
+within machine learning). Therefore, ×.
+C Correct description of generative AI. Therefore, ○ .
+D AI is a broad concept, and machine learning is one of the
+technologies within it. They do not have the same meaning.
+Therefore, ×.
+(2)
+a: Learning patterns from data is machine learning. A
+b: Using neural networks is deep learning. B
+c: Generating new data is generative AI. C
+
+=== PAGE 17 ===
+1-2 — How AI Works
+161-2 — How AI Works
+📝 EXAM-STYLE QUESTION
+💡 THINK IT THROUGH
+Generative AI can produce text
+that sounds plausible but is
+factually incorrect (a
+"hallucination"). Explain why it
+is dangerous to use such
+output as the answer to a
+school report as-is, and state
+what learners should do
+instead.
+Try
+1   Answer the following questions.
+1. What is the general term, expressed by a two-letter abbreviation, for
+technologies that reproduce or perform intelligent human behavior on a
+computer?
+2. What is the term for the learning technology that makes AI work by learning
+patterns from data to make predictions and judgments?
+3. What is the term for the advanced technology within machine learning that
+uses neural networks?
+4. What is the term for the AI technology that uses deep learning to generate
+new data?
+2   Answer the following questions.
+(1)  From the following options (A–D), choose the one that correctly describes the
+relationship between AI, machine learning, deep learning, and generative AI.
+A AI > Deep Learning > Machine Learning > Generative AI
+B Machine Learning > AI > Generative AI > Deep Learning
+C AI > Machine Learning > Deep Learning > Generative AI
+D Generative AI > Deep Learning > Machine Learning > AI
+(2)  From the following options (A–D), choose the one that is NOT an appropriate
+example of generative AI.
+A ChatGPT
+B Image generation AI
+C Spam filter
+D Audio generation AI
+⚙ Think as an Engineer — Investigate & Decide
+Starting from the Think It Through note about hallucination, investigate
+further and decide.
+1 · Investigate. Find one documented example where a generative AI gave
+an answer that sounded correct but was actually wrong (a "hallucination").
+Record its source — a news article, an official report, or a prompt you tested
+yourself with a screenshot — and note where you found it. Do not rely on an
+example recalled from memory without a source.
+2 · Weigh it up. Note one benefit and one risk of using generative AI to
+write a school report — for the student, and for the teacher.
+3 · Decide. Should generative AI be allowed for homework in your school?
+Recommend one rule and give two reasons.
+Analyze the relationship
+between AI, machine learning,
+deep learning, and generative
+AI. [6] In your answer: use the
+idea of nested categories, and
+give one example of each.
+
+=== PAGE 18 ===
+1-2 — How AI Works
+171-2 — How AI Works
+KEY TERMS
+deep learning — uses neural
+networks to learn complex
+patterns.
+generative AI — uses deep
+learning to generate new
+data.
+⭐  REFLECT & CHALLENGE
+Reflect: Before this lesson, did
+you think AI was one single
+technology? How has your idea
+changed? Which of the four —
+AI, machine learning, deep
+learning, generative AI — was
+hardest to tell apart, and why?
+Challenge: Generative AI can
+create text, images, and audio.
+Suggest one helpful use and
+one possible misuse, and say
+how the misuse could be
+reduced.
+Stuck? One benefit is speed; one risk is that the answer may be
+factually incorrect, so it must be checked.
+🌍   In a New Context
+A farmer wants to use AI to distinguish healthy crops from diseased ones in
+photographs. Using what you learned about deep learning and image
+analysis, explain what the AI would need to learn from, and identify one
+reason its judgment might be wrong.
+❓   Lesson Question — Answered
+The lesson question asked what AI is and how machine learning, deep
+learning, and generative AI are related. AI is a general term for technologies
+that reproduce or perform intelligent human behavior on a computer, and
+machine learning, deep learning, and generative AI are increasingly
+specialized fields nested within it rather than parallel to it. The key idea
+from this lesson is that these are not four separate technologies to learn in
+isolation, but one broad field understood at different levels of
+specialization.
+Exercise
+1   Cover the Point! section with a red plastic sheet and quiz yourself in
+your notebook in numerical order.
+2   Read the following passage and answer each question.
+The general term for technologies that reproduce or perform intelligent human
+behavior on a computer is ( a ). One of the learning technologies that makes ( a )
+work by learning patterns from data is ( b ). Within ( b ), an advanced technology
+that uses neural networks is ( c ). Furthermore, the technology that uses ( c ) to
+generate new data is ( d ).
+1. Fill in the blanks (a)–(d).
+
+=== PAGE 19 ===
+1-2 — How AI Works
+181-2 — How AI Works
+⭐  Key takeaway
+Remember:
+AI is the broad field;
+machine learning sits
+inside it, deep learning
+inside machine learning,
+and today's generative AI is
+built on deep learning —
+from the broadest idea to
+the most specialized.
+3   Answer the following questions.
+(1)  For each example (a–d), indicate which of the following is most closely
+related: A Machine learning, B Deep learning, C Generative AI.
+a Automatically sorting spam emails
+b Recognizing pedestrians on the road in autonomous driving
+c Automatically generating new images from text
+d Recommending products based on a user's purchase history
+(2)  From the following options (A–D), choose the one that most appropriately
+describes the relationship between AI, machine learning, deep learning, and
+generative AI.
+A Machine learning is a type of AI, and deep learning is a type of machine
+learning.
+B AI is a type of machine learning, and generative AI is a type of AI.
+C Deep learning and machine learning are completely different technologies.
+D Generative AI is a technology that generates data without using machine
+learning.
+
+=== PAGE 20 ===

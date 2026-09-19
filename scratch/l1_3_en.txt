@@ -1,0 +1,293 @@
+1-3 — AI in Daily Life and Industry
+191-3 — AI in Daily Life and Industry
+Learning Objectives
+Give examples of how AI is used in daily life and various industries.•
+Explain what AI is good at and what requires caution when using AI.•
+Lesson 1-3
+AI in Daily Life
+and Industry
+
+=== PAGE 21 ===
+1-3 — AI in Daily Life and Industry
+201-3 — AI in Daily Life and Industry
+Key Fact:
+AI is good at finding
+patterns in data, but
+human judgment is still
+needed where ethics,
+privacy, and responsibility
+are involved.
+Key Concepts:
+recommendation system
+voice assistant
+machine translation
+face recognition
+image-diagnosis AI
+predictive maintenance
+black-box problem
+hallucination
+Recommenders match new items
+to your past choices.
+KEY TERMS
+recommendation system —
+a system that predicts
+preferences from past
+behavior data and displays
+recommendations.
+AI is already part of many everyday services. A video site recommends the next
+clip, a voice assistant answers a spoken question, a translation tool converts text
+on a foreign menu, and a phone unlocks by recognizing your face. In industry, AI
+analyzes medical images, predicts when a machine will fail, and plans delivery
+routes. AI is effective at identifying patterns in data, but it is not suited to every
+task, and some uses require caution.
+? Guiding question: Where is AI used in daily life and industry, what is AI
+good at, and what needs caution?
+✎
+With a partner, list three services you used this week that you think used AI
+(for example, a video recommendation, a voice assistant, or a translation).
+For each, predict what data the AI needed to do its job. Then decide
+together: which one would matter most if it made a mistake?
+📌Point!
+1. Use of AI in Daily Life
+(1)  Various AI technologies are already in use around us.
+Service Role of AI Examples
+Recommendation
+systems
+Predict preferences from past behavior
+data and display recommendations.
+YouTube, Amazon,
+Spotify, etc.
+Voice assistants Recognize a voice, understand
+commands, and execute them.
+Siri, Google
+Assistant, etc.
+Machine translation Automatically translate text into different
+languages.
+Google Translate,
+DeepL, etc.
+Face recognition Automatically detect and identify human
+faces in photographs.
+Smartphone
+unlocking, etc.
+Four everyday-life AI services
+ Explore · In Pairs
+
+=== PAGE 22 ===
+1-3 — AI in Daily Life and Industry
+211-3 — AI in Daily Life and Industry
+In industry, AI flags what humans
+might miss.
+💡 THINK IT THROUGH
+A hospital is considering using
+image-diagnosis AI to detect
+diseases from X-ray images.
+Explain why the final diagnosis
+should be confirmed by a
+human doctor rather than left
+to AI alone.
+💡 PAUSE & THINK
+AI services often use your
+personal data — what you
+watch, buy, or say. Why does
+this raise privacy concerns, and
+who should decide how your
+data is used?
+KEY TERMS
+black-box problem — when
+it is unclear how an AI
+reached its judgment.
+2. Use of AI in Industry
+(1)  AI technologies are also being introduced in various industries.
+Industry Examples of AI use
+Healthcare Image-diagnosis AI (detecting diseases from X-ray and CT images),
+drug-discovery support
+Agriculture Predicting harvest timing, detecting pests and diseases
+Manufacturing Automation of product quality inspection, predictive maintenance
+Logistics Optimization of delivery routes
+Four industries where AI is used
+3. Characteristics of AI and Cautions for Use
+(1)  What AI is good at
+Finding and classifying patterns in complex data such as images and text
+Recognition and generation of images, audio, and text
+Probabilistic reasoning and prediction based on data
+(2)  What requires caution when using AI
+Ethical judgments (may lead to discrimination or prejudice)
+Judgments involving personal information or privacy
+Final decision-making (who is responsible for the result)
+Accuracy of judgments when training data is biased
+Generating content that differs from the facts (hallucination)
+Issues of rights when using copyrighted works as training data
+Loss of clarity about how a judgment was made (the black-box problem)
+✎ Worked Example
+a YouTube recommends videos that match the user's preferences
+b Speaking to a smartphone to check the weather
+c Translating a foreign-language website into one's native language
+d A smartphone camera automatically detects a person's face
+[Choices]   A Recommendation system    B Voice assistant    C
+Machine translation    D Face recognition
+(1)  For each of a-d, match the AI technology used in the service with the
+most appropriate term from the choices below (A–D).
+
+=== PAGE 23 ===
+1-3 — AI in Daily Life and Industry
+221-3 — AI in Daily Life and Industry
+AI can be confidently wrong —
+verify its output.
+📝 EXAM-STYLE QUESTION
+A AI is good at probabilistic reasoning and prediction based on data.
+B AI is good at recognizing images and audio.
+C It is fine to leave ethical judgments entirely to AI.
+D AI judgments can become inaccurate when training data is biased.
+✓ Solution
+(1)
+a: Recommendations matched to preferences come from a
+recommendation system. A
+b: Operating by speaking is a voice assistant. B
+c: Translating a foreign language into one's native language is machine
+translation. C
+d: Detecting a person's face is face recognition. D
+(2)
+A AI is good at probabilistic reasoning and prediction based on data.
+Therefore, ○.
+B AI is good at recognizing images, audio, and text. Therefore, ○.
+C AI judgments can lead to discrimination or prejudice, so ethical
+judgments should not be left entirely to AI. Therefore, ×.
+D Bias in training data affects the accuracy of AI judgments. Therefore,
+○.
+Try
+1   Answer the following questions.
+1. What is the term for the system that predicts preferences from past behavior
+data and displays recommendations?
+2. What is the term for the AI technology that recognizes a voice, understands
+commands, and executes them?
+3. In which industry are image-diagnosis AIs used?
+4. In manufacturing, what is the term for the system that predicts product
+failures in advance?
+Analyze why AI is well suited to
+some tasks but requires
+caution in others. [6] In your
+answer: refer to what AI is
+good at (finding patterns,
+recognition, prediction) and to
+what needs caution (ethical
+judgments, privacy, final
+decision-making).
+(2)  Mark each statement (A–D) with ○ if true or × if false.
+
+=== PAGE 24 ===
+1-3 — AI in Daily Life and Industry
+231-3 — AI in Daily Life and Industry
+💡 THINK IT THROUGH
+In agriculture, give one realistic
+advantage of introducing AI
+and one concern that should
+be considered before
+introduction, and briefly
+explain the reason for each.
+2   Answer the following questions.
+A Ethical judgments
+B Finding and classifying patterns
+C Judgments involving personal information or privacy
+D Final decision-making
+a Optimizing delivery routes
+b Detecting diseases from X-ray images
+c Detecting pests and diseases
+d Automating product quality inspection
+⚙ Think as an Engineer — Investigate & Decide
+You have just discussed agriculture in the Think It Through note. Now
+investigate a different industry and decide.
+1 · Investigate. Choose one industry from the lesson other than agriculture
+— healthcare, manufacturing, or logistics. Find one real, documented
+example of AI being used in it, and record the source you used.
+2 · Weigh it up. Note one benefit and one caution of using AI in that
+industry, using the ideas of what AI is good at and what needs caution.
+3 · Decide. Should this industry use AI for this task on its own, or with a
+human checking the result? Recommend one approach and give two
+reasons.
+Stuck? AI is good at finding patterns quickly; but a human is needed
+where a wrong result could harm someone or involve responsibility.
+🌍  In a New Context
+A school library wants to use AI to recommend books to students based on
+what they have borrowed before. Using what you learned about
+recommendation systems and what AI is good at, explain how the AI would
+work, and identify one caution the school should consider.
+(1)  From the following options (A–D), choose the one that does NOT belong to
+"what requires caution when using AI."
+(2)  For each AI usage example (a–d), indicate which industry is most closely
+related: A Healthcare, B Agriculture, C Manufacturing, D Logistics.
+
+=== PAGE 25 ===
+1-3 — AI in Daily Life and Industry
+241-3 — AI in Daily Life and Industry
+⭐ REFLECT & CHALLENGE
+❓  Lesson Question — Answered
+AI is used widely in daily life — in recommendation systems, voice
+assistants, machine translation, and face recognition — and in industry,
+across fields such as healthcare, agriculture, manufacturing, and logistics.
+AI is good at finding and classifying patterns in data, recognizing and
+generating images, audio, and text, and making probabilistic predictions
+from data. However, it needs caution where ethical judgments, personal
+information and privacy, and final decision-making are involved, and
+where training data is biased. So AI is a powerful tool for pattern-based
+tasks, but human judgment is still needed for responsibility, ethics, and
+fairness.
+Exercise
+1   Cover the Point! section with a red plastic sheet and quiz yourself in
+your notebook in numerical order.
+2   Answer the following questions.
+(1)  Select all options that AI excels at.
+A Ethical judgments
+B Finding features in images and text and classifying them
+C Judgments involving personal information
+D Probabilistic reasoning and prediction based on data
+E Decision-making that bears responsibility for results
+F Recognition and generation of images, audio, and text
+A A recommendation system predicts preferences from past behavior data
+and displays recommendations.
+B A voice assistant recognizes a voice, understands commands, and executes
+them.
+C Machine translation is a system in which humans manually translate
+foreign languages.
+D Face recognition automatically detects and identifies human faces in
+photographs.
+3   Read the following passage and answer each question.
+AI is widely used in our daily lives. For example, recommendations of videos that
+match one's preferences on a video site come from a ( a ) system. Also, AI
+Reflect: Which use of AI in this
+lesson surprised you most?
+Where in your own life do you
+think AI is making decisions
+about you? Challenge: Choose
+one task where AI needs
+caution (ethics, privacy, or final
+decisions). Suggest one rule
+that would make using AI for
+that task safer.
+(2)  From the following options (A–D), choose the one that is NOT an appropriate
+description of services that use AI.
+
+=== PAGE 26 ===
+1-3 — AI in Daily Life and Industry
+251-3 — AI in Daily Life and Industry
+⭐ Key takeaway
+Remember:
+AI is good at finding and
+classifying patterns in data
+— recommendations,
+voice, translation, face
+recognition, and many
+industry tasks — but
+human judgment is still
+needed where ethics,
+privacy, and responsibility
+are involved.
+technology is used in ( b ), with which one can speak to a smartphone to operate
+it, and in ( c ), which converts foreign-language text into one's native language.
+a High-speed processing of large amounts of data
+b Ethical judgments
+c Judgments involving personal information or privacy
+d Recognition of images and audio
+(2)  From the following (a–d), choose all that require caution when using AI.
+1. Fill in the blanks (a)–(c).
+
+=== PAGE 27 ===
