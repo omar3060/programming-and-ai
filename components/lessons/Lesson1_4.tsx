@@ -126,105 +126,233 @@ export function Lesson1_4() {
         </div>
       </div>
 
-      {/* SECTION 1: Algorithmic Bias Simulator (ص 25) */}
-      <div className="theme-panel border p-6 sm:p-8 rounded-3xl space-y-4">
-        <div className="flex items-center justify-between border-b border-slate-800 pb-3">
+      {/* SECTION 1: Algorithmic Bias & Causes (كتاب الوزارة ص 25) */}
+      <div className="theme-panel border p-6 sm:p-8 rounded-3xl space-y-5">
+        <div className="border-b border-slate-800 pb-3">
           <h3 className="text-lg font-black flex items-center gap-2">
             <span className="w-7 h-7 rounded-lg bg-rose-500/20 text-rose-400 flex items-center justify-center text-xs"><span className="lang-ar">١</span><span className="lang-en">1</span></span>
-            <span className="lang-ar">محاكي التحيز الخوارزمي (Algorithmic Bias) في فرز التوظيف (ص 25)</span>
-            <span className="lang-en">Algorithmic Bias Hiring Simulator (p. 25)</span>
+            <span className="lang-ar">1. التحيز الخوارزمي وأسبابه الرئيسية (كتاب الوزارة ص 25)</span>
+            <span className="lang-en">1. Algorithmic Bias & Main Causes (Textbook p. 25)</span>
+          </h3>
+        </div>
+
+        {/* Official Textbook Definitions */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs leading-relaxed">
+          <div className="p-4 rounded-2xl bg-rose-950/20 border border-rose-500/30 space-y-2">
+            <strong className="text-rose-400 text-sm block font-bold flex items-center gap-2">
+              <i className="fa-solid fa-scale-unbalanced"></i>
+              <span className="lang-ar">تعريف التحيز في أنظمة الذكاء الاصطناعي:</span>
+              <span className="lang-en">Definition of Algorithmic Bias:</span>
+            </strong>
+            <p className="text-slate-200">
+              <span className="lang-ar">"انحراف أو نمط قد يؤدي إلى نتائج غير عادلة أو ضارة، ويمكن أن ينشأ من البيانات أو تصميم النظام أو طريقة استخدامه أو السياق البشري والاجتماعي."</span>
+              <span className="lang-en">"A systematic deviation or pattern leading to unfair or harmful outcomes, originating from data, system design, usage context, or human/social factors."</span>
+            </p>
+            <p className="text-sub text-[11px]">
+              <span className="lang-ar">📌 <strong>مثال كتاب الوزارة:</strong> نظام توظيف يفضل فئة بصورة غير عادلة، أو نظام تعرف على الوجه تقل دقته مع فئات عرقية معينة.</span>
+              <span className="lang-en">📌 <strong>Textbook Examples:</strong> A hiring system unfairly favoring one demographic, or a facial recognition tool with lower accuracy for specific ethnic groups.</span>
+            </p>
+          </div>
+
+          <div className="p-4 rounded-2xl bg-amber-950/20 border border-amber-500/30 space-y-2">
+            <strong className="text-amber-400 text-sm block font-bold flex items-center gap-2">
+              <i className="fa-solid fa-database"></i>
+              <span className="lang-ar">مصطلح هام: بيانات التدريب (Training Data):</span>
+              <span className="lang-en">Key Term: Training Data:</span>
+            </strong>
+            <p className="text-slate-200">
+              <span className="lang-ar">"هي الأمثلة والنماذج التي يتعلم منها نظام الذكاء الاصطناعي أنماطه قبل استخدامه؛ وكلما قل تمثيلها للواقع زاد احتمال تحيز مخرجاته."</span>
+              <span className="lang-en">"The dataset of examples from which AI models extract patterns prior to deployment. Lower real-world representation increases output bias probability."</span>
+            </p>
+          </div>
+        </div>
+
+        {/* Main Causes of Bias */}
+        <div className="p-5 rounded-2xl theme-subpanel border space-y-3 text-xs leading-relaxed">
+          <strong className="text-white text-sm block font-bold flex items-center gap-2">
+            <i className="fa-solid fa-triangle-exclamation text-amber-400"></i>
+            <span className="lang-ar">الأسباب الرئيسية للتحيز (كتاب الوزارة ص 25):</span>
+            <span className="lang-en">Main Causes of Algorithmic Bias (Textbook p. 25):</span>
+          </strong>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div className="p-3.5 rounded-xl bg-slate-900 border border-slate-700/60 space-y-1">
+              <strong className="text-rose-300 block font-bold">1. بيانات التدريب المتحيزة (Biased Training Data):</strong>
+              <p className="text-sub">بيانات غير كافية عن سمات معينة، أو انعكاس نزعات تمييزية سابقة وتاريخية موجودة في البيانات الأساسية.</p>
+            </div>
+            <div className="p-3.5 rounded-xl bg-slate-900 border border-slate-700/60 space-y-1">
+              <strong className="text-amber-300 block font-bold">2. طريقة بناء النظام والمتغيرات البديلة (Proxy Variables):</strong>
+              <p className="text-sub">اختيار غير مناسب للمتغيرات، أو استخدام <strong>متغير بديل (Proxy Variable)</strong> يمثل بشكل غير مباشر سمة محمية (مثل استخدام الرمز البريدي لاستنتاج العرق أو المستوى الاجتماعي)، أو تصميم النموذج نفسه.</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Bias Simulator */}
+        <div className="space-y-3 pt-2">
+          <p className="text-xs text-sub leading-relaxed">
+            <span className="lang-ar">تجربة تفاعلية على التحيز الخوارزمي في فرز التوظيف:</span>
+            <span className="lang-en">Interactive simulation of recruitment algorithmic bias:</span>
+          </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+            <button onClick={() => handleTestBiasModel(true)} className="p-4 rounded-2xl bg-rose-950/30 border border-rose-500/50 hover:bg-rose-900/40 text-start space-y-1.5 transition">
+              <strong className="text-rose-300 block">
+                1. <span className="lang-ar">تشغيل النموذج ببيانات تاريخية غير متوازنة ❌</span>
+                <span className="lang-en">Unbalanced Historical Data Model ❌</span>
+              </strong>
+              <p className="text-sub"><span className="lang-ar">يستنتج النموذج أن الذكر هو الموظف الأفضل إحصائياً، فيستبعد الكفاءات النسائية تلقائياً!</span><span className="lang-en">The model infers male preference, systematically penalizing qualified female applicants.</span></p>
+            </button>
+            <button onClick={() => handleTestBiasModel(false)} className="p-4 rounded-2xl bg-emerald-950/30 border border-emerald-500/50 hover:bg-emerald-900/40 text-start space-y-1.5 transition">
+              <strong className="text-emerald-300 block">
+                2. <span className="lang-ar">تشغيل النموذج بعد تنقية البيانات وتحقيق العدالة ✅</span>
+                <span className="lang-en">Debiased & Balanced Fair Model ✅</span>
+              </strong>
+              <p className="text-sub"><span className="lang-ar">إلغاء المتغيرات البديلة وتمثيل الفئات بعدالة، ليركز النظام فقط على الكفاءة والمهارات.</span><span className="lang-en">Proxy variables removed; evaluation is conducted purely on skills and verifiable merits.</span></p>
+            </button>
+          </div>
+
+          {biasResult.show && (
+            <div className={`p-3.5 rounded-xl text-xs leading-relaxed border animate-fadeIn ${
+              biasResult.isUnbalanced ? 'bg-rose-950/60 border-rose-500 text-rose-200' : 'bg-emerald-950/60 border-emerald-500 text-emerald-200'
+            }`}>
+              {biasResult.isUnbalanced ? (
+                <>
+                  ⚠️ <strong>رصد تحيز خوارزمي صارخ (Algorithmic Bias):</strong> النموذج رفض تلقائياً 92% من السير الذاتية للإناث بغض النظر عن خبراتهن ورتبهن الأكاديمية! هذا يثبت أن الـ AI يكرر تحيزات البشر التاريخية إذا لم يُدقق بوعي.
+                </>
+              ) : (
+                <>
+                  ✅ <strong>نظام عادل ومحايد (Fairness-Aware AI):</strong> بعد إزالة المؤشرات الضمنية وإعادة موازنة البيانات، أصبحت نسبة القبول تعتمد 100% على الدرجات الأكاديمية والمهارات العملية دون النظر للنوع!
+                </>
+              )}
+            </div>
+          )}
+        </div>
+      </div>
+
+      {/* SECTION 2: Privacy Issues (كتاب الوزارة ص 26) */}
+      <div className="theme-panel border p-6 sm:p-8 rounded-3xl space-y-4">
+        <div className="border-b border-slate-800 pb-3">
+          <h3 className="text-lg font-black flex items-center gap-2">
+            <span className="w-7 h-7 rounded-lg bg-purple-500/20 text-purple-400 flex items-center justify-center text-xs"><span className="lang-ar">٢</span><span className="lang-en">2</span></span>
+            <span className="lang-ar">2. قضايا الخصوصية في الذكاء الاصطناعي (كتاب الوزارة ص 26)</span>
+            <span className="lang-en">2. Privacy Issues in Artificial Intelligence (Textbook p. 26)</span>
           </h3>
         </div>
 
         <p className="text-xs text-sub leading-relaxed">
-          <span className="lang-ar">نظام فرز سير ذاتية آلي دُرّب على بيانات شركة كانت 85% من التعيينات السابقة فيها لذكور فقط:</span>
-          <span className="lang-en">A resume screening AI trained on historical company records where 85% of previous hires were male:</span>
+          <span className="lang-ar">أدى تطور تقنية الذكاء الاصطناعي إلى ظهور قضايا جديدة ومقلقة تتعلق بالخصوصية وحرية الأفراد، أبرزها القضيتان التاليتان:</span>
+          <span className="lang-en">The expansion of AI introduces critical privacy challenges, highlighted by two main issues:</span>
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
-          <button onClick={() => handleTestBiasModel(true)} className="p-4 rounded-2xl bg-rose-950/30 border border-rose-500/50 hover:bg-rose-900/40 text-start space-y-1.5 transition">
-            <strong className="text-rose-300 block">
-              1. <span className="lang-ar">تشغيل النموذج ببيانات تاريخية غير متوازنة ❌</span>
-              <span className="lang-en">Unbalanced Historical Data Model ❌</span>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs leading-relaxed">
+          <div className="p-4 rounded-2xl theme-subpanel border border-purple-500/30 space-y-2">
+            <strong className="text-purple-300 text-sm block font-bold flex items-center gap-2">
+              <i className="fa-solid fa-eye"></i>
+              <span className="lang-ar">1. المراقبة عبر تقنية التعرف على الوجه:</span>
+              <span className="lang-en">1. Facial Recognition Surveillance:</span>
             </strong>
-            <p className="text-sub"><span className="lang-ar">يستنتج النموذج أن الذكر هو الموظف الأفضل إحصائياً، فيستبعد الكفاءات النسائية تلقائياً!</span><span className="lang-en">The model infers male preference, systematically penalizing qualified female applicants.</span></p>
-          </button>
-          <button onClick={() => handleTestBiasModel(false)} className="p-4 rounded-2xl bg-emerald-950/30 border border-emerald-500/50 hover:bg-emerald-900/40 text-start space-y-1.5 transition">
-            <strong className="text-emerald-300 block">
-              2. <span className="lang-ar">تشغيل النموذج بعد تنقية البيانات وتحقيق العدالة ✅</span>
-              <span className="lang-en">Debiased & Balanced Fair Model ✅</span>
-            </strong>
-            <p className="text-sub"><span className="lang-ar">إلغاء المتغيرات البديلة وتمثيل الفئات بعدالة، ليركز النظام فقط على الكفاءة والمهارات.</span><span className="lang-en">Proxy variables removed; evaluation is conducted purely on skills and verifiable merits.</span></p>
-          </button>
-        </div>
-
-        {biasResult.show && (
-          <div className={`p-3.5 rounded-xl text-xs leading-relaxed border animate-fadeIn ${
-            biasResult.isUnbalanced ? 'bg-rose-950/60 border-rose-500 text-rose-200' : 'bg-emerald-950/60 border-emerald-500 text-emerald-200'
-          }`}>
-            {biasResult.isUnbalanced ? (
-              <>
-                ⚠️ <strong>رصد تحيز خوارزمي صارخ (Algorithmic Bias):</strong> النموذج رفض تلقائياً 92% من السير الذاتية للإناث بغض النظر عن خبراتهن ورتبهن الأكاديمية! هذا يثبت أن الـ AI يكرر تحيزات البشر التاريخية إذا لم يُدقق بوعي.
-              </>
-            ) : (
-              <>
-                ✅ <strong>نظام عادل ومحايد (Fairness-Aware AI):</strong> بعد إزالة المؤشرات الضمنية وإعادة موازنة البيانات، أصبحت نسبة القبول تعتمد 100% على الدرجات الأكاديمية والمهارات العملية دون النظر للنوع!
-              </>
-            )}
+            <p className="text-sub">
+              <span className="lang-ar">يمكن للكاميرات المزودة بالذكاء الاصطناعي في الأماكن العامة التعرف على الأفراد وتتبع تحركاتهم بصفة مستمرة دون إذن صريح منهم.</span>
+              <span className="lang-en">Public AI cameras identifying and tracking individuals' movements continuously without explicit consent.</span>
+            </p>
           </div>
-        )}
+
+          <div className="p-4 rounded-2xl theme-subpanel border border-cyan-500/30 space-y-2">
+            <strong className="text-cyan-300 text-sm block font-bold flex items-center gap-2">
+              <i className="fa-solid fa-boxes-packing"></i>
+              <span className="lang-ar">2. الجمع الجماعي للبيانات الشخصية:</span>
+              <span className="lang-en">2. Bulk Personal Data Harvesting:</span>
+            </strong>
+            <p className="text-sub">
+              <span className="lang-ar">تُجمع وتُحلل كميات هائلة من بيانات السلوك عبر الإنترنت (مواقع الزيارة، المشتريات، الرسائل، التعليقات) لبناء بروفايل شخصي دقيق لكل مستخدم.</span>
+              <span className="lang-en">Collecting and analyzing vast streams of online behavioral data to construct intrusive user profiles.</span>
+            </p>
+          </div>
+        </div>
       </div>
 
-      {/* SECTION 2: The 4 Principles of AI Ethics (ص 27) */}
+      {/* SECTION 3: Explainable AI (XAI), Responsibility, Accountability & Transparency (كتاب الوزارة ص 26) */}
       <div className="theme-panel border p-6 sm:p-8 rounded-3xl space-y-5">
         <div className="border-b border-slate-800 pb-3">
           <h3 className="text-lg font-black flex items-center gap-2">
-            <span className="w-7 h-7 rounded-lg bg-blue-500/20 text-blue-400 flex items-center justify-center text-xs"><span className="lang-ar">٢</span><span className="lang-en">2</span></span>
-            <span className="lang-ar">المبادئ الأربعة الأساسية لأخلاقيات الذكاء الاصطناعي (ص 27)</span>
-            <span className="lang-en">The Four Core Principles of AI Ethics (p. 27)</span>
+            <span className="w-7 h-7 rounded-lg bg-cyan-500/20 text-cyan-400 flex items-center justify-center text-xs"><span className="lang-ar">٣</span><span className="lang-en">3</span></span>
+            <span className="lang-ar">3. الذكاء الاصطناعي القابل للتفسير (XAI) والمسؤولية والمساءلة والشفافية (ص 26)</span>
+            <span className="lang-en">3. Explainable AI (XAI), Responsibility, Accountability & Transparency (p. 26)</span>
           </h3>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
-          <div className="p-5 rounded-2xl theme-subpanel border border-emerald-500/30 space-y-2">
-            <div className="w-8 h-8 rounded-xl bg-emerald-500/20 text-emerald-400 font-bold flex items-center justify-center text-sm"><span className="lang-ar">١</span><span className="lang-en">1</span></div>
-            <h4 className="font-bold text-sm text-emerald-300"><span className="lang-ar">العدالة (Fairness)</span><span className="lang-en">Fairness</span></h4>
-            <p className="text-sub leading-relaxed"><span className="lang-ar">عدم التمييز ظلماً ضد أي شخص أو مجموعة في المخرجات والفرص وتكافؤ التقييم.</span><span className="lang-en">No unjust discrimination against any individual or demographic group.</span></p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs leading-relaxed">
+          {/* XAI */}
+          <div className="p-4 rounded-2xl bg-cyan-950/20 border border-cyan-500/40 space-y-2">
+            <strong className="text-cyan-300 text-sm block font-bold">1. XAI (القابل للتفسير):</strong>
+            <p className="text-sub">"أساليب تساعد البشر على فهم العوامل التي أسهمت في وصول النظام إلى مخرج أو قرار معين. وعندما تكون آلية الوصول للنتيجة غير واضحة (الصندوق الأسود)، يصعب تقييمها واكتشاف الأخطاء."</p>
           </div>
-          <div className="p-5 rounded-2xl theme-subpanel border border-brand-500/30 space-y-2">
-            <div className="w-8 h-8 rounded-xl bg-brand-500/20 text-brand-400 font-bold flex items-center justify-center text-sm"><span className="lang-ar">٢</span><span className="lang-en">2</span></div>
-            <h4 className="font-bold text-sm text-brand-400"><span className="lang-ar">الشفافية (Transparency)</span><span className="lang-en">Transparency</span></h4>
-            <p className="text-sub leading-relaxed"><span className="lang-ar">إتاحة معلومات واضحة عن عمل النظام وعملية اتخاذ قراره ومصادر بياناته وحدوده.</span><span className="lang-en">Disclosing how systems operate, how decisions are made, and their limits.</span></p>
+
+          {/* Responsibility */}
+          <div className="p-4 rounded-2xl bg-blue-950/20 border border-blue-500/40 space-y-2">
+            <strong className="text-blue-300 text-sm block font-bold">2. المسؤولية (Responsibility):</strong>
+            <p className="text-sub">"تحديد أدوار وواجبات الأطراف المرتبطة بتطوير النظام وتشغيله واستخدامه (المطور، الجهة المشغلة، المستخدم). ولا يوجد توزيع واحد يصلح لكل السياقات بل يختلف بحسب النظام."</p>
           </div>
-          <div className="p-5 rounded-2xl theme-subpanel border border-purple-500/30 space-y-2">
-            <div className="w-8 h-8 rounded-xl bg-purple-500/20 text-purple-300 font-bold flex items-center justify-center text-sm"><span className="lang-ar">٣</span><span className="lang-en">3</span></div>
-            <h4 className="font-bold text-sm text-purple-300"><span className="lang-ar">حماية الخصوصية</span><span className="lang-en">Privacy Protection</span></h4>
-            <p className="text-sub leading-relaxed"><span className="lang-ar">التعامل الآمن مع المعلومات الشخصية الحساسة ومنع التتبع أو المشاركة دون إذن صريح.</span><span className="lang-en">Appropriate handling of personal data without unauthorized tracking.</span></p>
+
+          {/* Accountability */}
+          <div className="p-4 rounded-2xl bg-amber-950/20 border border-amber-500/40 space-y-2">
+            <strong className="text-amber-300 text-sm block font-bold">3. المساءلة (Accountability):</strong>
+            <p className="text-sub">"تحديد الجهات المسؤولة عن النظام وقراراته وآثاره، وإمكان محاسبتها وفق أدوارها."</p>
+            <div className="p-2 rounded-lg bg-amber-500/10 text-amber-300 text-[11px] font-bold border border-amber-500/20">
+              📌 <strong>ملاحظة كتاب الوزارة:</strong> المساءلة ليست القدرة على شرح القرار (تلك وظيفة XAI)، بل تحديد من يُحاسب على النتيجة.
+            </div>
           </div>
-          <div className="p-5 rounded-2xl theme-subpanel border border-amber-500/30 space-y-2">
-            <div className="w-8 h-8 rounded-xl bg-amber-500/20 text-amber-400 font-bold flex items-center justify-center text-sm"><span className="lang-ar">٤</span><span className="lang-en">4</span></div>
-            <h4 className="font-bold text-sm text-amber-300"><span className="lang-ar">المساءلة (Accountability)</span><span className="lang-en">Accountability</span></h4>
-            <p className="text-sub leading-relaxed"><span className="lang-ar">تحديد من يتحمل المسؤولية القانونية والأخلاقية عن قرارات النظام وإمكان محاسبتهم.</span><span className="lang-en">Designating who answers for AI outcomes (developer, operator, user).</span></p>
+
+          {/* Transparency */}
+          <div className="p-4 rounded-2xl bg-emerald-950/20 border border-emerald-500/40 space-y-2">
+            <strong className="text-emerald-300 text-sm block font-bold">4. الشفافية (Transparency):</strong>
+            <p className="text-sub">"إتاحة معلومات واضحة ومناسبة عن النظام واستخدامه وعملية اتخاذ القرار وحدوده للجمهور والمستخدمين."</p>
           </div>
         </div>
+
+        {/* Live Interactive XAI Visualizer */}
+        <XAIDecisionVisualizer />
       </div>
 
-      {/* SECTION 3: Explainable AI (XAI) vs Black Box (ص 28) */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
-        <div className="p-5 rounded-3xl theme-panel border space-y-2">
-          <span className="text-2xl block">📦</span>
-          <strong className="text-white text-sm block"><span className="lang-ar">مشكلة الصندوق الأسود (Black Box)</span><span className="lang-en">Black-Box Problem</span></strong>
-          <p className="text-sub leading-relaxed"><span className="lang-ar">غموض العلاقات الحسابية الداخلية في الشبكات العصبية العميقة يجعل من المستحيل على البشر فهم سبب القرار أو كشف التحيز الداخلي في الخوارزمية.</span><span className="lang-en">Opaque decision logic prevents human stakeholders from auditing or catching hidden biases.</span></p>
+      {/* SECTION 4: The 4 Core Principles of AI Ethics (كتاب الوزارة ص 27) */}
+      <div className="theme-panel border p-6 sm:p-8 rounded-3xl space-y-5">
+        <div className="border-b border-slate-800 pb-3">
+          <h3 className="text-lg font-black flex items-center gap-2">
+            <span className="w-7 h-7 rounded-lg bg-blue-500/20 text-blue-400 flex items-center justify-center text-xs"><span className="lang-ar">٤</span><span className="lang-en">4</span></span>
+            <span className="lang-ar">4. المبادئ الأربعة الأساسية لأخلاقيات الذكاء الاصطناعي (جدول ص 27)</span>
+            <span className="lang-en">4. The Four Core Principles of AI Ethics (Textbook Table p. 27)</span>
+          </h3>
         </div>
-        <div className="p-5 rounded-3xl theme-panel border border-cyan-500/40 space-y-2">
-          <span className="text-2xl block">💡</span>
-          <strong className="text-cyan-300 text-sm block"><span className="lang-ar">الذكاء القابل للتفسير (XAI)</span><span className="lang-en">Explainable AI (XAI)</span></strong>
-          <p className="text-sub leading-relaxed"><span className="lang-ar">تقنيات وأدوات برمجية تتيح للبشر فهم العوامل والأسباب التي قادت النموذج لحكمه، مما يمكننا من مراجعة الخطأ وتحقيق الشفافية والمساءلة.</span><span className="lang-en">Methods enabling humans to trace why an AI reached a verdict, ensuring auditability and compliance.</span></p>
+
+        {/* Official Textbook Table Representation */}
+        <div className="overflow-x-auto">
+          <table className="w-full text-xs text-start border-collapse">
+            <thead>
+              <tr className="bg-slate-800/80 text-white font-bold border-b border-slate-700">
+                <th className="p-3 text-start w-1/4">المبدأ (Principle)</th>
+                <th className="p-3 text-start">الوصف الرسمي في كتاب الوزارة (Official Textbook Description)</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-slate-800 text-sub">
+              <tr className="hover:bg-slate-800/30">
+                <td className="p-3 font-bold text-emerald-400">1. العدالة (Fairness)</td>
+                <td className="p-3">عدم التمييز ظلماً ضد أي شخص أو مجموعة بعينها.</td>
+              </tr>
+              <tr className="hover:bg-slate-800/30">
+                <td className="p-3 font-bold text-brand-400">2. الشفافية (Transparency)</td>
+                <td className="p-3">إتاحة معلومات واضحة ومناسبة عن النظام واستخدامه وعملية اتخاذ القرار وحدوده.</td>
+              </tr>
+              <tr className="hover:bg-slate-800/30">
+                <td className="p-3 font-bold text-purple-400">3. حماية الخصوصية (Privacy)</td>
+                <td className="p-3">التعامل مع المعلومات الشخصية بشكل مناسب وحماية الخصوصية.</td>
+              </tr>
+              <tr className="hover:bg-slate-800/30">
+                <td className="p-3 font-bold text-amber-400">4. المساءلة (Accountability)</td>
+                <td className="p-3">تحديد الجهات المسؤولة عن النظام وقراراته وآثاره، وإمكان محاسبتها وفق أدوارها.</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
-
-      {/* Live Interactive Explainable AI (XAI) vs Black-Box Simulator */}
-      <XAIDecisionVisualizer />
 
       {/* TEXTBOOK SIDEBAR FEATURES (كتاب الوزارة ص 24 - 30) */}
       <div className="theme-panel border p-6 sm:p-8 rounded-3xl space-y-6">
