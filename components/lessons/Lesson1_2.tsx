@@ -5,6 +5,7 @@ import { useApp } from '@/components/providers/AppProviders';
 import { allExamQuestions } from '@/data/examQuestions';
 
 import { InstructorBioCard } from '@/components/ui/InstructorBioCard';
+import { DownloadEvaluationButton } from '@/components/ui/DownloadEvaluationButton';
 import { RuleBasedVsMLSimulator } from '@/components/simulators/RuleBasedVsMLSimulator';
 
 const ringDetails = {
@@ -194,6 +195,11 @@ export function Lesson1_2() {
                 <span className="lang-ar">آليات عمل الذكاء الاصطناعي</span>
                 <span className="lang-en">AI Mechanics</span>
               </span>
+              <DownloadEvaluationButton
+                pdfUrl="/evaluations/unit1/lesson1_2_eval.pdf"
+                fileName="حل_تقييمات_الدرس_الثاني_كيف_يعمل_الذكاء_الاصطناعي.pdf"
+                lessonTitle="الدرس الثاني"
+              />
             </div>
             <h2 className="text-2xl sm:text-3xl font-black">
               <span className="lang-ar">كيف يعمل الذكاء الاصطناعي؟</span>

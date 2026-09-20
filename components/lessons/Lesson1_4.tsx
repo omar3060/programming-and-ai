@@ -5,6 +5,7 @@ import { useApp } from '@/components/providers/AppProviders';
 import { allExamQuestions } from '@/data/examQuestions';
 
 import { InstructorBioCard } from '@/components/ui/InstructorBioCard';
+import { DownloadEvaluationButton } from '@/components/ui/DownloadEvaluationButton';
 import { XAIDecisionVisualizer } from '@/components/simulators/XAIDecisionVisualizer';
 
 export function Lesson1_4() {
@@ -57,6 +58,11 @@ export function Lesson1_4() {
                 <span className="lang-ar">أخلاقيات الذكاء الاصطناعي</span>
                 <span className="lang-en">AI Ethics & Governance</span>
               </span>
+              <DownloadEvaluationButton
+                pdfUrl="/evaluations/unit1/lesson1_4_eval.pdf"
+                fileName="حل_تقييمات_الدرس_الرابع_القضايا_الأخلاقية_للذكاء_الاصطناعي.pdf"
+                lessonTitle="الدرس الرابع"
+              />
             </div>
             <h2 className="text-2xl sm:text-3xl font-black">
               <span className="lang-ar">القضايا الأخلاقية المتعلقة بالذكاء الاصطناعي</span>

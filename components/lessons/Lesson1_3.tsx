@@ -5,6 +5,7 @@ import { useApp } from '@/components/providers/AppProviders';
 import { allExamQuestions } from '@/data/examQuestions';
 
 import { InstructorBioCard } from '@/components/ui/InstructorBioCard';
+import { DownloadEvaluationButton } from '@/components/ui/DownloadEvaluationButton';
 import { AIApplicationsInteractiveGrid } from '@/components/simulators/AIApplicationsInteractiveGrid';
 
 export function Lesson1_3() {
@@ -51,6 +52,11 @@ export function Lesson1_3() {
                 <span className="lang-ar">تطبيقات الذكاء الاصطناعي</span>
                 <span className="lang-en">AI Applications</span>
               </span>
+              <DownloadEvaluationButton
+                pdfUrl="/evaluations/unit1/lesson1_3_eval.pdf"
+                fileName="حل_تقييمات_الدرس_الثالث_الذكاء_الاصطناعي_في_الحياة_اليومية.pdf"
+                lessonTitle="الدرس الثالث"
+              />
             </div>
             <h2 className="text-2xl sm:text-3xl font-black">
               <span className="lang-ar">الذكاء الاصطناعي في الحياة اليومية والصناعة</span>

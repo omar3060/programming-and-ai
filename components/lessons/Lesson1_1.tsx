@@ -5,6 +5,7 @@ import { useApp } from '@/components/providers/AppProviders';
 import { allExamQuestions } from '@/data/examQuestions';
 
 import { InstructorBioCard } from '@/components/ui/InstructorBioCard';
+import { DownloadEvaluationButton } from '@/components/ui/DownloadEvaluationButton';
 import { MultiCoreSimulator } from '@/components/simulators/MultiCoreSimulator';
 import { EdgeVsCloudInteractiveLab } from '@/components/simulators/EdgeVsCloudInteractiveLab';
 
@@ -103,6 +104,11 @@ export function Lesson1_1() {
                 <span className="lang-ar">تكنولوجيا المعلومات والمجتمع</span>
                 <span className="lang-en">IT and Society</span>
               </span>
+              <DownloadEvaluationButton
+                pdfUrl="/evaluations/unit1/lesson1_1_eval.pdf"
+                fileName="حل_تقييمات_الدرس_الأول_تطور_تكنولوجيا_المعلومات.pdf"
+                lessonTitle="الدرس الأول"
+              />
             </div>
             <h2 className="text-2xl sm:text-3xl font-black">
               <span className="lang-ar">تطور تكنولوجيا المعلومات والتحول الاجتماعي</span>
