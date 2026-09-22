@@ -72,47 +72,47 @@ export function Lesson2_1() {
           </p>
         </div>
 
-        {/* TLS Handshake Stages Table */}
-        <div className="overflow-x-auto rounded-xl border border-slate-200 dark:border-slate-800">
-          <table className="w-full text-left text-sm text-slate-800 dark:text-slate-300">
-            <thead className="theme-subpanel text-slate-900 dark:text-slate-200 uppercase text-xs font-bold">
+        {/* TLS Handshake Stages Table - Perfectly Aligned via text-start */}
+        <div className="overflow-x-auto rounded-2xl border border-slate-200 dark:border-slate-800 shadow-md">
+          <table className="w-full text-start text-sm text-slate-800 dark:text-slate-300">
+            <thead className="theme-subpanel text-slate-900 dark:text-slate-200 uppercase text-xs font-bold border-b border-slate-200 dark:border-slate-800">
               <tr>
-                <th className="p-3">{lang === 'ar' ? 'المرحلة' : 'Stage'}</th>
-                <th className="p-3">{lang === 'ar' ? 'ما يحدث (Mechanism)' : 'What Happens'}</th>
-                <th className="p-3">{lang === 'ar' ? 'طريقة التشفير المستخدمة' : 'Cryptographic Method Used'}</th>
+                <th className="p-4 text-start font-black">{lang === 'ar' ? 'المرحلة' : 'Stage'}</th>
+                <th className="p-4 text-start font-black">{lang === 'ar' ? 'ما يحدث (Mechanism)' : 'What Happens'}</th>
+                <th className="p-4 text-start font-black">{lang === 'ar' ? 'طريقة التشفير المستخدمة' : 'Cryptographic Method Used'}</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-slate-200 dark:divide-slate-800">
               <tr className="hover:bg-slate-500/10 transition">
-                <td className="p-3 font-bold text-rose-600 dark:text-rose-400">① {lang === 'ar' ? 'الاتصال والتحقق' : 'Connection'}</td>
-                <td className="p-3">
+                <td className="p-4 font-bold text-rose-600 dark:text-rose-400 align-top">① {lang === 'ar' ? 'الاتصال والتحقق' : 'Connection'}</td>
+                <td className="p-4 text-start leading-relaxed align-top">
                   {lang === 'ar'
                     ? 'يرسل خادم الويب شهادته الرقمية والمفتاح العام إلى المتصفح. يتحقق المتصفح من أصالة الخادم عبر جهة التصديق (CA).'
                     : 'The web server sends a digital certificate and a public key to the browser. The browser verifies the server\'s authenticity through a certificate authority (CA).'}
                 </td>
-                <td className="p-3 font-semibold text-emerald-600 dark:text-emerald-400">
+                <td className="p-4 font-semibold text-emerald-600 dark:text-emerald-400 align-top text-start">
                   {lang === 'ar' ? 'التشفير بالمفتاح العام (Public-key cryptography)' : 'Public-key cryptography'}
                 </td>
               </tr>
               <tr className="hover:bg-slate-500/10 transition">
-                <td className="p-3 font-bold text-rose-600 dark:text-rose-400">② {lang === 'ar' ? 'تبادل المفتاح' : 'Key Exchange'}</td>
-                <td className="p-3">
+                <td className="p-4 font-bold text-rose-600 dark:text-rose-400 align-top">② {lang === 'ar' ? 'تبادل المفتاح' : 'Key Exchange'}</td>
+                <td className="p-4 text-start leading-relaxed align-top">
                   {lang === 'ar'
                     ? 'ينشئ المتصفح مفتاحاً مشتركاً (Common key) للاتصال، ويشفره بمفتاح الخادم العام ويرسله. يفك الخادم تشفيره بمفتاحه الخاص للحصول على المفتاح المشترك.'
                     : 'The browser creates a common key for communication, encrypts it with the server\'s public key, and sends it. The server decrypts it with its private key to obtain the common key.'}
                 </td>
-                <td className="p-3 font-semibold text-emerald-600 dark:text-emerald-400">
+                <td className="p-4 font-semibold text-emerald-600 dark:text-emerald-400 align-top text-start">
                   {lang === 'ar' ? 'التشفير بالمفتاح العام (Public-key cryptography)' : 'Public-key cryptography'}
                 </td>
               </tr>
               <tr className="hover:bg-slate-500/10 transition">
-                <td className="p-3 font-bold text-rose-600 dark:text-rose-400">③ {lang === 'ar' ? 'تبادل البيانات' : 'Data Communication'}</td>
-                <td className="p-3">
+                <td className="p-4 font-bold text-rose-600 dark:text-rose-400 align-top">③ {lang === 'ar' ? 'تبادل البيانات' : 'Data Communication'}</td>
+                <td className="p-4 text-start leading-relaxed align-top">
                   {lang === 'ar'
                     ? 'يتم تشفير وتداول البيانات بسرعة وكفاءة باستخدام المفتاح المشترك الذي تم تبادله.'
                     : 'Data is encrypted and exchanged using the shared common key.'}
                 </td>
-                <td className="p-3 font-semibold text-indigo-600 dark:text-indigo-400">
+                <td className="p-4 font-semibold text-indigo-600 dark:text-indigo-400 align-top text-start">
                   {lang === 'ar' ? 'التشفير المتماثل / بالمفتاح المشترك (Common-key cryptography)' : 'Common-key cryptography'}
                 </td>
               </tr>
@@ -150,36 +150,36 @@ export function Lesson2_1() {
             : 'Many services adopt multi-factor authentication (MFA), in which two or more of the three factors of authentication (knowledge, possession, biometric) are combined. When only one factor is used, an unauthorized party can gain access if that factor is broken. By combining multiple factors, even if one is broken, another can still prevent access.'}
         </p>
 
-        {/* Real Service Authentication Examples Table */}
-        <div className="overflow-x-auto rounded-xl border border-slate-200 dark:border-slate-800">
-          <table className="w-full text-left text-sm text-slate-800 dark:text-slate-300">
-            <thead className="theme-subpanel text-slate-900 dark:text-slate-200 uppercase text-xs font-bold">
+        {/* Real Service Authentication Examples Table - Perfectly Aligned via text-start */}
+        <div className="overflow-x-auto rounded-2xl border border-slate-200 dark:border-slate-800 shadow-md">
+          <table className="w-full text-start text-sm text-slate-800 dark:text-slate-300">
+            <thead className="theme-subpanel text-slate-900 dark:text-slate-200 uppercase text-xs font-bold border-b border-slate-200 dark:border-slate-800">
               <tr>
-                <th className="p-3">{lang === 'ar' ? 'الخدمة (Service)' : 'Service'}</th>
-                <th className="p-3">{lang === 'ar' ? 'أمثلة المصادقة المستخدمة' : 'Examples of Authentication Used'}</th>
-                <th className="p-3">{lang === 'ar' ? 'تصنيف العوامل' : 'Factors Category'}</th>
+                <th className="p-4 text-start font-black">{lang === 'ar' ? 'الخدمة (Service)' : 'Service'}</th>
+                <th className="p-4 text-start font-black">{lang === 'ar' ? 'أمثلة المصادقة المستخدمة' : 'Examples of Authentication Used'}</th>
+                <th className="p-4 text-start font-black">{lang === 'ar' ? 'تصنيف العوامل' : 'Factors Category'}</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-slate-200 dark:divide-slate-800">
               <tr className="hover:bg-slate-500/10 transition">
-                <td className="p-3 font-bold text-slate-900 dark:text-white">{lang === 'ar' ? 'الخدمات المصرفية عبر الإنترنت (Online Banking)' : 'Online banking'}</td>
-                <td className="p-3">{lang === 'ar' ? 'كلمة المرور + كلمة المرور لمرة واحدة (OTP)' : 'Password + one-time password'}</td>
-                <td className="p-3 font-mono text-xs text-amber-600 dark:text-amber-400">{lang === 'ar' ? 'المعرفة + الملكية' : 'Knowledge + Possession'}</td>
+                <td className="p-4 font-bold text-slate-900 dark:text-white align-top text-start">{lang === 'ar' ? 'الخدمات المصرفية عبر الإنترنت (Online Banking)' : 'Online banking'}</td>
+                <td className="p-4 align-top text-start">{lang === 'ar' ? 'كلمة المرور + كلمة المرور لمرة واحدة (OTP)' : 'Password + one-time password'}</td>
+                <td className="p-4 font-mono text-xs text-amber-600 dark:text-amber-400 align-top text-start">{lang === 'ar' ? 'المعرفة + الملكية' : 'Knowledge + Possession'}</td>
               </tr>
               <tr className="hover:bg-slate-500/10 transition">
-                <td className="p-3 font-bold text-slate-900 dark:text-white">{lang === 'ar' ? 'تسجيل دخول وسائل التواصل (SNS Login)' : 'SNS login'}</td>
-                <td className="p-3">{lang === 'ar' ? 'كلمة المرور + رمز رسالة SMS' : 'Password + SMS authentication'}</td>
-                <td className="p-3 font-mono text-xs text-amber-600 dark:text-amber-400">{lang === 'ar' ? 'المعرفة + الملكية' : 'Knowledge + Possession'}</td>
+                <td className="p-4 font-bold text-slate-900 dark:text-white align-top text-start">{lang === 'ar' ? 'تسجيل دخول وسائل التواصل (SNS Login)' : 'SNS login'}</td>
+                <td className="p-4 align-top text-start">{lang === 'ar' ? 'كلمة المرور + رمز رسالة SMS' : 'Password + SMS authentication'}</td>
+                <td className="p-4 font-mono text-xs text-amber-600 dark:text-amber-400 align-top text-start">{lang === 'ar' ? 'المعرفة + الملكية' : 'Knowledge + Possession'}</td>
               </tr>
               <tr className="hover:bg-slate-500/10 transition">
-                <td className="p-3 font-bold text-slate-900 dark:text-white">{lang === 'ar' ? 'التسوق الإلكتروني (Online Shopping)' : 'Online shopping'}</td>
-                <td className="p-3">{lang === 'ar' ? 'كلمة المرور + رمز كود 3-D Secure' : 'Password + one-time code from 3-D Secure'}</td>
-                <td className="p-3 font-mono text-xs text-amber-600 dark:text-amber-400">{lang === 'ar' ? 'المعرفة + الملكية' : 'Knowledge + Possession'}</td>
+                <td className="p-4 font-bold text-slate-900 dark:text-white align-top text-start">{lang === 'ar' ? 'التسوق الإلكتروني (Online Shopping)' : 'Online shopping'}</td>
+                <td className="p-4 align-top text-start">{lang === 'ar' ? 'كلمة المرور + رمز كود 3-D Secure' : 'Password + one-time code from 3-D Secure'}</td>
+                <td className="p-4 font-mono text-xs text-amber-600 dark:text-amber-400 align-top text-start">{lang === 'ar' ? 'المعرفة + الملكية' : 'Knowledge + Possession'}</td>
               </tr>
               <tr className="hover:bg-slate-500/10 transition">
-                <td className="p-3 font-bold text-slate-900 dark:text-white">{lang === 'ar' ? 'تسجيل كمبيوتر الشركة (Company Laptop)' : 'Company laptop login'}</td>
-                <td className="p-3">{lang === 'ar' ? 'البطاقة الذكية + مصادقة بصمة الإصبع' : 'Smart card + fingerprint authentication'}</td>
-                <td className="p-3 font-mono text-xs text-emerald-600 dark:text-emerald-400">{lang === 'ar' ? 'الملكية + السمات البيومترية' : 'Possession + Biometric'}</td>
+                <td className="p-4 font-bold text-slate-900 dark:text-white align-top text-start">{lang === 'ar' ? 'تسجيل كمبيوتر الشركة (Company Laptop)' : 'Company laptop login'}</td>
+                <td className="p-4 align-top text-start">{lang === 'ar' ? 'البطاقة الذكية + مصادقة بصمة الإصبع' : 'Smart card + fingerprint authentication'}</td>
+                <td className="p-4 font-mono text-xs text-emerald-600 dark:text-emerald-400 align-top text-start">{lang === 'ar' ? 'الملكية + السمات البيومترية' : 'Possession + Biometric'}</td>
               </tr>
             </tbody>
           </table>
@@ -313,7 +313,7 @@ export function Lesson2_1() {
                       <button
                         key={oIdx}
                         onClick={() => handleSelectQuiz(qIdx, oIdx)}
-                        className={`p-3 rounded-lg border text-right text-xs transition flex items-center justify-between ${btnStyle}`}
+                        className={`p-3 rounded-lg border text-start text-xs transition flex items-center justify-between ${btnStyle}`}
                       >
                         <span>{opt}</span>
                         {isAnswered && oIdx === q.a && <span className="text-emerald-600 dark:text-emerald-400 font-bold">✓</span>}

@@ -145,7 +145,7 @@ export function Unit2Exam() {
                   key={idx}
                   disabled={isAnswered}
                   onClick={() => handleSelectOption(idx)}
-                  className={`w-full p-4 rounded-xl border text-right text-sm sm:text-base transition-all flex items-center justify-between gap-3 ${optStyle}`}
+                  className={`w-full p-4 rounded-xl border text-start text-sm sm:text-base transition-all flex items-center justify-between gap-3 ${optStyle}`}
                 >
                   <span className="flex-1">{opt}</span>
                   {isAnswered && idx === currentQ.a && (

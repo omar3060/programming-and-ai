@@ -370,7 +370,7 @@ export function IncidentRiskLab() {
                 <button
                   key={i}
                   onClick={() => applyScenario(sc)}
-                  className="p-3 theme-subpanel hover:border-rose-500 border rounded-xl text-right transition flex flex-col justify-between"
+                  className="p-3 theme-subpanel hover:border-rose-500 border rounded-xl text-start transition flex flex-col justify-between"
                 >
                   <span className="text-xs font-bold text-rose-600 dark:text-rose-300 block mb-1">
                     {sc.name[lang]}

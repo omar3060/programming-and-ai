@@ -171,7 +171,7 @@ export function NetworkSecurityDesignLab() {
                 <button
                   key={opt.id}
                   onClick={() => { playSfx('click'); setTrafficType(opt.id); }}
-                  className={`p-3 rounded-xl border text-right transition flex items-center gap-2 cursor-pointer ${
+                  className={`p-3 rounded-xl border text-start transition flex items-center gap-2 cursor-pointer ${
                     isSelected
                       ? 'bg-purple-600 text-white border-purple-600 font-bold shadow-md'
                       : 'theme-panel text-slate-800 dark:text-slate-200 border-slate-300 dark:border-slate-700 hover:border-purple-400'
@@ -203,7 +203,7 @@ export function NetworkSecurityDesignLab() {
                 <button
                   key={opt.id}
                   onClick={() => { playSfx('click'); setTargetZone(opt.id); }}
-                  className={`p-3 rounded-xl border text-right transition flex items-center gap-2 cursor-pointer ${
+                  className={`p-3 rounded-xl border text-start transition flex items-center gap-2 cursor-pointer ${
                     isSelected
                       ? 'bg-purple-600 text-white border-purple-600 font-bold shadow-md'
                       : 'theme-panel text-slate-800 dark:text-slate-200 border-slate-300 dark:border-slate-700 hover:border-purple-400'

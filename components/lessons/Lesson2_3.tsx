@@ -109,39 +109,39 @@ export function Lesson2_3() {
           </span>
         </div>
 
-        {/* 6 Stages Table */}
-        <div className="overflow-x-auto rounded-xl border border-slate-200 dark:border-slate-800">
-          <table className="w-full text-left text-sm text-slate-800 dark:text-slate-300">
-            <thead className="theme-subpanel text-slate-900 dark:text-slate-200 uppercase text-xs font-bold">
+        {/* 6 Stages Table - Perfectly Aligned via text-start */}
+        <div className="overflow-x-auto rounded-2xl border border-slate-200 dark:border-slate-800 shadow-md">
+          <table className="w-full text-start text-sm text-slate-800 dark:text-slate-300">
+            <thead className="theme-subpanel text-slate-900 dark:text-slate-200 uppercase text-xs font-bold border-b border-slate-200 dark:border-slate-800">
               <tr>
-                <th className="p-3">{lang === 'ar' ? 'المرحلة' : 'Stage'}</th>
-                <th className="p-3">{lang === 'ar' ? 'الوصف والتطبيق العملي' : 'Description & Action'}</th>
+                <th className="p-4 text-start font-black">{lang === 'ar' ? 'المرحلة' : 'Stage'}</th>
+                <th className="p-4 text-start font-black">{lang === 'ar' ? 'الوصف والتطبيق العملي' : 'Description & Action'}</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-slate-200 dark:divide-slate-800">
               <tr className="hover:bg-slate-500/10 transition">
-                <td className="p-3 font-bold text-slate-900 dark:text-slate-300">① {lang === 'ar' ? 'التحضير (Preparation)' : 'Preparation'}</td>
-                <td className="p-3">{lang === 'ar' ? 'إعداد إجراءات وهياكل الاستجابة مسبقاً تحسباً للحوادث وتجهيز النسخ الاحتياطية.' : 'Establish response procedures and structures in advance, in preparation for incidents.'}</td>
+                <td className="p-4 font-bold text-slate-900 dark:text-slate-300 text-start align-top">① {lang === 'ar' ? 'التحضير (Preparation)' : 'Preparation'}</td>
+                <td className="p-4 text-start leading-relaxed align-top">{lang === 'ar' ? 'إعداد إجراءات وهياكل الاستجابة مسبقاً تحسباً للحوادث وتجهيز النسخ الاحتياطية.' : 'Establish response procedures and structures in advance, in preparation for incidents.'}</td>
               </tr>
               <tr className="hover:bg-slate-500/10 transition">
-                <td className="p-3 font-bold text-amber-600 dark:text-amber-400">② {lang === 'ar' ? 'الكشف والتحليل (Detection)' : 'Detection'}</td>
-                <td className="p-3">{lang === 'ar' ? 'اكتشاف وتأكيد وقوع الحادث الأمني ورصد التنبيهات.' : 'Discover and confirm that an incident has occurred.'}</td>
+                <td className="p-4 font-bold text-amber-600 dark:text-amber-400 text-start align-top">② {lang === 'ar' ? 'الكشف والتحليل (Detection)' : 'Detection'}</td>
+                <td className="p-4 text-start leading-relaxed align-top">{lang === 'ar' ? 'اكتشاف وتأكيد وقوع الحادث الأمني ورصد التنبيهات.' : 'Discover and confirm that an incident has occurred.'}</td>
               </tr>
               <tr className="hover:bg-slate-500/10 transition">
-                <td className="p-3 font-bold text-rose-600 dark:text-rose-400">③ {lang === 'ar' ? 'الاحتواء (Containment)' : 'Containment'}</td>
-                <td className="p-3">{lang === 'ar' ? 'الحد من نطاق التأثير وعزل الأجهزة المصابة حتى لا ينتشر الضرر لباقي المنظومة.' : 'Limit the scope of impact so that damage does not spread further.'}</td>
+                <td className="p-4 font-bold text-rose-600 dark:text-rose-400 text-start align-top">③ {lang === 'ar' ? 'الاحتواء (Containment)' : 'Containment'}</td>
+                <td className="p-4 text-start leading-relaxed align-top">{lang === 'ar' ? 'الحد من نطاق التأثير وعزل الأجهزة المصابة حتى لا ينتشر الضرر لباقي المنظومة.' : 'Limit the scope of impact so that damage does not spread further.'}</td>
               </tr>
               <tr className="hover:bg-slate-500/10 transition">
-                <td className="p-3 font-bold text-purple-600 dark:text-purple-400">④ {lang === 'ar' ? 'الاستئصال وإزالة التهديد (Eradication)' : 'Eradication'}</td>
-                <td className="p-3">{lang === 'ar' ? 'إزالة السبب الجذري للحادث (مثل حذف البرمجيات الخبيثة، سد الثغرات، وإلغاء الحسابات المخترقة).' : 'Remove the cause of the incident (e.g., remove malware).' }</td>
+                <td className="p-4 font-bold text-purple-600 dark:text-purple-400 text-start align-top">④ {lang === 'ar' ? 'الاستئصال وإزالة التهديد (Eradication)' : 'Eradication'}</td>
+                <td className="p-4 text-start leading-relaxed align-top">{lang === 'ar' ? 'إزالة السبب الجذري للحادث (مثل حذف البرمجيات الخبيثة، سد الثغرات، وإلغاء الحسابات المخترقة).' : 'Remove the cause of the incident (e.g., remove malware).' }</td>
               </tr>
               <tr className="hover:bg-slate-500/10 transition">
-                <td className="p-3 font-bold text-emerald-600 dark:text-emerald-400">⑤ {lang === 'ar' ? 'الاستعادة (Recovery)' : 'Recovery'}</td>
-                <td className="p-3">{lang === 'ar' ? 'إعادة الأنظمة والخدمات إلى حالتها الطبيعية من نسخ احتياطية نظيفة والتحقق من سلامتها.' : 'Return systems and services to their normal state.'}</td>
+                <td className="p-4 font-bold text-emerald-600 dark:text-emerald-400 text-start align-top">⑤ {lang === 'ar' ? 'الاستعادة (Recovery)' : 'Recovery'}</td>
+                <td className="p-4 text-start leading-relaxed align-top">{lang === 'ar' ? 'إعادة الأنظمة والخدمات إلى حالتها الطبيعية من نسخ احتياطية نظيفة والتحقق من سلامتها.' : 'Return systems and services to their normal state.'}</td>
               </tr>
               <tr className="hover:bg-slate-500/10 transition">
-                <td className="p-3 font-bold text-blue-600 dark:text-blue-400">⑥ {lang === 'ar' ? 'الدروس المستفادة والتحسين (Prevention of Recurrence)' : 'Prevention of Recurrence'}</td>
-                <td className="p-3">{lang === 'ar' ? 'تحليل الأسباب واتخاذ تدابير لمنع تكرار نفس الحادث مستقبلاً.' : 'Analyze the cause and take measures so that the same incident does not occur again.'}</td>
+                <td className="p-4 font-bold text-blue-600 dark:text-blue-400 text-start align-top">⑥ {lang === 'ar' ? 'الدروس المستفادة والتحسين (Prevention of Recurrence)' : 'Prevention of Recurrence'}</td>
+                <td className="p-4 text-start leading-relaxed align-top">{lang === 'ar' ? 'تحليل الأسباب واتخاذ تدابير لمنع تكرار نفس الحادث مستقبلاً.' : 'Analyze the cause and take measures so that the same incident does not occur again.'}</td>
               </tr>
             </tbody>
           </table>
@@ -247,7 +247,7 @@ export function Lesson2_3() {
                       <button
                         key={oIdx}
                         onClick={() => handleSelectQuiz(qIdx, oIdx)}
-                        className={`p-3 rounded-lg border text-right text-xs transition flex items-center justify-between ${btnStyle}`}
+                        className={`p-3 rounded-lg border text-start text-xs transition flex items-center justify-between ${btnStyle}`}
                       >
                         <span>{opt}</span>
                         {isAnswered && oIdx === q.a && <span className="text-emerald-600 dark:text-emerald-400 font-bold">✓</span>}

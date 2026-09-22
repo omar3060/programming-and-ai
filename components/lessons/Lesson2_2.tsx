@@ -128,31 +128,31 @@ export function Lesson2_2() {
             : 'Defense in depth is the concept of layering multiple security measures so that, even if one measure is breached, the next can still protect the system.'}
         </p>
 
-        {/* 4 Layers Table */}
-        <div className="overflow-x-auto rounded-xl border border-slate-200 dark:border-slate-800">
-          <table className="w-full text-left text-sm text-slate-800 dark:text-slate-300">
-            <thead className="theme-subpanel text-slate-900 dark:text-slate-200 uppercase text-xs font-bold">
+        {/* 4 Layers Table - Perfectly Aligned via text-start */}
+        <div className="overflow-x-auto rounded-2xl border border-slate-200 dark:border-slate-800 shadow-md">
+          <table className="w-full text-start text-sm text-slate-800 dark:text-slate-300">
+            <thead className="theme-subpanel text-slate-900 dark:text-slate-200 uppercase text-xs font-bold border-b border-slate-200 dark:border-slate-800">
               <tr>
-                <th className="p-3">{lang === 'ar' ? 'طبقة الدفاع (Layer)' : 'Defense Layer'}</th>
-                <th className="p-3">{lang === 'ar' ? 'أمثلة الإجراءات المطبقة' : 'Examples of Measures Applied'}</th>
+                <th className="p-4 text-start font-black">{lang === 'ar' ? 'طبقة الدفاع (Layer)' : 'Defense Layer'}</th>
+                <th className="p-4 text-start font-black">{lang === 'ar' ? 'أمثلة الإجراءات المطبقة' : 'Examples of Measures Applied'}</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-slate-200 dark:divide-slate-800">
               <tr className="hover:bg-slate-500/10 transition">
-                <td className="p-3 font-bold text-blue-600 dark:text-blue-400">Layer 1: {lang === 'ar' ? 'مدخل الشبكة (Network Entry)' : 'Network entry'}</td>
-                <td className="p-3">{lang === 'ar' ? 'حظر الاتصالات غير المصرح بها باستخدام جدار الحماية (Firewall)' : 'Block unauthorized communication using a firewall'}</td>
+                <td className="p-4 font-bold text-blue-600 dark:text-blue-400 align-top text-start">Layer 1: {lang === 'ar' ? 'مدخل الشبكة (Network Entry)' : 'Network entry'}</td>
+                <td className="p-4 align-top text-start leading-relaxed">{lang === 'ar' ? 'حظر الاتصالات غير المصرح بها باستخدام جدار الحماية (Firewall)' : 'Block unauthorized communication using a firewall'}</td>
               </tr>
               <tr className="hover:bg-slate-500/10 transition">
-                <td className="p-3 font-bold text-cyan-600 dark:text-cyan-400">Layer 2: {lang === 'ar' ? 'مسار الاتصال (Communication Path)' : 'Communication path'}</td>
-                <td className="p-3">{lang === 'ar' ? 'تشفير اتصالات الشبكة والوصول عن بعد باستخدام الـ VPN' : 'Encrypt communication using a VPN'}</td>
+                <td className="p-4 font-bold text-cyan-600 dark:text-cyan-400 align-top text-start">Layer 2: {lang === 'ar' ? 'مسار الاتصال (Communication Path)' : 'Communication path'}</td>
+                <td className="p-4 align-top text-start leading-relaxed">{lang === 'ar' ? 'تشفير اتصالات الشبكة والوصول عن بعد باستخدام الـ VPN' : 'Encrypt communication using a VPN'}</td>
               </tr>
               <tr className="hover:bg-slate-500/10 transition">
-                <td className="p-3 font-bold text-indigo-600 dark:text-indigo-400">Layer 3: {lang === 'ar' ? 'وضع الخوادم (Server Placement)' : 'Server placement'}</td>
-                <td className="p-3">{lang === 'ar' ? 'فصل الخوادم الموجهة للجمهور عن الشبكة الداخلية باستخدام المنطقة منزوعة السلاح (DMZ)' : 'Separate public-facing servers from the internal network using a DMZ'}</td>
+                <td className="p-4 font-bold text-indigo-600 dark:text-indigo-400 align-top text-start">Layer 3: {lang === 'ar' ? 'وضع الخوادم (Server Placement)' : 'Server placement'}</td>
+                <td className="p-4 align-top text-start leading-relaxed">{lang === 'ar' ? 'فصل الخوادم الموجهة للجمهور عن الشبكة الداخلية باستخدام المنطقة منزوعة السلاح (DMZ)' : 'Separate public-facing servers from the internal network using a DMZ'}</td>
               </tr>
               <tr className="hover:bg-slate-500/10 transition">
-                <td className="p-3 font-bold text-emerald-600 dark:text-emerald-400">Layer 4: {lang === 'ar' ? 'الأجهزة الطرفية (Endpoints)' : 'Endpoints'}</td>
-                <td className="p-3">{lang === 'ar' ? 'تثبيت برامج مضاد الفيروسات، تحديث أنظمة التشغيل باستمرار، وتشفير القرص' : 'Install antivirus software and keep the OS updated'}</td>
+                <td className="p-4 font-bold text-emerald-600 dark:text-emerald-400 align-top text-start">Layer 4: {lang === 'ar' ? 'الأجهزة الطرفية (Endpoints)' : 'Endpoints'}</td>
+                <td className="p-4 align-top text-start leading-relaxed">{lang === 'ar' ? 'تثبيت برامج مضاد الفيروسات، تحديث أنظمة التشغيل باستمرار، وتشفير القرص' : 'Install antivirus software and keep the OS updated'}</td>
               </tr>
             </tbody>
           </table>
@@ -234,7 +234,7 @@ export function Lesson2_2() {
                       <button
                         key={oIdx}
                         onClick={() => handleSelectQuiz(qIdx, oIdx)}
-                        className={`p-3 rounded-lg border text-right text-xs transition flex items-center justify-between ${btnStyle}`}
+                        className={`p-3 rounded-lg border text-start text-xs transition flex items-center justify-between ${btnStyle}`}
                       >
                         <span>{opt}</span>
                         {isAnswered && oIdx === q.a && <span className="text-emerald-600 dark:text-emerald-400 font-bold">✓</span>}
