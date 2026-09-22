@@ -15,6 +15,7 @@ export function Sidebar({ activeView, onNavigate, isOpenMobile, onCloseMobile }:
   const { playSfx } = useApp();
   const [searchQuery, setSearchQuery] = useState('');
   const [unit1Open, setUnit1Open] = useState(true);
+  const [unit2Open, setUnit2Open] = useState(true);
 
   const handleNav = (viewId: LessonViewId) => {
     playSfx('click');
@@ -123,17 +124,17 @@ export function Sidebar({ activeView, onNavigate, isOpenMobile, onCloseMobile }:
         </div>
 
         {/* Units & Lessons Tree */}
-        <div className="p-3 space-y-3 flex-1">
+        <div className="p-3 space-y-4 flex-1">
 
-          {/* Unit 1 (Active) */}
+          {/* UNIT 1 ACCORDION */}
           <div className="space-y-1">
             <button onClick={() => { playSfx('click'); setUnit1Open(!unit1Open); }} className="w-full p-2.5 rounded-xl bg-brand-500/10 border border-brand-500/30 text-start flex items-center justify-between font-bold text-xs hover:bg-brand-500/15 transition">
               <div className="flex items-center gap-2">
                 <span className="w-6 h-6 rounded-lg bg-brand-500 text-white flex items-center justify-center text-xs"><span className="lang-ar">١</span><span className="lang-en">1</span></span>
                 <div>
                   <div className="text-[10px] text-brand-400 uppercase tracking-wider font-extrabold">
-                    <span className="lang-ar">الوحدة الأولى (المنهج الكامل)</span>
-                    <span className="lang-en">Unit 1 (Full Curriculum)</span>
+                    <span className="lang-ar">الوحدة الأولى</span>
+                    <span className="lang-en">Unit 1</span>
                   </div>
                   <div className="text-xs font-black">
                     <span className="lang-ar">تكنولوجيا المعلومات والمجتمع</span>
@@ -245,8 +246,8 @@ export function Sidebar({ activeView, onNavigate, isOpenMobile, onCloseMobile }:
                   </span>
                   <div className="min-w-0 flex-1">
                     <div className="font-bold text-amber-400 truncate">
-                      <span className="lang-ar">حلول تدريبات كتاب الوزارة كاملة</span>
-                      <span className="lang-en">Textbook Exercises Solutions</span>
+                      <span className="lang-ar">حلول تدريبات كتاب الوزارة (وحدة 1)</span>
+                      <span className="lang-en">Textbook Exercises Solutions (Unit 1)</span>
                     </div>
                     <div className="text-[10px] text-sub truncate">
                       <span className="lang-ar">إجابات نموذجية مع الشرح والتفسير</span>
@@ -268,7 +269,7 @@ export function Sidebar({ activeView, onNavigate, isOpenMobile, onCloseMobile }:
                   </span>
                   <div className="min-w-0 flex-1">
                     <div className="font-bold text-amber-300 truncate">
-                      <span className="lang-ar">الامتحان الشامل (25 سؤالاً) 🏆</span>
+                      <span className="lang-ar">الامتحان الشامل للوحدة 1 🏆</span>
                       <span className="lang-en">Unit 1 Exam (25 Questions) 🏆</span>
                     </div>
                     <div className="text-[10px] text-sub truncate">
@@ -282,25 +283,147 @@ export function Sidebar({ activeView, onNavigate, isOpenMobile, onCloseMobile }:
             )}
           </div>
 
+          {/* UNIT 2 ACCORDION */}
+          <div className="space-y-1">
+            <button onClick={() => { playSfx('click'); setUnit2Open(!unit2Open); }} className="w-full p-2.5 rounded-xl bg-rose-500/10 border border-rose-500/30 text-start flex items-center justify-between font-bold text-xs hover:bg-rose-500/15 transition">
+              <div className="flex items-center gap-2">
+                <span className="w-6 h-6 rounded-lg bg-rose-600 text-white flex items-center justify-center text-xs"><span className="lang-ar">٢</span><span className="lang-en">2</span></span>
+                <div>
+                  <div className="text-[10px] text-rose-400 uppercase tracking-wider font-extrabold">
+                    <span className="lang-ar">الوحدة الثانية</span>
+                    <span className="lang-en">Unit 2</span>
+                  </div>
+                  <div className="text-xs font-black">
+                    <span className="lang-ar">الأمن السيبراني (Cybersecurity)</span>
+                    <span className="lang-en">Cybersecurity</span>
+                  </div>
+                </div>
+              </div>
+              <i id="unit-2-icon" className={`fa-solid fa-chevron-down text-rose-400 text-xs transition-transform duration-200 ${unit2Open ? '' : '-rotate-90'}`}></i>
+            </button>
+
+            {/* Unit 2 Sub-items */}
+            {unit2Open && (
+              <div id="unit-2-items" className="space-y-1 rtl:pr-2 ltr:pl-2 pt-1">
+
+                {/* Lesson 2-1 */}
+                <button
+                  id="nav-btn-lesson-2-1"
+                  onClick={() => handleNav('lesson-2-1')}
+                  className={`nav-lesson-btn w-full p-2.5 rounded-xl theme-subpanel border text-start flex items-start gap-2.5 text-xs hover:border-rose-500 transition ${
+                    activeView === 'lesson-2-1' ? 'active-nav' : ''
+                  }`}
+                >
+                  <span className="w-5 h-5 rounded-md bg-rose-500/20 text-rose-400 flex items-center justify-center text-[10px] font-bold mt-0.5 shrink-0">2-1</span>
+                  <div className="min-w-0 flex-1">
+                    <div className="font-bold truncate">
+                      <span className="lang-ar">تقنيات التشفير والمصادقة</span>
+                      <span className="lang-en">Cryptographic Tech & Auth</span>
+                    </div>
+                    <div className="text-[10px] text-sub truncate">
+                      <span className="lang-ar">HTTPS، مصافحة TLS، والمصادقة MFA</span>
+                      <span className="lang-en">HTTPS, TLS Handshake & MFA</span>
+                    </div>
+                  </div>
+                </button>
+
+                {/* Lesson 2-2 */}
+                <button
+                  id="nav-btn-lesson-2-2"
+                  onClick={() => handleNav('lesson-2-2')}
+                  className={`nav-lesson-btn w-full p-2.5 rounded-xl theme-subpanel border text-start flex items-start gap-2.5 text-xs hover:border-rose-500 transition ${
+                    activeView === 'lesson-2-2' ? 'active-nav' : ''
+                  }`}
+                >
+                  <span className="w-5 h-5 rounded-md bg-blue-500/20 text-blue-400 flex items-center justify-center text-[10px] font-bold mt-0.5 shrink-0">2-2</span>
+                  <div className="min-w-0 flex-1">
+                    <div className="font-bold truncate">
+                      <span className="lang-ar">تصميم أمن الشبكات</span>
+                      <span className="lang-en">Network Security Design</span>
+                    </div>
+                    <div className="text-[10px] text-sub truncate">
+                      <span className="lang-ar">جدار الحماية، VPN، DMZ، و Zero Trust</span>
+                      <span className="lang-en">Firewall, VPN, DMZ & Zero Trust</span>
+                    </div>
+                  </div>
+                </button>
+
+                {/* Lesson 2-3 */}
+                <button
+                  id="nav-btn-lesson-2-3"
+                  onClick={() => handleNav('lesson-2-3')}
+                  className={`nav-lesson-btn w-full p-2.5 rounded-xl theme-subpanel border text-start flex items-start gap-2.5 text-xs hover:border-rose-500 transition ${
+                    activeView === 'lesson-2-3' ? 'active-nav' : ''
+                  }`}
+                >
+                  <span className="w-5 h-5 rounded-md bg-orange-500/20 text-orange-400 flex items-center justify-center text-[10px] font-bold mt-0.5 shrink-0">2-3</span>
+                  <div className="min-w-0 flex-1">
+                    <div className="font-bold truncate">
+                      <span className="lang-ar">الاستجابة للحوادث وإدارة المخاطر</span>
+                      <span className="lang-en">Incident Response & Risk</span>
+                    </div>
+                    <div className="text-[10px] text-sub truncate">
+                      <span className="lang-ar">المراحل الـ 6 والمعادلة: Risk = Impact × Likelihood</span>
+                      <span className="lang-en">6 IR Phases & Risk Size formula</span>
+                    </div>
+                  </div>
+                </button>
+
+                {/* Unit 2 Textbook Solutions */}
+                <button
+                  id="nav-btn-unit-2-solutions"
+                  onClick={() => handleNav('unit-2-solutions')}
+                  className={`nav-lesson-btn w-full p-2.5 rounded-xl bg-rose-500/10 border border-rose-500/30 text-start flex items-start gap-2.5 text-xs hover:border-rose-400 transition ${
+                    activeView === 'unit-2-solutions' ? 'active-nav' : ''
+                  }`}
+                >
+                  <span className="w-5 h-5 rounded-md bg-rose-500/20 text-rose-400 flex items-center justify-center text-[10px] font-bold mt-0.5 shrink-0">
+                    <i className="fa-solid fa-book-open"></i>
+                  </span>
+                  <div className="min-w-0 flex-1">
+                    <div className="font-bold text-rose-400 truncate">
+                      <span className="lang-ar">حلول تدريبات كتاب الوزارة (وحدة 2)</span>
+                      <span className="lang-en">Textbook Exercises Solutions (Unit 2)</span>
+                    </div>
+                    <div className="text-[10px] text-sub truncate">
+                      <span className="lang-ar">إجابات نموذجية مع الشرح والتفسير</span>
+                      <span className="lang-en">Full Model Solutions with Rationale</span>
+                    </div>
+                  </div>
+                </button>
+
+                {/* Unit 2 Comprehensive Exam */}
+                <button
+                  id="nav-btn-unit-2-exam"
+                  onClick={() => handleNav('unit-2-exam')}
+                  className={`nav-lesson-btn w-full p-2.5 rounded-xl bg-gradient-to-r from-rose-500/20 to-amber-500/20 border border-rose-500/40 text-start flex items-start gap-2.5 text-xs hover:border-rose-400 transition ${
+                    activeView === 'unit-2-exam' ? 'active-nav' : ''
+                  }`}
+                >
+                  <span className="w-5 h-5 rounded-md bg-rose-600 text-white flex items-center justify-center text-[10px] font-bold mt-0.5 shrink-0">
+                    <i className="fa-solid fa-shield-halved"></i>
+                  </span>
+                  <div className="min-w-0 flex-1">
+                    <div className="font-bold text-rose-300 truncate">
+                      <span className="lang-ar">الامتحان الشامل للوحدة 2 🛡️</span>
+                      <span className="lang-en">Unit 2 Exam (25 Questions) 🛡️</span>
+                    </div>
+                    <div className="text-[10px] text-sub truncate">
+                      <span className="lang-ar">شهادة إتقان الأمن السيبراني</span>
+                      <span className="lang-en">Certified Cybersecurity Mastery</span>
+                    </div>
+                  </div>
+                </button>
+
+              </div>
+            )}
+          </div>
+
           {/* Upcoming Units in Roadmap */}
           <div className="pt-2 border-t border-slate-800/80 space-y-1">
             <div className="text-[10px] font-bold text-sub px-2 uppercase tracking-wider">
-              <span className="lang-ar">باقي وحدات المنهج المقرر</span>
+              <span className="lang-ar">خريطة باقي وحدات المنهج</span>
               <span className="lang-en">Curriculum Roadmap</span>
-            </div>
-
-            <div className="p-2.5 rounded-xl theme-subpanel border opacity-60 flex items-center justify-between text-xs">
-              <div className="flex items-center gap-2">
-                <span className="w-5 h-5 rounded-md bg-slate-800 text-slate-400 flex items-center justify-center text-[10px] font-bold"><span className="lang-ar">٢</span><span className="lang-en">2</span></span>
-                <span className="text-sub font-semibold">
-                  <span className="lang-ar">الوحدة 2: الأمن السيبراني </span>
-                  <span className="lang-en">Unit 2: Cybersecurity</span>
-                </span>
-              </div>
-              <span className="text-[9px] px-1.5 py-0.5 rounded bg-slate-800 text-slate-400">
-                <span className="lang-ar">قريباً</span>
-                <span className="lang-en">Soon</span>
-              </span>
             </div>
 
             <div className="p-2.5 rounded-xl theme-subpanel border opacity-60 flex items-center justify-between text-xs">
@@ -316,6 +439,7 @@ export function Sidebar({ activeView, onNavigate, isOpenMobile, onCloseMobile }:
                 <span className="lang-en">Soon</span>
               </span>
             </div>
+
             <div className="p-2.5 rounded-xl theme-subpanel border opacity-60 flex items-center justify-between text-xs">
               <div className="flex items-center gap-2">
                 <span className="w-5 h-5 rounded-md bg-slate-800 text-slate-400 flex items-center justify-center text-[10px] font-bold"><span className="lang-ar">٤</span><span className="lang-en">4</span></span>
@@ -351,4 +475,3 @@ export function Sidebar({ activeView, onNavigate, isOpenMobile, onCloseMobile }:
     </>
   );
 }
-

@@ -10,8 +10,13 @@ import { Lesson1_1 } from '@/components/lessons/Lesson1_1';
 import { Lesson1_2 } from '@/components/lessons/Lesson1_2';
 import { Lesson1_3 } from '@/components/lessons/Lesson1_3';
 import { Lesson1_4 } from '@/components/lessons/Lesson1_4';
+import { Lesson2_1 } from '@/components/lessons/Lesson2_1';
+import { Lesson2_2 } from '@/components/lessons/Lesson2_2';
+import { Lesson2_3 } from '@/components/lessons/Lesson2_3';
 import { TextbookSolutions } from '@/components/practice/TextbookSolutions';
+import { TextbookSolutionsUnit2 } from '@/components/practice/TextbookSolutionsUnit2';
 import { Unit1Exam } from '@/components/practice/Unit1Exam';
+import { Unit2Exam } from '@/components/practice/Unit2Exam';
 
 export default function Home() {
   const {
@@ -39,6 +44,16 @@ export default function Home() {
         return <TextbookSolutions />;
       case 'unit-1-exam':
         return <Unit1Exam />;
+      case 'lesson-2-1':
+        return <Lesson2_1 />;
+      case 'lesson-2-2':
+        return <Lesson2_2 />;
+      case 'lesson-2-3':
+        return <Lesson2_3 />;
+      case 'unit-2-solutions':
+        return <TextbookSolutionsUnit2 />;
+      case 'unit-2-exam':
+        return <Unit2Exam />;
       default:
         return <Lesson1_1 />;
     }
@@ -76,4 +91,3 @@ export default function Home() {
     </div>
   );
 }
-

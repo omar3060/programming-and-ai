@@ -1,0 +1,363 @@
+2-1 — Cryptographic Technologies and Authentication
+332-1 — Cryptographic Technologies and Authentication
+Learning Objectives
+Explain how HTTPS secures communication: how the TLS handshake uses public-key
+cryptography to share a key safely, and how common-key cryptography then protects the data
+that follows.
+•
+Describe how authentication, including multi-factor authentication, is used in real services,
+and explain why security technologies are combined.
+•
+Lesson 2-1
+Cryptographic
+Technologies
+and
+Authentication
+
+=== PAGE 35 ===
+2-1 — Cryptographic Technologies and Authentication
+342-1 — Cryptographic Technologies and Authentication
+Key Fact:
+Secure online
+communication and
+services depend on
+combining cryptography
+and authentication — not
+on any single technology.
+Key Concepts:
+HTTPS
+common-key
+cryptography
+public-key cryptography
+TLS handshake
+multi-factor
+authentication
+digital signature
+digital certificate
+non-repudiation
+KEY TERMS
+Every time you log in to a bank app, buy something online, or open a website
+with a small padlock in the address bar, hidden technologies are working to
+keep your information safe. Messages are scrambled so no one else can read
+them, the website proves that it is genuine, and your identity is checked before
+you are granted access. Without these protections, passwords could be stolen
+and private data could be read by unauthorized people.
+? Guiding question: How do cryptographic technologies and
+authentication work together to keep online communication and services
+secure?
+📌Point!
+1. How HTTPS Communication Works
+Stage What happens Cryptographic
+method used
+①  Connection The web server sends a digital certificate and a
+public key to the browser. The browser verifies
+the server's authenticity through a certificate
+authority (CA).
+Public-key
+cryptography
+②  Key exchange The browser creates a common key for
+communication, encrypts it with the server's
+public key, and sends it. The server decrypts it
+with its private key to obtain the common key.
+Public-key
+cryptography
+③  Data
+communication
+Data is encrypted and exchanged using the
+shared common key.
+Common-key
+cryptography
+(1)  (HTTPS (HTTP Secure))…a communication protocol that adds TLS
+encryption to HTTP. By providing encryption, detection of tampering, and
+verification of the communication partner, it protects users from threats such
+as eavesdropping, tampering, and impersonation. The procedure for
+establishing a secure communication is called the TLS handshake.
+HTTPS — HTTP with TLS
+encryption added
+(encryption, tamper
+detection, and partner
+verification).(2)  HTTPS combines common-key (symmetric-key) cryptography and public-key
+cryptography as follows, taking advantage of the strengths of both methods.
+Note: the exchange above shows one way a common key can be shared. Current
+versions of TLS use Diffie-Hellman key agreement instead.
+A public key locks; a different
+private key unlocks. In a digital
+signature the direction reverses:
+the private key signs and the
+public key verifies.
+
+=== PAGE 36 ===
+2-1 — Cryptographic Technologies and Authentication
+352-1 — Cryptographic Technologies and Authentication
+Strong login combines two or
+more different factors.
+KEY TERMS
+multi-factor authentication
+— combining two or more of
+the three factors: knowledge,
+possession, biometric.
+HTTPS Communication Flow
+(3)  Public-key cryptography is used to "share keys safely," and common-key
+cryptography is used to "exchange large amounts of data quickly." This division
+of roles makes it possible to achieve both security and communication speed.
+2. Use of Authentication in Real Services
+(1)  Many services adopt (multi-factor authentication), in which two or more of
+the three factors of authentication (knowledge, possession, biometric) are
+combined.
+(2)  When only one factor is used, an unauthorized party can gain access if that
+factor is broken. By combining multiple factors, even if one is broken, another
+can still prevent access.
+e.g., If only a password (knowledge) is used, an unauthorized login is possible once
+the password is leaked. However, if a notification to a smartphone (possession) is
+also required, an attacker cannot log in without the device, even if the password is
+leaked.
+(3)  The following examples of multi-factor authentication are used in various
+services.
+Service Examples of authentication used
+Online banking Password (knowledge) + one-time password (possession)
+SNS login Password (knowledge) + SMS authentication (possession)
+Online shopping
+3. Combinations of Security Technologies
+(1)  Safe communication and services are achieved not by a single technology,
+but by combining multiple security technologies.
+Company laptop login Smart card (possession) + fingerprint authentication (biometric)
+Password (knowledge) + one-time code from 3-D Secure
+(possession)
+
+=== PAGE 37 ===
+2-1 — Cryptographic Technologies and Authentication
+362-1 — Cryptographic Technologies and Authentication
+KEY TERMS
+digital signature — detects
+tampering and
+impersonation, and provides
+non-repudiation.
+A certificate authority vouches
+that a site is genuine.
+💡 PAUSE & THINK
+If a password is leaked, why
+can a second factor sent to a
+phone still keep the account
+safe?
+KEY TERMS
+public-key cryptography —
+shares a key safely.
+common-key cryptography
+— exchanges data quickly.
+Technology Effect
+Encryption (common-
+key, public-key)
+Prevents communication content from being read by third
+parties
+Digital signature Detects data tampering or impersonation of the sender, and
+makes it impossible for the sender to deny having sent the data
+afterward (non-repudiation)
+Digital certificate Verifies that the communication partner is authentic
+Multi-factor
+authentication
+Prevents unauthorized logins
+           
+      
+          
+        
+           
+     
+         
+      
+            
+      
+  
+✎ Worked Example
+(1)  Mark each statement (A–D) with ○ if true or × if false.
+A HTTPS communication uses both public-key cryptography and
+common-key cryptography.
+B HTTPS communication exchanges all data using public-key
+cryptography.
+C Multi-factor authentication is a method that combines two or more of
+the three factors of authentication.
+D An example of multi-factor authentication is setting two passwords.
+(2)  Match each threat (a–c) with the most appropriate security technology
+from the choices below (A–C).
+a I want to prevent communication content from being read by third
+parties.
+b I want to verify that data has not been altered during
+communication.
+(2 )  For  example,  when  purchasing  a  product  through  online  shopping,  these 
+technologies  are  combined  and  used  as  follows.
+①  When  you  access  the  site,  HTTPS  communication  begins,  and 
+(encryption)  prevents  communication  content  from  being  read  by  third 
+parties.
+②  The  browser  checks  the  (digital  certificate)  to  confirm  that  the 
+destination  is  the  genuine  shopping  site.
+③  For  account  login,  (multi-factor  authentication)  combining  a  password 
+and  SMS  authentication,  etc.,  prevents  unauthorized  logins.
+④  When sending order details, a  (digital signature)  can also be used so that
+tampering during communication can be detected.
+(3)  By  combining  multiple  technologies  in  this  way,  various  threats  such  as
+"eavesdropping, " "tampering, " "impersonation, " and  "unauthorized  login"  can 
+be  addressed  simultaneously.
+
+=== PAGE 38 ===
+2-1 — Cryptographic Technologies and Authentication
+372-1 — Cryptographic Technologies and Authentication
+📝 EXAM-STYLE QUESTION
+c I want to verify that the communication partner is authentic.
+[Choices]   A Encryption    B Digital signature    C Digital certificate
+✓ Solution
+(1)
+A HTTPS communication uses public-key cryptography for key
+exchange and common-key cryptography for data communication.
+Therefore, ○.
+B Exchanging all data using public-key cryptography would be slow, so
+common-key cryptography is used for data communication.
+Therefore, ×.
+C Correct definition of multi-factor authentication. Therefore, ○.
+D Even if two passwords are set, both are "knowledge" factors, so this
+does not constitute multi-factor authentication (it is two-step
+authentication using the same factor). Therefore, ×.
+(2)
+a: Preventing reading of communication content is encryption. A
+b: Detecting data tampering is a digital signature. B
+c: Verifying the authenticity of the communication partner is a digital
+certificate. C
+Try
+1   Answer the following questions.
+1. In HTTPS communication, what cryptographic method is used so that the
+browser and server can safely share a common key?
+2. In HTTPS communication, what cryptographic method is used for data
+communication after the common key has been shared?
+3. Briefly explain the reason for combining the cryptographic methods in (1)
+and (2), based on the characteristics of each method.
+2   Answer the following questions.
+(1)  For each service (a–d), indicate which combination of authentication factors
+is used: A Knowledge + possession, B Knowledge + biometric, C Biometric +
+possession.
+a Password + one-time password
+b Password + fingerprint authentication
+Explain why HTTPS uses
+public-key cryptography to
+share the key but common-key
+cryptography to exchange the
+data. [6] Refer to: security and
+speed.
+
+=== PAGE 39 ===
+2-1 — Cryptographic Technologies and Authentication
+382-1 — Cryptographic Technologies and Authentication
+c Password + SMS authentication
+d
+(2)  From the following options (A–D), choose the one that is NOT an appropriate
+description of combinations of security technologies.
+A Encryption is a technology that prevents communication content from
+being read by third parties.
+B Digital signatures are a technology that improves communication speed.
+C Digital certificates are a system for verifying that the communication
+partner is authentic.
+D By combining multiple security technologies, various threats can be
+addressed.
+⚙ Think as an Engineer — Investigate & Decide
+A school in your city is building an online portal where students check their
+grades and pay fees. You must choose how students log in. Which is the
+better choice for this service?
+☐ A password
+only
+☐ A password plus a one-time password sent to the
+phone
+1 · Collect data. Ask ten classmates which login methods they use and
+trust (password, one-time password, SMS, fingerprint or face). Record the
+results in a table and find the most common answer.
+2 · Analyze the stakeholders. For each group — a student, the school, and
+a student with no smartphone — note one benefit and one drawback of
+requiring a second factor.
+3 · Decide. Recommend one login method for the portal and give two
+reasons based on your survey and your table. In pairs, compare your
+recommendations and agree together on the single strongest reason before
+you write it down.
+Give evidence for your answer.
+Stuck? Start with the user: a password alone fails once it leaks; adding
+a possession factor (a one-time password) still blocks the login.
+Face recognition + smart card
+
+=== PAGE 40 ===
+2-1 — Cryptographic Technologies and Authentication
+392-1 — Cryptographic Technologies and Authentication
+KEY TERMS
+digital certificate — proves a
+site is genuine.
+multi-factor authentication
+— blocks unauthorized
+logins.
+⭐  REFLECT & CHALLENGE
+Reflect: Which of these
+protections do you rely on
+most when you go online?
+Challenge: Suggest one extra
+security measure an online
+shop could add, and one threat
+it would still not remove.
+KEY TERMS
+encryption — keeps content
+private.
+digital signature — detects
+tampering; gives non-
+repudiation.
+🌍   In a New Context
+A small online shop wants to secure both customer login and payment.
+Using what you learned, name two security technologies it should use and
+say where each one helps, then identify one threat that could still remain.
+❓   Lesson Question — Answered
+The lesson asked how cryptographic technologies and authentication keep
+communication and services secure. HTTPS combines public-key
+cryptography — used to share a key safely — with common-key
+cryptography — used to exchange data quickly — so communication is both
+secure and fast. Beyond communication, services stay safe by combining
+several technologies: encryption hides content, digital certificates prove a
+site is genuine, digital signatures detect tampering, and multi-factor
+authentication blocks unauthorized logins. Security online therefore comes
+from layering these technologies so that many threats are addressed at the
+same time.
+Exercise
+1   Cover the Point! section with a red plastic sheet and quiz yourself in
+your notebook in numerical order.
+2   Read the following passage and answer each question.
+HTTPS communication, used to access websites safely, combines multiple
+cryptographic technologies. First, the web server sends a ( a ) and a public key to
+the browser. The browser verifies whether the server is authentic through ( b ).
+Next, the browser creates a ( c ) for communication and encrypts it with the
+server's public key before sending. After this, all data communication is
+encrypted using this ( c ).
+1. Fill in the blanks (a)–(c).
+2. Briefly explain the reason for using common-key cryptography rather than
+public-key cryptography for data communication.
+
+=== PAGE 41 ===
+2-1 — Cryptographic Technologies and Authentication
+402-1 — Cryptographic Technologies and Authentication
+⭐ Key takeaway
+Remember:
+HTTPS uses public-key
+cryptography to share a key
+safely and common-key
+cryptography to move data
+quickly. Services stay safe
+by layering encryption,
+certificates, signatures, and
+multi-factor
+authentication.
+3   Answer the following questions.
+(1)  For each threat (a–d), indicate which technology is primarily used to address
+it: A Encryption, B Digital signature, C Digital certificate, D Multi-factor
+authentication.
+a A password is leaked and unauthorized login occurs.
+b Data is altered during communication.
+c A user is led to a fake website.
+d Communication content is intercepted by a third party.
+(2)  From the following options (A–D), choose the one that is NOT an appropriate
+example of multi-factor authentication.
+A Password + smartphone notification
+B Password + secret question
+C
+D Password + SMS authentication
+Fingerprint authentication + smart card
+
+=== PAGE 42 ===

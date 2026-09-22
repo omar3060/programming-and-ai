@@ -1,0 +1,278 @@
+2-2 — Network Security Design
+412-2 — Network Security Design
+Learning Objectives
+Explain the roles of firewalls, VPNs, and DMZs in protecting a network.•
+Describe defense in depth and zero trust, and explain why layered, verified access is stronger
+than a single barrier.
+•
+Lesson 2-2
+Network
+Security Design
+
+=== PAGE 43 ===
+2-2 — Network Security Design
+422-2 — Network Security Design
+Key Fact:
+Strong network security
+comes from layering
+measures — firewall, VPN,
+DMZ, endpoint protection
+— and from verifying every
+access (zero trust), not
+from a single barrier.
+Key Concepts:
+firewall
+VPN
+DMZ
+defense in depth
+zero trust
+perimeter
+KEY TERMS
+firewall — allows or denies
+communication at a
+network's entry/exit point
+based on preset rules.
+A firewall allows or blocks traffic
+by rules.
+A VPN tunnels data safely
+through a hostile network.
+KEY TERMS
+DMZ — a zone for public-
+facing servers, separated
+from the internal network.
+An organization's network holds confidential data — customer records, financial
+files, and private messages. Attackers constantly look for a way in. A single lock
+on the front door is not enough: if it is picked, everything inside is exposed. For
+this reason, modern network security uses several layers, so that even when one
+defense is breached, the next one still protects the system.
+? Guiding question: How can an organization design its network so that,
+even if one defense is breached, the system stays protected?
+📌Point!
+1. The Role of Firewalls
+(1)  (Firewall)…a system installed at the entry/exit point of a network that
+allows or denies communication based on rules set in advance.
+e.g., Allow access to the web server, but deny direct external access to the
+database server.
+2. VPN (Virtual Private Network)
+(1)  (VPN)…a technology that creates an encrypted virtual private line (tunnel)
+over the Internet, allowing safe connection to a network from a remote location.
+(2)  Main uses of VPN
+①   Remote work…connecting safely to an organization's network from home
+or while away.
+②   Connecting branches…connecting offices in different locations safely.
+(3)  Because communication content is encrypted when using a VPN, the risk of
+eavesdropping is reduced even when using public Wi-Fi.
+3. DMZ (Demilitarized Zone)
+(1)  (DMZ)…an area where servers exposed to the external network (web servers,
+mail servers, etc.) are placed separately from the internal network.
+(2)  By providing a DMZ, even if a public-facing server is attacked, damage to the
+internal network can be prevented.
+
+=== PAGE 44 ===
+2-2 — Network Security Design
+432-2 — Network Security Design
+💡  PAUSE & THINK
+Why is it safer to place a public
+web server in a DMZ rather
+than inside the internal
+network?
+Defense in depth: if one layer
+falls, the next holds.
+DMZ Network Configuration
+4. Defense in Depth
+(1)  (Defense in depth)…the concept of layering multiple security measures so
+that, even if one measure is breached, the next can still protect the system.
+(2)  In network security, multiple measures are combined as follows.
+Layer Examples of measures
+Layer 1: Network entry Block unauthorized communication using a firewall
+Layer 2: Communication
+path
+Encrypt communication using a VPN
+Layer 3: Server placement Separate public-facing servers from the internal network
+using a DMZ
+Layer 4: Endpoints Install antivirus software and keep the OS updated
+5. The Concept of Zero Trust
+(1)  (Zero trust)…a security concept that means the system does not trust any
+communication, including from within the organization's network, and always
+verifies it.
+e.g., Even for access from inside the organization, identity verification and access
+permission checks are performed every time.
+(2)  Conventional network security was designed mainly around protecting a
+perimeter, based on the premise that "inside the organization's network is safe,
+and outside is dangerous." However, with the spread of cloud services and
+remote work, the boundary between "inside" and "outside" has become
+blurred, and designs that protect only the perimeter have become insufficient.
+
+=== PAGE 45 ===
+2-2 — Network Security Design
+442-2 — Network Security Design
+KEY TERMS
+defense in depth — layering
+measures.
+zero trust — verify every
+access.
+Traditional vs. Zero Trust
+✎  Worked Example
+(1)  Mark each statement (A–D) with ○  if true or × if false.
+A A firewall allows or denies communication based on rules set in
+advance.
+B Using a VPN can reduce the risk of eavesdropping even on public Wi-
+Fi.
+C A DMZ is a system that exposes all servers to the outside.
+D Defense in depth is the concept of layering multiple security
+measures.
+(2)  Match each description (a–c) with the most appropriate term from the
+choices below (A–C).
+a A technology that creates an encrypted virtual private line over the
+Internet for safe connection from a remote location
+b An area where servers exposed to the outside are placed separately
+from the internal network
+c A system that allows or denies communication based on rules set in
+advance
+[Choices]   A Firewall    B VPN    C DMZ
+✓  Solution
+(1)
+A A firewall controls communication based on rules. Therefore, ○ .
+B A VPN encrypts communication, reducing the risk of eavesdropping
+on public Wi-Fi. Therefore, ○ .
+C A DMZ is an area where public-facing servers are placed separately
+from the internal network, not a system that exposes all servers.
+Therefore, ×.
+
+=== PAGE 46 ===
+2-2 — Network Security Design
+452-2 — Network Security Design
+📝 EXAM-STYLE QUESTION
+D Correct definition of defense in depth. Therefore, ○.
+(2)
+a: An encrypted virtual private line is a VPN. B
+b: An area where public-facing servers are isolated is a DMZ. C
+c: A system that allows or denies communication is a firewall. A
+Try
+1   Answer the following questions.
+1. What is the term for the system installed at the entry/exit point of a network
+that allows or denies communication based on rules?
+2. What is the three-letter abbreviation for the technology that creates an
+encrypted virtual private line over the Internet for safe communication?
+3. What is the three-letter abbreviation for the area where servers exposed to
+the outside are placed separately from the internal network?
+4. What is the term for the concept of layering multiple security measures?
+2   Answer the following questions.
+(1)  From the following options (A–D), choose the one that is NOT an appropriate
+use of a VPN.
+A Connecting safely from home to an organization's network
+B Connecting offices in different locations safely
+C Automatically deleting files infected with viruses
+D Encrypting communication content on public Wi-Fi
+(2)  For each of the security measures (a–d), indicate which layer of defense in
+depth (A–D) it belongs to.
+a Blocking unauthorized communication with a firewall
+b Encrypting communication with a VPN
+c Installing antivirus software
+d Separating public-facing servers from the internal network using a DMZ
+[Layers]   A Network entry    B Communication path    C Server placement   
+D Endpoints
+⚙ Think as an Engineer — Investigate & Decide
+A company in your city is setting up its office network. It has a public
+website, staff who work from home, and confidential customer data. You
+advise on the security design.
+Explain why layering several
+security measures (defense in
+depth) protects an organization
+better than relying on a firewall
+alone. [6] Refer to: what
+happens if one measure is
+breached.
+
+=== PAGE 47 ===
+2-2 — Network Security Design
+462-2 — Network Security Design
+KEY TERMS
+perimeter — the old "inside
+is safe" boundary that cloud
+and remote work have
+blurred.
+☐  A
+firewall
+only
+☐  A layered design (firewall + VPN + DMZ + endpoints) that
+also verifies every access (zero trust)
+1 · Collect data. List the company's three assets (public website, remote
+staff, customer database) and the main threat to each.
+2 · Rank the layers. For this company, rank the four defense-in-depth
+layers (network entry, communication path, server placement, endpoints)
+from most to least critical, and justify your top choice.
+3 · Decide. Recommend a design and give two reasons why layering is safer
+than a single firewall. In pairs, compare your designs and agree together
+on the strongest reason before you write it down.
+Give evidence for your answer.
+Stuck? Start with the most exposed asset — the public website — and
+place it in a DMZ so that an attack there cannot reach the internal
+database.
+🌍   In a New Context
+A hospital moves its patient records to a cloud service and lets doctors
+access them from home. Using zero trust and defense in depth, suggest two
+measures it should apply and say where each one helps, then identify one
+risk that could still remain.
+❓   Lesson Question — Answered
+The lesson asked how to design a network so that one breach does not
+expose everything. The answer is layering. A firewall controls what enters
+and leaves the network; a VPN encrypts communication from remote
+locations; a DMZ separates public-facing servers so that an attack on them
+cannot reach internal data; and endpoint measures protect each device.
+Because cloud services and remote work have blurred the line between
+"inside" and "outside," zero trust adds a further principle: no access is
+trusted automatically, and every request is verified. Together, defense in
+depth and zero trust keep the network protected even when a single
+measure fails.
+
+=== PAGE 48 ===
+2-2 — Network Security Design
+472-2 — Network Security Design
+⭐  REFLECT & CHALLENGE
+Reflect: Which layer of defense
+do you think is easiest for an
+attacker to get past, and why?
+Challenge: Suggest one
+measure a small company
+could add beyond a firewall,
+and one threat it would still not
+remove.
+⭐  Key takeaway
+Remember:
+Layer your defenses —
+firewall, VPN, DMZ,
+endpoints — and verify
+every access (zero trust).
+One breach is then far less
+likely to expose the whole
+network.
+Exercise
+1   Cover the Point! section with a red plastic sheet and quiz yourself in
+your notebook in numerical order.
+2   Read the following passage and answer each question.
+To protect an organization's network, it is important to combine multiple
+security measures. First, a ( a ) is installed at the entry/exit point of the network
+to block unauthorized communication based on rules. Web servers and other
+servers exposed to the outside are placed in a ( b ), separated from the internal
+network. To connect safely from outside, such as with remote work,
+communication is encrypted using a ( c ). The concept of layering multiple
+measures in this way is called ( d ).
+1. Fill in the blanks (a)–(d).
+3   Answer the following questions.
+(1)  From the following options (A–D), choose the most appropriate reason for
+providing a DMZ.
+A To improve communication speed.
+B To expose all servers to the outside.
+C To prevent damage to the internal network even if a public-facing server is
+attacked.
+D To automatically detect and remove viruses.
+(2)  From the following options (A–D), choose the one that most appropriately
+describes the concept of zero trust.
+A Access from within the organization's network is safe, so verification is
+unnecessary.
+B A firewall alone is sufficient to protect the network.
+C No communication is trusted and is always verified.
+D Only access from outside needs to be monitored.
+
+=== PAGE 49 ===

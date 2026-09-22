@@ -7,7 +7,12 @@ export type LessonViewId =
   | 'lesson-1-3' 
   | 'lesson-1-4' 
   | 'unit-1-solutions' 
-  | 'unit-1-exam';
+  | 'unit-1-exam'
+  | 'lesson-2-1'
+  | 'lesson-2-2'
+  | 'lesson-2-3'
+  | 'unit-2-solutions'
+  | 'unit-2-exam';
 
 export interface LocalizedText {
   ar: string;

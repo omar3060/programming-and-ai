@@ -1,4 +1,7 @@
 import { Question } from '../types';
+import { unit2ExamQuestions } from './unit2ExamQuestions';
+
+export { unit2ExamQuestions };
 
 export const allExamQuestions: Question[] = [
   // Lesson 1-1 (5 questions)
