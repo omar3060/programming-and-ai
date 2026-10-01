@@ -10,6 +10,10 @@ export function Lesson2_1() {
   const quizQuestions = unit2ExamQuestions.slice(0, 5);
 
   const [quizAnswers, setQuizAnswers] = useState<Record<number, number>>({});
+  const [showPauseThink, setShowPauseThink] = useState(false);
+  const [engineerChoice, setEngineerChoice] = useState<'passOnly' | 'passMFA' | null>(null);
+  const [showExamAnswer, setShowExamAnswer] = useState(false);
+  const [showReflect, setShowReflect] = useState(false);
 
   const handleSelectQuiz = (qIdx: number, oIdx: number) => {
     playSfx('click');
@@ -84,7 +88,7 @@ export function Lesson2_1() {
             </thead>
             <tbody className="divide-y divide-slate-200 dark:divide-slate-800">
               <tr className="hover:bg-slate-500/10 transition">
-                <td className="p-4 font-bold text-rose-600 dark:text-rose-400 align-top">① {lang === 'ar' ? 'الاتصال والتحقق' : 'Connection'}</td>
+                <td className="p-4 font-bold text-rose-600 dark:text-rose-400 align-top text-start">① {lang === 'ar' ? 'الاتصال والتحقق' : 'Connection'}</td>
                 <td className="p-4 text-start leading-relaxed align-top">
                   {lang === 'ar'
                     ? 'يرسل خادم الويب شهادته الرقمية والمفتاح العام إلى المتصفح. يتحقق المتصفح من أصالة الخادم عبر جهة التصديق (CA).'
@@ -95,7 +99,7 @@ export function Lesson2_1() {
                 </td>
               </tr>
               <tr className="hover:bg-slate-500/10 transition">
-                <td className="p-4 font-bold text-rose-600 dark:text-rose-400 align-top">② {lang === 'ar' ? 'تبادل المفتاح' : 'Key Exchange'}</td>
+                <td className="p-4 font-bold text-rose-600 dark:text-rose-400 align-top text-start">② {lang === 'ar' ? 'تبادل المفتاح' : 'Key Exchange'}</td>
                 <td className="p-4 text-start leading-relaxed align-top">
                   {lang === 'ar'
                     ? 'ينشئ المتصفح مفتاحاً مشتركاً (Common key) للاتصال، ويشفره بمفتاح الخادم العام ويرسله. يفك الخادم تشفيره بمفتاحه الخاص للحصول على المفتاح المشترك.'
@@ -106,7 +110,7 @@ export function Lesson2_1() {
                 </td>
               </tr>
               <tr className="hover:bg-slate-500/10 transition">
-                <td className="p-4 font-bold text-rose-600 dark:text-rose-400 align-top">③ {lang === 'ar' ? 'تبادل البيانات' : 'Data Communication'}</td>
+                <td className="p-4 font-bold text-rose-600 dark:text-rose-400 align-top text-start">③ {lang === 'ar' ? 'تبادل البيانات' : 'Data Communication'}</td>
                 <td className="p-4 text-start leading-relaxed align-top">
                   {lang === 'ar'
                     ? 'يتم تشفير وتداول البيانات بسرعة وكفاءة باستخدام المفتاح المشترك الذي تم تبادله.'
@@ -150,7 +154,7 @@ export function Lesson2_1() {
             : 'Many services adopt multi-factor authentication (MFA), in which two or more of the three factors of authentication (knowledge, possession, biometric) are combined. When only one factor is used, an unauthorized party can gain access if that factor is broken. By combining multiple factors, even if one is broken, another can still prevent access.'}
         </p>
 
-        {/* Real Service Authentication Examples Table - Perfectly Aligned via text-start */}
+        {/* Real Service Authentication Examples Table */}
         <div className="overflow-x-auto rounded-2xl border border-slate-200 dark:border-slate-800 shadow-md">
           <table className="w-full text-start text-sm text-slate-800 dark:text-slate-300">
             <thead className="theme-subpanel text-slate-900 dark:text-slate-200 uppercase text-xs font-bold border-b border-slate-200 dark:border-slate-800">
@@ -183,6 +187,177 @@ export function Lesson2_1() {
               </tr>
             </tbody>
           </table>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* OFFICIAL TEXTBOOK ACTIVITIES & FEATURES SECTION (ميزات وأنشطة كتاب الوزارة) */}
+      {/* ========================================================================= */}
+
+      {/* 1. 💡 PAUSE & THINK (توقف وفكر - ص 37) */}
+      <section className="theme-panel border rounded-2xl p-6 shadow-xl space-y-4">
+        <div className="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-3">
+          <div className="flex items-center gap-3">
+            <span className="p-2 bg-amber-500/20 text-amber-600 dark:text-amber-400 rounded-xl font-bold">💡</span>
+            <h3 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white">
+              {lang === 'ar' ? 'توقف وفكر (PAUSE & THINK - كتاب الوزارة p. 37)' : 'PAUSE & THINK (Textbook p. 37)'}
+            </h3>
+          </div>
+          <span className="px-3 py-1 bg-amber-500/10 text-amber-600 dark:text-amber-400 rounded-full text-xs font-bold border border-amber-500/20">
+            {lang === 'ar' ? 'نشاط الملاحظة والتأمل' : 'Observation Activity'}
+          </span>
+        </div>
+
+        <p className="text-sm font-semibold text-slate-800 dark:text-slate-200 leading-relaxed">
+          {lang === 'ar'
+            ? 'إذا تم تسريب كلمة السر الخاصة بحسابك، لماذا ينجح العامل الثاني (المرسل إلى هاتفك المحمول) في الحفاظ على أمان الحساب وتجنب الاختراق؟'
+            : 'If a password is leaked, why can a second factor sent to a phone still keep the account safe?'}
+        </p>
+
+        <button
+          onClick={() => { playSfx('click'); setShowPauseThink(!showPauseThink); }}
+          className="px-4 py-2 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs transition cursor-pointer shadow flex items-center gap-2"
+        >
+          <span>{showPauseThink ? '🙈' : '👁️'}</span>
+          <span>
+            {showPauseThink
+              ? (lang === 'ar' ? 'إخفاء تفسير كتاب الوزارة' : 'Hide Textbook Answer')
+              : (lang === 'ar' ? 'عرض التفسير العلمي المعياري' : 'Show Rationale')}
+          </span>
+        </button>
+
+        {showPauseThink && (
+          <div className="p-4 rounded-xl bg-amber-500/10 border border-amber-500/30 text-xs sm:text-sm text-amber-900 dark:text-amber-200 leading-relaxed animate-fadeIn space-y-1">
+            <strong>{lang === 'ar' ? 'التفسير المعياري:' : 'Scientific Rationale:'}</strong>
+            <p>
+              {lang === 'ar'
+                ? 'لأن المهاجم أو المعتدي يتواجد في مكان بعيد ولا يمتلك جهاز الهاتف المحمول الخاص بك (عامل الملكية Possession Factor)، وبالتالي يظل الاختراق مسدوداً ومستحيلاً بدون امتلاك الجهاز الفيزيائي نفسه.'
+                : 'Because even if an attacker obtains the password (knowledge factor), they do not possess your physical mobile phone (possession factor). Without the physical device, unauthorized access remains blocked.'}
+            </p>
+          </div>
+        )}
+      </section>
+
+      {/* 2. ⚙ THINK AS AN ENGINEER (استقرئ مع صاحبك واتخذ القرار - ص 39) */}
+      <section className="theme-panel border rounded-2xl p-6 shadow-xl space-y-6">
+        <div className="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-4">
+          <div className="flex items-center gap-3">
+            <span className="p-2 bg-indigo-500/20 text-indigo-600 dark:text-indigo-400 rounded-xl font-bold">⚙️</span>
+            <div>
+              <h3 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white">
+                {lang === 'ar' ? 'فكّر كمهندس — استقرئ مع صاحبك واتخذ القرار (p. 39)' : 'Think as an Engineer — Investigate & Decide (p. 39)'}
+              </h3>
+              <p className="text-xs text-sub">
+                {lang === 'ar' ? 'سيناريو تطبيقي من كتاب الوزارة للتحليل والتصميم' : 'Official textbook decision-making scenario'}
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="p-4 rounded-xl bg-indigo-500/10 border border-indigo-500/20 text-xs sm:text-sm leading-relaxed text-indigo-900 dark:text-indigo-200 space-y-2">
+          <strong>{lang === 'ar' ? 'السيناريو:' : 'Scenario:'}</strong>
+          <p>
+            {lang === 'ar'
+              ? 'تقوم مدرسة في مدينتك ببناء بوابة إلكترونية جديدة حيث يدخل الطلاب لمراجعة درجاتهم ودفع المصروفات. بصفتك مهندساً سيبرانياً، طلب منك اختيار طريقة تسجيل الدخول الأنسب للطلاب.'
+              : 'A school in your city is building an online portal where students check grades and pay fees. You must recommend the optimal login strategy.'}
+          </p>
+        </div>
+
+        {/* Interactive Decision Options */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+          <button
+            onClick={() => { playSfx('click'); setEngineerChoice('passOnly'); }}
+            className={`p-4 rounded-xl border text-start transition cursor-pointer space-y-2 ${
+              engineerChoice === 'passOnly'
+                ? 'bg-rose-500/20 border-rose-500 text-rose-900 dark:text-rose-200 font-bold'
+                : 'theme-panel border-slate-300 dark:border-slate-700 hover:border-rose-400'
+            }`}
+          >
+            <div className="flex items-center justify-between font-bold text-sm">
+              <span>{lang === 'ar' ? 'الخيار (أ): كلمة سر فقط' : 'Option A: Password Only'}</span>
+              {engineerChoice === 'passOnly' && <span>✓</span>}
+            </div>
+            <p className="text-sub font-normal text-xs">
+              {lang === 'ar' ? 'عامل معرفة واحد فقط (Single Factor)' : 'Single Knowledge Factor'}
+            </p>
+          </button>
+
+          <button
+            onClick={() => { playSfx('click'); setEngineerChoice('passMFA'); }}
+            className={`p-4 rounded-xl border text-start transition cursor-pointer space-y-2 ${
+              engineerChoice === 'passMFA'
+                ? 'bg-emerald-500/20 border-emerald-500 text-emerald-900 dark:text-emerald-200 font-bold'
+                : 'theme-panel border-slate-300 dark:border-slate-700 hover:border-emerald-400'
+            }`}
+          >
+            <div className="flex items-center justify-between font-bold text-sm">
+              <span>{lang === 'ar' ? 'الخيار (ب): كلمة سر + OTP للهاتف' : 'Option B: Password + SMS OTP'}</span>
+              {engineerChoice === 'passMFA' && <span>✓</span>}
+            </div>
+            <p className="text-sub font-normal text-xs">
+              {lang === 'ar' ? 'مصادقة ثنائية متعددة العوامل (MFA)' : 'Multi-Factor Authentication'}
+            </p>
+          </button>
+        </div>
+
+        {/* Dynamic Recommendation Analysis */}
+        {engineerChoice && (
+          <div className={`p-4 rounded-xl border text-xs sm:text-sm leading-relaxed animate-fadeIn space-y-2 ${
+            engineerChoice === 'passMFA'
+              ? 'bg-emerald-500/10 border-emerald-500 text-emerald-900 dark:text-emerald-200'
+              : 'bg-rose-500/10 border-rose-500 text-rose-900 dark:text-rose-200'
+          }`}>
+            <h4 className="font-bold flex items-center gap-2">
+              <span>{engineerChoice === 'passMFA' ? '✅ التوصية الهندسية الصائبة (كتاب الوزارة):' : '⚠️ خيار غير آمن كلياً:'}</span>
+            </h4>
+            <p>
+              {engineerChoice === 'passMFA'
+                ? (lang === 'ar'
+                  ? 'الخيار (ب) هو الأنسب حتماً! لأن دفع الرسوم واختبارات الطلاب تتضمن بيانات مالية وشخصية حساسة. عند إضافة رمز OTP هاتف (عامل الملكية)، يمنع الدخول غير المصرح به حتى لو تم تسريب كلمة السر.'
+                  : 'Option B is correct! Because fee payment and student records involve financial and personal data. Adding phone OTP (possession factor) blocks access even if passwords leak.')
+                : (lang === 'ar'
+                  ? 'استخدام كلمة السر بمفردها يعرض الطلاب والمدرسة لخطر الاختراق الفوري بمجرد خمين أو تسريب كلمة السر.'
+                  : 'Using password alone leaves student accounts exposed to instant compromise if passwords leak.')}
+            </p>
+          </div>
+        )}
+      </section>
+
+      {/* 3. 🌍 IN A NEW CONTEXT & REFLECT (في سياق جديد وتحدَّ نفسك - ص 40) */}
+      <section className="theme-panel border rounded-2xl p-6 shadow-xl space-y-6">
+        <div className="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-4">
+          <div className="flex items-center gap-3">
+            <span className="p-2 bg-purple-500/20 text-purple-600 dark:text-purple-400 rounded-xl font-bold">🌍</span>
+            <h3 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white">
+              {lang === 'ar' ? 'تطبيق في سياق جديد وتحدَّ نفسك (Textbook pp. 40-41)' : 'In a New Context & Reflect Challenge'}
+            </h3>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm">
+          <div className="p-4 theme-subpanel rounded-xl border space-y-2">
+            <h4 className="font-bold text-purple-600 dark:text-purple-400 flex items-center gap-2">
+              <span>🛒</span>
+              <span>{lang === 'ar' ? 'في سياق جديد (متجر إلكتروني):' : 'In a New Context (Online Store):'}</span>
+            </h4>
+            <p className="text-sub leading-relaxed">
+              {lang === 'ar'
+                ? 'متجر إلكتروني يدمج بين التشفير لحماية الاتصال (HTTPS)، والشهادة الرقمية لإثبات هويته للعملاء، والمصادقة متعددة العوامل لحماية الدخول والتوقيع الرقمي لمنع التلاعب.'
+                : 'An online shop combines HTTPS encryption for communication, digital certificate for identity, MFA for login, and digital signatures for integrity.'}
+            </p>
+          </div>
+
+          <div className="p-4 theme-subpanel rounded-xl border space-y-2">
+            <h4 className="font-bold text-rose-600 dark:text-rose-400 flex items-center gap-2">
+              <span>⭐</span>
+              <span>{lang === 'ar' ? 'تأمل وتحدَّ نفسك:' : 'Reflect & Challenge:'}</span>
+            </h4>
+            <p className="text-sub leading-relaxed">
+              {lang === 'ar'
+                ? 'التحدي: هل تضمن تقنيات التشفير والمصادقة خلو المنظومة من التهديدات بالكامل؟ التهديدات البشرية مثل الهندسة الاجتماعية (Social Engineering) تظل قائمة وتتطلب وعياً مستمراً.'
+                : 'Challenge: Does combining encryption and authentication eliminate all threats? Human threats like Social Engineering still remain and require ongoing user awareness.'}
+            </p>
+          </div>
         </div>
       </section>
 
@@ -249,6 +424,66 @@ export function Lesson2_1() {
             </p>
           </div>
         </div>
+      </section>
+
+      {/* 4. 📝 6-MARK OFFICIAL EXAM MODEL QUESTION SECTION */}
+      <section className="theme-panel border rounded-2xl p-6 shadow-xl space-y-4">
+        <div className="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-3">
+          <div className="flex items-center gap-3">
+            <span className="p-2 bg-rose-500/20 text-rose-600 dark:text-rose-400 rounded-xl font-bold">📝</span>
+            <div>
+              <h3 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white">
+                {lang === 'ar' ? 'سؤال نمط الامتحان الوزاري المعياري (Exam-Style Question [6 Marks])' : 'Exam-Style Question [6 Marks]'}
+              </h3>
+              <p className="text-xs text-sub">
+                {lang === 'ar' ? 'نموذج الإجابة والدرجة الكاملة (6/6)' : 'Official marking scheme for 6/6 full marks'}
+              </p>
+            </div>
+          </div>
+          <span className="px-3 py-1 bg-rose-500/10 text-rose-600 dark:text-rose-400 rounded-full text-xs font-bold border border-rose-500/20">
+            6 Marks
+          </span>
+        </div>
+
+        <p className="text-sm font-semibold text-slate-900 dark:text-white leading-relaxed">
+          {lang === 'ar'
+            ? 'سؤال [6 درجات]: اشرح سبب استخدام بروتوكول HTTPS للتشفير بالمفتاح العام لمشاركة المفتاح، بينما يستخدم التشفير المتماثل (بالمفتاح المشترك) لتبادل البيانات فوراً؟ (اشر إلى: الأمان والسرعة).'
+            : 'Explain why HTTPS uses public-key cryptography to share the key but common-key cryptography to exchange the data. [6 Marks] Refer to: security and speed.'}
+        </p>
+
+        <button
+          onClick={() => { playSfx('click'); setShowExamAnswer(!showExamAnswer); }}
+          className="px-4 py-2 rounded-xl bg-rose-600 hover:bg-rose-500 text-white font-bold text-xs transition cursor-pointer shadow flex items-center gap-2"
+        >
+          <span>{showExamAnswer ? '🙈' : '📜'}</span>
+          <span>
+            {showExamAnswer
+              ? (lang === 'ar' ? 'إخفاء نموذج الإجابة 6/6' : 'Hide Model Answer')
+              : (lang === 'ar' ? 'عرض الإجابة النموذجية 6/6' : 'Show 6/6 Model Answer')}
+          </span>
+        </button>
+
+        {showExamAnswer && (
+          <div className="p-4 rounded-xl bg-slate-900 text-slate-200 border border-slate-800 text-xs sm:text-sm leading-relaxed animate-fadeIn space-y-2 font-mono">
+            <div className="text-rose-400 font-bold text-xs">
+              {lang === 'ar' ? 'توزيع درجات التصحيح الوزاري (6/6):' : 'Official Marking Rubric (6/6):'}
+            </div>
+            <ul className="list-disc list-inside space-y-1 text-slate-300">
+              <li>
+                <strong>{lang === 'ar' ? '1. التشفير بالمفتاح العام (3 درجات):' : '1. Public-Key Cryptography (3 Marks):'}</strong>{' '}
+                {lang === 'ar'
+                  ? 'يُستخدم في مرحلة المصافحة لمشاركة المفاتيح بأمان دون الحاجة لتوزيع مفاتيح سرية مسبقاً.'
+                  : 'Used in the handshake phase to safely share secret session keys without prior secret distribution.'}
+              </li>
+              <li>
+                <strong>{lang === 'ar' ? '2. التشفير المتماثل (3 درجات):' : '2. Common-Key Cryptography (3 Marks):'}</strong>{' '}
+                {lang === 'ar'
+                  ? 'يُستخدم في مرحلة تداول البيانات لأنه يتميز بالسرعة العالية والكفاءة الحسابية في نقل حجم البيانات الكبيرة.'
+                  : 'Used for data communication because it provides ultra-high speed and computational efficiency for large data payloads.'}
+              </li>
+            </ul>
+          </div>
+        )}
       </section>
 
       {/* Worked Example */}
@@ -331,6 +566,21 @@ export function Lesson2_1() {
             );
           })}
         </div>
+      </section>
+
+      {/* ⭐ KEY TAKEAWAY (الخلاصة الذهبية لكتاب الوزارة ص 41) */}
+      <section className="theme-panel border border-amber-500/30 rounded-2xl p-6 shadow-xl bg-gradient-to-r from-amber-500/10 via-rose-500/5 to-transparent">
+        <div className="flex items-center gap-3 mb-2">
+          <span className="p-2 bg-amber-500/20 text-amber-600 dark:text-amber-400 rounded-xl font-bold">⭐</span>
+          <h3 className="text-lg font-bold text-slate-900 dark:text-white">
+            {lang === 'ar' ? 'الخلاصة الذهبية لكتاب الوزارة (Key Takeaway)' : 'Key Takeaway'}
+          </h3>
+        </div>
+        <p className="text-xs sm:text-sm text-amber-900 dark:text-amber-200 leading-relaxed font-semibold">
+          {lang === 'ar'
+            ? 'تذكر دائماً: يدمج بروتوكول HTTPS بين التشفير بالمفتاح العام (لمشاركة المفتاح بأمان) والتشفير المتماثل (لنقل البيانات بسرعة). وتتحقق حماية الخدمات من خلال تكديس عدة طبقات أمان: التشفير، الشهادات الرقمية، التوقيعات الرقمية، والمصادقة متعددة العوامل.'
+            : 'Remember: HTTPS uses public-key cryptography to share a key safely and common-key cryptography to move data quickly. Services stay safe by layering encryption, certificates, signatures, and multi-factor authentication.'}
+        </p>
       </section>
     </div>
   );

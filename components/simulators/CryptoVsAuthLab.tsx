@@ -465,9 +465,10 @@ export function CryptoVsAuthLab() {
               </div>
             </div>
 
-            {/* CENTER CHANNEL: ANIMATED PACKETS */}
-            <div className="py-2 md:py-0 flex flex-col items-center justify-center space-y-2 relative min-h-[110px]">
-              <div className="w-full h-2.5 rounded-full bg-slate-800 border border-slate-700 relative overflow-hidden">
+            {/* CENTER CHANNEL: ANIMATED PACKETS (DESKTOP HORIZONTAL & MOBILE VERTICAL) */}
+            <div className="py-3 md:py-0 flex flex-col items-center justify-center space-y-2 relative min-h-[90px] md:min-h-[110px]">
+              {/* Desktop Horizontal Line */}
+              <div className="hidden md:block w-full h-2.5 rounded-full bg-slate-800 border border-slate-700 relative overflow-hidden">
                 <div
                   className={`h-full transition-all duration-700 ${
                     handshakeStep === 3
@@ -478,8 +479,19 @@ export function CryptoVsAuthLab() {
                 />
               </div>
 
+              {/* Mobile Vertical Line */}
+              <div className="md:hidden w-2.5 h-16 rounded-full bg-slate-800 border border-slate-700 relative overflow-hidden">
+                <div
+                  className={`w-full h-full transition-all duration-700 ${
+                    handshakeStep === 3
+                      ? 'bg-gradient-to-b from-blue-500 via-emerald-400 to-indigo-500 animate-pulse'
+                      : 'bg-gradient-to-b from-blue-600 to-purple-600'
+                  }`}
+                />
+              </div>
+
               {/* Status Badge */}
-              <div className="px-2.5 py-0.5 rounded-full bg-slate-900 border border-slate-700 text-[10px] font-mono text-slate-300 shadow flex items-center gap-1">
+              <div className="px-2.5 py-0.5 rounded-full bg-slate-900 border border-slate-700 text-[10px] font-mono text-slate-300 shadow flex items-center gap-1 z-20">
                 <span>{handshakeStep === 3 ? '⚡' : '🔐'}</span>
                 <span>
                   {handshakeStep === 3
@@ -488,54 +500,96 @@ export function CryptoVsAuthLab() {
                 </span>
               </div>
 
-              {/* ANIMATED PACKETS MOVING */}
+              {/* ANIMATED PACKETS MOVING (DESKTOP HORIZONTAL & MOBILE VERTICAL) */}
               {/* Step 0: Server to Browser (Certificate + Public Key) */}
               {handshakeStep === 0 && (
-                <div
-                  className="absolute z-30 px-2.5 py-1 rounded-lg bg-amber-500 text-slate-950 font-bold text-[11px] shadow flex items-center gap-1.5 border border-amber-300"
-                  style={{ animation: 'floatLeftFast 2.5s infinite ease-in-out' }}
-                >
-                  <span>📜</span>
-                  <span>{lang === 'ar' ? 'الشهادة الرقمية + مفتاح عام 🔓' : 'Digital Cert + Public Key 🔓'}</span>
-                </div>
+                <>
+                  {/* Desktop */}
+                  <div
+                    className="hidden md:flex absolute z-30 px-2.5 py-1 rounded-lg bg-amber-500 text-slate-950 font-bold text-[11px] shadow items-center gap-1.5 border border-amber-300"
+                    style={{ animation: 'floatLeftFast 2.5s infinite ease-in-out' }}
+                  >
+                    <span>📜</span>
+                    <span>{lang === 'ar' ? 'الشهادة الرقمية + مفتاح عام 🔓' : 'Digital Cert + Public Key 🔓'}</span>
+                  </div>
+                  {/* Mobile */}
+                  <div
+                    className="md:hidden absolute z-30 px-2 py-0.5 rounded-lg bg-amber-500 text-slate-950 font-bold text-[10px] shadow flex items-center gap-1 border border-amber-300"
+                    style={{ animation: 'floatUpFast 2.5s infinite ease-in-out' }}
+                  >
+                    <span>📜</span>
+                    <span>{lang === 'ar' ? 'الشهادة الرقمية 🔓' : 'Digital Cert 🔓'}</span>
+                  </div>
+                </>
               )}
 
               {/* Step 1: Browser to Server (Encrypted Shared Key) */}
               {handshakeStep === 1 && (
-                <div
-                  className="absolute z-30 px-2.5 py-1 rounded-lg bg-purple-600 text-white font-bold text-[11px] shadow flex items-center gap-1.5 border border-purple-400"
-                  style={{ animation: 'floatRightFast 2.5s infinite ease-in-out' }}
-                >
-                  <span>📦</span>
-                  <span>{lang === 'ar' ? 'مفتاح جلسة مشفر 🔑' : 'Encrypted Key 🔑'}</span>
-                </div>
+                <>
+                  {/* Desktop */}
+                  <div
+                    className="hidden md:flex absolute z-30 px-2.5 py-1 rounded-lg bg-purple-600 text-white font-bold text-[11px] shadow items-center gap-1.5 border border-purple-400"
+                    style={{ animation: 'floatRightFast 2.5s infinite ease-in-out' }}
+                  >
+                    <span>📦</span>
+                    <span>{lang === 'ar' ? 'مفتاح جلسة مشفر 🔑' : 'Encrypted Key 🔑'}</span>
+                  </div>
+                  {/* Mobile */}
+                  <div
+                    className="md:hidden absolute z-30 px-2 py-0.5 rounded-lg bg-purple-600 text-white font-bold text-[10px] shadow flex items-center gap-1 border border-purple-400"
+                    style={{ animation: 'floatDownFast 2.5s infinite ease-in-out' }}
+                  >
+                    <span>📦</span>
+                    <span>{lang === 'ar' ? 'مفتاح جلسة مشفر 🔑' : 'Encrypted Key 🔑'}</span>
+                  </div>
+                </>
               )}
 
               {/* Step 2: Server Decrypting */}
               {handshakeStep === 2 && (
-                <div className="p-2 rounded-xl bg-purple-950/90 border border-purple-500 text-purple-200 text-[11px] text-center font-bold animate-bounce shadow">
+                <div className="p-1.5 sm:p-2 rounded-xl bg-purple-950/90 border border-purple-500 text-purple-200 text-[10px] sm:text-[11px] text-center font-bold animate-bounce shadow">
                   <span>🔐 {lang === 'ar' ? 'الخادم يفك التشفير بالمفتاح الخاص...' : 'Decrypting with Private Key...'}</span>
                 </div>
               )}
 
               {/* Step 3: FAST BIDIRECTIONAL STREAM */}
               {handshakeStep === 3 && (
-                <div className="w-full relative h-8 flex items-center justify-center">
-                  <div
-                    className={`absolute z-30 px-2.5 py-0.5 rounded-lg font-bold text-[11px] shadow flex items-center gap-1 ${
-                      packetDirection === 'toServer'
-                        ? 'bg-emerald-500 text-slate-950 border border-emerald-300'
-                        : 'bg-cyan-500 text-slate-950 border border-cyan-300'
-                    }`}
-                    style={{
-                      animation: `${packetDirection === 'toServer' ? 'floatRightFast' : 'floatLeftFast'} 1.8s infinite linear`
-                    }}
-                  >
-                    <span>⚡</span>
-                    <span className="font-mono">{lastDataPacket}</span>
-                    <span>🔑</span>
+                <>
+                  {/* Desktop */}
+                  <div className="hidden md:flex w-full relative h-8 items-center justify-center">
+                    <div
+                      className={`absolute z-30 px-2.5 py-0.5 rounded-lg font-bold text-[11px] shadow flex items-center gap-1 ${
+                        packetDirection === 'toServer'
+                          ? 'bg-emerald-500 text-slate-950 border border-emerald-300'
+                          : 'bg-cyan-500 text-slate-950 border border-cyan-300'
+                      }`}
+                      style={{
+                        animation: `${packetDirection === 'toServer' ? 'floatRightFast' : 'floatLeftFast'} 1.8s infinite linear`
+                      }}
+                    >
+                      <span>⚡</span>
+                      <span className="font-mono">{lastDataPacket}</span>
+                      <span>🔑</span>
+                    </div>
                   </div>
-                </div>
+                  {/* Mobile */}
+                  <div className="md:hidden w-full relative h-10 flex items-center justify-center">
+                    <div
+                      className={`absolute z-30 px-2 py-0.5 rounded-lg font-bold text-[10px] shadow flex items-center gap-1 ${
+                        packetDirection === 'toServer'
+                          ? 'bg-emerald-500 text-slate-950 border border-emerald-300'
+                          : 'bg-cyan-500 text-slate-950 border border-cyan-300'
+                      }`}
+                      style={{
+                        animation: `${packetDirection === 'toServer' ? 'floatDownFast' : 'floatUpFast'} 1.8s infinite linear`
+                      }}
+                    >
+                      <span>⚡</span>
+                      <span className="font-mono">{lastDataPacket}</span>
+                      <span>🔑</span>
+                    </div>
+                  </div>
+                </>
               )}
             </div>
 
@@ -611,6 +665,39 @@ export function CryptoVsAuthLab() {
             </div>
           </div>
         )}
+
+        {/* INTEGRATED TEXTBOOK SUMMARY CARDS: ASYMMETRIC VS SYMMETRIC */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs pt-1">
+          <div className="p-3.5 rounded-xl theme-panel border border-amber-500/30 space-y-1.5 shadow-sm">
+            <div className="flex items-center gap-1.5 font-bold text-amber-600 dark:text-amber-300 text-xs sm:text-sm">
+              <span>🔓🔐</span>
+              <span>{lang === 'ar' ? '1. التشفير بالمفتاح العام (غير المتماثل)' : '1. Public-Key Cryptography (Asymmetric)'}</span>
+            </div>
+            <p className="text-slate-700 dark:text-slate-300 leading-relaxed text-[11px]">
+              {lang === 'ar'
+                ? 'تُستخدم تقنية التشفير بالمفتاح العام "لمشاركة المفاتيح بأمان" في بداية الاتصال (TLS Handshake). تتميز بالتحقق من الهوية وعدم الحاجة لمفتاح سرّي مسبق، ولكنها بطيئة نسبياً في العمليات الحسابية.'
+                : 'Used at connection initiation (TLS Handshake) to safely exchange secret session keys. Provides authentication without prior secret sharing, but is computationally slower.'}
+            </p>
+            <span className="inline-block px-2.5 py-0.5 rounded-md bg-amber-500/10 text-amber-600 dark:text-amber-400 font-bold text-[10px] border border-amber-500/20">
+              {lang === 'ar' ? 'الدور: تبادل المفاتيح بأمان 🛡️ (بطيء)' : 'Role: Secure Key Exchange 🛡️ (Slow)'}
+            </span>
+          </div>
+
+          <div className="p-3.5 rounded-xl theme-panel border border-emerald-500/30 space-y-1.5 shadow-sm">
+            <div className="flex items-center gap-1.5 font-bold text-emerald-600 dark:text-emerald-300 text-xs sm:text-sm">
+              <span>🔑🔑</span>
+              <span>{lang === 'ar' ? '2. التشفير بالمفتاح المشترك (المتماثل)' : '2. Common-Key Cryptography (Symmetric)'}</span>
+            </div>
+            <p className="text-slate-700 dark:text-slate-300 leading-relaxed text-[11px]">
+              {lang === 'ar'
+                ? 'بمجرد حصول الطرفين على نفس المفتاح المشترك، تُستخدم تقنية التشفير المتماثل "لتداول البيانات الحجمية والكبيرة بسرعة فائقة وسلاسة".'
+                : 'Once both parties possess the same secret symmetric key, symmetric encryption is used for high-speed, high-volume data transmission.'}
+            </p>
+            <span className="inline-block px-2.5 py-0.5 rounded-md bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-bold text-[10px] border border-emerald-500/20">
+              {lang === 'ar' ? 'الدور: نقل البيانات بسرعة ⚡ (سريع جداً)' : 'Role: High-Speed Data Stream ⚡ (Ultra Fast)'}
+            </span>
+          </div>
+        </div>
       </div>
 
       {/* ========================================================================= */}
