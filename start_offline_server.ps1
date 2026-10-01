@@ -1,28 +1,23 @@
-$ErrorActionPreference = "SilentlyContinue"
-
-# Resolve path to "out" folder
+# Try Node.js first if available
 $scriptDir = Split-Path -Parent $MyInvocation.MyCommand.Definition
+$nodeServer = Join-Path $scriptDir "server.js"
+
+if (Get-Command node -ErrorAction SilentlyContinue) {
+    Write-Host "Starting Node.js offline server..." -ForegroundColor Green
+    node $nodeServer
+    exit 0
+}
+
+# Fallback: PowerShell HttpListener using 127.0.0.1 (No Admin Rights Required)
 $outDir = Join-Path $scriptDir "out"
+if (-not (Test-Path $outDir)) { $outDir = $scriptDir }
 
-if (-not (Test-Path $outDir)) {
-    Write-Host "Generating offline build out folder..." -ForegroundColor Yellow
-    Set-Location $scriptDir
-    npm run build
-}
-
-if (-not (Test-Path $outDir)) {
-    Write-Host "Error: Could not locate 'out' directory." -ForegroundColor Red
-    Read-Host "Press Enter to exit..."
-    exit 1
-}
-
-# Find available port
 $port = 8080
 $listener = $null
 while ($port -le 8099) {
     try {
         $l = New-Object System.Net.HttpListener
-        $l.Prefixes.Add("http://localhost:$port/")
+        $l.Prefixes.Add("http://127.0.0.1:$port/")
         $l.Start()
         $listener = $l
         break
@@ -32,18 +27,18 @@ while ($port -le 8099) {
 }
 
 if (-not $listener) {
-    Write-Host "Error: Could not bind HTTP listener to ports 8080-8099" -ForegroundColor Red
+    Write-Host "Error: Could not start local server on ports 8080-8099." -ForegroundColor Red
     Read-Host "Press Enter to exit..."
     exit 1
 }
 
+$url = "http://127.0.0.1:$port/"
 Write-Host "===================================================================" -ForegroundColor Green
-Write-Host "  Platform Offline Server Running at: http://localhost:$port/" -ForegroundColor Cyan
-Write-Host "  Close this window to stop the server." -ForegroundColor Yellow
+Write-Host "  Platform Offline Server Running at: $url" -ForegroundColor Cyan
+Write-Host "  (Please keep this window open while using the platform)" -ForegroundColor Yellow
 Write-Host "===================================================================" -ForegroundColor Green
 
-# Open default web browser
-Start-Process "http://localhost:$port/"
+Start-Process $url
 
 $mimeTypes = @{
     ".html" = "text/html; charset=utf-8"
@@ -71,7 +66,6 @@ try {
         $rawPath = [System.Uri]::UnescapeDataString($request.Url.LocalPath)
         if ($rawPath -eq "/") { $rawPath = "/index.html" }
 
-        # Remove leading slash and sanitize path
         $cleanPath = $rawPath.TrimStart('/').Replace('/', '\')
         $targetFile = Join-Path $outDir $cleanPath
 
@@ -86,7 +80,6 @@ try {
             $response.ContentLength64 = $bytes.Length
             $response.OutputStream.Write($bytes, 0, $bytes.Length)
         } else {
-            # SPA Fallback to index.html
             $indexPath = Join-Path $outDir "index.html"
             if (Test-Path $indexPath) {
                 $response.ContentType = "text/html; charset=utf-8"
