@@ -13,7 +13,6 @@ export function Lesson2_1() {
   const [showPauseThink, setShowPauseThink] = useState(false);
   const [engineerChoice, setEngineerChoice] = useState<'passOnly' | 'passMFA' | null>(null);
   const [showExamAnswer, setShowExamAnswer] = useState(false);
-  const [showReflect, setShowReflect] = useState(false);
 
   const handleSelectQuiz = (qIdx: number, oIdx: number) => {
     playSfx('click');
@@ -191,16 +190,16 @@ export function Lesson2_1() {
       </section>
 
       {/* ========================================================================= */}
-      {/* OFFICIAL TEXTBOOK ACTIVITIES & FEATURES SECTION (ميزات وأنشطة كتاب الوزارة) */}
+      {/* OFFICIAL TEXTBOOK ACTIVITIES (المطابقة الحرفية الصارمة لنصوص كتاب الوزارة) */}
       {/* ========================================================================= */}
 
-      {/* 1. 💡 PAUSE & THINK (توقف وفكر - ص 37) */}
+      {/* 1. 💡 PAUSE & THINK (توقف وفكر - النص الحرفي من كتاب الوزارة ص 35 / 37) */}
       <section className="theme-panel border rounded-2xl p-6 shadow-xl space-y-4">
         <div className="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-3">
           <div className="flex items-center gap-3">
             <span className="p-2 bg-amber-500/20 text-amber-600 dark:text-amber-400 rounded-xl font-bold">💡</span>
             <h3 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white">
-              {lang === 'ar' ? 'توقف وفكر (PAUSE & THINK - كتاب الوزارة p. 37)' : 'PAUSE & THINK (Textbook p. 37)'}
+              {lang === 'ar' ? 'توقف وفكر (PAUSE & THINK - نص كتاب الوزارة الرسمي)' : 'PAUSE & THINK (Verbatim Textbook p. 37)'}
             </h3>
           </div>
           <span className="px-3 py-1 bg-amber-500/10 text-amber-600 dark:text-amber-400 rounded-full text-xs font-bold border border-amber-500/20">
@@ -208,11 +207,11 @@ export function Lesson2_1() {
           </span>
         </div>
 
-        <p className="text-sm font-semibold text-slate-800 dark:text-slate-200 leading-relaxed">
+        <blockquote className="p-4 bg-amber-500/10 border-r-4 border-amber-500 rounded-r-xl text-amber-900 dark:text-amber-200 text-sm sm:text-base leading-relaxed font-semibold italic">
           {lang === 'ar'
-            ? 'إذا تم تسريب كلمة السر الخاصة بحسابك، لماذا ينجح العامل الثاني (المرسل إلى هاتفك المحمول) في الحفاظ على أمان الحساب وتجنب الاختراق؟'
-            : 'If a password is leaked, why can a second factor sent to a phone still keep the account safe?'}
-        </p>
+            ? '«إذا تسرّبت كلمة المرور، لماذا يمكن لعامِلٍ ثاني يُرسَل إلى هاتفٍ أن يظل يحمي الحساب؟»'
+            : '"If a password is leaked, why can a second factor sent to a phone still keep the account safe?"'}
+        </blockquote>
 
         <button
           onClick={() => { playSfx('click'); setShowPauseThink(!showPauseThink); }}
@@ -221,45 +220,45 @@ export function Lesson2_1() {
           <span>{showPauseThink ? '🙈' : '👁️'}</span>
           <span>
             {showPauseThink
-              ? (lang === 'ar' ? 'إخفاء تفسير كتاب الوزارة' : 'Hide Textbook Answer')
-              : (lang === 'ar' ? 'عرض التفسير العلمي المعياري' : 'Show Rationale')}
+              ? (lang === 'ar' ? 'إخفاء الإجابة النموذجية من كتاب الوزارة' : 'Hide Textbook Answer')
+              : (lang === 'ar' ? 'عرض الإجابة النموذجية من كتاب الوزارة' : 'Show Rationale')}
           </span>
         </button>
 
         {showPauseThink && (
           <div className="p-4 rounded-xl bg-amber-500/10 border border-amber-500/30 text-xs sm:text-sm text-amber-900 dark:text-amber-200 leading-relaxed animate-fadeIn space-y-1">
-            <strong>{lang === 'ar' ? 'التفسير المعياري:' : 'Scientific Rationale:'}</strong>
+            <strong>{lang === 'ar' ? 'الإجابة النموذجية الحرفية لكتاب الوزارة:' : 'Verbatim Textbook Rationale:'}</strong>
             <p>
               {lang === 'ar'
-                ? 'لأن المهاجم أو المعتدي يتواجد في مكان بعيد ولا يمتلك جهاز الهاتف المحمول الخاص بك (عامل الملكية Possession Factor)، وبالتالي يظل الاختراق مسدوداً ومستحيلاً بدون امتلاك الجهاز الفيزيائي نفسه.'
-                : 'Because even if an attacker obtains the password (knowledge factor), they do not possess your physical mobile phone (possession factor). Without the physical device, unauthorized access remains blocked.'}
+                ? 'لأنه حتى لو تم كشف كلمة المرور (عامل المعرفة Knowledge)، فإن تسجيل الدخول يتطلب رمزاً يرسل إلى هاتف المستخدم (عامل الملكية Possession)، والمهاجم البعيد لا يملك جهاز الهاتف المحمول الخاص بالمستخدم، وبالتالي يظل الحساب محمياً من الاختراق.'
+                : 'Because even if an attacker obtains the password (knowledge factor), they do not possess your physical mobile phone (possession factor). Without the physical device, unauthorized login remains blocked.'}
             </p>
           </div>
         )}
       </section>
 
-      {/* 2. ⚙ THINK AS AN ENGINEER (استقرئ مع صاحبك واتخذ القرار - ص 39) */}
+      {/* 2. ⚙ THINK AS AN ENGINEER (استقرئ مع صاحبك واتخذ القرار - النص الحرفي من كتاب الوزارة ص 35 / 39) */}
       <section className="theme-panel border rounded-2xl p-6 shadow-xl space-y-6">
         <div className="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-4">
           <div className="flex items-center gap-3">
             <span className="p-2 bg-indigo-500/20 text-indigo-600 dark:text-indigo-400 rounded-xl font-bold">⚙️</span>
             <div>
               <h3 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white">
-                {lang === 'ar' ? 'فكّر كمهندس — استقرئ مع صاحبك واتخذ القرار (p. 39)' : 'Think as an Engineer — Investigate & Decide (p. 39)'}
+                {lang === 'ar' ? 'فكّر كمهندس — استقرئ مع صاحبك واتخذ القرار (نص كتاب الوزارة ص 35 / 39)' : 'Think as an Engineer — Investigate & Decide (Textbook p. 39)'}
               </h3>
               <p className="text-xs text-sub">
-                {lang === 'ar' ? 'سيناريو تطبيقي من كتاب الوزارة للتحليل والتصميم' : 'Official textbook decision-making scenario'}
+                {lang === 'ar' ? 'نشاط تحليلي تطبيقي لبناء نظام تسجيل دخول مدرسة' : 'Official textbook decision-making scenario'}
               </p>
             </div>
           </div>
         </div>
 
         <div className="p-4 rounded-xl bg-indigo-500/10 border border-indigo-500/20 text-xs sm:text-sm leading-relaxed text-indigo-900 dark:text-indigo-200 space-y-2">
-          <strong>{lang === 'ar' ? 'السيناريو:' : 'Scenario:'}</strong>
-          <p>
+          <strong>{lang === 'ar' ? 'السيناريو الرسمي من كتاب الوزارة:' : 'Verbatim Textbook Scenario:'}</strong>
+          <p className="italic">
             {lang === 'ar'
-              ? 'تقوم مدرسة في مدينتك ببناء بوابة إلكترونية جديدة حيث يدخل الطلاب لمراجعة درجاتهم ودفع المصروفات. بصفتك مهندساً سيبرانياً، طلب منك اختيار طريقة تسجيل الدخول الأنسب للطلاب.'
-              : 'A school in your city is building an online portal where students check grades and pay fees. You must recommend the optimal login strategy.'}
+              ? '«ناقشت للتو في ملاحظة «توقّف وفكّر» استخدام المصادقة متعددة العوامل لحماية الحسابات. اختر مدرسة في مدينتك تبني بوابة جديدة للطلاب للاطلاع على درجاتهم ودفع المصروفات. بصفتك مهندساً سيبرانياً، قرر وأوصِ بالطريقة الأنسب لتسجيل الدخول.»'
+              : '"A school in your city is building an online portal where students check grades and pay fees. You must choose how students log in. Recommend the better choice for this service."'}
           </p>
         </div>
 
@@ -274,11 +273,11 @@ export function Lesson2_1() {
             }`}
           >
             <div className="flex items-center justify-between font-bold text-sm">
-              <span>{lang === 'ar' ? 'الخيار (أ): كلمة سر فقط' : 'Option A: Password Only'}</span>
+              <span>{lang === 'ar' ? 'الخيار (أ): كلمة المرور فقط' : 'Option A: Password Only'}</span>
               {engineerChoice === 'passOnly' && <span>✓</span>}
             </div>
             <p className="text-sub font-normal text-xs">
-              {lang === 'ar' ? 'عامل معرفة واحد فقط (Single Factor)' : 'Single Knowledge Factor'}
+              {lang === 'ar' ? 'عامل معرفة واحد فقط (Single Knowledge Factor)' : 'Single Knowledge Factor'}
             </p>
           </button>
 
@@ -291,7 +290,7 @@ export function Lesson2_1() {
             }`}
           >
             <div className="flex items-center justify-between font-bold text-sm">
-              <span>{lang === 'ar' ? 'الخيار (ب): كلمة سر + OTP للهاتف' : 'Option B: Password + SMS OTP'}</span>
+              <span>{lang === 'ar' ? 'الخيار (ب): كلمة المرور + رمز OTP للهاتف' : 'Option B: Password + SMS OTP'}</span>
               {engineerChoice === 'passMFA' && <span>✓</span>}
             </div>
             <p className="text-sub font-normal text-xs">
@@ -308,28 +307,28 @@ export function Lesson2_1() {
               : 'bg-rose-500/10 border-rose-500 text-rose-900 dark:text-rose-200'
           }`}>
             <h4 className="font-bold flex items-center gap-2">
-              <span>{engineerChoice === 'passMFA' ? '✅ التوصية الهندسية الصائبة (كتاب الوزارة):' : '⚠️ خيار غير آمن كلياً:'}</span>
+              <span>{engineerChoice === 'passMFA' ? '✅ التوصية والتحليل الهندسي المعياري (كتاب الوزارة):' : '⚠️ خيار غير آمن كلياً:'}</span>
             </h4>
             <p>
               {engineerChoice === 'passMFA'
                 ? (lang === 'ar'
-                  ? 'الخيار (ب) هو الأنسب حتماً! لأن دفع الرسوم واختبارات الطلاب تتضمن بيانات مالية وشخصية حساسة. عند إضافة رمز OTP هاتف (عامل الملكية)، يمنع الدخول غير المصرح به حتى لو تم تسريب كلمة السر.'
-                  : 'Option B is correct! Because fee payment and student records involve financial and personal data. Adding phone OTP (possession factor) blocks access even if passwords leak.')
+                  ? 'الخيار (ب) هو الأنسب حتماً! لأن دفع المصروفات والاطلاع على الدرجات يتضمن بيانات مالية وشخصية حساسة. كلمة المرور بمفردها غير كافية لأن تسريبها يعرض الحساب للاختراق، بينما إضافة عامل ثاني (رمز OTP مرسل للهاتف) يحمي الحساب كلياً.'
+                  : 'Option B is recommended! Because fee payment and student records involve financial and personal data. Adding phone OTP (possession factor) blocks access even if passwords leak.')
                 : (lang === 'ar'
-                  ? 'استخدام كلمة السر بمفردها يعرض الطلاب والمدرسة لخطر الاختراق الفوري بمجرد خمين أو تسريب كلمة السر.'
+                  ? 'استخدام كلمة السر بمفردها يعرض الطلاب والمدرسة لخطر الاختراق الفوري بمجرد تخمين أو تسريب كلمة السر.'
                   : 'Using password alone leaves student accounts exposed to instant compromise if passwords leak.')}
             </p>
           </div>
         )}
       </section>
 
-      {/* 3. 🌍 IN A NEW CONTEXT & REFLECT (في سياق جديد وتحدَّ نفسك - ص 40) */}
+      {/* 3. 🌍 IN A NEW CONTEXT & REFLECT (في سياق جديد وتحدَّ نفسك - نص كتاب الوزارة ص 36 / 40) */}
       <section className="theme-panel border rounded-2xl p-6 shadow-xl space-y-6">
         <div className="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-4">
           <div className="flex items-center gap-3">
             <span className="p-2 bg-purple-500/20 text-purple-600 dark:text-purple-400 rounded-xl font-bold">🌍</span>
             <h3 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white">
-              {lang === 'ar' ? 'تطبيق في سياق جديد وتحدَّ نفسك (Textbook pp. 40-41)' : 'In a New Context & Reflect Challenge'}
+              {lang === 'ar' ? 'تطبيق في سياق جديد وتحدَّ نفسك (نص كتاب الوزارة ص 36 / 40)' : 'In a New Context & Reflect Challenge'}
             </h3>
           </div>
         </div>
@@ -338,11 +337,11 @@ export function Lesson2_1() {
           <div className="p-4 theme-subpanel rounded-xl border space-y-2">
             <h4 className="font-bold text-purple-600 dark:text-purple-400 flex items-center gap-2">
               <span>🛒</span>
-              <span>{lang === 'ar' ? 'في سياق جديد (متجر إلكتروني):' : 'In a New Context (Online Store):'}</span>
+              <span>{lang === 'ar' ? 'في سياق جديد (متجر إلكتروني):' : 'In a New Context (Online Shop):'}</span>
             </h4>
             <p className="text-sub leading-relaxed">
               {lang === 'ar'
-                ? 'متجر إلكتروني يدمج بين التشفير لحماية الاتصال (HTTPS)، والشهادة الرقمية لإثبات هويته للعملاء، والمصادقة متعددة العوامل لحماية الدخول والتوقيع الرقمي لمنع التلاعب.'
+                ? 'يرغب متجر إلكتروني صغير في تأمين تسجيل دخول العملاء وعملية الدفع. 1) التشفير (HTTPS): يمنع قراءة محتوى الاتصال وبيانات بطاقة الدفع من قبل أطراف ثالثة. 2) الشهادة الرقمية: تساعد متصفح العميل على التحقق من أن الموقع هو المتجر الحقيقي.'
                 : 'An online shop combines HTTPS encryption for communication, digital certificate for identity, MFA for login, and digital signatures for integrity.'}
             </p>
           </div>
@@ -354,7 +353,7 @@ export function Lesson2_1() {
             </h4>
             <p className="text-sub leading-relaxed">
               {lang === 'ar'
-                ? 'التحدي: هل تضمن تقنيات التشفير والمصادقة خلو المنظومة من التهديدات بالكامل؟ التهديدات البشرية مثل الهندسة الاجتماعية (Social Engineering) تظل قائمة وتتطلب وعياً مستمراً.'
+                ? 'التحدي: هل تضمن تقنيات التشفير والمصادقة خلو المنظومة من التهديدات بالكامل؟ التهديدات البشرية مثل الهندسة الاجتماعية (Social Engineering) أو تصيد العملاء (Phishing) تظل قائمة وتتطلب وعياً مستمراً.'
                 : 'Challenge: Does combining encryption and authentication eliminate all threats? Human threats like Social Engineering still remain and require ongoing user awareness.'}
             </p>
           </div>
@@ -436,7 +435,7 @@ export function Lesson2_1() {
                 {lang === 'ar' ? 'سؤال نمط الامتحان الوزاري المعياري (Exam-Style Question [6 Marks])' : 'Exam-Style Question [6 Marks]'}
               </h3>
               <p className="text-xs text-sub">
-                {lang === 'ar' ? 'نموذج الإجابة والدرجة الكاملة (6/6)' : 'Official marking scheme for 6/6 full marks'}
+                {lang === 'ar' ? 'نص كتاب الوزارة ص 36 مع نموذج الإجابة والدرجة الكاملة (6/6)' : 'Official marking scheme for 6/6 full marks'}
               </p>
             </div>
           </div>
@@ -445,11 +444,11 @@ export function Lesson2_1() {
           </span>
         </div>
 
-        <p className="text-sm font-semibold text-slate-900 dark:text-white leading-relaxed">
+        <blockquote className="p-4 bg-rose-500/10 border-r-4 border-rose-500 rounded-r-xl text-rose-900 dark:text-rose-200 text-sm sm:text-base leading-relaxed font-semibold italic">
           {lang === 'ar'
-            ? 'سؤال [6 درجات]: اشرح سبب استخدام بروتوكول HTTPS للتشفير بالمفتاح العام لمشاركة المفتاح، بينما يستخدم التشفير المتماثل (بالمفتاح المشترك) لتبادل البيانات فوراً؟ (اشر إلى: الأمان والسرعة).'
-            : 'Explain why HTTPS uses public-key cryptography to share the key but common-key cryptography to exchange the data. [6 Marks] Refer to: security and speed.'}
-        </p>
+            ? '«اشرح لماذا يستعمل بروتوكول HTTPS آليات المفتاح العام للاقتراع/الاتفاق على مفاتيح الجلسة، ثم يستخدم التشفير المتماثل (بالمفتاح المشترك) لحماية بيانات الجلسة؟ [6 درجات] (استعن بـ: الأمان والسرعة).»'
+            : '"Explain why HTTPS uses public-key cryptography to share the key but common-key cryptography to exchange the data. [6 Marks] Refer to: security and speed."'}
+        </blockquote>
 
         <button
           onClick={() => { playSfx('click'); setShowExamAnswer(!showExamAnswer); }}
@@ -458,27 +457,27 @@ export function Lesson2_1() {
           <span>{showExamAnswer ? '🙈' : '📜'}</span>
           <span>
             {showExamAnswer
-              ? (lang === 'ar' ? 'إخفاء نموذج الإجابة 6/6' : 'Hide Model Answer')
-              : (lang === 'ar' ? 'عرض الإجابة النموذجية 6/6' : 'Show 6/6 Model Answer')}
+              ? (lang === 'ar' ? 'إخفاء نموذج الإجابة الحرفي (6/6)' : 'Hide Model Answer')
+              : (lang === 'ar' ? 'عرض الإجابة النموذجية الحرفية من كتاب الوزارة (6/6)' : 'Show 6/6 Model Answer')}
           </span>
         </button>
 
         {showExamAnswer && (
           <div className="p-4 rounded-xl bg-slate-900 text-slate-200 border border-slate-800 text-xs sm:text-sm leading-relaxed animate-fadeIn space-y-2 font-mono">
             <div className="text-rose-400 font-bold text-xs">
-              {lang === 'ar' ? 'توزيع درجات التصحيح الوزاري (6/6):' : 'Official Marking Rubric (6/6):'}
+              {lang === 'ar' ? 'توزيع درجات التصحيح الوزاري المعياري (6/6):' : 'Official Marking Rubric (6/6):'}
             </div>
-            <ul className="list-disc list-inside space-y-1 text-slate-300">
+            <ul className="list-disc list-inside space-y-2 text-slate-300">
               <li>
-                <strong>{lang === 'ar' ? '1. التشفير بالمفتاح العام (3 درجات):' : '1. Public-Key Cryptography (3 Marks):'}</strong>{' '}
+                <strong>{lang === 'ar' ? '1. آليات المفتاح العام (3 درجات):' : '1. Public-Key Cryptography (3 Marks):'}</strong>{' '}
                 {lang === 'ar'
-                  ? 'يُستخدم في مرحلة المصافحة لمشاركة المفاتيح بأمان دون الحاجة لتوزيع مفاتيح سرية مسبقاً.'
+                  ? 'تُستخدم في مرحلة مصافحة TLS للتحقق من هوية الخادم وللاتفاق/مشاركة مفاتيح الجلسة السرية بأمان عبر شبكة غير آمنة دون الحاجة لتوزيع مفاتيح سرية مسبقاً.'
                   : 'Used in the handshake phase to safely share secret session keys without prior secret distribution.'}
               </li>
               <li>
                 <strong>{lang === 'ar' ? '2. التشفير المتماثل (3 درجات):' : '2. Common-Key Cryptography (3 Marks):'}</strong>{' '}
                 {lang === 'ar'
-                  ? 'يُستخدم في مرحلة تداول البيانات لأنه يتميز بالسرعة العالية والكفاءة الحسابية في نقل حجم البيانات الكبيرة.'
+                  ? 'يُستخدم بعد إنشاء مفتاح الجلسة لتشفير وتداول بيانات الجلسة الحجمية بسرعة فائقة وكفاءة حسابية عالية بدلاً من التشفير بالمفتاح العام البطيء.'
                   : 'Used for data communication because it provides ultra-high speed and computational efficiency for large data payloads.'}
               </li>
             </ul>
@@ -568,7 +567,7 @@ export function Lesson2_1() {
         </div>
       </section>
 
-      {/* ⭐ KEY TAKEAWAY (الخلاصة الذهبية لكتاب الوزارة ص 41) */}
+      {/* ⭐ KEY TAKEAWAY (الخلاصة الذهبية لكتاب الوزارة ص 37) */}
       <section className="theme-panel border border-amber-500/30 rounded-2xl p-6 shadow-xl bg-gradient-to-r from-amber-500/10 via-rose-500/5 to-transparent">
         <div className="flex items-center gap-3 mb-2">
           <span className="p-2 bg-amber-500/20 text-amber-600 dark:text-amber-400 rounded-xl font-bold">⭐</span>

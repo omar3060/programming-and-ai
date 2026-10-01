@@ -21,7 +21,6 @@ export function CryptoVsAuthLab() {
     if (!plainText.trim()) return;
     playSfx('click');
     try {
-      // Create a visual ciphertext string using UTF-8 safe encoding
       const encoded = btoa(encodeURIComponent(plainText));
       const scrambled = '🔒' + encoded.split('').reverse().join('');
       setCipherText(scrambled);
@@ -47,7 +46,7 @@ export function CryptoVsAuthLab() {
   const [handshakeStep, setHandshakeStep] = useState<number>(0);
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
   const [packetCount, setPacketCount] = useState<number>(12);
-  const [lastDataPacket, setLastDataPacket] = useState<string>('GET /user/profile');
+  const [lastDataPacket, setLastDataPacket] = useState<string>('رسائل ونصوص 📝');
   const [packetDirection, setPacketDirection] = useState<'toServer' | 'toBrowser'>('toServer');
 
   // Auto-play / Video Mode timer logic
@@ -212,19 +211,19 @@ export function CryptoVsAuthLab() {
 
   return (
     <div className="space-y-6 animate-fadeIn">
-      {/* Dynamic Keyframe Animations for Smooth Flow */}
+      {/* Dynamic Keyframe Animations */}
       <style>{`
         @keyframes floatRightFast {
-          0% { left: 18%; opacity: 0; transform: translateY(-50%) scale(0.9); }
-          15% { opacity: 1; transform: translateY(-50%) scale(1.05); }
-          85% { opacity: 1; transform: translateY(-50%) scale(1.05); }
-          100% { left: 78%; opacity: 0; transform: translateY(-50%) scale(0.9); }
+          0% { left: 10%; opacity: 0; transform: translateY(-50%) scale(0.9); }
+          20% { opacity: 1; transform: translateY(-50%) scale(1.05); }
+          80% { opacity: 1; transform: translateY(-50%) scale(1.05); }
+          100% { left: 80%; opacity: 0; transform: translateY(-50%) scale(0.9); }
         }
         @keyframes floatLeftFast {
-          0% { left: 78%; opacity: 0; transform: translateY(-50%) scale(0.9); }
-          15% { opacity: 1; transform: translateY(-50%) scale(1.05); }
-          85% { opacity: 1; transform: translateY(-50%) scale(1.05); }
-          100% { left: 18%; opacity: 0; transform: translateY(-50%) scale(0.9); }
+          0% { left: 80%; opacity: 0; transform: translateY(-50%) scale(0.9); }
+          20% { opacity: 1; transform: translateY(-50%) scale(1.05); }
+          80% { opacity: 1; transform: translateY(-50%) scale(1.05); }
+          100% { left: 10%; opacity: 0; transform: translateY(-50%) scale(0.9); }
         }
       `}</style>
 
@@ -435,7 +434,7 @@ export function CryptoVsAuthLab() {
           </p>
         </div>
 
-        {/* MAIN COMPACT ANIMATED CANVAS (Browser ↔ Network ↔ Server) */}
+        {/* MAIN ANIMATED CANVAS */}
         <div className="relative p-4 sm:p-6 rounded-2xl bg-slate-950 border border-slate-800 min-h-[220px] flex flex-col justify-between overflow-hidden shadow-inner">
           <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
             
@@ -465,10 +464,9 @@ export function CryptoVsAuthLab() {
               </div>
             </div>
 
-            {/* CENTER CHANNEL: ANIMATED PACKETS (DESKTOP HORIZONTAL & MOBILE VERTICAL) */}
+            {/* CENTER CHANNEL: ANIMATED PACKETS */}
             <div className="py-3 md:py-0 flex flex-col items-center justify-center space-y-2 relative min-h-[90px] md:min-h-[110px]">
-              {/* Desktop Horizontal Line */}
-              <div className="hidden md:block w-full h-2.5 rounded-full bg-slate-800 border border-slate-700 relative overflow-hidden">
+              <div className="w-full h-2.5 rounded-full bg-slate-800 border border-slate-700 relative overflow-hidden">
                 <div
                   className={`h-full transition-all duration-700 ${
                     handshakeStep === 3
@@ -476,17 +474,6 @@ export function CryptoVsAuthLab() {
                       : 'bg-gradient-to-r from-blue-600 to-purple-600'
                   }`}
                   style={{ width: '100%' }}
-                />
-              </div>
-
-              {/* Mobile Vertical Line */}
-              <div className="md:hidden w-2.5 h-16 rounded-full bg-slate-800 border border-slate-700 relative overflow-hidden">
-                <div
-                  className={`w-full h-full transition-all duration-700 ${
-                    handshakeStep === 3
-                      ? 'bg-gradient-to-b from-blue-500 via-emerald-400 to-indigo-500 animate-pulse'
-                      : 'bg-gradient-to-b from-blue-600 to-purple-600'
-                  }`}
                 />
               </div>
 
@@ -500,49 +487,27 @@ export function CryptoVsAuthLab() {
                 </span>
               </div>
 
-              {/* ANIMATED PACKETS MOVING (DESKTOP HORIZONTAL & MOBILE VERTICAL) */}
+              {/* ANIMATED PACKETS MOVING */}
               {/* Step 0: Server to Browser (Certificate + Public Key) */}
               {handshakeStep === 0 && (
-                <>
-                  {/* Desktop */}
-                  <div
-                    className="hidden md:flex absolute z-30 px-2.5 py-1 rounded-lg bg-amber-500 text-slate-950 font-bold text-[11px] shadow items-center gap-1.5 border border-amber-300"
-                    style={{ animation: 'floatLeftFast 2.5s infinite ease-in-out' }}
-                  >
-                    <span>📜</span>
-                    <span>{lang === 'ar' ? 'الشهادة الرقمية + مفتاح عام 🔓' : 'Digital Cert + Public Key 🔓'}</span>
-                  </div>
-                  {/* Mobile */}
-                  <div
-                    className="md:hidden absolute z-30 px-2 py-0.5 rounded-lg bg-amber-500 text-slate-950 font-bold text-[10px] shadow flex items-center gap-1 border border-amber-300"
-                    style={{ animation: 'floatUpFast 2.5s infinite ease-in-out' }}
-                  >
-                    <span>📜</span>
-                    <span>{lang === 'ar' ? 'الشهادة الرقمية 🔓' : 'Digital Cert 🔓'}</span>
-                  </div>
-                </>
+                <div
+                  className="absolute z-30 px-2.5 py-1 rounded-lg bg-amber-500 text-slate-950 font-bold text-[11px] shadow flex items-center gap-1.5 border border-amber-300"
+                  style={{ animation: 'floatLeftFast 2.5s infinite ease-in-out' }}
+                >
+                  <span>📜</span>
+                  <span>{lang === 'ar' ? 'الشهادة الرقمية + مفتاح عام 🔓' : 'Digital Cert + Public Key 🔓'}</span>
+                </div>
               )}
 
               {/* Step 1: Browser to Server (Encrypted Shared Key) */}
               {handshakeStep === 1 && (
-                <>
-                  {/* Desktop */}
-                  <div
-                    className="hidden md:flex absolute z-30 px-2.5 py-1 rounded-lg bg-purple-600 text-white font-bold text-[11px] shadow items-center gap-1.5 border border-purple-400"
-                    style={{ animation: 'floatRightFast 2.5s infinite ease-in-out' }}
-                  >
-                    <span>📦</span>
-                    <span>{lang === 'ar' ? 'مفتاح جلسة مشفر 🔑' : 'Encrypted Key 🔑'}</span>
-                  </div>
-                  {/* Mobile */}
-                  <div
-                    className="md:hidden absolute z-30 px-2 py-0.5 rounded-lg bg-purple-600 text-white font-bold text-[10px] shadow flex items-center gap-1 border border-purple-400"
-                    style={{ animation: 'floatDownFast 2.5s infinite ease-in-out' }}
-                  >
-                    <span>📦</span>
-                    <span>{lang === 'ar' ? 'مفتاح جلسة مشفر 🔑' : 'Encrypted Key 🔑'}</span>
-                  </div>
-                </>
+                <div
+                  className="absolute z-30 px-2.5 py-1 rounded-lg bg-purple-600 text-white font-bold text-[11px] shadow flex items-center gap-1.5 border border-purple-400"
+                  style={{ animation: 'floatRightFast 2.5s infinite ease-in-out' }}
+                >
+                  <span>📦</span>
+                  <span>{lang === 'ar' ? 'مفتاح جلسة مشفر 🔑' : 'Encrypted Key 🔑'}</span>
+                </div>
               )}
 
               {/* Step 2: Server Decrypting */}
@@ -554,42 +519,22 @@ export function CryptoVsAuthLab() {
 
               {/* Step 3: FAST BIDIRECTIONAL STREAM */}
               {handshakeStep === 3 && (
-                <>
-                  {/* Desktop */}
-                  <div className="hidden md:flex w-full relative h-8 items-center justify-center">
-                    <div
-                      className={`absolute z-30 px-2.5 py-0.5 rounded-lg font-bold text-[11px] shadow flex items-center gap-1 ${
-                        packetDirection === 'toServer'
-                          ? 'bg-emerald-500 text-slate-950 border border-emerald-300'
-                          : 'bg-cyan-500 text-slate-950 border border-cyan-300'
-                      }`}
-                      style={{
-                        animation: `${packetDirection === 'toServer' ? 'floatRightFast' : 'floatLeftFast'} 1.8s infinite linear`
-                      }}
-                    >
-                      <span>⚡</span>
-                      <span className="font-mono">{lastDataPacket}</span>
-                      <span>🔑</span>
-                    </div>
+                <div className="w-full relative h-8 flex items-center justify-center">
+                  <div
+                    className={`absolute z-30 px-2.5 py-0.5 rounded-lg font-bold text-[11px] shadow flex items-center gap-1 ${
+                      packetDirection === 'toServer'
+                        ? 'bg-emerald-500 text-slate-950 border border-emerald-300'
+                        : 'bg-cyan-500 text-slate-950 border border-cyan-300'
+                    }`}
+                    style={{
+                      animation: `${packetDirection === 'toServer' ? 'floatRightFast' : 'floatLeftFast'} 1.8s infinite linear`
+                    }}
+                  >
+                    <span>⚡</span>
+                    <span className="font-mono">{lastDataPacket}</span>
+                    <span>🔑</span>
                   </div>
-                  {/* Mobile */}
-                  <div className="md:hidden w-full relative h-10 flex items-center justify-center">
-                    <div
-                      className={`absolute z-30 px-2 py-0.5 rounded-lg font-bold text-[10px] shadow flex items-center gap-1 ${
-                        packetDirection === 'toServer'
-                          ? 'bg-emerald-500 text-slate-950 border border-emerald-300'
-                          : 'bg-cyan-500 text-slate-950 border border-cyan-300'
-                      }`}
-                      style={{
-                        animation: `${packetDirection === 'toServer' ? 'floatDownFast' : 'floatUpFast'} 1.8s infinite linear`
-                      }}
-                    >
-                      <span>⚡</span>
-                      <span className="font-mono">{lastDataPacket}</span>
-                      <span>🔑</span>
-                    </div>
-                  </div>
-                </>
+                </div>
               )}
             </div>
 
@@ -649,9 +594,9 @@ export function CryptoVsAuthLab() {
 
             <div className="flex flex-wrap items-center gap-2">
               {[
-                { labelAr: 'GET /account', payload: 'GET /account (Encrypted)' },
-                { labelAr: 'POST /transfer $500', payload: 'POST /transfer (Encrypted)' },
-                { labelAr: '200 OK Response', payload: '200 OK (Encrypted)' }
+                { labelAr: 'رسائل ونصوص 📝', payload: 'رسائل ونصوص 📝 (مشفّرة)' },
+                { labelAr: 'صور وفيديوهات 🎬', payload: 'صور وفيديوهات 🎬 (مشفّرة)' },
+                { labelAr: 'بيانات وملفات 📂', payload: 'بيانات وملفات 📂 (مشفّرة)' }
               ].map((item, idx) => (
                 <button
                   key={idx}
