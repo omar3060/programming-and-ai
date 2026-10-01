@@ -8,23 +8,14 @@ echo   جاري تشغيل المنصة والمحاكيات بدون إنترن
 echo ===================================================================
 echo.
 
-cd /d "%~dp0out" 2>nul || cd /d "%~dp0"
+powershell -ExecutionPolicy Bypass -File "%~dp0start_offline_server.ps1"
 
-:: Start default browser automatically at http://localhost:8080
-start http://localhost:8080
+if %ERRORLEVEL% NEQ 0 (
+    echo.
+    echo جاري محاولة التشغيل عبر الخادم البديل...
+    cd /d "%~dp0out" 2>nul || cd /d "%~dp0"
+    start http://localhost:8080
+    python -m http.server 8080
+)
 
-:: Try running Python built-in static server (available on Windows/Mac/Linux)
-python -m http.server 8080 2>nul
-if %ERRORLEVEL% EQU 0 goto END
-
-python3 -m http.server 8080 2>nul
-if %ERRORLEVEL% EQU 0 goto END
-
-:: Fallback if Python is not installed: try npx serve or direct browser launch
-npx --yes serve -s . -p 8080 2>nul
-if %ERRORLEVEL% EQU 0 goto END
-
-:: Fallback direct HTML launch
-start index.html
-
-:END
+pause
