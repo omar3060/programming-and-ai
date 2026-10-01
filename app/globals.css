@@ -292,7 +292,7 @@ html.light .text-slate-500 {
 }
 
 html.light .text-sub {
-  color: #334155 !important;
+  color: #1e293b !important;
 }
 
 /* 2. Deep Vibrant Accent Text Colors for Light Mode */
@@ -349,21 +349,37 @@ html.light .theme-panel {
 }
 
 html.light .theme-subpanel {
-  background-color: #f1f5f9 !important;
+  background-color: #f8fafc !important;
   border-color: #cbd5e1 !important;
 }
 
-html.light [class*="bg-slate-950"],
-html.light [class*="bg-slate-900"] {
+html.light [class*="bg-slate-950"]:not(.preserve-dark):not(.preserve-dark *),
+html.light [class*="bg-slate-900"]:not(.preserve-dark):not(.preserve-dark *) {
   background-color: #ffffff !important;
   border-color: #cbd5e1 !important;
   color: #0f172a !important;
 }
 
-html.light [class*="bg-slate-800"] {
+html.light [class*="bg-slate-800"]:not(.preserve-dark):not(.preserve-dark *) {
   background-color: #f1f5f9 !important;
   border-color: #cbd5e1 !important;
   color: #0f172a !important;
+}
+
+/* Preserve dark visualizers inside .preserve-dark containers */
+html.light .preserve-dark {
+  background-color: #020617 !important;
+  border-color: #1e293b !important;
+  color: #f8fafc !important;
+}
+html.light .preserve-dark * {
+  color: inherit;
+}
+html.light .preserve-dark .text-slate-400 {
+  color: #94a3b8 !important;
+}
+html.light .preserve-dark .text-white {
+  color: #ffffff !important;
 }
 
 /* 4. Tinted Interactive Boxes & Badges in Light Mode (Catches all opacity fractions like /30, /40, /70) */

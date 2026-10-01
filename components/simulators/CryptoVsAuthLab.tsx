@@ -285,8 +285,8 @@ export function CryptoVsAuthLab() {
               <span>📦 {lang === 'ar' ? '2. النص المشفر (Ciphertext)' : '2. Ciphertext'}</span>
               <span className="text-[10px] text-amber-600 dark:text-amber-400 font-mono">غير مفهوم</span>
             </div>
-            <div className="p-2 rounded-lg bg-slate-950 border border-slate-800 text-amber-400 font-mono text-[11px] truncate min-h-[34px] flex items-center">
-              {isEncrypted ? cipherText : <span className="text-slate-600 italic">{lang === 'ar' ? 'اضغط زر التشفير...' : 'Awaiting encryption...'}</span>}
+            <div className="p-2 rounded-lg bg-slate-950 border border-slate-800 text-amber-400 font-mono text-[11px] truncate min-h-[34px] flex items-center preserve-dark">
+              {isEncrypted ? cipherText : <span className="text-slate-400 italic">{lang === 'ar' ? 'اضغط زر التشفير...' : 'Awaiting encryption...'}</span>}
             </div>
             <button
               disabled={!isEncrypted}
@@ -435,7 +435,7 @@ export function CryptoVsAuthLab() {
         </div>
 
         {/* MAIN ANIMATED CANVAS */}
-        <div className="relative p-4 sm:p-6 rounded-2xl bg-slate-950 border border-slate-800 min-h-[220px] flex flex-col justify-between overflow-hidden shadow-inner">
+        <div className="relative p-4 sm:p-6 rounded-2xl bg-slate-950 border border-slate-800 min-h-[220px] flex flex-col justify-between overflow-hidden shadow-inner preserve-dark">
           <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
             
             {/* LEFT NODE: BROWSER */}
@@ -613,32 +613,32 @@ export function CryptoVsAuthLab() {
 
         {/* INTEGRATED TEXTBOOK SUMMARY CARDS: ASYMMETRIC VS SYMMETRIC */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs pt-1">
-          <div className="p-3.5 rounded-xl theme-panel border border-amber-500/30 space-y-1.5 shadow-sm">
-            <div className="flex items-center gap-1.5 font-bold text-amber-600 dark:text-amber-300 text-xs sm:text-sm">
+          <div className="p-3.5 rounded-xl theme-panel border border-amber-500/40 space-y-1.5 shadow-sm">
+            <div className="flex items-center gap-1.5 font-black text-amber-700 dark:text-amber-300 text-xs sm:text-sm">
               <span>🔓🔐</span>
               <span>{lang === 'ar' ? '1. التشفير بالمفتاح العام (غير المتماثل)' : '1. Public-Key Cryptography (Asymmetric)'}</span>
             </div>
-            <p className="text-slate-700 dark:text-slate-300 leading-relaxed text-[11px]">
+            <p className="text-slate-800 dark:text-slate-200 font-semibold leading-relaxed text-[11px]">
               {lang === 'ar'
                 ? 'تُستخدم تقنية التشفير بالمفتاح العام "لمشاركة المفاتيح بأمان" في بداية الاتصال (TLS Handshake). تتميز بالتحقق من الهوية وعدم الحاجة لمفتاح سرّي مسبق، ولكنها بطيئة نسبياً في العمليات الحسابية.'
                 : 'Used at connection initiation (TLS Handshake) to safely exchange secret session keys. Provides authentication without prior secret sharing, but is computationally slower.'}
             </p>
-            <span className="inline-block px-2.5 py-0.5 rounded-md bg-amber-500/10 text-amber-600 dark:text-amber-400 font-bold text-[10px] border border-amber-500/20">
+            <span className="inline-block px-2.5 py-0.5 rounded-md bg-amber-500/20 text-amber-800 dark:text-amber-300 font-black text-[10px] border border-amber-500/40">
               {lang === 'ar' ? 'الدور: تبادل المفاتيح بأمان 🛡️ (بطيء)' : 'Role: Secure Key Exchange 🛡️ (Slow)'}
             </span>
           </div>
 
-          <div className="p-3.5 rounded-xl theme-panel border border-emerald-500/30 space-y-1.5 shadow-sm">
-            <div className="flex items-center gap-1.5 font-bold text-emerald-600 dark:text-emerald-300 text-xs sm:text-sm">
+          <div className="p-3.5 rounded-xl theme-panel border border-emerald-500/40 space-y-1.5 shadow-sm">
+            <div className="flex items-center gap-1.5 font-black text-emerald-700 dark:text-emerald-300 text-xs sm:text-sm">
               <span>🔑🔑</span>
               <span>{lang === 'ar' ? '2. التشفير بالمفتاح المشترك (المتماثل)' : '2. Common-Key Cryptography (Symmetric)'}</span>
             </div>
-            <p className="text-slate-700 dark:text-slate-300 leading-relaxed text-[11px]">
+            <p className="text-slate-800 dark:text-slate-200 font-semibold leading-relaxed text-[11px]">
               {lang === 'ar'
                 ? 'بمجرد حصول الطرفين على نفس المفتاح المشترك، تُستخدم تقنية التشفير المتماثل "لتداول البيانات الحجمية والكبيرة بسرعة فائقة وسلاسة".'
                 : 'Once both parties possess the same secret symmetric key, symmetric encryption is used for high-speed, high-volume data transmission.'}
             </p>
-            <span className="inline-block px-2.5 py-0.5 rounded-md bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-bold text-[10px] border border-emerald-500/20">
+            <span className="inline-block px-2.5 py-0.5 rounded-md bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 font-black text-[10px] border border-emerald-500/40">
               {lang === 'ar' ? 'الدور: نقل البيانات بسرعة ⚡ (سريع جداً)' : 'Role: High-Speed Data Stream ⚡ (Ultra Fast)'}
             </span>
           </div>
@@ -648,15 +648,15 @@ export function CryptoVsAuthLab() {
       {/* ========================================================================= */}
       {/* 2. MULTI-FACTOR AUTHENTICATION (MFA) SIMULATOR (محاكي المصادقة) */}
       {/* ========================================================================= */}
-      <div className="p-4 sm:p-5 rounded-2xl theme-subpanel border border-emerald-500/30 space-y-3 shadow-lg">
+      <div className="p-4 sm:p-5 rounded-2xl theme-subpanel border border-emerald-500/40 space-y-3 shadow-lg">
         <div className="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-2.5">
-          <h4 className="font-black text-xs sm:text-sm flex items-center gap-1.5 text-emerald-600 dark:text-emerald-400">
+          <h4 className="font-black text-xs sm:text-sm flex items-center gap-1.5 text-emerald-700 dark:text-emerald-400">
             <span>🛡️</span>
             <span>{lang === 'ar' ? 'ثالثاً: محاكي المصادقة متعددة العوامل (MFA Interactive Security Lab)' : 'Third: Multi-Factor Authentication (MFA) Interactive Lab'}</span>
           </h4>
         </div>
 
-        <p className="text-xs text-sub leading-relaxed">
+        <p className="text-xs text-slate-800 dark:text-slate-200 font-semibold leading-relaxed">
           {lang === 'ar'
             ? 'اختر عوامل الأمان المراد تفعيلها لحسابك المصرفي وتفحص قوة الحماية ضد هجمات تسريب كلمات السر:'
             : 'Select security factors to enable on your online account and evaluate resistance against password leaks:'}
@@ -665,39 +665,39 @@ export function CryptoVsAuthLab() {
         {/* Factor Options Selector */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 text-xs">
           {/* Factor 1: Knowledge */}
-          <label className={`p-3 rounded-xl border cursor-pointer transition space-y-1 ${usePassword ? 'bg-blue-500/10 border-blue-500' : 'theme-panel border-slate-300 dark:border-slate-800'}`}>
+          <label className={`p-3 rounded-xl border cursor-pointer transition space-y-1 ${usePassword ? 'bg-blue-500/15 border-blue-500 shadow-sm' : 'theme-panel border-slate-300 dark:border-slate-800'}`}>
             <div className="flex items-center justify-between">
-              <span className="font-bold text-blue-600 dark:text-blue-400 flex items-center gap-1">
+              <span className="font-black text-blue-700 dark:text-blue-400 flex items-center gap-1">
                 <span>🔑</span>
                 <span>{lang === 'ar' ? '1. المعرفة (Knowledge)' : '1. Knowledge'}</span>
               </span>
               <input type="checkbox" checked={usePassword} onChange={(e) => setUsePassword(e.target.checked)} className="accent-blue-500 cursor-pointer" />
             </div>
-            <p className="text-[10px] text-sub">{lang === 'ar' ? 'كلمة السر أو الـ PIN.' : 'Password or PIN.'}</p>
+            <p className="text-[10px] text-slate-700 dark:text-slate-300 font-semibold">{lang === 'ar' ? 'كلمة السر أو الـ PIN.' : 'Password or PIN.'}</p>
           </label>
 
           {/* Factor 2: Possession */}
-          <label className={`p-3 rounded-xl border cursor-pointer transition space-y-1 ${usePhoneOTP ? 'bg-amber-500/10 border-amber-500' : 'theme-panel border-slate-300 dark:border-slate-800'}`}>
+          <label className={`p-3 rounded-xl border cursor-pointer transition space-y-1 ${usePhoneOTP ? 'bg-amber-500/15 border-amber-500 shadow-sm' : 'theme-panel border-slate-300 dark:border-slate-800'}`}>
             <div className="flex items-center justify-between">
-              <span className="font-bold text-amber-600 dark:text-amber-400 flex items-center gap-1">
+              <span className="font-black text-amber-700 dark:text-amber-400 flex items-center gap-1">
                 <span>📱</span>
                 <span>{lang === 'ar' ? '2. الملكية (Possession)' : '2. Possession'}</span>
               </span>
               <input type="checkbox" checked={usePhoneOTP} onChange={(e) => setUsePhoneOTP(e.target.checked)} className="accent-amber-500 cursor-pointer" />
             </div>
-            <p className="text-[10px] text-sub">{lang === 'ar' ? 'رمز OTP هاتف (8492).' : 'Phone OTP (8492).'}</p>
+            <p className="text-[10px] text-slate-700 dark:text-slate-300 font-semibold">{lang === 'ar' ? 'رمز OTP هاتف (8492).' : 'Phone OTP (8492).'}</p>
           </label>
 
           {/* Factor 3: Biometric */}
-          <label className={`p-3 rounded-xl border cursor-pointer transition space-y-1 ${useBiometrics ? 'bg-purple-500/10 border-purple-500' : 'theme-panel border-slate-300 dark:border-slate-800'}`}>
+          <label className={`p-3 rounded-xl border cursor-pointer transition space-y-1 ${useBiometrics ? 'bg-purple-500/15 border-purple-500 shadow-sm' : 'theme-panel border-slate-300 dark:border-slate-800'}`}>
             <div className="flex items-center justify-between">
-              <span className="font-bold text-purple-600 dark:text-purple-400 flex items-center gap-1">
+              <span className="font-black text-purple-700 dark:text-purple-400 flex items-center gap-1">
                 <span>👆</span>
                 <span>{lang === 'ar' ? '3. بيومتري (Biometric)' : '3. Biometric'}</span>
               </span>
               <input type="checkbox" checked={useBiometrics} onChange={(e) => setUseBiometrics(e.target.checked)} className="accent-purple-500 cursor-pointer" />
             </div>
-            <p className="text-[10px] text-sub">{lang === 'ar' ? 'بصمة الإصبع أو الوجه.' : 'Fingerprint or Face ID.'}</p>
+            <p className="text-[10px] text-slate-700 dark:text-slate-300 font-semibold">{lang === 'ar' ? 'بصمة الإصبع أو الوجه.' : 'Fingerprint or Face ID.'}</p>
           </label>
         </div>
 
@@ -705,33 +705,33 @@ export function CryptoVsAuthLab() {
         <div className="p-3 rounded-xl theme-panel border border-slate-300 dark:border-slate-800 space-y-2 text-xs">
           {usePassword && (
             <div className="space-y-1">
-              <label className="text-sub font-bold block text-[11px]">{lang === 'ar' ? 'كلمة السر:' : 'Password:'}</label>
+              <label className="text-slate-900 dark:text-slate-100 font-black block text-[11px]">{lang === 'ar' ? 'كلمة السر:' : 'Password:'}</label>
               <input
                 type="password"
                 value={passInput}
                 onChange={(e) => setPassInput(e.target.value)}
                 placeholder={lang === 'ar' ? 'أدخل كلمة السر...' : 'Enter password...'}
-                className="w-full p-2 rounded-lg theme-subpanel border text-xs focus:outline-none focus:border-blue-500"
+                className="w-full p-2 rounded-lg theme-subpanel border text-xs text-slate-900 dark:text-white font-bold focus:outline-none focus:border-blue-500"
               />
             </div>
           )}
 
           {usePhoneOTP && (
             <div className="space-y-1">
-              <label className="text-sub font-bold block text-[11px]">{lang === 'ar' ? 'رمز OTP (اكتب 8492):' : 'SMS OTP (enter 8492):'}</label>
+              <label className="text-slate-900 dark:text-slate-100 font-black block text-[11px]">{lang === 'ar' ? 'رمز OTP (اكتب 8492):' : 'SMS OTP (enter 8492):'}</label>
               <input
                 type="text"
                 value={otpInput}
                 onChange={(e) => setOtpInput(e.target.value)}
                 placeholder="8492"
-                className="w-full p-2 rounded-lg theme-subpanel border font-mono text-amber-600 dark:text-amber-400 text-xs focus:outline-none focus:border-amber-500"
+                className="w-full p-2 rounded-lg theme-subpanel border font-mono text-amber-700 dark:text-amber-400 font-bold text-xs focus:outline-none focus:border-amber-500"
               />
             </div>
           )}
 
           {useBiometrics && (
             <div className="flex items-center justify-between p-2 rounded-lg theme-subpanel border text-xs">
-              <span className="text-sub font-bold text-[11px]">{lang === 'ar' ? 'مسح بصمة الأصبع:' : 'Biometric Scan:'}</span>
+              <span className="text-slate-900 dark:text-slate-100 font-black text-[11px]">{lang === 'ar' ? 'مسح بصمة الأصبع:' : 'Biometric Scan:'}</span>
               <button
                 onClick={() => { playSfx('success'); setBioScanned(true); }}
                 className={`px-2.5 py-1 rounded-lg text-xs font-bold transition cursor-pointer ${bioScanned ? 'bg-emerald-500 text-slate-950' : 'bg-purple-600 hover:bg-purple-500 text-white'}`}
