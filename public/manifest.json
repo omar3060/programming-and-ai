@@ -1,0 +1,24 @@
+{
+  "name": "منهج البرمجة والذكاء الاصطناعي — الصف الثاني الثانوي",
+  "short_name": "البرمجة 2ث",
+  "description": "منصة تعليمية وتفاعلية متكاملة لمنهج البرمجة والذكاء الاصطناعي للصف الثاني الثانوي",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#0f172a",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "/logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
