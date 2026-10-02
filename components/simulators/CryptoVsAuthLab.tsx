@@ -285,8 +285,8 @@ export function CryptoVsAuthLab() {
               <span>📦 {lang === 'ar' ? '2. النص المشفر (Ciphertext)' : '2. Ciphertext'}</span>
               <span className="text-[10px] text-amber-600 dark:text-amber-400 font-mono">غير مفهوم</span>
             </div>
-            <div className="p-2 rounded-lg bg-slate-950 border border-slate-800 text-amber-400 font-mono text-[11px] truncate min-h-[34px] flex items-center preserve-dark">
-              {isEncrypted ? cipherText : <span className="text-slate-400 italic">{lang === 'ar' ? 'اضغط زر التشفير...' : 'Awaiting encryption...'}</span>}
+            <div className="p-2 rounded-lg bg-slate-100 dark:bg-slate-950 border border-slate-300 dark:border-slate-800 text-amber-800 dark:text-amber-400 font-mono text-[11px] truncate min-h-[34px] flex items-center font-bold">
+              {isEncrypted ? cipherText : <span className="text-slate-500 dark:text-slate-400 italic font-normal">{lang === 'ar' ? 'اضغط زر التشفير...' : 'Awaiting encryption...'}</span>}
             </div>
             <button
               disabled={!isEncrypted}
@@ -308,7 +308,7 @@ export function CryptoVsAuthLab() {
               <span>✨ {lang === 'ar' ? '3. البيانات المسترجعة' : '3. Restored Data'}</span>
               <span className="text-[10px] text-blue-600 dark:text-blue-400 font-mono">مفهومة مجدداً</span>
             </div>
-            <div className="p-2 rounded-lg bg-emerald-500/10 border border-emerald-500/30 text-emerald-700 dark:text-emerald-300 font-bold text-xs min-h-[34px] flex items-center">
+            <div className="p-2 rounded-lg bg-emerald-500/10 border border-emerald-500/30 text-emerald-800 dark:text-emerald-300 font-bold text-xs min-h-[34px] flex items-center">
               {isDecrypted ? restoredText : <span className="text-slate-500 italic font-normal">{lang === 'ar' ? 'اضغط زر فك التشفير...' : 'Awaiting decryption...'}</span>}
             </div>
             <div className="text-[10px] text-sub text-center font-mono">
@@ -435,30 +435,30 @@ export function CryptoVsAuthLab() {
         </div>
 
         {/* MAIN ANIMATED CANVAS */}
-        <div className="relative p-4 sm:p-6 rounded-2xl bg-slate-950 border border-slate-800 min-h-[220px] flex flex-col justify-between overflow-hidden shadow-inner preserve-dark">
+        <div className="relative p-4 sm:p-6 rounded-2xl bg-slate-100/90 dark:bg-slate-950 border border-slate-300 dark:border-slate-800 min-h-[220px] flex flex-col justify-between overflow-hidden shadow-inner">
           <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
             
             {/* LEFT NODE: BROWSER */}
-            <div className="p-3 rounded-xl bg-slate-900/90 border border-blue-500/40 shadow space-y-2 text-center">
-              <div className="w-10 h-10 mx-auto rounded-xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-xl">
+            <div className="p-3.5 rounded-2xl theme-panel border-2 border-blue-500/50 shadow-lg space-y-2 text-center">
+              <div className="w-10 h-10 mx-auto rounded-xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-xl shadow-sm">
                 🌐
               </div>
               <div>
-                <h5 className="font-bold text-xs text-white">
+                <h5 className="font-black text-xs text-slate-900 dark:text-white">
                   {lang === 'ar' ? 'متصفح المستخدم' : 'User Browser'}
                 </h5>
-                <p className="text-[10px] text-slate-400 font-mono">https://bank.com</p>
+                <p className="text-[10px] text-slate-600 dark:text-slate-400 font-mono">https://bank.com</p>
               </div>
 
-              <div className="pt-1.5 border-t border-slate-800 space-y-1 text-[10px] text-start">
+              <div className="pt-2 border-t border-slate-200 dark:border-slate-800 space-y-1 text-[10px] text-start">
                 <div className="flex items-center justify-between">
-                  <span className="text-slate-400">{lang === 'ar' ? 'المفتاح المشترك:' : 'Shared Key:'}</span>
+                  <span className="text-slate-700 dark:text-slate-300 font-semibold">{lang === 'ar' ? 'المفتاح المشترك:' : 'Shared Key:'}</span>
                   {handshakeStep >= 1 ? (
-                    <span className="px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-400 font-mono font-bold border border-emerald-500/30">
+                    <span className="px-1.5 py-0.5 rounded bg-emerald-500/15 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-400 font-mono font-bold border border-emerald-500/30">
                       🔑 K_symmetric
                     </span>
                   ) : (
-                    <span className="text-slate-600 italic">{lang === 'ar' ? 'غير متوفر' : 'None'}</span>
+                    <span className="text-slate-500 dark:text-slate-500 italic">{lang === 'ar' ? 'غير متوفر' : 'None'}</span>
                   )}
                 </div>
               </div>
@@ -466,7 +466,7 @@ export function CryptoVsAuthLab() {
 
             {/* CENTER CHANNEL: ANIMATED PACKETS */}
             <div className="py-3 md:py-0 flex flex-col items-center justify-center space-y-2 relative min-h-[90px] md:min-h-[110px]">
-              <div className="w-full h-2.5 rounded-full bg-slate-800 border border-slate-700 relative overflow-hidden">
+              <div className="w-full h-2.5 rounded-full bg-slate-200 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 relative overflow-hidden">
                 <div
                   className={`h-full transition-all duration-700 ${
                     handshakeStep === 3
@@ -478,7 +478,7 @@ export function CryptoVsAuthLab() {
               </div>
 
               {/* Status Badge */}
-              <div className="px-2.5 py-0.5 rounded-full bg-slate-900 border border-slate-700 text-[10px] font-mono text-slate-300 shadow flex items-center gap-1 z-20">
+              <div className="px-2.5 py-0.5 rounded-full theme-panel border border-slate-300 dark:border-slate-700 text-[10px] font-bold text-slate-800 dark:text-slate-300 shadow flex items-center gap-1 z-20">
                 <span>{handshakeStep === 3 ? '⚡' : '🔐'}</span>
                 <span>
                   {handshakeStep === 3
@@ -491,7 +491,7 @@ export function CryptoVsAuthLab() {
               {/* Step 0: Server to Browser (Certificate + Public Key) */}
               {handshakeStep === 0 && (
                 <div
-                  className="absolute z-30 px-2.5 py-1 rounded-lg bg-amber-500 text-slate-950 font-bold text-[11px] shadow flex items-center gap-1.5 border border-amber-300"
+                  className="absolute z-30 px-2.5 py-1 rounded-lg bg-amber-400 dark:bg-amber-500 text-slate-950 font-bold text-[11px] shadow flex items-center gap-1.5 border border-amber-500 dark:border-amber-300"
                   style={{ animation: 'floatLeftFast 2.5s infinite ease-in-out' }}
                 >
                   <span>📜</span>
@@ -512,7 +512,7 @@ export function CryptoVsAuthLab() {
 
               {/* Step 2: Server Decrypting */}
               {handshakeStep === 2 && (
-                <div className="p-1.5 sm:p-2 rounded-xl bg-purple-950/90 border border-purple-500 text-purple-200 text-[10px] sm:text-[11px] text-center font-bold animate-bounce shadow">
+                <div className="p-1.5 sm:p-2 rounded-xl bg-purple-100 dark:bg-purple-950/90 border border-purple-300 dark:border-purple-500 text-purple-900 dark:text-purple-200 text-[10px] sm:text-[11px] text-center font-bold animate-bounce shadow">
                   <span>🔐 {lang === 'ar' ? 'الخادم يفك التشفير بالمفتاح الخاص...' : 'Decrypting with Private Key...'}</span>
                 </div>
               )}
@@ -523,8 +523,8 @@ export function CryptoVsAuthLab() {
                   <div
                     className={`absolute z-30 px-2.5 py-0.5 rounded-lg font-bold text-[11px] shadow flex items-center gap-1 ${
                       packetDirection === 'toServer'
-                        ? 'bg-emerald-500 text-slate-950 border border-emerald-300'
-                        : 'bg-cyan-500 text-slate-950 border border-cyan-300'
+                        ? 'bg-emerald-500 text-slate-950 border border-emerald-600 dark:border-emerald-300'
+                        : 'bg-cyan-500 text-slate-950 border border-cyan-600 dark:border-cyan-300'
                     }`}
                     style={{
                       animation: `${packetDirection === 'toServer' ? 'floatRightFast' : 'floatLeftFast'} 1.8s infinite linear`
@@ -539,21 +539,21 @@ export function CryptoVsAuthLab() {
             </div>
 
             {/* RIGHT NODE: WEB SERVER */}
-            <div className="p-3 rounded-xl bg-slate-900/90 border border-purple-500/40 shadow space-y-2 text-center">
-              <div className="w-10 h-10 mx-auto rounded-xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-xl">
+            <div className="p-3.5 rounded-2xl theme-panel border-2 border-purple-500/50 shadow-lg space-y-2 text-center">
+              <div className="w-10 h-10 mx-auto rounded-xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-xl shadow-sm">
                 🖥️
               </div>
               <div>
-                <h5 className="font-bold text-xs text-white">
+                <h5 className="font-black text-xs text-slate-900 dark:text-white">
                   {lang === 'ar' ? 'خادم الويب' : 'Web Server'}
                 </h5>
-                <p className="text-[10px] text-slate-400 font-mono">192.168.1.100</p>
+                <p className="text-[10px] text-slate-600 dark:text-slate-400 font-mono">192.168.1.100</p>
               </div>
 
-              <div className="pt-1.5 border-t border-slate-800 space-y-1 text-[10px] text-start">
+              <div className="pt-2 border-t border-slate-200 dark:border-slate-800 space-y-1 text-[10px] text-start">
                 <div className="flex items-center justify-between">
-                  <span className="text-slate-400">{lang === 'ar' ? 'المفتاح الخاص:' : 'Private Key:'}</span>
-                  <span className="px-1.5 py-0.5 rounded bg-rose-500/20 text-rose-300 font-mono font-bold border border-rose-500/30">
+                  <span className="text-slate-700 dark:text-slate-300 font-semibold">{lang === 'ar' ? 'المفتاح الخاص:' : 'Private Key:'}</span>
+                  <span className="px-1.5 py-0.5 rounded bg-rose-500/15 dark:bg-rose-500/20 text-rose-800 dark:text-rose-300 font-mono font-bold border border-rose-500/30">
                     🔐 PrivKey
                   </span>
                 </div>
@@ -563,7 +563,7 @@ export function CryptoVsAuthLab() {
 
           {/* BOTH HAVE SAME KEY BANNER */}
           {handshakeStep >= 2 && (
-            <div className="relative z-20 mt-3 p-2.5 rounded-xl bg-emerald-950/80 border border-emerald-500/40 text-emerald-200 text-xs font-bold flex items-center justify-between gap-2 shadow animate-fadeIn">
+            <div className="relative z-20 mt-3 p-2.5 rounded-xl bg-emerald-500/15 dark:bg-emerald-950/80 border border-emerald-500/40 text-emerald-900 dark:text-emerald-200 text-xs font-bold flex items-center justify-between gap-2 shadow-md animate-fadeIn">
               <div className="flex items-center gap-1.5">
                 <span>✨</span>
                 <span>
