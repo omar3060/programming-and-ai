@@ -107,7 +107,7 @@ export function Lesson2_3() {
           <h2 className="text-lg sm:text-2xl font-black text-orange-600 dark:text-orange-400">
             {lang === 'ar' ? '2. تسلسل مراحل الاستجابة للحوادث الست (The 6 Stages)' : '2. Flow of Incident Response (6 Ordered Stages)'}
           </h2>
-          <span className="text-[11px] font-mono bg-orange-500/10 text-orange-600 dark:text-orange-400 px-2.5 py-0.5 rounded-full border border-orange-500/20">
+          <span className="text-xs font-semibold bg-orange-500/10 text-orange-600 dark:text-orange-400 px-2.5 py-0.5 rounded-full border border-orange-500/20">
             Strict Ordered Sequence
           </span>
         </div>
@@ -169,7 +169,7 @@ export function Lesson2_3() {
           <h2 className="text-lg sm:text-2xl font-black text-amber-600 dark:text-amber-400">
             {lang === 'ar' ? '3. مفهوم تقييم المخاطر (Risk Assessment)' : '3. Concept of Risk Assessment'}
           </h2>
-          <span className="text-[11px] font-mono bg-amber-500/10 text-amber-600 dark:text-amber-400 px-2.5 py-0.5 rounded-full border border-amber-500/20">
+          <span className="text-xs font-semibold bg-amber-500/10 text-amber-600 dark:text-amber-400 px-2.5 py-0.5 rounded-full border border-amber-500/20">
             Risk Size = Impact × Likelihood
           </span>
         </div>
@@ -227,7 +227,7 @@ export function Lesson2_3() {
                 : 'Activities: Pause & Think • Think as Engineer • New Context • Exam Style'}
             </h3>
           </div>
-          <span className="text-xs text-sub font-mono shrink-0">ص 47 - ص 50</span>
+          <span className="text-xs text-sub font-semibold shrink-0">ص 47 - ص 50</span>
         </div>
 
         {/* 1. 💡 PAUSE & THINK (توقف وفكر - ص 47) */}

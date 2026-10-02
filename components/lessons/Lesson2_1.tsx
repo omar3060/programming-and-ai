@@ -142,7 +142,87 @@ export function Lesson2_1() {
           <h2 className="text-lg sm:text-2xl font-black text-rose-600 dark:text-rose-400">
             {lang === 'ar' ? '2. استخدام المصادقة في الخدمات الفعلية' : '2. Use of Authentication in Real Services'}
           </h2>
-          <span className="text-[11px] font-mono bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 px-2.5 py-0.5 rounded-full border border-indigo-500/20">
+          <span className="text-xs font-semibold bg-rose-500/10 text-rose-600 dark:text-rose-400 px-2.5 py-0.5 rounded-full border border-rose-500/20">
+            HTTPS (HTTP Secure)
+          </span>
+        </div>
+
+        <div className="text-slate-700 dark:text-slate-300 text-xs sm:text-base leading-relaxed space-y-3">
+          <p>
+            {lang === 'ar'
+              ? 'بروتوكول HTTPS هو بروتوكول HTTP نقل مؤمن عبر اتصال TLS. يوفر TLS سرية البيانات وسامتها أثناء النقل، ويساعد المتصفح على التحقق من هوية الخادم واسم النطاق، وتسمى خطوات إنشاء الاتصال الآمن مصافحة TLS (TLS Handshake).'
+              : 'HTTPS (HTTP Secure) is a communication protocol that adds TLS encryption to HTTP. By providing encryption, detection of tampering, and verification of the communication partner, it protects users from threats such as eavesdropping, tampering, and impersonation. The procedure for establishing a secure communication is called the TLS handshake.'}
+          </p>
+        </div>
+
+        {/* TLS Handshake Stages Table - Perfectly Aligned via text-start */}
+        <div className="overflow-x-auto rounded-2xl border border-slate-200 dark:border-slate-800 shadow-md">
+          <table className="w-full text-start text-xs sm:text-sm text-slate-800 dark:text-slate-300">
+            <thead className="theme-subpanel text-slate-900 dark:text-slate-200 uppercase text-[11px] sm:text-xs font-bold border-b border-slate-200 dark:border-slate-800">
+              <tr>
+                <th className="p-3 sm:p-4 text-start font-black shrink-0">{lang === 'ar' ? 'المرحلة' : 'Stage'}</th>
+                <th className="p-3 sm:p-4 text-start font-black min-w-[200px]">{lang === 'ar' ? 'ما يحدث (Mechanism)' : 'What Happens'}</th>
+                <th className="p-3 sm:p-4 text-start font-black min-w-[160px]">{lang === 'ar' ? 'طريقة التشفير المستخدمة' : 'Cryptographic Method Used'}</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-slate-200 dark:divide-slate-800">
+              <tr className="hover:bg-slate-500/10 transition">
+                <td className="p-3 sm:p-4 font-bold text-rose-600 dark:text-rose-400 align-top text-start whitespace-nowrap">① {lang === 'ar' ? 'الاتصال والتحقق' : 'Connection'}</td>
+                <td className="p-3 sm:p-4 text-start leading-relaxed align-top">
+                  {lang === 'ar'
+                    ? 'يرسل خادم الويب شهادته الرقمية والمفتاح العام إلى المتصفح. يتحقق المتصفح من أصالة الخادم عبر جهة التصديق (CA).'
+                    : 'The web server sends a digital certificate and a public key to the browser. The browser verifies the server\'s authenticity through a certificate authority (CA).'}
+                </td>
+                <td className="p-3 sm:p-4 font-semibold text-emerald-600 dark:text-emerald-400 align-top text-start">
+                  {lang === 'ar' ? 'التشفير بالمفتاح العام (Public-key cryptography)' : 'Public-key cryptography'}
+                </td>
+              </tr>
+              <tr className="hover:bg-slate-500/10 transition">
+                <td className="p-3 sm:p-4 font-bold text-rose-600 dark:text-rose-400 align-top text-start whitespace-nowrap">② {lang === 'ar' ? 'تبادل المفتاح' : 'Key Exchange'}</td>
+                <td className="p-3 sm:p-4 text-start leading-relaxed align-top">
+                  {lang === 'ar'
+                    ? 'ينشئ المتصفح مفتاحاً مشتركاً (Common key) للاتصال، ويشفره بمفتاح الخادم العام ويرسله. يفك الخادم تشفيره بمفتاحه الخاص للحصول على المفتاح المشترك.'
+                    : 'The browser creates a common key for communication, encrypts it with the server\'s public key, and sends it. The server decrypts it with its private key to obtain the common key.'}
+                </td>
+                <td className="p-3 sm:p-4 font-semibold text-emerald-600 dark:text-emerald-400 align-top text-start">
+                  {lang === 'ar' ? 'التشفير بالمفتاح العام (Public-key cryptography)' : 'Public-key cryptography'}
+                </td>
+              </tr>
+              <tr className="hover:bg-slate-500/10 transition">
+                <td className="p-3 sm:p-4 font-bold text-rose-600 dark:text-rose-400 align-top text-start whitespace-nowrap">③ {lang === 'ar' ? 'تبادل البيانات' : 'Data Communication'}</td>
+                <td className="p-3 sm:p-4 text-start leading-relaxed align-top">
+                  {lang === 'ar'
+                    ? 'يتم تشفير وتداول البيانات بسرعة وكفاءة باستخدام المفتاح المشترك الذي تم تبادله.'
+                    : 'Data is encrypted and exchanged using the shared common key.'}
+                </td>
+                <td className="p-3 sm:p-4 font-semibold text-indigo-600 dark:text-indigo-400 align-top text-start">
+                  {lang === 'ar' ? 'التشفير المتماثل / بالمفتاح المشترك (Common-key cryptography)' : 'Common-key cryptography'}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <blockquote className="p-3.5 sm:p-4 theme-subpanel rounded-xl border-l-4 border-rose-500 text-xs text-slate-700 dark:text-slate-300">
+          💡 <strong>{lang === 'ar' ? 'ملاحظة الفكر التكاملي:' : 'Division of Roles:'}</strong>{' '}
+          {lang === 'ar'
+            ? 'تُستخدم تقنية التشفير بالمفتاح العام "لمشاركة المفاتيح بأمان"، وتُستخدم تقنية التشفير المتماثل "لتبادل البيانات الحجمية بسرعة". يتيح هذا توزيع الأدوار تحقيق كل من الأمان وسرعة الاتصال في وقت واحد.'
+            : 'Public-key cryptography is used to "share keys safely," and common-key cryptography is used to "exchange large amounts of data quickly." This division of roles makes it possible to achieve both security and communication speed.'}
+        </blockquote>
+      </section>
+
+      {/* Interactive CryptoVsAuthLab Simulator */}
+      <section>
+        <CryptoVsAuthLab />
+      </section>
+
+      {/* Section 2: Authentication in Real Services */}
+      <section className="theme-panel border rounded-2xl p-5 sm:p-6 shadow-xl space-y-5">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 border-b border-slate-200 dark:border-slate-800 pb-3">
+          <h2 className="text-lg sm:text-2xl font-black text-rose-600 dark:text-rose-400">
+            {lang === 'ar' ? '2. استخدام المصادقة في الخدمات الفعلية' : '2. Use of Authentication in Real Services'}
+          </h2>
+          <span className="text-xs font-semibold bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 px-2.5 py-0.5 rounded-full border border-indigo-500/20">
             Multi-Factor Authentication (MFA / 2FA)
           </span>
         </div>
@@ -167,22 +247,22 @@ export function Lesson2_1() {
               <tr className="hover:bg-slate-500/10 transition">
                 <td className="p-3 sm:p-4 font-bold text-slate-900 dark:text-white align-top text-start">{lang === 'ar' ? 'الخدمات المصرفية عبر الإنترنت (Online Banking)' : 'Online banking'}</td>
                 <td className="p-3 sm:p-4 align-top text-start">{lang === 'ar' ? 'كلمة المرور + كلمة المرور لمرة واحدة (OTP)' : 'Password + one-time password'}</td>
-                <td className="p-3 sm:p-4 font-mono text-xs text-amber-600 dark:text-amber-400 align-top text-start">{lang === 'ar' ? 'المعرفة + الملكية' : 'Knowledge + Possession'}</td>
+                <td className="p-3 sm:p-4 font-bold text-xs sm:text-sm text-amber-700 dark:text-amber-400 align-top text-start">{lang === 'ar' ? 'المعرفة + الملكية' : 'Knowledge + Possession'}</td>
               </tr>
               <tr className="hover:bg-slate-500/10 transition">
                 <td className="p-3 sm:p-4 font-bold text-slate-900 dark:text-white align-top text-start">{lang === 'ar' ? 'تسجيل دخول وسائل التواصل (SNS Login)' : 'SNS login'}</td>
                 <td className="p-3 sm:p-4 align-top text-start">{lang === 'ar' ? 'كلمة المرور + رمز رسالة SMS' : 'Password + SMS authentication'}</td>
-                <td className="p-3 sm:p-4 font-mono text-xs text-amber-600 dark:text-amber-400 align-top text-start">{lang === 'ar' ? 'المعرفة + الملكية' : 'Knowledge + Possession'}</td>
+                <td className="p-3 sm:p-4 font-bold text-xs sm:text-sm text-amber-700 dark:text-amber-400 align-top text-start">{lang === 'ar' ? 'المعرفة + الملكية' : 'Knowledge + Possession'}</td>
               </tr>
               <tr className="hover:bg-slate-500/10 transition">
                 <td className="p-3 sm:p-4 font-bold text-slate-900 dark:text-white align-top text-start">{lang === 'ar' ? 'التسوق الإلكتروني (Online Shopping)' : 'Online shopping'}</td>
                 <td className="p-3 sm:p-4 align-top text-start">{lang === 'ar' ? 'كلمة المرور + رمز كود 3-D Secure' : 'Password + one-time code from 3-D Secure'}</td>
-                <td className="p-3 sm:p-4 font-mono text-xs text-amber-600 dark:text-amber-400 align-top text-start">{lang === 'ar' ? 'المعرفة + الملكية' : 'Knowledge + Possession'}</td>
+                <td className="p-3 sm:p-4 font-bold text-xs sm:text-sm text-amber-700 dark:text-amber-400 align-top text-start">{lang === 'ar' ? 'المعرفة + الملكية' : 'Knowledge + Possession'}</td>
               </tr>
               <tr className="hover:bg-slate-500/10 transition">
                 <td className="p-3 sm:p-4 font-bold text-slate-900 dark:text-white align-top text-start">{lang === 'ar' ? 'تسجيل كمبيوتر الشركة (Company Laptop)' : 'Company laptop login'}</td>
                 <td className="p-3 sm:p-4 align-top text-start">{lang === 'ar' ? 'البطاقة الذكية + مصادقة بصمة الإصبع' : 'Smart card + fingerprint authentication'}</td>
-                <td className="p-3 sm:p-4 font-mono text-xs text-emerald-600 dark:text-emerald-400 align-top text-start">{lang === 'ar' ? 'الملكية + السمات البيومترية' : 'Possession + Biometric'}</td>
+                <td className="p-3 sm:p-4 font-bold text-xs sm:text-sm text-emerald-700 dark:text-emerald-400 align-top text-start">{lang === 'ar' ? 'الملكية + السمات البيومترية' : 'Possession + Biometric'}</td>
               </tr>
             </tbody>
           </table>
@@ -195,7 +275,7 @@ export function Lesson2_1() {
           <h2 className="text-lg sm:text-2xl font-black text-rose-600 dark:text-rose-400">
             {lang === 'ar' ? '3. تركيبات تقنيات الأمان' : '3. Combinations of Security Technologies'}
           </h2>
-          <span className="text-[11px] font-mono bg-purple-500/10 text-purple-600 dark:text-purple-400 px-2.5 py-0.5 rounded-full border border-purple-500/20">
+          <span className="text-xs font-semibold bg-purple-500/10 text-purple-600 dark:text-purple-400 px-2.5 py-0.5 rounded-full border border-purple-500/20">
             Layered Protection
           </span>
         </div>
@@ -270,7 +350,7 @@ export function Lesson2_1() {
                 : 'Activities: Pause & Think • Think as Engineer • New Context • Exam Style'}
             </h3>
           </div>
-          <span className="text-xs text-sub font-mono shrink-0">ص 35 - ص 38</span>
+          <span className="text-xs text-sub font-semibold shrink-0">ص 35 - ص 38</span>
         </div>
 
         {/* 1. 💡 PAUSE & THINK (توقف وفكر - ص 35 في كتاب الوزارة) */}

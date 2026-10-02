@@ -120,7 +120,7 @@ export function Lesson2_2() {
           <h2 className="text-lg sm:text-2xl font-black text-blue-600 dark:text-blue-400">
             {lang === 'ar' ? '2. مفهوم الدفاع العميق (Defense in Depth)' : '2. Defense in Depth (Layered Defense)'}
           </h2>
-          <span className="text-[11px] font-mono bg-blue-500/10 text-blue-600 dark:text-blue-400 px-2.5 py-0.5 rounded-full border border-blue-500/20">
+          <span className="text-xs font-semibold bg-blue-500/10 text-blue-600 dark:text-blue-400 px-2.5 py-0.5 rounded-full border border-blue-500/20">
             4 Security Layers
           </span>
         </div>
@@ -168,7 +168,7 @@ export function Lesson2_2() {
           <h2 className="text-lg sm:text-2xl font-black text-rose-600 dark:text-rose-400">
             {lang === 'ar' ? '3. مفهوم عدم الثقة (Zero Trust)' : '3. Concept of Zero Trust'}
           </h2>
-          <span className="text-[11px] font-mono bg-rose-500/10 text-rose-600 dark:text-rose-400 px-2.5 py-0.5 rounded-full border border-rose-500/20">
+          <span className="text-xs font-semibold bg-rose-500/10 text-rose-600 dark:text-rose-400 px-2.5 py-0.5 rounded-full border border-rose-500/20">
             Never Trust, Always Verify
           </span>
         </div>
@@ -214,7 +214,7 @@ export function Lesson2_2() {
                 : 'Activities: Pause & Think • Think as Engineer • New Context • Exam Style'}
             </h3>
           </div>
-          <span className="text-xs text-sub font-mono shrink-0">ص 41 - ص 44</span>
+          <span className="text-xs text-sub font-semibold shrink-0">ص 41 - ص 44</span>
         </div>
 
         {/* 1. 💡 PAUSE & THINK (توقف وفكر - ص 41) */}

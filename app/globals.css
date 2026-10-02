@@ -43,6 +43,33 @@
   }
 }
 
+/* Strict Cairo Typography Engine for Arabic */
+html[lang="ar"],
+html[lang="ar"] body,
+html[lang="ar"] p,
+html[lang="ar"] span,
+html[lang="ar"] div,
+html[lang="ar"] td,
+html[lang="ar"] th,
+html[lang="ar"] h1,
+html[lang="ar"] h2,
+html[lang="ar"] h3,
+html[lang="ar"] h4,
+html[lang="ar"] h5,
+html[lang="ar"] h6,
+html[lang="ar"] button,
+html[lang="ar"] input,
+html[lang="ar"] select,
+html[lang="ar"] textarea,
+html[lang="ar"] blockquote,
+html[lang="ar"] label {
+  font-family: var(--font-cairo), 'Cairo', system-ui, -apple-system, BlinkMacSystemFont, sans-serif !important;
+}
+
+html[lang="ar"] .font-mono:not(code):not(pre):not(kbd):not(.preserve-dark-code) {
+  font-family: var(--font-cairo), 'Cairo', system-ui, sans-serif !important;
+}
+
 /* Bilingual display engine */
 html[lang="ar"] .lang-en {
   display: none !important;
