@@ -19,7 +19,7 @@ export function PwaRegister() {
   useEffect(() => {
     // Service Worker Registration
     if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
+      const registerSW = () => {
         navigator.serviceWorker
           .register('/sw.js')
           .then((reg) => {
@@ -28,7 +28,13 @@ export function PwaRegister() {
           .catch((err) => {
             console.warn('SW Registration failed:', err);
           });
-      });
+      };
+
+      if (document.readyState === 'complete') {
+        registerSW();
+      } else {
+        window.addEventListener('load', registerSW);
+      }
     }
 
     // Network Online / Offline Detection
