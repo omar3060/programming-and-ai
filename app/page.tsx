@@ -19,6 +19,11 @@ import { Unit1Exam } from '@/components/practice/Unit1Exam';
 import { Unit2Exam } from '@/components/practice/Unit2Exam';
 
 export default function Home() {
+  const [mounted, setMounted] = React.useState(false);
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
+
   const {
     activeLesson,
     setActiveLesson,
@@ -31,6 +36,8 @@ export default function Home() {
   } = useApp();
 
   const renderActiveView = () => {
+    if (!mounted) return null;
+
     switch (activeLesson) {
       case 'lesson-1-1':
         return <Lesson1_1 />;
