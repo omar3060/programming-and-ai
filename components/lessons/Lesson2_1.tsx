@@ -7,7 +7,7 @@ import { CryptoVsAuthLab } from '@/components/simulators/CryptoVsAuthLab';
 
 export function Lesson2_1() {
   const { lang, playSfx } = useApp();
-  const quizQuestions = unit2ExamQuestions.slice(0, 5);
+  const quizQuestions = unit2ExamQuestions.slice(0, 10);
 
   const [quizAnswers, setQuizAnswers] = useState<Record<number, number>>({});
   const [showPauseThink, setShowPauseThink] = useState(false);
@@ -367,7 +367,7 @@ export function Lesson2_1() {
           </div>
 
           {engineerChoice && (
-            <div className={`p-3.5 sm:p-4 rounded-xl border text-xs sm:text-sm leading-relaxed animate-fadeIn space-y-1 ${
+            <div className={`p-3.5 sm:p-4 rounded-xl border text-xs sm:text-sm leading-relaxed animate-fadeIn space-y-3 ${
               engineerChoice === 'passMFA'
                 ? 'bg-emerald-500/10 border-emerald-500 text-emerald-900 dark:text-emerald-200'
                 : 'bg-rose-500/10 border-rose-500 text-rose-900 dark:text-rose-200'
@@ -384,6 +384,42 @@ export function Lesson2_1() {
                     ? 'استخدام كلمة السر بمفردها يعرض الطلاب والمدرسة لخطر الاختراق الفوري بمجرد تخمين أو تسريب كلمة السر.'
                     : 'Using password alone leaves student accounts exposed to instant compromise if passwords leak.')}
               </p>
+
+              {/* Stakeholder Analysis Table from p. 37 */}
+              <div className="pt-2">
+                <h5 className="font-bold text-xs mb-2 text-slate-900 dark:text-white flex items-center gap-1.5">
+                  <span>📊</span>
+                  <span>{lang === 'ar' ? 'جدول تحليل أصحاب المصلحة (كتاب الوزارة ص 37):' : 'Stakeholder Benefit & Drawback Analysis (p. 37):'}</span>
+                </h5>
+                <div className="overflow-x-auto rounded-xl border border-slate-300 dark:border-slate-700 bg-white/60 dark:bg-slate-900/60 shadow-sm">
+                  <table className="w-full text-start text-xs text-slate-800 dark:text-slate-200">
+                    <thead className="bg-slate-100 dark:bg-slate-800 font-bold border-b border-slate-300 dark:border-slate-700">
+                      <tr>
+                        <th className="p-2.5 text-start">{lang === 'ar' ? 'فئة أصحاب المصلحة' : 'Stakeholder Category'}</th>
+                        <th className="p-2.5 text-start font-bold text-emerald-600 dark:text-emerald-400">{lang === 'ar' ? 'ميزة / فائدة واحدة' : 'Single Benefit'}</th>
+                        <th className="p-2.5 text-start font-bold text-rose-600 dark:text-rose-400">{lang === 'ar' ? 'عيب / عائق واحد' : 'Single Drawback'}</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-slate-200 dark:divide-slate-800">
+                      <tr>
+                        <td className="p-2.5 font-bold text-slate-900 dark:text-white">{lang === 'ar' ? '1. الطالب (Student)' : '1. Student'}</td>
+                        <td className="p-2.5 text-emerald-700 dark:text-emerald-300">{lang === 'ar' ? 'حماية حسابه ودرجاته وبياناته الشخصية من سرقة زملائه أو المخترقين.' : 'Protects personal records and grades from unauthorized access.'}</td>
+                        <td className="p-2.5 text-rose-700 dark:text-rose-300">{lang === 'ar' ? 'الحاجة لحمل الهاتف الذكي باستمرار وإدخال رمز إضافي في كل مرة.' : 'Must carry a phone and enter an extra code on every login.'}</td>
+                      </tr>
+                      <tr>
+                        <td className="p-2.5 font-bold text-slate-900 dark:text-white">{lang === 'ar' ? '2. المدرسة (School)' : '2. School'}</td>
+                        <td className="p-2.5 text-emerald-700 dark:text-emerald-300">{lang === 'ar' ? 'حماية سمعة المدرسة وتأمين المعاملات المالية ضد الاختراقات والتلاعب.' : 'Safeguards financial payments and preserves institutional reputation.'}</td>
+                        <td className="p-2.5 text-rose-700 dark:text-rose-300">{lang === 'ar' ? 'زيادة تكاليف إرسال رسائل SMS وتوفير خدمة دعم فني لإعادة تعيين الحسابات.' : 'Higher SMS service costs and support overhead for account resets.'}</td>
+                      </tr>
+                      <tr>
+                        <td className="p-2.5 font-bold text-slate-900 dark:text-white">{lang === 'ar' ? '3. طالب لا يملك هاتفاً (Student w/o phone)' : '3. Student w/o phone'}</td>
+                        <td className="p-2.5 text-emerald-700 dark:text-emerald-300">{lang === 'ar' ? 'إمكانية الاعتماد على مفتاح أمان يدوي (Security Key) أو تطبيق مصادقة على كمبيوتر المدرسة.' : 'Option to rely on a USB security key or school computer auth app.'}</td>
+                        <td className="p-2.5 text-rose-700 dark:text-rose-300 font-bold">{lang === 'ar' ? 'عدم القدرة على تسجيل الدخول فوراً عبر الهاتف في حالة اشتراط هاتف محمول حصراً.' : 'Cannot log in immediately if mobile SMS is strictly mandatory.'}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
             </div>
           )}
         </div>

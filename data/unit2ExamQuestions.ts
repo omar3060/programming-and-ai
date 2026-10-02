@@ -1,186 +1,219 @@
 import { Question } from '../types';
 
 export const unit2ExamQuestions: Question[] = [
-  // Lesson 2-1: Cryptographic Technologies and Authentication (5 questions)
+  // Lesson 2-1: Cryptographic Technologies and Authentication (10 questions)
   {
     lesson: { ar: "الدرس 2-1", en: "Lesson 2-1" },
-    q: { ar: "في اتصالات HTTPS، ما التقنية المستخدمة أولاً لتبادل المفتاح المشترك بأمان بين المتصفح والخادم؟", en: "In HTTPS communication, which cryptographic method is used first to safely share a common key between the browser and server?" },
-    opts: { ar: ["التشفر المتماثل", "التشفير بالمفتاح العام (Public-key cryptography)", "جدار الحماية", "التأمين اللاسلكي"], en: ["Common-key cryptography", "Public-key cryptography", "Firewall", "Wireless Security"] },
+    q: { ar: "في اتصالات HTTPS، ما التقنية المستخدمة أولاً لتبادل المفتاح المشترك بأمان بين المتصفح والخادم؟", en: "In HTTPS communication, which cryptographic method is used first to safely share a common key between browser and server?" },
+    opts: { ar: ["التشفير المتماثل", "التشفير بالمفتاح العام (Public-key cryptography)", "جدار الحماية", "التأمين اللاسلكي"], en: ["Symmetric encryption", "Public-key cryptography", "Firewall", "Wireless Security"] },
     a: 1,
-    exp: { ar: "يستخدم التشفير بالمفتاح العام في البداية لتبادل المفتاح المشترك بآمان أثناء مصافحة TLS.", en: "Public-key cryptography is used initially to safely exchange the shared key during TLS handshake." }
+    exp: { ar: "يُستخدم التشفير بالمفتاح العام في البداية لتبادل المفتاح المشترك بأمان أثناء مصافحة TLS.", en: "Public-key cryptography is used initially to safely exchange the shared key during TLS handshake." }
   },
   {
     lesson: { ar: "الدرس 2-1", en: "Lesson 2-1" },
-    q: { ar: "لماذا تُستخدم تقنية التشفير المتماثل (Common-key cryptography) في تبادل البيانات الحجمية بعد مشاركة المفتاح؟", en: "Why is common-key cryptography used for exchanging large amounts of data after the key is shared?" },
+    q: { ar: "لماذا تُستخدم تقنية التشفير المتماثل (Symmetric Key) في نقل البيانات بعد مشاركة المفتاح في TLS؟", en: "Why is symmetric key cryptography used for data transfer after sharing the key in TLS?" },
     opts: { ar: ["لأنها أبطأ", "لأنها توفر السرعة العالية والأداء السريع في تشفير البيانات ضخمة الحجم", "لأنها لا تحتاج مفاتيح", "لأنها مجانية"], en: ["Because it is slower", "Because it achieves high speed and performance for encrypting large amounts of data", "Because it requires no keys", "Because it is free"] },
     a: 1,
-    exp: { ar: "التشفير بالمفتاح المشترك (المتماثل) أسرع بكثير في نقل البيانات الكبيرة.", en: "Common-key (symmetric) cryptography provides fast encryption speed for large data payloads." }
+    exp: { ar: "التشفير بالمفتاح المشترك (المتماثل) أسرع بكثير في نقل البيانات الكبيرة بعد الاتفاق عليه.", en: "Symmetric cryptography provides high speed and efficiency for bulk data encryption once shared." }
   },
   {
     lesson: { ar: "الدرس 2-1", en: "Lesson 2-1" },
-    q: { ar: "المصادقة الثنائية أو متعددة العوامل (MFA) هي الجمع بين عاملتين أو أكثر من العوامل الثلاثة وهي:", en: "Multi-factor authentication (MFA) combines two or more of which three factor categories?" },
-    opts: { ar: ["اسم المستخد وكلمة المرور فقط", "المعرفة (Knowledge)، الملكية (Possession)، والسمات البيومترية (Biometric)", "الرقم السري والبريد", "الاسم والجهة"], en: ["Username and password only", "Knowledge, Possession, and Biometric factors", "PIN and email", "Name and organization"] },
+    q: { ar: "المصادقة متعددة العوامل (MFA) هي دمج عاملتين أو أكثر من ثلاث فئات مستقلة وهي:", en: "Multi-factor authentication (MFA) combines two or more factors from which three independent categories?" },
+    opts: { ar: ["اسم المستخدم وكلمة المرور فقط", "المعرفة (Knowledge)، الملكية (Possession)، والسمات البيومترية (Biometrics)", "الرقم السري والبريد", "الاسم والجهة"], en: ["Username and password only", "Knowledge, Possession, and Biometric factors", "PIN and email", "Name and organization"] },
     a: 1,
-    exp: { ar: "تتكون العوامل الثلاثة للمصادقة من المعرفة (كلمة سر)، الملكية (هاتف/بطاقة)، والبيومترية (بصمة/وجه).", en: "MFA factors comprise Knowledge (password), Possession (phone/smartcard), and Biometric (fingerprint/face)." }
+    exp: { ar: "تتكون عوامل MFA من المعرفة (مثل كلمة المرور)، الملكية (مثل الهاتف)، والسمات البيومترية (مثل البصمة).", en: "MFA factors comprise Knowledge (password), Possession (phone/card), and Biometrics (fingerprint/face)." }
   },
   {
     lesson: { ar: "الدرس 2-1", en: "Lesson 2-1" },
-    q: { ar: "ما التقنية الأمنية التي تمكن من كشف أي تلاعب بالبيانات وتمنع المرسل من إنكار إرسالها (عدم التنصل Non-repudiation)؟", en: "Which security technology detects data tampering and provides non-repudiation (preventing sender denial)?" },
+    q: { ar: "ما التقنية الأمنية التي تمكن من كشف أي تلاعب بالبيانات وتضمن عدم التنصل (Non-repudiation)؟", en: "Which security technology detects data tampering and provides non-repudiation (preventing sender denial)?" },
     opts: { ar: ["التوقيع الرقمي (Digital Signature)", "جدار الحماية", "مضاد الفيروسات", "اسم المستخدم"], en: ["Digital Signature", "Firewall", "Antivirus", "Username"] },
     a: 0,
-    exp: { ar: "التوقيع الرقمي يكشف التلاعب بالبيانات ويضمن عدم التنصل من المسؤولية.", en: "Digital signatures detect tampering and enforce non-repudiation." }
+    exp: { ar: "التوقيع الرقمي يكشف التلاعب بالبيانات ويضمن عدم تنصل المرسل من توقيعه.", en: "Digital signatures detect tampering and enforce non-repudiation of transactions." }
   },
   {
     lesson: { ar: "الدرس 2-1", en: "Lesson 2-1" },
-    q: { ar: "ما التقنية التي توفرها جهة تصديق (CA) للتحقق من هوية وأصالة الموقع أو الطرف المقابل في الاتصال؟", en: "What technology issued by a Certificate Authority (CA) verifies that the communication partner is authentic?" },
+    q: { ar: "ما الوثيقة الرقمية الصادرة من جهة تصديق موثوقة (CA) للتحقق من هوية وأصالة موقع الويب؟", en: "What digital record issued by a Certificate Authority (CA) verifies the identity and authenticity of a web server?" },
     opts: { ar: ["الشهادة الرقمية (Digital Certificate)", "كلمة السر", "رمز QR", "الملف المؤقت"], en: ["Digital Certificate", "Password", "QR Code", "Temporary File"] },
     a: 0,
-    exp: { ar: "تثبت الشهادة الرقمية الصادرة من جهة موثوقة (CA) أصالة موقع الويب والجهة المتصلة.", en: "Digital certificates from trusted CAs confirm web server identity and authenticity." }
+    exp: { ar: "تثبت الشهادة الرقمية الصادرة من CA أصالة موقع الويب ورابطه الرسمي.", en: "Digital certificates issued by trusted CAs confirm web server authenticity." }
+  },
+  {
+    lesson: { ar: "الدرس 2-1", en: "Lesson 2-1" },
+    q: { ar: "إذا أدخل المستخدم كلمتي مرور متتاليتين من نفس الفئة، فهل يُعد ذلك مصادقة ثنائية (2FA)؟", en: "If a user enters two consecutive passwords from the same category, does it qualify as 2FA?" },
+    opts: { ar: ["نعم، لأنها خطوتان", "لا، لأن 2FA تتطلب عامل ينتميان لفئتين مستقلتين مختلفين (مثل معرفة + ملكية)", "نعم، إذا كانتا طويلتين", "لا، إلا إذا تم استخدام البريد"], en: ["Yes, because it has two steps", "No, because 2FA requires two factors from different independent categories (e.g. Knowledge + Possession)", "Yes, if passwords are long", "No, unless email is used"] },
+    a: 1,
+    exp: { ar: "يشترط في المصادقة الثنائية 2FA استخدام عاملين من فئتين مختلفتين (وليس إدخال كلمتي سر من فئة المعرفة).", en: "2FA strictly requires two independent factor categories, not multi-step single-factor inputs." }
+  },
+  {
+    lesson: { ar: "الدرس 2-1", en: "Lesson 2-1" },
+    q: { ar: "ما دور مفاتيح الجلسة (Session Keys) في اتصالات TLS بعد اكتمال المصافحة؟", en: "What is the role of Session Keys in TLS communications after the handshake completes?" },
+    opts: { ar: ["فحص الفيروسات", "تشفير وفك تشفير بيانات الجلسة بسرعة عالية باستخدام التشفير المتماثل", "حظر الإعلانات", "حفظ كلمة السر"], en: ["Virus scanning", "Fast encryption and decryption of payload data using symmetric encryption", "Ad blocking", "Saving password"] },
+    a: 1,
+    exp: { ar: "مفاتيح الجلسة هي مفاتيح متماثلة تُستخدم لتشفير حركة البيانات الفعلية بسرعة وسلاسة.", en: "Session keys enable high-speed symmetric payload encryption during active connections." }
+  },
+  {
+    lesson: { ar: "الدرس 2-1", en: "Lesson 2-1" },
+    q: { ar: "إذا تم تسريب كلمة مرور حساب معزز بنظام MFA، فما الذي يمنع المخترق من الدخول؟", en: "If an MFA-protected account password leaks, what prevents an attacker from logging in?" },
+    opts: { ar: ["الحاسوب سينطفئ تلقائياً", "عدم امتلاك المخترق لعامل الملكية (مثل رمز الهاتف) أو العامل البيومتري", "بطء شبكة الإنترنت", "تغيير اسم المستخدم"], en: ["Computer auto shut down", "Attacker lacks the Possession factor (e.g., OTP on phone) or Biometric factor", "Slow network", "Changing username"] },
+    a: 1,
+    exp: { ar: "تمنع مصادقة MFA الاختراق لأن المهاجم يفتقر إلى العامل الثاني كالهاتف الشخصي أو البصمة.", en: "MFA thwarts breaches because attackers lack physical possession tokens or biometrics." }
+  },
+  {
+    lesson: { ar: "الدرس 2-1", en: "Lesson 2-1" },
+    q: { ar: "في تحليل تمرين 'فكر كمهندس'، ما العيب الرئيسي لاشتراط هاتف ذكي كعامل ثانٍ لإنجاز الخدمات المدرسية؟", en: "In the 'Think as an Engineer' exercise, what is the main drawback of requiring a smartphone as a 2nd authentication factor for students?" },
+    opts: { ar: ["الخدمة صعبة الاستخدام", "عدم قدرة الطلاب الذين لا يمتلكون هواتف ذكية على الوصول للخدمة المدرسية", "زيادة تكلفة السيرفر", "الرسائل سريعة جداً"], en: ["Service is hard to use", "Students without smartphones cannot access the school portal", "Increases server cost", "SMS is too fast"] },
+    a: 1,
+    exp: { ar: "يشكل الاعتماد الحصري على الهواتف الذكية عائقاً أمام الطلاب الذين لا يملكون أجهزة خاصة.", en: "Requiring smartphones creates accessibility issues for students who do not own personal mobile devices." }
+  },
+  {
+    lesson: { ar: "الدرس 2-1", en: "Lesson 2-1" },
+    q: { ar: "عند إجراء شراء إلكتروني عبر متجر، ما التقنيات المكتملة التي توفر السرية، وتأكيد الهوية، ومنع الاختراق؟", en: "When purchasing online, which integrated suite delivers encryption privacy, site authentication, and access control?" },
+    opts: { ar: ["تشفير HTTPS + الشهادة الرقمية + المصادقة الثنائية 2FA", "البريد الإلكتروني فقط", "طباعة الفاتورة ورقية", "المكالمة الهاتفية"], en: ["HTTPS Encryption + Digital Certificate + 2FA Authentication", "Email only", "Paper invoice printing", "Phone call"] },
+    a: 0,
+    exp: { ar: "تتكامل هذه التقنيات معاً لحماية الاتصال (HTTPS)، وإثبات هوية الخادم (CA)، وتأمين الحساب (2FA).", en: "Integrating HTTPS, digital certificates, and 2FA holistically secures online transactions." }
   },
 
-  // Lesson 2-2: Network Security Design (5 questions)
+  // Lesson 2-2: Network Security Design (10 questions)
   {
     lesson: { ar: "الدرس 2-2", en: "Lesson 2-2" },
-    q: { ar: "النظام المقام عند نقطة دخول/خروج الشبكة للتحكم في مرور البيانات بناءً على قواعد محددة مسبقاً يسمى:", en: "System installed at a network entry/exit point that allows or denies communication based on preset rules is:" },
+    q: { ar: "النظام المقيم عند نقطة حدود الشبكة للتحكم في مرور حركة البيانات بناءً على قواعد محددة هو:", en: "System installed at network borders to control traffic flow according to predefined rules is:" },
     opts: { ar: ["الشبكة الافتراضية VPN", "جدار الحماية (Firewall)", "المنطقة منزوعة السلاح DMZ", "المتصفح"], en: ["Virtual Private Network (VPN)", "Firewall", "Demilitarized Zone (DMZ)", "Browser"] },
     a: 1,
-    exp: { ar: "جدار الحماية يفحص الاتصالات ويسمح بها أو يمنعها بناءً على قواعد محددة.", en: "Firewalls filter network traffic against preconfigured security rule sets." }
+    exp: { ar: "يفحص جدار الحماية الاتصالات ويسمح بها أو يمنعها بناءً على قواعد أمان مسبقة.", en: "Firewalls filter network packets against preconfigured security rules." }
   },
   {
     lesson: { ar: "الدرس 2-2", en: "Lesson 2-2" },
-    q: { ar: "التقنية التي تنشئ خطاً خاصاً افتراضياً مشفراً عبر الإنترنت لتوصيل الموظفين بالشبكة بأمان أثناء العمل عن بعد هي:", en: "Technology creating an encrypted virtual private line over the Internet for safe remote connections:" },
-    opts: { ar: ["الشبكة الافتراضية الخاصة (VPN)", "جدار الحماية", "الذاكرة العشوائية", "البريد الإلكتروني"], en: ["Virtual Private Network (VPN)", "Firewall", "RAM", "Email"] },
+    q: { ar: "التقنية التي تنشئ خطاً خاصاً مشفراً عبر الإنترنت لتوصيل الموظفين عن بعد بشبكة المؤسسة بأمان هي:", en: "Technology creating an encrypted private tunnel over the internet for safe remote employee access:" },
+    opts: { ar: ["الشبكة الافتراضية الخاصة (VPN)", "جدار الحماية", "الذاكرة العشوائية", "موزع الشبكة"], en: ["Virtual Private Network (VPN)", "Firewall", "RAM", "Network Switch"] },
     a: 0,
-    exp: { ar: "الـ VPN تُنشئ نفقاً مشفراً يحمي البيانات أثناء نقلها عبر الشبكات المفتوحة كـ Wi-Fi العام.", en: "VPNs create an encrypted tunnel protecting telemetry across public networks." }
+    exp: { ar: "تنشئ الـ VPN نفقاً مشفراً لحماية الاتصال من التجسس والاختراق عبر الشبكات المفتوحة.", en: "VPNs establish encrypted tunnels safeguarding data transit across public networks." }
   },
   {
     lesson: { ar: "الدرس 2-2", en: "Lesson 2-2" },
-    q: { ar: "المنطقة التي تُوضع فيها الخوادم الموجهة للجمهور (مثل خادم الويب) بمعزل عن الشبكة الداخلية تسمى:", en: "Network zone where public-facing servers (web, mail) are placed separately from internal networks:" },
+    q: { ar: "المنطقة التشييدية التي تُوضع فيها الخوادم الموجهة للجمهور (كخادم الويب) بمعزل عن الشبكة الداخلية هي:", en: "Network segment where public-facing servers (web/mail) are placed isolated from internal networks:" },
     opts: { ar: ["المنطقة منزوعة السلاح (DMZ)", "جدار الحماية", "المعالجة الطرفية", "البوابة المحلية"], en: ["Demilitarized Zone (DMZ)", "Firewall", "Edge Processing", "Local Gateway"] },
     a: 0,
-    exp: { ar: "تضم الـ DMZ الخوادم العامة لحماية الشبكة الداخلية وقواعد البيانات من الاختراق المباشر.", en: "DMZs isolate public web servers so an attack there does not compromise internal databases." }
+    exp: { ar: "تُعزل الخوادم العامة في DMZ لمنع المهاجم من الوصول للشبكة الداخلية وقواعد البيانات في حال اختراق الخادم.", en: "DMZs isolate public servers so an attack there does not compromise internal enterprise databases." }
   },
   {
     lesson: { ar: "الدرس 2-2", en: "Lesson 2-2" },
-    q: { ar: "مفهوم بناء الأمان عبر تطبيق تدابير أمنية متعددة الطبقات بحيث إذا اخترقت طبقة تحمي الطبقة التالية النظام هو:", en: "Concept of layering multiple security measures so that if one fails, the next still protects the system:" },
+    q: { ar: "مفهوم الأمان القائم على تطبيق تدابير أمنية متعددة الطبقات بحيث إذا فشلت طبقة تحمي الطبقة التالية النظام هو:", en: "Security architecture layering multiple controls so that if one layer fails, subsequent layers protect the system:" },
     opts: { ar: ["الدفاع العميق (Defense in Depth)", "الجدار التكعيبي", "قانون مور", "التشفير المتماثل"], en: ["Defense in Depth", "Cubic Wall", "Moore's Law", "Symmetric Encryption"] },
     a: 0,
-    exp: { ar: "الدفاع العميق يعتمد على توزيع الأمان على طبقات متتالية (الشبكة، المسار، الخوادم، والأجهزة).", en: "Defense in depth layers security across entry points, communication paths, servers, and endpoints." }
+    exp: { ar: "يعتمد الدفاع العميق على توزيع الأمان على 4 طبقات (الشبكة، المسار، الخوادم، الأجهزة).", en: "Defense in depth layers security across network entry, communication paths, servers, and endpoints." }
   },
   {
     lesson: { ar: "الدرس 2-2", en: "Lesson 2-2" },
-    q: { ar: "ما المفهوم الأمني الحديث الذي ينص على 'عدم الوثوق بأي اتصال بشكل آلي حتى داخل الشبكة والتحقق الدائم من كل طلب'؟", en: "Modern security concept stating 'Never trust any communication, even from inside the network, and always verify':" },
+    q: { ar: "ما المفهوم الحديث الذي ينص على 'عدم الوثوق بأي اتصال آلياً حتى داخل الشبكة والتحقق الدائم من كل طلب'؟", en: "Modern security model stating 'Never trust, always verify' for every access request inside or outside the network:" },
     opts: { ar: ["عدم الثقة (Zero Trust)", "المحيط المفتوح", "الثقة التلقائية", "التشفير فقط"], en: ["Zero Trust", "Open Perimeter", "Automatic Trust", "Encryption Only"] },
     a: 0,
-    exp: { ar: "نموذج Zero Trust يفترض أن التهديدات قد تأتي من داخل أو خارج الشبكة ويطلب التحقق باستمرار.", en: "Zero Trust eliminates implicit trust and mandates identity verification for every access request." }
-  },
-
-  // Lesson 2-3: Incident Response and Risk Management (5 questions)
-  {
-    lesson: { ar: "الدرس 2-3", en: "Lesson 2-3" },
-    q: { ar: "الموقف الذي ينجم عنه حدوث ضرر فعلي أو تهديد جدي لسرية أو سلامة أو توافر المعلومات يسمى:", en: "A situation where actual damage occurs or serious threat compromises confidentiality, integrity, or availability:" },
-    opts: { ar: ["حادث أمني (Security Incident)", "تحديث برمجيات", "إطفاء عادي", "نسخ احتياطي"], en: ["Security Incident", "Software Update", "Normal Shutdown", "Backup"] },
-    a: 0,
-    exp: { ar: "الحادث الأمني هو أي خرق أو هجوم يسبب ضرراً مادياً أو رقمياً لحماية المعلومات.", en: "A security incident represents actual realized harm or critical risk to information systems." }
+    exp: { ar: "يلغي نموذج Zero Trust الثقة التلقائية ويشترط التحقق المستمر من الهوية والصلاحيات.", en: "Zero Trust eliminates implicit trust, requiring continuous authentication for all requests." }
   },
   {
-    lesson: { ar: "الدرس 2-3", en: "Lesson 2-3" },
-    q: { ar: "في التسلسل العام لمراحل الاستجابة للحوادث الست، أي مرحلة تُنفذ فوراً للحد من انتشار الضرر قبل إزالة التهديد؟", en: "In the 6 incident response phases, which phase is executed immediately to limit damage spread before eradication?" },
-    opts: { ar: ["الاحتواء (Containment)", "الاستعادة", "التحضير", "الدروس المستفادة"], en: ["Containment", "Recovery", "Preparation", "Lessons Learned"] },
-    a: 0,
-    exp: { ar: "الاحتواء (مثل فصل الجهاز المصاب عن الشبكة) يمنع انتشار الفيروس أو الضرر لباقي المنظومة.", en: "Containment isolates compromised assets to freeze damage progression across the enterprise." }
-  },
-  {
-    lesson: { ar: "الدرس 2-3", en: "Lesson 2-3" },
-    q: { ar: "أي مرحلة تهدف إلى إزالة السبب الجذري للحادث الأمني (مثل حذف البرمجيات الخبيثة وسد الثغرات)؟", en: "Which phase removes the root cause of the incident (e.g., removing malware and patching flaws)?" },
-    opts: { ar: ["الاستئصال وإزالة التهديد (Eradication)", "الاستعادة", "الكشف", "التحضير"], en: ["Eradication", "Recovery", "Detection", "Preparation"] },
-    a: 0,
-    exp: { ar: "الاستئصال هو تنظيف النظام وإزالة الفيروسات قبل البدء في استعادة الخدمة للعمل.", en: "Eradication purges malware and remedies vulnerabilities before bringing systems back." }
-  },
-  {
-    lesson: { ar: "الدرس 2-3", en: "Lesson 2-3" },
-    q: { ar: "حسب مفهوم تقييم المخاطر، كيف يُحسب حجم الخطر (Risk Size) للتطبيقات؟", en: "According to risk assessment methodology, how is Risk Size calculated?" },
-    opts: { ar: ["حجم الخطر = التأثير + التكلفة", "حجم الخطر = التأثير × الاحتمالية (Impact × Likelihood)", "حجم الخطر = عدد المستخدمين", "حجم الخطر = سرعة المعالج"], en: ["Risk Size = Impact + Cost", "Risk Size = Impact × Likelihood", "Risk Size = User Count", "Risk Size = CPU Speed"] },
-    a: 1,
-    exp: { ar: "حجم الخطر هو حاصل ضرب حجم الضرر (التأثير) في نسبة فرصة وقوعه (الاحتمالية).", en: "Risk magnitude is determined mathematically by Impact multiplied by Likelihood." }
-  },
-  {
-    lesson: { ar: "الدرس 2-3", en: "Lesson 2-3" },
-    q: { ar: "عند تحديد أولويات المعالجة للمخاطر الأجهزة، أي المخاطر يجب إعطاؤها الأولوية القصوى والبدء بمعالجتها فوراً؟", en: "When setting remediation priorities, which risks must receive immediate top priority?" },
-    opts: { ar: ["المخاطر ذات التأثير المنخفض والاحتمالية المنخفضة", "المخاطر ذات التأثير العالي والاحتمالية العالية (High Impact × High Likelihood)", "المخاطر رخيصة التكلفة", "المخاطر القديمة فقط"], en: ["Low Impact × Low Likelihood", "High Impact × High Likelihood", "Inexpensive risks", "Old risks only"] },
-    a: 1,
-    exp: { ar: "المخاطر ذات التأثير المرتفع والاحتمالية العالية هي الأشد خطورة وتستوجب المعالجة الفورية.", en: "High Impact × High Likelihood risks present extreme threats and demand top priority." }
-  },
-
-  // Synthesis & Textbook Practice Questions (10 questions)
-  {
-    lesson: { ar: "شامل الوحدة 2", en: "Unit 2 Synthesis" },
-    q: { ar: "ما المشكلة الأمنية التي تنتج إذا قمنا باستعادة النظام (Recovery) قبل استئصال التهديد (Eradication)؟", en: "What severe security problem occurs if Recovery is executed before Eradication?" },
-    opts: { ar: ["يتسارع النظام", "قد تظل البرمجية الخبيثة موجودة ويتكرر الحادث الأمني فوراً", "تتضاعف سعة التخزين", "يقل استهلاك الكهرباء"], en: ["System speeds up", "Malware persists causing immediate incident recurrence", "Storage doubles", "Power use drops"] },
-    a: 1,
-    exp: { ar: "الاستعادة قبل إزالة الفيروس تعني بقاء التهديد وتكرار الهجوم الأمني فور تشغيل النظام.", en: "Restoring services while malware remains active triggers immediate re-infection." }
-  },
-  {
-    lesson: { ar: "شامل الوحدة 2", en: "Unit 2 Synthesis" },
-    q: { ar: "إذا كان لدى شخص كلمة سر فقط، وتم تسريبها، استطاع المخترق الدخول. ما الذي يمنعه إذا استخدمت المؤسسة MFA؟", en: "If a leaked password allows login, what stops an attacker when the system uses MFA?" },
-    opts: { ar: ["الحاسوب سينطفئ", "حاجة المخترق لجهاز الهاتف أو البصمة المسجلة في ملكية/سمات المستخدم", "السرعة البطيئة", "اسم المستخدم"], en: ["Computer shuts down", "Attacker lacks physical possession factor (phone/token) or biometric", "Slow connection", "Username"] },
-    a: 1,
-    exp: { ar: "المصادقة متعددة العوامل تمنع الاختراق لأن المهاجم لا يملك عامل الملكية (الهاتف) أو البصمة.", en: "MFA blocks unauthorized logins because attackers lack physical possession tokens or biometrics." }
-  },
-  {
-    lesson: { ar: "شامل الوحدة 2", en: "Unit 2 Synthesis" },
-    q: { ar: "ما الخادم الذي يُنصح دائماً بوضعه في المنطقة منزوعة السلاح DMZ؟", en: "Which server type is standardly deployed within the DMZ zone?" },
-    opts: { ar: ["خادم قاعدة بيانات العملاء السرية", "خادم الويب الموجه للجمهور (Public Web Server)", "خادم المرتبات الداخلي", "جهاز الكمبيوتر الشخصي للموظف"], en: ["Confidential Database Server", "Public Web Server", "Internal Payroll Server", "Employee PC"] },
-    a: 1,
-    exp: { ar: "توضع خوادم الويب العامة في الـ DMZ لمنع وصول المهاجمين لقواعد البيانات الداخلية.", en: "Public web servers reside in DMZs to buffer and isolate internal database networks." }
-  },
-  {
-    lesson: { ar: "شامل الوحدة 2", en: "Unit 2 Synthesis" },
-    q: { ar: "في بروتوكول HTTPS، أين تُستخدم تقنية التشفير بالمفتاح العام (Public-Key Cryptography)؟", en: "In HTTPS, where is Public-Key Cryptography specifically applied?" },
-    opts: { ar: ["في تشفير مقاطع الفيديو الضخمة", "في مصافحة TLS وتأمين تبادل مفتاح الجلسة المشترك", "في تحديد سرعة النت", "في طباعة المستندات"], en: ["Encrypting video streams", "In TLS handshake for secure session key exchange", "Setting internet speed", "Document printing"] },
-    a: 1,
-    exp: { ar: "التشفير بالمفتاح العام يُستخدم في المصافحة لحماية المفتاح المشترك دون تسريبه.", en: "Public-key cryptography secures key exchange during the TLS handshake." }
-  },
-  {
-    lesson: { ar: "شامل الوحدة 2", en: "Unit 2 Synthesis" },
-    q: { ar: "تتضمن طبقات الدفاع العميق (Defense in Depth) تثبيت مضاد الفيروسات وتحديث OS في أي طبقة؟", en: "In Defense in Depth, installing antivirus software and updating the OS belongs to which layer?" },
+    lesson: { ar: "الدرس 2-2", en: "Lesson 2-2" },
+    q: { ar: "في طبقات الدفاع العميق الاربع، تثبيت برنامج مضاد الفيروسات وتحديث نظام التشغيل يمثل حماية أي طبقة؟", en: "In Defense in Depth 4 layers, installing antivirus and patch management belongs to which layer?" },
     opts: { ar: ["مدخل الشبكة (Network Entry)", "مسار الاتصال (Communication Path)", "وضع الخوادم (Server Placement)", "الأجهزة الطرفية (Endpoints)"], en: ["Network Entry", "Communication Path", "Server Placement", "Endpoints"] },
     a: 3,
-    exp: { ar: "حماية الأجهزة الفردية للموظفين والمستخدمين تقع ضمن طبقة الأجهزة الطرفية (Endpoints).", en: "Antivirus software and patch management safeguard the Endpoint device layer." }
+    exp: { ar: "تقع حماية حواسيب الموظفين وأجهزتهم الشخصية ضمن طبقة الأجهزة الطرفية (Endpoints).", en: "Antivirus and OS updates safeguard the individual Endpoint device layer." }
   },
   {
-    lesson: { ar: "شامل الوحدة 2", en: "Unit 2 Synthesis" },
-    q: { ar: "ما العامل الذي يمثله استخدام البصمة الذكية أو التعرف على الوجه في المصادقة؟", en: "Which authentication factor category is represented by fingerprint or face recognition?" },
-    opts: { ar: ["عامل المعرفة (Knowledge)", "عامل الملكية (Possession)", "عامل السمات البيومترية (Biometric)", "عامل الموقع"], en: ["Knowledge Factor", "Possession Factor", "Biometric Factor", "Location Factor"] },
-    a: 2,
-    exp: { ar: "البصمة والوجه هي سمات حيوية بيومترية (Biometrics) خاصة بجسم الإنسان.", en: "Fingerprints and facial recognition constitute physical Biometric factors." }
-  },
-  {
-    lesson: { ar: "شامل الوحدة 2", en: "Unit 2 Synthesis" },
-    q: { ar: "ما المرحلة الأخيرة المكملة لدورة الاستجابة للحوادث الست والتي تمنع تكرار نفس الحادث مستقبلاً؟", en: "What is the final 6th phase of incident response that prevents future recurrence?" },
-    opts: { ar: ["التحضير", "الدروس المستفادة والتحسين (Prevention of Recurrence)", "الكشف", "الاحتواء"], en: ["Preparation", "Prevention of Recurrence", "Detection", "Containment"] },
+    lesson: { ar: "الدرس 2-2", en: "Lesson 2-2" },
+    q: { ar: "ما الهدف الرئيسي من تكوين المنطقة منزوعة السلاح DMZ؟", en: "What is the primary architectural goal of configuring a DMZ?" },
+    opts: { ar: ["تسريع التحميل", "منع انتشار الاختراق من الخوادم العامة المفتوحة للنت إلى قواعد البيانات والشبكة الداخلية", "إغلاق المتجر", "إلغاء التشفير"], en: ["Speed up downloading", "Prevent external breaches on public servers from penetrating internal database networks", "Close store", "Disable encryption"] },
     a: 1,
-    exp: { ar: "الدروس المستفادة وتحليل الأسباب تسد الثغرات لمنع وقوع نفس الحادث مجدداً.", en: "Prevention of recurrence analyzes root causes to harden systems against repeat breaches." }
+    exp: { ar: "فصل خوادم الويب في DMZ يضمن أنه حتى لو تم اختراق خادم الويب، تظل البيانات الداخلية محمية.", en: "DMZ isolation ensures that compromised web servers cannot directly access internal backend storage." }
   },
   {
-    lesson: { ar: "شامل الوحدة 2", en: "Unit 2 Synthesis" },
-    q: { ar: "أي التهديدات التالية يُعد حادثاً أمنياً من نوع 'تعديل وتغيير البيانات دون تصريح'؟", en: "Which incident scenario represents an unauthorized 'Data Tampering' security incident?" },
-    opts: { ar: ["تعديل درجات الطلاب أو أرصدة البنوك دون إذن", "تشفير الملفات ببرنامج فدية", "تعطل الموقع بسبب ضغط الزوار", "تسريب كشف الحساب"], en: ["Unauthorized editing of student grades or bank balances", "Ransomware encryption", "Website crash from heavy traffic", "Statement leak"] },
-    a: 0,
-    exp: { ar: "التعديل غير المصرح به على البيانات يُصنف كحادث تلاعب وسالمة البيانات (Data Tampering).", en: "Unauthorized modification of records constitutes a Data Tampering security incident." }
+    lesson: { ar: "الدرس 2-2", en: "Lesson 2-2" },
+    q: { ar: "لماذا يُعد استخدام الـ VPN ضرورياً جداً عند الاتصال بشبكة Wi-Fi عامة في مقهى أو مطار؟", en: "Why is using a VPN essential when connecting to public Wi-Fi networks in airports or cafes?" },
+    opts: { ar: ["لأنه يمنع شحن البطارية", "لأنه يشفر البيانات المتبادلة فيمنع المتنصتين على الشبكة المفتوحة من قراءتها", "لأنه يزيد مساحة الهارد", "لأنه يلغي كلمات السر"], en: ["Prevents battery charging", "Encrypts data traffic to prevent packet sniffing and eavesdropping on open networks", "Increases disk space", "Removes passwords"] },
+    a: 1,
+    exp: { ar: "تمنع تقنية التشفير في الـ VPN المهاجمين الموجودين على نفس شبكة Wi-Fi العامة من التنصت على البيانات.", en: "VPN encryption shields telemetry from malicious packet sniffers sharing open Wi-Fi networks." }
   },
   {
-    lesson: { ar: "شامل الوحدة 2", en: "Unit 2 Synthesis" },
-    q: { ar: "لماذا لم يعد نموذج أمان 'المحيط التقليدي' (الداخل آمن والخارج خطر) كافياً في العصر الحديث؟", en: "Why is the traditional 'Perimeter Defense' model no longer sufficient today?" },
-    opts: { ar: ["بسبب انتشار الخدمات السحابية والعمل عن بعد وتلاشي الحدود الصلبة للشبكة", "لأن الشبكات أصبحت بطيئة", "لأن الحواسيب صغيرة", "لأن الفيروسات اختفت"], en: ["Cloud services and remote work blurred network borders", "Networks became slow", "Computers became small", "Viruses disappeared"] },
+    lesson: { ar: "الدرس 2-2", en: "Lesson 2-2" },
+    q: { ar: "لماذا لم يعد نموذج أمان 'المحيط التقليدي' (الداخل آمن والخارج خطر) كافياً للمؤسسات؟", en: "Why is traditional perimeter defense ('Inside safe, outside dangerous') no longer sufficient?" },
+    opts: { ar: ["بسبب انتشار الخدمات السحابية والعمل عن بعد وتلاشي الحدود الصلبة للشبكة", "لأن الشبكات أصبحت بطيئة", "لأن الحاسوب لا يعمل", "لأن التهديدات اختفت"], en: ["Cloud services and remote telework dissolved physical network borders", "Networks became slow", "Computers stopped working", "Threats disappeared"] },
     a: 0,
-    exp: { ar: "السحابة والعمل عن بعد جعلا الأجهزة تتصل من خارج المؤسسة مما استدعى تطبيق Zero Trust.", en: "Cloud adoption and remote teleworking dissolved perimeter boundaries, requiring Zero Trust." }
+    exp: { ar: "أدى العمل عن بعد والسحابة لتلاشي حدود الشبكة الفيزيائية، مما تطلب تطبيق نموذج Zero Trust.", en: "Cloud adoption and teleworking dissolved traditional network boundaries, necessitating Zero Trust." }
   },
   {
-    lesson: { ar: "شامل الوحدة 2", en: "Unit 2 Synthesis" },
-    q: { ar: "عند شراء منتج عبر الإنترنت، أي التقنيات تُستخدم معاً لتوفير السرية، وتأكيد الهوية، ومنع الاختراق؟", en: "When making an online purchase, which integrated technologies deliver privacy, authentication, and login protection?" },
-    opts: { ar: ["تشفير HTTPS + الشهادة الرقمية + المصادقة متعددة العوامل MFA", "البريد الإلكتروني فقط", "طباعة الفاتورة فقط", "مكالمة هاتفية"], en: ["HTTPS Encryption + Digital Certificate + MFA", "Email only", "Paper invoice only", "Phone call"] },
+    lesson: { ar: "الدرس 2-2", en: "Lesson 2-2" },
+    q: { ar: "ما التسلسل الصحيح لطبقات الدفاع العميق الأربع (Defense in Depth Layers)؟", en: "What is the correct 4-layer order of Defense in Depth Architecture?" },
+    opts: { ar: ["1-مدخل الشبكة، 2-مسار الاتصال، 3-وضع الخوادم (DMZ)، 4-الأجهزة الطرفية", "1-الأجهزة فقط", "1-كلمة السر فقط", "1-الذاكرة فقط"], en: ["1-Network Entry, 2-Communication Path, 3-Server Placement (DMZ), 4-Endpoints", "1-Endpoints only", "1-Password only", "1-Memory only"] },
     a: 0,
-    exp: { ar: "دمج تشفير HTTPS والشهادات الرقمية و MFA يؤمن المعاملة المالية الإلكترونية من كافة الجوانب.", en: "Combining HTTPS encryption, digital certificates, and MFA comprehensively protects e-commerce." }
+    exp: { ar: "يتدرج الأمان من مدخل الشبكة (جدار الحماية)، لمسار الاتصال (VPN)، لوضع الخوادم (DMZ)، للأجهزة الطرفية.", en: "Defense in depth cascades from entry firewall to path VPN, server DMZ, and device endpoint security." }
+  },
+
+  // Lesson 2-3: Incident Response and Risk Management (10 questions)
+  {
+    lesson: { ar: "الدرس 2-3", en: "Lesson 2-3" },
+    q: { ar: "الموقف الذي ينجم عنه حدوث ضرر فعلي أو تهديد جدي لسرية أو سلامة أو توافر المعلومات يسمى:", en: "A situation causing actual damage or serious threat compromising confidentiality, integrity, or availability:" },
+    opts: { ar: ["حادث أمني (Security Incident)", "تحديث برمجيات", "إيقاف التشغيل العادي", "نسخ احتياطي"], en: ["Security Incident", "Software Update", "Normal Shutdown", "Backup"] },
+    a: 0,
+    exp: { ar: "الحادث الأمني هو أي خرق أو تهديد يضر بخصائص أمان المعلومات الرئيسية.", en: "A security incident represents realized damage or critical threat to information assets." }
+  },
+  {
+    lesson: { ar: "الدرس 2-3", en: "Lesson 2-3" },
+    q: { ar: "ما المرحلة الأولى في الدورة العامة الست للاستجابة للحوادثSecurity Incident Response؟", en: "What is the first phase in the 6-stage Incident Response lifecycle?" },
+    opts: { ar: ["التحضير والاستعداد (Preparation)", "الاستئصال", "الاستعادة", "الدروس المستفادة"], en: ["Preparation", "Eradication", "Recovery", "Lessons Learned"] },
+    a: 0,
+    exp: { ar: "التحضير ينشئ إجراءات وفريق الاستجابة وتدابير الأمان مسبقاً قبل وقوع أي حادث.", en: "Preparation establishes policies, response teams, and tools prior to any security event." }
+  },
+  {
+    lesson: { ar: "الدرس 2-3", en: "Lesson 2-3" },
+    q: { ar: "في مراحل الاستجابة للحوادث الست، أي مرحلة تُنفذ فوراً لعزل الأجهزة المصابة ومنع انتشار الضرر؟", en: "In incident response, which phase is executed immediately to isolate affected systems and contain damage?" },
+    opts: { ar: ["الاحتواء (Containment)", "الاستعادة", "التحضير", "الدروس المستفادة"], en: ["Containment", "Recovery", "Preparation", "Lessons Learned"] },
+    a: 0,
+    exp: { ar: "الاحتواء (مثل فصل الجهاز المصاب عن الشبكة) يمنع انتشار الفيروس أو الضرر لباقي الأنظمة.", en: "Containment isolates compromised assets to freeze damage progression across the enterprise." }
+  },
+  {
+    lesson: { ar: "الدرس 2-3", en: "Lesson 2-3" },
+    q: { ar: "أي مرحلة تهدف إلى إزالة السبب الجذري للحادث الأمني (كحذف البرمجيات الخبيثة وسد الثغرات)؟", en: "Which phase removes the root cause of the incident (e.g., purging malware and patching vulnerabilities)?" },
+    opts: { ar: ["الاستئصال وإزالة التهديد (Eradication)", "الاستعادة", "الكشف", "التحضير"], en: ["Eradication", "Recovery", "Detection", "Preparation"] },
+    a: 0,
+    exp: { ar: "تستأصل هذه المرحلة التهديد وتنظف النظام تماماً قبل البدء في إعادة الخدمة للعمل.", en: "Eradication purges malware and remedies vulnerabilities before restoring services." }
+  },
+  {
+    lesson: { ar: "الدرس 2-3", en: "Lesson 2-3" },
+    q: { ar: "ما الكارثة الأمنية التي تحدث إذا قمنا بمرحلة الاستعادة (Recovery) قبل مرحلة الاستئصال (Eradication)؟", en: "What severe flaw occurs if Recovery is executed before Eradication?" },
+    opts: { ar: ["يتسارع النظام", "قد تظل البرمجية الخبيثة نشطة مما يسبب تكرار الحادث الأمني فوراً", "تتضاعف الشاشة", "تزيد السرعة"], en: ["System speeds up", "Malware remains active causing immediate incident recurrence", "Screen doubles", "Speed increases"] },
+    a: 1,
+    exp: { ar: "إعادة التشغيل أو الاستعادة قبل حذف التهديد تعني بقاء الفيروس وتكرار الهجوم الأمني فوراً.", en: "Restoring operations while malware persists triggers immediate re-infection." }
+  },
+  {
+    lesson: { ar: "الدرس 2-3", en: "Lesson 2-3" },
+    q: { ar: "حسب نموذج تقييم المخاطر المدرسي، كيف يُحسب حجم الخطر (Risk Size)؟", en: "According to the textbook risk assessment model, how is Risk Size calculated?" },
+    opts: { ar: ["حجم الخطر = التأثير + التكلفة", "حجم الخطر = التأثير × الاحتمالية (Impact × Likelihood)", "حجم الخطر = عدد الحواسيب", "حجم الخطر = التكلفة مقسومة على 2"], en: ["Risk Size = Impact + Cost", "Risk Size = Impact × Likelihood", "Risk Size = Computer count", "Risk Size = Cost / 2"] },
+    a: 1,
+    exp: { ar: "حجم الخطر هو حاصل ضرب حجم الضرر (التأثير) في نسبة فرصة وقوعه (الاحتمالية).", en: "Risk magnitude is mathematically computed as Impact multiplied by Likelihood." }
+  },
+  {
+    lesson: { ar: "الدرس 2-3", en: "Lesson 2-3" },
+    q: { ar: "عند ترتيب أولويات معالجة المخاطر، أي نوع من المخاطر يجب البدء بمعالجته فوراً وله الأولوية القصوى؟", en: "When prioritizing risk remediation, which risk profile demands top priority and immediate action?" },
+    opts: { ar: ["المخاطر ذات التأثير المنخفض والاحتمالية المنخفضة", "المخاطر ذات التأثير العالي والاحتمالية العالية (High Impact × High Likelihood)", "المخاطر رخيصة التكلفة", "المخاطر القديمة"], en: ["Low Impact × Low Likelihood", "High Impact × High Likelihood", "Inexpensive risks", "Old risks"] },
+    a: 1,
+    exp: { ar: "تُمثل المخاطر عالية التأثير وعالية الاحتمالية التهديد الأكبر وتستوجب التدخل الفوري.", en: "High Impact × High Likelihood risks present extreme threats and demand top priority." }
+  },
+  {
+    lesson: { ar: "الدرس 2-3", en: "Lesson 2-3" },
+    q: { ar: "ما الهدف الرئيسي من المرحلة السادسة والأخيرة (الدروس المستفادة والتحسين)؟", en: "What is the primary goal of the 6th final phase (Lessons Learned & Improvement)?" },
+    opts: { ar: ["تنسيق الخطوط", "توثيق الحادث وتحسين الضوابط الأمنية لمنع تكرار نفس الحادث مستقبلاً", "إطفاء السيرفرات", "حذف قاعدة البيانات"], en: ["Formatting fonts", "Documenting the event and hardening security controls to prevent future recurrence", "Powering down servers", "Deleting databases"] },
+    a: 1,
+    exp: { ar: "تُحلل هذه المرحلة الأسباب الجذرية وتطور تدابير الأمان لضمان عدم تكرار الخرق.", en: "Lessons learned analyzes root causes to harden posture against repeat breaches." }
+  },
+  {
+    lesson: { ar: "الدرس 2-3", en: "Lesson 2-3" },
+    q: { ar: "أي التهديدات التالية يُصنف كحادث أمني من نوع 'التلاعب بالبيانات Data Tampering'؟", en: "Which scenario exemplifies an unauthorized 'Data Tampering' security incident?" },
+    opts: { ar: ["تعديل درجات الطلاب أو سجلات الحضور دون إذن رسمي", "تشفير الملفات ببرنامج فدية", "تعطل الموقع بسبب كثرة الزوار", "تسريب الفاتورة"], en: ["Unauthorized modification of student grades or attendance records", "Ransomware encryption", "Server crash from high traffic", "Invoice leak"] },
+    a: 0,
+    exp: { ar: "تعديل البيانات غير المصرح به يمس سلامة المعلومات ويُعد حادث تلاعب (Tampering).", en: "Unauthorized alteration of records violates data integrity, constituting data tampering." }
+  },
+  {
+    lesson: { ar: "الدرس 2-3", en: "Lesson 2-3" },
+    q: { ar: "عند تعرض المدرسة لهجوم برمجيات الفدية (Ransomware)، ما ترتيب الإجراءات الصحيحة الموصى بها؟", en: "When a school suffers a Ransomware attack, what is the mandatory sequence of actions?" },
+    opts: { ar: ["1-الاحتواء (فصل الأجهزة)، 2-الاستئصال (إزالة الفدية والسد)، 3-الاستعادة (إرجاع النسخة الاحتياطية)", "1-الاستعادة أولاً", "1-الفرار", "1-إعادة التشغيل فوراً"], en: ["1-Containment (isolate PCs), 2-Eradication (purge malware), 3-Recovery (restore clean backup)", "1-Recovery first", "1-Fleeing", "1-Rebooting immediately"] },
+    a: 0,
+    exp: { ar: "يجب أولاً احتواء الإصابة لمنع انتشارها، ثم استئصال الفيروس، ثم استعادة البيانات من النسخ الاحتياطية.", en: "Proper response mandates Containment first, followed by Eradication, and then clean Recovery." }
   }
 ];
