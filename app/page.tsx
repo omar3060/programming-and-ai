@@ -75,7 +75,7 @@ export default function Home() {
       />
 
       {/* Main Container */}
-      <div className="flex-1 flex overflow-hidden relative">
+      <div className="flex-1 flex overflow-x-hidden relative max-w-full">
         {/* Sidebar */}
         <Sidebar
           activeView={activeLesson}
@@ -85,7 +85,7 @@ export default function Home() {
         />
 
         {/* Scrollable Viewport */}
-        <main className="flex-1 h-[calc(100vh-61px)] overflow-y-auto p-4 sm:p-6 lg:p-8 space-y-8">
+        <main className="flex-1 h-[calc(100vh-61px)] overflow-y-auto overflow-x-hidden p-3 sm:p-5 lg:p-8 space-y-8 max-w-full">
           {renderActiveView()}
         </main>
       </div>

@@ -71,29 +71,29 @@ export function InstructorBioCard() {
   };
 
   return (
-    <div dir="rtl" className="theme-panel border border-amber-500/40 p-6 sm:p-8 rounded-3xl relative overflow-hidden shadow-xl space-y-6 [font-family:var(--font-cairo),'Cairo',sans-serif]">
+    <div dir="rtl" className="theme-panel border border-amber-500/40 p-4 sm:p-6 lg:p-8 rounded-3xl relative overflow-hidden shadow-xl space-y-6 [font-family:var(--font-cairo),'Cairo',sans-serif] max-w-full">
       {/* Top Header */}
-      <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 border-b border-slate-700/50 dark:border-slate-800/80 pb-6">
-        <div className="flex items-center gap-4">
+      <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 sm:gap-6 border-b border-slate-700/50 dark:border-slate-800/80 pb-6">
+        <div className="flex items-center gap-3 sm:gap-4">
           <div className="relative shrink-0">
             <img
               src="/my%20image.JPG"
               alt="البشمهندس عمر محمود"
-              className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl object-cover border-2 border-amber-500/60 shadow-lg shadow-amber-500/20"
+              className="w-14 h-14 sm:w-20 sm:h-20 rounded-2xl object-cover border-2 border-amber-500/60 shadow-lg shadow-amber-500/20"
             />
-            <span className="absolute -bottom-1 -right-1 w-4 h-4 rounded-full bg-emerald-500 border-2 border-slate-900"></span>
+            <span className="absolute -bottom-1 -right-1 w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-full bg-emerald-500 border-2 border-slate-900"></span>
           </div>
           <div className="space-y-1">
-            <div className="flex flex-wrap items-center gap-2">
-              <span className="px-3 py-1 rounded-full bg-amber-500/15 text-amber-600 dark:text-amber-400 border border-amber-500/30 text-xs font-black flex items-center gap-1.5">
+            <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
+              <span className="px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full bg-amber-500/15 text-amber-600 dark:text-amber-400 border border-amber-500/30 text-[11px] sm:text-xs font-black flex items-center gap-1.5">
                 <i className="fa-solid fa-chalkboard-user"></i>
                 <span>الخبرة العملية والتدريس</span>
               </span>
-              <span className="px-2.5 py-0.5 rounded-full bg-blue-500/15 text-blue-600 dark:text-blue-400 border border-blue-500/30 text-[11px] font-bold">
+              <span className="px-2 sm:px-2.5 py-0.5 rounded-full bg-blue-500/15 text-blue-600 dark:text-blue-400 border border-blue-500/30 text-[10px] sm:text-[11px] font-bold">
                 عربي ولغات (تجريبي)
               </span>
             </div>
-            <h2 className="text-xl sm:text-2xl font-black text-slate-900 dark:text-white">
+            <h2 className="text-lg sm:text-2xl font-black text-slate-900 dark:text-white">
               نبذة عن البشمهندس عمر محمود
             </h2>
             <p className="text-xs sm:text-sm text-sub font-semibold">
@@ -103,12 +103,12 @@ export function InstructorBioCard() {
         </div>
 
         {/* Quick Action Buttons */}
-        <div className="flex flex-wrap items-center gap-2 w-full lg:w-auto">
+        <div className="flex flex-wrap items-center gap-2 w-full md:w-auto shrink-0">
           <a
             href="https://wa.me/201012306019"
             target="_blank"
             rel="noreferrer"
-            className="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold flex items-center gap-2 shadow-md transition"
+            className="flex-1 md:flex-initial px-3.5 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold flex items-center justify-center gap-2 shadow-md transition"
           >
             <i className="fa-brands fa-whatsapp text-sm"></i>
             <span>واتساب: 01012306019</span>
@@ -117,7 +117,7 @@ export function InstructorBioCard() {
             href="https://www.youtube.com/@omarmahmoud-p6l"
             target="_blank"
             rel="noreferrer"
-            className="px-4 py-2 rounded-xl bg-red-600 hover:bg-red-700 text-white text-xs font-bold flex items-center gap-2 shadow-md transition"
+            className="flex-1 md:flex-initial px-3.5 py-2 rounded-xl bg-red-600 hover:bg-red-700 text-white text-xs font-bold flex items-center justify-center gap-2 shadow-md transition"
           >
             <i className="fa-brands fa-youtube text-sm"></i>
             <span>قناة YouTube</span>
@@ -132,47 +132,47 @@ export function InstructorBioCard() {
           <div className="space-y-2.5">
             <div className="flex items-start gap-2.5 p-3 rounded-2xl theme-subpanel border border-slate-200 dark:border-slate-800">
               <i className="fa-solid fa-graduation-cap text-amber-500 text-base shrink-0 mt-1.5"></i>
-              <p className="font-medium text-slate-100 dark:text-slate-100">
+              <p className="font-medium text-slate-900 dark:text-slate-100">
                 خريج كلية الحاسبات والمعلومات قسم علوم الحاسوب وخريج معهد تكنولوجيا المعلومات تخصص برمجة تطبيقات ومواقع الويب
               </p>
             </div>
 
             <div className="flex items-start gap-2.5 p-3 rounded-2xl theme-subpanel border border-slate-200 dark:border-slate-800">
               <i className="fa-solid fa-chalkboard-user text-blue-500 text-base shrink-0 mt-1.5"></i>
-              <p className="font-medium text-slate-100 dark:text-slate-100">
+              <p className="font-medium text-slate-900 dark:text-slate-100">
                 يعمل كمدرب برمجيات في مديرية القوى العامله بالاسماعيلية
               </p>
             </div>
 
             <div className="flex items-start gap-2.5 p-3 rounded-2xl theme-subpanel border border-slate-200 dark:border-slate-800">
               <i className="fa-solid fa-briefcase text-purple-500 text-base shrink-0 mt-1.5"></i>
-              <p className="font-medium text-slate-100 dark:text-slate-100">
+              <p className="font-medium text-slate-900 dark:text-slate-100">
                 ولديه خبرة 4 سنوات في مجال تطوير وبرمجة تطبيقات الويب في مختلف الشركات في مصر والسعودية وحاليا اعمل كمهندس برمجيات عن بعُد في شركة بريطانية
               </p>
             </div>
 
             <div className="flex items-start gap-2.5 p-3 rounded-2xl theme-subpanel border border-slate-200 dark:border-slate-800">
               <i className="fa-solid fa-users text-emerald-500 text-base shrink-0 mt-1.5"></i>
-              <p className="font-medium text-slate-100 dark:text-slate-100">
+              <p className="font-medium text-slate-900 dark:text-slate-100">
                 واعمل في مجال تدريس مادة البرمجة والذكاء الاصطناعى لطلاب اولى وثانيه بكالوريا عربي ولغات حصتين اسبوعيا تفاعليه مباشره مع الطلاب باسعار رمزيه مراعاة لأولياء الأمور
               </p>
             </div>
           </div>
 
           {/* Pricing Badges Box */}
-          <div className="p-4 rounded-2xl bg-amber-500/10 border border-amber-500/30 space-y-2">
+          <div className="p-3.5 sm:p-4 rounded-2xl bg-amber-500/10 border border-amber-500/30 space-y-2">
             <div className="font-bold text-amber-500 dark:text-amber-400 text-xs flex items-center gap-2">
               <i className="fa-solid fa-tags"></i>
               <span>أسعار الاشتراك الشهري للدروس التفاعلية المباشرة (حصتين أسبوعياً):</span>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs pt-1 font-bold">
-              <div className="p-2.5 rounded-xl bg-white dark:bg-slate-900 border border-amber-500/40 text-slate-900 dark:text-amber-300 flex items-center justify-between shadow-sm">
+              <div className="p-2.5 rounded-xl theme-panel border border-amber-500/40 text-slate-900 dark:text-amber-300 flex items-center justify-between shadow-sm">
                 <span>اولى بكالوريا (عربي / لغات):</span>
-                <span className="px-2 py-0.5 rounded bg-amber-500 text-slate-950 font-black text-xs">150 جنيه شهريا</span>
+                <span className="px-2 py-0.5 rounded bg-amber-500 text-slate-950 font-black text-xs shrink-0">150 جنيه شهريا</span>
               </div>
-              <div className="p-2.5 rounded-xl bg-white dark:bg-slate-900 border border-amber-500/40 text-slate-900 dark:text-amber-300 flex items-center justify-between shadow-sm">
+              <div className="p-2.5 rounded-xl theme-panel border border-amber-500/40 text-slate-900 dark:text-amber-300 flex items-center justify-between shadow-sm">
                 <span>ثانيه بكالوريا (عربي / لغات):</span>
-                <span className="px-2 py-0.5 rounded bg-amber-500 text-slate-950 font-black text-xs">250 جنيه شهريا</span>
+                <span className="px-2 py-0.5 rounded bg-amber-500 text-slate-950 font-black text-xs shrink-0">250 جنيه شهريا</span>
               </div>
             </div>
           </div>
