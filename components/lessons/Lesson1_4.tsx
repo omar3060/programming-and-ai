@@ -10,7 +10,7 @@ import { XAIDecisionVisualizer } from '@/components/simulators/XAIDecisionVisual
 
 export function Lesson1_4() {
   const { playSfx } = useApp();
-  const quizQuestions = allExamQuestions.slice(15, 20);
+  const quizQuestions = allExamQuestions.slice(30, 40);
 
   const [biasResult, setBiasResult] = useState<{ show: boolean; isUnbalanced: boolean }>({ show: false, isUnbalanced: true });
   const [expandedCards, setExpandedCards] = useState<Record<string, boolean>>({});

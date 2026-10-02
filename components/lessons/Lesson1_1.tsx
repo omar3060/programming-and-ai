@@ -188,7 +188,7 @@ const mooreData = [
 
 export function Lesson1_1() {
   const { playSfx } = useApp();
-  const quizQuestions = allExamQuestions.slice(0, 5);
+  const quizQuestions = allExamQuestions.slice(0, 10);
 
   const [eraIdx, setEraIdx] = useState(0);
   const [mooreIdx, setMooreIdx] = useState(0);
@@ -890,26 +890,75 @@ export function Lesson1_1() {
                 <span className="lang-ar">مصفوفة تقييم الفئات والقرار الهندسي:</span>
                 <span className="lang-en">Engineering Decision Evaluation:</span>
               </strong>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-[11px]">
-                <div className="p-2.5 rounded-lg bg-slate-950 border border-slate-800">
-                  <strong className="text-brand-400 block">1. العميل:</strong>
-                  <span>ميزة: السرعة والأمان وعدم حمل نقود | عيب: الاعتماد التام على شحن الهاتف والإنترنت.</span>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-[11px]">
+                {/* 1. Customer */}
+                <div className="p-3 rounded-xl bg-slate-950 border border-slate-800 space-y-1">
+                  <strong className="text-brand-400 block text-xs">
+                    <span className="lang-ar">1. العميل الذي يدفع (A customer paying):</span>
+                    <span className="lang-en">1. A customer paying:</span>
+                  </strong>
+                  <div className="text-emerald-400 font-medium">
+                    <span className="lang-ar">✓ <strong>ميزة:</strong> السرعة والأمان والراحة وتجنب مخاطر سرقة الكاش.</span>
+                    <span className="lang-en">✓ <strong>Benefit:</strong> Speed, convenience, and zero risk of physical cash theft.</span>
+                  </div>
+                  <div className="text-rose-400 font-medium">
+                    <span className="lang-ar">⚠️ <strong>عيب:</strong> الاعتماد التام على شحن الهاتف وشبكات الإنترنت، ومخاطر انقطاع الخدمة.</span>
+                    <span className="lang-en">⚠️ <strong>Drawback:</strong> Total dependency on battery power and mobile network connectivity.</span>
+                  </div>
                 </div>
-                <div className="p-2.5 rounded-lg bg-slate-950 border border-slate-800">
-                  <strong className="text-brand-400 block">2. صاحب المتجر الصغير:</strong>
-                  <span>ميزة: منع سرقة الكاش وزيادة المبيعات | عيب: رسوم التحصيل المصرفية وصيانة الأجهزة.</span>
+
+                {/* 2. Small Shop Owner */}
+                <div className="p-3 rounded-xl bg-slate-950 border border-slate-800 space-y-1">
+                  <strong className="text-brand-400 block text-xs">
+                    <span className="lang-ar">2. صاحب المتجر الصغير (A small shop owner):</span>
+                    <span className="lang-en">2. A small shop owner:</span>
+                  </strong>
+                  <div className="text-emerald-400 font-medium">
+                    <span className="lang-ar">✓ <strong>ميزة:</strong> تسريع الطوابير، جذب الزبائن الجدد، وتقليل خطأ إرجاع الفكة.</span>
+                    <span className="lang-en">✓ <strong>Benefit:</strong> Faster checkout queues, attracting tech-savvy users, and zero change errors.</span>
+                  </div>
+                  <div className="text-rose-400 font-medium">
+                    <span className="lang-ar">⚠️ <strong>عيب:</strong> التكلفة المالية لرسوم المعاملات المصرفية وأجهزة ماكينات POS.</span>
+                    <span className="lang-en">⚠️ <strong>Drawback:</strong> Transaction fee percentages and hardware POS maintenance costs.</span>
+                  </div>
                 </div>
-                <div className="p-2.5 rounded-lg bg-slate-950 border border-slate-800">
-                  <strong className="text-brand-400 block">3. كبار السن:</strong>
-                  <span>ميزة: تجنب الذهاب للزحام | عيب: صعوبة التعامل مع الواجهات الرقمية وخوف الاحتيال.</span>
+
+                {/* 3. Person without Smartphone/Card */}
+                <div className="p-3 rounded-xl bg-slate-950 border border-slate-800 space-y-1">
+                  <strong className="text-brand-400 block text-xs">
+                    <span className="lang-ar">3. من لا يملك بطاقة أو هاتفاً ذكياً (No card/phone person):</span>
+                    <span className="lang-en">3. A person with no bank card or smartphone:</span>
+                  </strong>
+                  <div className="text-emerald-400 font-medium">
+                    <span className="lang-ar">✓ <strong>ميزة:</strong> التحفيز على الانضمام للشمول المالي والحصول على خدمات رقمية حديثة.</span>
+                    <span className="lang-en">✓ <strong>Benefit:</strong> Encourages financial inclusion and access to modern digital banking.</span>
+                  </div>
+                  <div className="text-rose-400 font-medium">
+                    <span className="lang-ar">⚠️ <strong>عيب:</strong> صعوبة الشراء والتهميش الفوري عند غياب أي بديل نقدي ورقي.</span>
+                    <span className="lang-en">⚠️ <strong>Drawback:</strong> Severe purchasing friction and digital exclusion if cash is completely banned.</span>
+                  </div>
                 </div>
-                <div className="p-2.5 rounded-lg bg-slate-950 border border-slate-800">
-                  <strong className="text-brand-400 block">4. البنوك والدولة:</strong>
-                  <span>ميزة: تقليل تكلفة طباعة النقد والشمول المالي | عيب: الحاجة لبنية سيبرانية ضخمة لحماية البيانات.</span>
+
+                {/* 4. Banks & Government */}
+                <div className="p-3 rounded-xl bg-slate-950 border border-slate-800 space-y-1">
+                  <strong className="text-brand-400 block text-xs">
+                    <span className="lang-ar">4. البنوك والمؤسسات المالية (Banks & Institutions):</span>
+                    <span className="lang-en">4. Banks & Financial Institutions:</span>
+                  </strong>
+                  <div className="text-emerald-400 font-medium">
+                    <span className="lang-ar">✓ <strong>ميزة:</strong> توفير مليارات الجنيهات لتأمين ونقل وطباعة العملات الورقية.</span>
+                    <span className="lang-en">✓ <strong>Benefit:</strong> Saves billions in physical currency printing, transport, and vault storage.</span>
+                  </div>
+                  <div className="text-rose-400 font-medium">
+                    <span className="lang-ar">⚠️ <strong>عيب:</strong> تكلفة البنية السيبرانية الضخمة لحماية السيرفرات من الاختراق والإهداء.</span>
+                    <span className="lang-en">⚠️ <strong>Drawback:</strong> High cyber-defense expenditure to secure servers against attacks.</span>
+                  </div>
                 </div>
               </div>
-              <div className="p-3 rounded-lg bg-emerald-950/40 border border-emerald-500/30 text-emerald-300 font-bold mt-2">
-                ⚖️ <strong>القرار الهندسي السليم:</strong> لا يمكن التحول بخطوة واحدة فورية لتجنب تهميش فئات غير ممتلكة للتقنية، بل يجب أن يكون التحول تدريجياً عبر مراحل متوازية وتوفير خيارات هجينة (Hybrid) وتثقيف المستخدمين.
+
+              <div className="p-3 rounded-xl bg-emerald-950/40 border border-emerald-500/30 text-emerald-300 font-bold mt-2 leading-relaxed">
+                <span className="lang-ar">⚖️ <strong>القرار الهندسي السليم (كتاب الوزارة ص 10):</strong> لا يمكن لمجتمعنا التحول الكامل بخطوة واحدة فورية لتجنب تهميش الفئات غير الممتلكة للتقنية، بل يجب تقديم مرحلة انتقالية وتوفير خيارات هجينة (Hybrid) مع تخفيض رسوم التجار ودعم كبار السن.</span>
+                <span className="lang-en">⚖️ <strong>Engineered Decision (Textbook p. 10):</strong> Society should NOT transition in a single immediate step to prevent digital exclusion. A phased hybrid model with merchant fee subsidies and accessible onboarding is recommended.</span>
               </div>
             </div>
           )}

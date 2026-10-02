@@ -29,7 +29,7 @@ const ringDetails = {
 
 export function Lesson1_2() {
   const { playSfx } = useApp();
-  const quizQuestions = allExamQuestions.slice(5, 10);
+  const quizQuestions = allExamQuestions.slice(10, 20);
 
   const [ringKey, setRingKey] = useState<'ai' | 'ml' | 'dl' | 'genai'>('ai');
   const [spamSelectedMsg, setSpamSelectedMsg] = useState<number | null>(null);

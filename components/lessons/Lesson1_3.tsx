@@ -10,7 +10,7 @@ import { AIApplicationsInteractiveGrid } from '@/components/simulators/AIApplica
 
 export function Lesson1_3() {
   const { playSfx } = useApp();
-  const quizQuestions = allExamQuestions.slice(10, 15);
+  const quizQuestions = allExamQuestions.slice(20, 30);
 
   const [expandedCards, setExpandedCards] = useState<Record<string, boolean>>({});
   const [flippedCards, setFlippedCards] = useState<Record<string, boolean>>({});
