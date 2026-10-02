@@ -950,7 +950,7 @@ export function Lesson1_1() {
                     <span className="lang-en">✓ <strong>Benefit:</strong> Saves billions in physical currency printing, transport, and vault storage.</span>
                   </div>
                   <div className="text-rose-400 font-medium">
-                    <span className="lang-ar">⚠️ <strong>عيب:</strong> تكلفة البنية السيبرانية الضخمة لحماية السيرفرات من الاختراق والإهداء.</span>
+                    <span className="lang-ar">⚠️ <strong>عيب:</strong> تكلفة البنية السيبرانية الضخمة لحماية السيرفرات من الاختراق والهجمات.</span>
                     <span className="lang-en">⚠️ <strong>Drawback:</strong> High cyber-defense expenditure to secure servers against attacks.</span>
                   </div>
                 </div>
