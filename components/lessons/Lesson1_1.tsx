@@ -334,13 +334,13 @@ export function Lesson1_1() {
         </div>
 
         {/* Introductory Real-Life Scenario Box (كتاب الوزارة ص 4 / p. 6) */}
-        <div className="p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-blue-900/30 via-slate-900/60 to-purple-900/30 border border-blue-500/30 text-xs sm:text-sm leading-relaxed space-y-3 shadow-sm">
-          <div className="flex items-center gap-2 text-blue-400 font-bold text-xs sm:text-sm">
-            <i className="fa-solid fa-sun text-amber-400 text-base"></i>
+        <div className="p-4 sm:p-5 rounded-2xl theme-subpanel border border-blue-500/40 text-xs sm:text-sm leading-relaxed space-y-3 shadow-sm">
+          <div className="flex items-center gap-2 text-blue-600 dark:text-blue-400 font-black text-xs sm:text-sm">
+            <i className="fa-solid fa-sun text-amber-500 text-base"></i>
             <span className="lang-ar">سيناريو الحياة اليومية (كتاب الوزارة ص 4): يوم في حياة طالب مصري</span>
             <span className="lang-en">Daily Life Scenario (Textbook p. 6): A Day in the Life of an Egyptian Student</span>
           </div>
-          <p className="text-sub">
+          <p className="text-slate-900 dark:text-slate-100 font-medium leading-relaxed">
             <span className="lang-ar">
               في يوم عادي، يقرأ طالب في مصر رسائل على أحد تطبيقات التواصل الاجتماعي (SNS)، ويدفع ثمن إفطاره إلكترونياً باستخدام تطبيق للدفع غير النقدي، وينضم إلى درس عبر الإنترنت، ويطلب كتاباً من متجر إلكتروني. 
               قبل 20 عاماً، لم تكن معظم هذه الخدمات متاحة أو منتشرة بالصورة التي نعرفها اليوم. 

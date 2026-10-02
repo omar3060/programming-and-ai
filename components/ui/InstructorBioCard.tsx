@@ -73,7 +73,7 @@ export function InstructorBioCard() {
   return (
     <div dir="rtl" className="theme-panel border border-amber-500/40 p-4 sm:p-6 lg:p-8 rounded-3xl relative overflow-hidden shadow-xl space-y-6 [font-family:var(--font-cairo),'Cairo',sans-serif] max-w-full">
       {/* Top Header */}
-      <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 sm:gap-6 border-b border-slate-700/50 dark:border-slate-800/80 pb-6">
+      <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4 sm:gap-6 border-b border-slate-700/50 dark:border-slate-800/80 pb-6">
         <div className="flex items-center gap-3 sm:gap-4">
           <div className="relative shrink-0">
             <img
@@ -103,23 +103,23 @@ export function InstructorBioCard() {
         </div>
 
         {/* Quick Action Buttons */}
-        <div className="flex flex-wrap items-center gap-2 w-full md:w-auto shrink-0">
+        <div className="flex flex-wrap items-center gap-2.5 w-full lg:w-auto shrink-0 pt-2 lg:pt-0">
           <a
             href="https://wa.me/201012306019"
             target="_blank"
             rel="noreferrer"
-            className="flex-1 md:flex-initial px-3.5 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold flex items-center justify-center gap-2 shadow-md transition"
+            className="flex-1 sm:flex-initial px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs sm:text-sm font-bold flex items-center justify-center gap-2 shadow-md transition"
           >
-            <i className="fa-brands fa-whatsapp text-sm"></i>
+            <i className="fa-brands fa-whatsapp text-sm sm:text-base"></i>
             <span>واتساب: 01012306019</span>
           </a>
           <a
             href="https://www.youtube.com/@omarmahmoud-p6l"
             target="_blank"
             rel="noreferrer"
-            className="flex-1 md:flex-initial px-3.5 py-2 rounded-xl bg-red-600 hover:bg-red-700 text-white text-xs font-bold flex items-center justify-center gap-2 shadow-md transition"
+            className="flex-1 sm:flex-initial px-4 py-2.5 rounded-xl bg-red-600 hover:bg-red-700 text-white text-xs sm:text-sm font-bold flex items-center justify-center gap-2 shadow-md transition"
           >
-            <i className="fa-brands fa-youtube text-sm"></i>
+            <i className="fa-brands fa-youtube text-sm sm:text-base"></i>
             <span>قناة YouTube</span>
           </a>
         </div>
