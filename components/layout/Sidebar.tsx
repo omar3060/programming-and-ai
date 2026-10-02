@@ -26,12 +26,12 @@ export function Sidebar({ activeView, onNavigate, isOpenMobile, onCloseMobile }:
 
   return (
     <>
-      {/* Sidebar Backdrop for Mobile */}
+      {/* Sidebar Backdrop for Mobile & Tablet */}
       {isOpenMobile && (
         <div
           id="sidebar-backdrop"
           onClick={onCloseMobile}
-          className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 lg:hidden"
+          className="fixed inset-0 bg-slate-950/70 backdrop-blur-md z-40 lg:hidden animate-fadeIn"
         />
       )}
 
@@ -42,15 +42,16 @@ export function Sidebar({ activeView, onNavigate, isOpenMobile, onCloseMobile }:
           isOpenMobile ? 'open' : ''
         }`}
       >
-        {/* Mobile Header with Close Button */}
-        <div className="lg:hidden p-3 border-b border-slate-700/50 dark:border-slate-800/80 theme-subpanel flex items-center justify-between">
-          <span className="font-bold text-xs text-amber-500 dark:text-amber-400 flex items-center gap-1.5">
-            <i className="fa-solid fa-compass"></i>
-            <span>قائمة المنهج والتنقل</span>
+        {/* Mobile & Tablet Drawer Header */}
+        <div className="lg:hidden p-3.5 border-b border-slate-700/50 dark:border-slate-800/80 theme-subpanel flex items-center justify-between shadow-sm">
+          <span className="font-extrabold text-xs sm:text-sm text-amber-500 dark:text-amber-400 flex items-center gap-2">
+            <i className="fa-solid fa-compass text-base"></i>
+            <span className="lang-ar">قائمة المنهج والتنقل</span>
+            <span className="lang-en">Curriculum Menu</span>
           </span>
           <button
             onClick={onCloseMobile}
-            className="w-8 h-8 rounded-xl bg-rose-500/15 text-rose-500 hover:bg-rose-500/25 flex items-center justify-center text-sm font-bold transition cursor-pointer"
+            className="w-9 h-9 rounded-xl bg-rose-500/15 text-rose-500 hover:bg-rose-500/25 border border-rose-500/30 flex items-center justify-center text-base font-bold transition cursor-pointer active:scale-95 shadow-sm"
             aria-label="Close Menu"
           >
             <i className="fa-solid fa-xmark"></i>

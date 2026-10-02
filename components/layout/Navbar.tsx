@@ -16,30 +16,31 @@ export function Navbar({ onToggleSidebar, onOpenPrintModal }: NavbarProps) {
       {/* Top Main Row */}
       <div className="flex items-center justify-between gap-2 w-full">
         {/* Left Side (RTL Right): Sidebar Toggle & Brain Logo */}
-        <div className="flex items-center gap-2.5 shrink-0">
+        <div className="flex items-center gap-2 sm:gap-3 shrink-0">
           <button
             onClick={() => {
               playSfx('click');
               onToggleSidebar();
             }}
-            className="lg:hidden w-9 h-9 rounded-xl theme-subpanel border flex items-center justify-center text-slate-300 hover:text-white shrink-0"
-            aria-label="Toggle Menu"
+            className="lg:hidden w-10 h-10 rounded-xl theme-subpanel border border-brand-500/30 flex items-center justify-center text-brand-400 hover:text-white hover:bg-brand-500/20 shrink-0 shadow-sm transition active:scale-95 cursor-pointer"
+            aria-label="Toggle Navigation Menu"
+            title={lang === 'ar' ? 'فتح قائمة الدروس' : 'Open Menu'}
           >
-            <i className="fa-solid fa-bars text-base"></i>
+            <i className="fa-solid fa-bars text-lg"></i>
           </button>
 
           <div className="flex items-center gap-2.5">
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-brand-600 to-purple-600 flex items-center justify-center text-white shadow-md shadow-brand-500/20 shrink-0">
-              <i className="fa-solid fa-brain text-base"></i>
+            <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-tr from-brand-600 via-purple-600 to-indigo-600 flex items-center justify-center text-white shadow-md shadow-brand-500/25 shrink-0">
+              <i className="fa-solid fa-brain text-base sm:text-lg"></i>
             </div>
 
-            {/* Desktop Title & Subtitle */}
+            {/* Title & Subtitle for Tablet and Desktop */}
             <div className="hidden md:block">
-              <h1 className="font-black text-sm sm:text-base leading-tight text-slate-900 dark:text-white">
+              <h1 className="font-black text-xs sm:text-sm lg:text-base leading-tight text-slate-900 dark:text-white">
                 <span className="lang-ar">منهج البرمجة والذكاء الاصطناعي ثانيه بكالوريا</span>
                 <span className="lang-en">Programming & AI Curriculum 2nd Year</span>
               </h1>
-              <p className="text-[11px] text-amber-500 dark:text-amber-400 font-bold leading-tight pt-0.5">
+              <p className="text-[10px] sm:text-[11px] text-amber-500 dark:text-amber-400 font-bold leading-tight pt-0.5">
                 <span className="lang-ar">الصف الثاني الثانوي • إشراف م/ عمر محمود (01012306019)</span>
                 <span className="lang-en">Grade 11 • Eng. Omar Mahmoud (01012306019)</span>
               </p>
