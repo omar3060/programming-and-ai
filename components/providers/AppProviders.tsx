@@ -32,15 +32,11 @@ export function AppProviders({ children }: { children: React.ReactNode }) {
   const [isPrintModalOpen, setIsPrintModalOpen] = useState<boolean>(false);
   const [mobileSidebarOpen, setMobileSidebarOpen] = useState<boolean>(false);
   const [audioCtx, setAudioCtx] = useState<AudioContext | null>(null);
-  const [, startTransition] = useTransition();
-
   const dir = lang === 'ar' ? 'rtl' : 'ltr';
 
   const setActiveLesson = (view: LessonViewId) => {
-    startTransition(() => {
-      setActiveLessonState(view);
-      setMobileSidebarOpen(false);
-    });
+    setActiveLessonState(view);
+    setMobileSidebarOpen(false);
   };
 
   const openPrintModal = () => setIsPrintModalOpen(true);

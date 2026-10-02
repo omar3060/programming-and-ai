@@ -11,24 +11,169 @@ import { EdgeVsCloudInteractiveLab } from '@/components/simulators/EdgeVsCloudIn
 
 const erasData = [
   {
-    title: { ar: "1940s-60s: ظهور الحاسوب (ENIAC، الصمامات المفرغة)", en: "1940s-60s: Birth of the computer (ENIAC, vacuum tubes)" },
-    desc: { ar: "استُخدم بشكل رئيسي للحسابات العسكرية والعلمية.", en: "Mainly used for military and scientific computation." }
+    period: "1940s-1960s",
+    icon: "💡",
+    badge: { ar: "ظهور الحاسوب والأنبوب المفرغ", en: "First Computers & Vacuum Tubes" },
+    title: { 
+      ar: "العصر الأول (1940s-1960s): ظهور الحواسيب الأولى (الصمامات المفرغة وحاسوب ENIAC)", 
+      en: "Era 1 (1940s-1960s): Birth of First Computers (Vacuum Tubes & ENIAC)" 
+    },
+    summary: { 
+      ar: "شهدت هذه الفترة ولادة الحوسبة الإلكترونية باستخدام الصمامات المفرغة. كانت الحواسيب في هذه الحقبة عبارة عن آلات ضخمة يزن بعضها عشرات الأطنان وتعمل كأجهزة مفردة للمؤسسات الكبرى والدفاع.", 
+      en: "This period witnessed the birth of electronic computing powered by vacuum tubes. Computers were colossal machines weighing tens of tons, operated as standalone units by military and research institutions." 
+    },
+    hardware: { 
+      ar: "الصمامات المفرغة (Vacuum Tubes) كعناصر مفاتيح إلكترونية لتمثيل 0 و 1. حاسوب ENIAC كان يزن 30 طناً، ويشغل مساحة غرفة كاملة، ويحتوي على 18,000 صمام مفرغ تستهلك حرارة وطاقة هائلة وتتعرض للتلف المستمر.", 
+      en: "Vacuum tubes used as electronic switches (0 and 1). The ENIAC computer weighed 30 tons, occupied a full room, and contained 18,000 vacuum tubes that generated immense heat, consumed high wattage, and frequently burned out." 
+    },
+    impact: { 
+      ar: "اقتصر استخدام الحواسيب على الأغراض العسكرية، والتشفير في الحرب العالمية، والحسابات المعقدة في مراكز البحوث والمؤسسات الحكومية الكبرى دون وجود أي استخدام شخصي أو مدني عام.", 
+      en: "Computer usage was restricted to military ballistics, wartime cryptography, and complex calculations in large scientific research centers with zero individual or civilian home usage." 
+    },
+    keyInnovations: {
+      ar: [
+        "حاسوب ENIAC (أول حاسوب إلكتروني رقمي عام).",
+        "الصمامات المفرغة (Vacuum Tubes) كمفاتيح إلكترونية.",
+        "البطاقات المثقوبة (Punched Cards) لإدخال البيانات والمعادلات العسكرية."
+      ],
+      en: [
+        "ENIAC computer (the first general-purpose digital electronic computer).",
+        "Vacuum Tubes serving as electronic logic switches.",
+        "Punched Cards for data input and ballistics computation."
+      ]
+    }
   },
   {
-    title: { ar: "1970s-80s: انتشار الحواسيب الشخصية (PCs)", en: "1970s-80s: Spread of personal computers (PCs)" },
-    desc: { ar: "بداية استخدام الحواسيب الشخصية.", en: "Beginning of personal computer use." }
+    period: "1970s-1980s",
+    icon: "🖥️",
+    badge: { ar: "انتشار الحواسب الشخصية والسيليكون", en: "Personal PCs & Microprocessors" },
+    title: { 
+      ar: "العصر الثاني (1970s-1980s): انتشار الحواسيب الشخصية (PCs) والمعالجات الدقيقة", 
+      en: "Era 2 (1970s-1980s): Spread of Personal Computers (PCs) & Microprocessors" 
+    },
+    summary: { 
+      ar: "شهدت هذه الحقبة الثورة الإلكترونية الحقيقية بفضل استبدال الصمامات بالترانزستورات والدوائر المتكاملة من السيليكون، مما سمح بإنشاء المعالج الدقيق (Microprocessor) وتصغير الحواسيب لتوضع على المكاتب.", 
+      en: "This era marked a true silicon revolution as vacuum tubes were replaced by transistors and integrated circuits, enabling microprocessors and scaling computers down to fit desktop tables." 
+    },
+    hardware: { 
+      ar: "الترانزستورات المدمجة على شرائح السيليكون (Microprocessors)، وشاشات CRT، وأقراص التخزين المرنة (Floppy Disks). تقلص الحجم من مساحة غرفة كاملة إلى جهاز مكتبي محمول.", 
+      en: "Microprocessors built on silicon integrated chips, CRT monitors, and floppy disks. Hardware scaled down from room-sized mainframes to desktop units." 
+    },
+    impact: { 
+      ar: "بداية استخدام الحواسيب الشخصية من قبل الأفراد والمكاتب والشركات الصغيرة. تغيرت طبيعة العمل المكتبي، والحسابات المالية، وكتابة المستندات والبيانات محلية التخزين.", 
+      en: "The inception of personal computing for home users and small businesses. Workplaces were transformed with digital spreadsheets, word processing, and localized data management." 
+    },
+    keyInnovations: {
+      ar: [
+        "المعالج الدقيق Intel 4004 وإنتل 8086.",
+        "أجهزة الحاسوب الشخصي (IBM PC, Apple II).",
+        "أنظمة التشغيل المعتمدة على النصوص (MS-DOS) ثم الواجهات الرسمية الأولى (GUI)."
+      ],
+      en: [
+        "Intel 4004 & 8086 microprocessors.",
+        "Personal computers (IBM PC, Apple II).",
+        "Command-line operating systems (MS-DOS) followed by early Graphical User Interfaces (GUI)."
+      ]
+    }
   },
   {
-    title: { ar: "1990s: تسويق الإنترنت تجارياً؛ الشبكة العالمية (الويب)", en: "1990s: Commercialization of the Internet; the Web" },
-    desc: { ar: "عولمة المعلومات؛ انتشار البريد الإلكتروني.", en: "Globalization of information; spread of email." }
+    period: "1990s",
+    icon: "🌐",
+    badge: { ar: "تسويق الإنترنت ونشأة الويب", en: "Commercial Internet & WWW" },
+    title: { 
+      ar: "العصر الثالث (1990s): تسويق الإنترنت تجارياً والشبكة العالمية (الويب WWW)", 
+      en: "Era 3 (1990s): Commercialization of the Internet & the World Wide Web" 
+    },
+    summary: { 
+      ar: "انتقلت الحواسيب من أجهزة معزولة تعمل بشكل منفرد إلى شبكة عالمية مترابطة، مع افتتاح شبكة الإنترنت للاستخدام التجاري العام واختراع الشبكة العنكبوتية العالمية (WWW).", 
+      en: "Computers transitioned from isolated standalone desktop devices into an interconnected global network, powered by the commercialization of the Internet and the invention of the World Wide Web (WWW)." 
+    },
+    hardware: { 
+      ar: "شبكات الاتصال السلكية (Dial-up Modems)، أجهزة السيرفر الأولى، المتصفحات الإلكترونية (Internet Explorer, Netscape)، وبروتوكولات الويب (HTTP, HTML).", 
+      en: "Dial-up modems, early web servers, graphical web browsers (Internet Explorer, Netscape), and foundational web protocols (HTTP, HTML)." 
+    },
+    impact: { 
+      ar: "عولمة المعلومات بشكل غير مسبوق، انتشار البريد الإلكتروني (Email) كوسيلة اتصل سريعة، نشأة المتاجر الإلكترونية التجريبية (بداية E-Commerce)، وإمكانية تبادل الأخبار والبيانات بين القارات في ثوانٍ.", 
+      en: "Unprecedented globalization of information, widespread email adoption replacing physical mail, the origin of electronic commerce (E-Commerce), and instantaneous cross-continental data sharing." 
+    },
+    keyInnovations: {
+      ar: [
+        "اختراع الشبكة العنكبوتية العالمية (World Wide Web) بواسطة تيم بيرنرز لي.",
+        "انتشار البريد الإلكتروني (E-mail) ومتصفحات الويب.",
+        "بداية المتاجر الإلكترونية الأولى مثل Amazon و eBay."
+      ],
+      en: [
+        "Invention of the World Wide Web (WWW) by Tim Berners-Lee.",
+        "Widespread usage of email and graphical web browsers.",
+        "Emergence of early e-commerce platforms such as Amazon and eBay."
+      ]
+    }
   },
   {
-    title: { ar: "2000s: صعود الهواتف الذكية (مثل iPhone)", en: "2000s: Rise of smartphones (iPhone, etc.)" },
-    desc: { ar: "انتشار هائل لإنترنت الهاتف المحمول.", en: "Explosive spread of mobile Internet." }
+    period: "2000s",
+    icon: "📱",
+    badge: { ar: "صعود الهواتف الذكية وإنترنت المحمول", en: "Smartphones & Mobile Web" },
+    title: { 
+      ar: "العصر الرابع (2000s): صعود الهواتف الذكية وشبكات المحمول عالية السرعة", 
+      en: "Era 4 (2000s): Rise of Smartphones & Mobile High-Speed Internet" 
+    },
+    summary: { 
+      ar: "تحولت القدرة الحوسبية والاتصال بالإنترنت من المكاتب والشاشات الثابتة إلى أجهزة الجيب المحمولة بشاشات اللمس، مما أحدث انفجاراً في استخدام إنترنت المحمول على مدار 24 ساعة.", 
+      en: "Computing power and Internet access shifted from stationary office desks into pocket-sized touch devices, triggering an explosive growth of 24/7 mobile Internet connectivity." 
+    },
+    hardware: { 
+      ar: "الهواتف الذكية (مثل iPhone)، شاشات اللمس التكثيفية، شبكات المحمول (3G / 4G)، المعالجات المدمجة عالية الكفاءة (System on Chip - SoC)، ومتاجر التطبيقات (App Store / Google Play).", 
+      en: "Smartphones (e.g., iPhone), capacitive touchscreens, mobile 3G/4G cellular networks, efficient System-on-Chip (SoC) processors, and mobile application stores." 
+    },
+    impact: { 
+      ar: "أصبح الاتصال بالإنترنت متواصلاً في كل مكان؛ ظهرت شبكات التواصل الاجتماعي (SNS)، والتواصل الفوري، وتغيّرت أساليب التصوير وتشارك الوسائط والترفيه اليومي للأفراد.", 
+      en: "Internet connection became ubiquitous; social networking services (SNS) exploded, instant messaging flourished, and everyday personal communication, media capture, and entertainment were revolutionized." 
+    },
+    keyInnovations: {
+      ar: [
+        "إطلاق أول هاتف iPhone عام 2007 ونظام Android.",
+        "انتشار منصات شبكات التواصل الاجتماعي (SNS مثل Facebook و Twitter).",
+        "شبكات الجيل الثالث والرابع (3G/4G) والملاحة عبر GPS."
+      ],
+      en: [
+        "Launch of the first iPhone in 2007 and Android ecosystem.",
+        "Booming Social Networking Services (SNS like Facebook & Twitter).",
+        "3G/4G cellular connectivity and mobile GPS navigation."
+      ]
+    }
   },
   {
-    title: { ar: "2010s فصاعداً: انتشار الحوسبة السحابية", en: "2010s onward: Spread of cloud computing" },
-    desc: { ar: "تحليل البيانات ضخمة الحجم والذكاء الاصطناعي؛ انتشار \"تكنولوجيا المعلومات كخدمة\" (IT as a service).", en: "Large-scale data analysis and AI; \"IT as a service\" becomes widespread." }
+    period: "2010s Onward",
+    icon: "☁️",
+    badge: { ar: "الحوسبة السحابية والذكاء الاصطناعي", en: "Cloud Computing & AI Era" },
+    title: { 
+      ar: "العصر الخامس (2010s فصاعداً): انتشار الحوسبة السحابية، البيانات الضخمة، والذكاء الاصطناعي", 
+      en: "Era 5 (2010s Onward): Cloud Computing, Big Data & Artificial Intelligence" 
+    },
+    summary: { 
+      ar: "تحولت تكنولوجيا المعلومات إلى قدرة خدمة مشغلة عبر الشبكة (IT as a Service). لم يعد الفرد أو الشركة بحاجة لشراء سيرفرات ضخمة، بل يتم استئجار القدرة الحوسبية والذكاء الاصطناعي من مراكز سحابية عملاقة.", 
+      en: "IT transformed into a service delivered on demand over the Internet ('IT as a Service'). Neither individuals nor companies need to buy local server hardware; processing and AI are leased from cloud datacenters." 
+    },
+    hardware: { 
+      ar: "مراكز البيانات السحابية العملاقة (Cloud Datacenters)، المعالجات الفائقة وتسريعات الذكاء الاصطناعي (GPUs / NPUs)، الحوسبة الطرفية (Edge Computing)، وشبكات الجيل الخامس (5G).", 
+      en: "Global cloud data centers (real hardware in real locations), specialized AI accelerators (GPUs/NPUs), Edge Computing nodes, and 5G ultra-fast networks." 
+    },
+    impact: { 
+      ar: "تمكين تحليل البيانات ضخمة الحجم (Big Data)، تشغيل نماذج الذكاء الاصطناعي والتوليدي، انتشار العمل عن بعد، التعليم الإلكتروني الكامل، والدفع غير النقدي (Cashless Payment) في المعاملات اليومية.", 
+      en: "Empowered large-scale data analysis (Big Data), enabled Generative AI and deep learning models, popularized seamless remote work, full online learning platforms, and cashless payment infrastructure." 
+    },
+    keyInnovations: {
+      ar: [
+        "مراكز الحوسبة السحابية (AWS, Azure, Google Cloud) ومفهوم 'تكنولوجيا المعلومات كخدمة' (IT as a Service).",
+        "نماذج الذكاء الاصطناعي التوليدي (Generative AI) مثل ChatGPT ومحركات التعلم العميق.",
+        "المنظومات المتكاملة للدفع غير النقدي (Cashless Payment)، والقيادة الذاتية، والحوسبة الطرفية (Edge Computing)."
+      ],
+      en: [
+        "Cloud platforms (AWS, Azure, Google Cloud) offering 'IT as a Service'.",
+        "Generative AI models (e.g. ChatGPT, LLMs) and deep learning frameworks.",
+        "Cashless payment systems, autonomous driving platforms, and edge computing architectures."
+      ]
+    }
   }
 ];
 
@@ -179,69 +324,233 @@ export function Lesson1_1() {
       </div>
 
       {/* SECTION 1: The 5 Eras of IT (ص 4 - 5) */}
-      <div className="theme-panel border p-6 sm:p-8 rounded-3xl space-y-5">
+      <div className="theme-panel border p-6 sm:p-8 rounded-3xl space-y-6">
         <div className="flex items-center justify-between border-b border-slate-800 pb-3">
-          <h3 className="text-lg font-black flex items-center gap-2">
-            <span className="w-7 h-7 rounded-lg bg-blue-500/20 text-blue-400 flex items-center justify-center text-xs"><span className="lang-ar">١</span><span className="lang-en">1</span></span>
+          <h3 className="text-lg sm:text-xl font-black flex items-center gap-2">
+            <span className="w-8 h-8 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center text-sm font-bold"><span className="lang-ar">١</span><span className="lang-en">1</span></span>
             <span className="lang-ar">تاريخ تكنولوجيا المعلومات — العصور الخمسة الكبرى (ص 4 - ص 5)</span>
             <span className="lang-en">History of IT — The Five Evolutionary Eras (pp. 4 - 5)</span>
           </h3>
         </div>
 
+        {/* Introductory Real-Life Scenario Box (كتاب الوزارة ص 4 / p. 6) */}
+        <div className="p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-blue-900/30 via-slate-900/60 to-purple-900/30 border border-blue-500/30 text-xs sm:text-sm leading-relaxed space-y-3 shadow-sm">
+          <div className="flex items-center gap-2 text-blue-400 font-bold text-xs sm:text-sm">
+            <i className="fa-solid fa-sun text-amber-400 text-base"></i>
+            <span className="lang-ar">سيناريو الحياة اليومية (كتاب الوزارة ص 4): يوم في حياة طالب مصري</span>
+            <span className="lang-en">Daily Life Scenario (Textbook p. 6): A Day in the Life of an Egyptian Student</span>
+          </div>
+          <p className="text-sub">
+            <span className="lang-ar">
+              في يوم عادي، يقرأ طالب في مصر رسائل على أحد تطبيقات التواصل الاجتماعي (SNS)، ويدفع ثمن إفطاره إلكترونياً باستخدام تطبيق للدفع غير النقدي، وينضم إلى درس عبر الإنترنت، ويطلب كتاباً من متجر إلكتروني. 
+              قبل 20 عاماً، لم تكن معظم هذه الخدمات متاحة أو منتشرة بالصورة التي نعرفها اليوم. 
+              لقد مرت تكنولوجيا المعلومات بسلسلة من المراحل المتتابعة — من الحواسيب الأولى الضخمة إلى الحوسبة السحابية — وفي كل مرحلة غيرت طريقة تواصل الناس، وعملهم، وتعلمهم، ودفعهم للأموال.
+            </span>
+            <span className="lang-en">
+              On an ordinary day, a student in Egypt checks messages on an SNS app, pays for breakfast with a cashless app, joins a lesson through online learning, and orders a book from an e-commerce (EC) shop. 
+              Twenty years ago, most of this was not possible. Information technology has developed through a series of stages — from the first room-sized computers to cloud computing — and at each stage it has changed the way people communicate, work, learn, and pay.
+            </span>
+          </p>
+        </div>
+
         <p className="text-xs text-sub leading-relaxed">
-          <span className="lang-ar">على مدى أكثر من ثمانين عاماً، مرت تكنولوجيا المعلومات بخمس مراحل تطورية كبرى، مثلت كل مرحلة منها نقلة نوعية كاملة في شكل الأجهزة وحجمها وطريقة استخدامها وتأثيرها على المجتمع البشري:</span>
+          <span className="lang-ar">على مدى أكثر من ثمانين عاماً، مرت تكنولوجيا المعلومات بخمس مراحل تطورية كبرى، مثلت كل مرحلة منها نقلة نوعية كاملة في حجم الأجهزة وطريقة عملها وتأثيرها المباشر على المجتمع البشري:</span>
           <span className="lang-en">Over more than eight decades, IT transitioned across five major eras, each marking a complete paradigm shift in hardware size, functionality, and societal adoption:</span>
         </p>
 
         {/* Interactive Eras Selector */}
         <div className="grid grid-cols-2 sm:grid-cols-5 gap-2 text-xs">
-          {[
-            { icon: "💡", range: "1940s-1960s", ar: "الحواسيب الأولى", en: "First Computers" },
-            { icon: "🖥️", range: "1970s-1980s", ar: "الحواسب الشخصية", en: "Personal PCs" },
-            { icon: "🌐", range: "1990s", ar: "تسويق الإنترنت", en: "Web Era" },
-            { icon: "📱", range: "2000s", ar: "الهواتف الذكية", en: "Smartphones" },
-            { icon: "☁️", range: "2010s Onward", ar: "السحابة والذكاء", en: "Cloud & AI" }
-          ].map((item, i) => (
+          {erasData.map((item, i) => (
             <button
               key={i}
               onClick={() => handlePickEra(i)}
               className={`p-3 rounded-2xl theme-subpanel border text-center space-y-1 transition group ${
-                eraIdx === i ? 'border-blue-500 bg-blue-500/10 font-bold' : 'hover:border-blue-500'
+                eraIdx === i ? 'border-blue-500 bg-blue-500/10 font-bold shadow-md ring-1 ring-blue-500/30' : 'hover:border-blue-500/50 opacity-80 hover:opacity-100'
               } ${i === 4 ? 'col-span-2 sm:col-span-1' : ''}`}
             >
-              <span className="text-xl block group-hover:scale-110 transition">{item.icon}</span>
-              <strong className="block text-slate-200 text-[11px]">{item.range}</strong>
-              <span className="text-[10px] text-sub block">
-                <span className="lang-ar">{item.ar}</span>
-                <span className="lang-en">{item.en}</span>
+              <span className="text-2xl block group-hover:scale-110 transition">{item.icon}</span>
+              <strong className="block text-slate-200 text-[11px] font-mono">{item.period}</strong>
+              <span className="text-[10px] text-sub block line-clamp-1">
+                <span className="lang-ar">{item.badge.ar}</span>
+                <span className="lang-en">{item.badge.en}</span>
               </span>
             </button>
           ))}
         </div>
 
-        {/* Era Details Dynamic Card */}
-        <div className="p-5 rounded-2xl bg-slate-900/60 border border-blue-500/40 text-xs sm:text-sm leading-relaxed text-slate-200 space-y-2">
-          <strong className="text-brand-400 block text-base font-bold">
-            <span className="lang-ar">{erasData[eraIdx].title.ar}</span>
-            <span className="lang-en">{erasData[eraIdx].title.en}</span>
-          </strong>
-          <p className="text-sub">
-            <span className="lang-ar">{erasData[eraIdx].desc.ar}</span>
-            <span className="lang-en">{erasData[eraIdx].desc.en}</span>
+        {/* Era Details Dynamic Detailed Card */}
+        <div className="p-5 sm:p-6 rounded-2xl theme-subpanel border border-blue-500/40 text-xs sm:text-sm leading-relaxed space-y-4 shadow-md animate-fadeIn">
+          <div className="flex flex-wrap items-center justify-between gap-2 border-b border-slate-800 pb-3">
+            <div className="flex items-center gap-2">
+              <span className="text-2xl">{erasData[eraIdx].icon}</span>
+              <h4 className="text-base font-black text-blue-400">
+                <span className="lang-ar">{erasData[eraIdx].title.ar}</span>
+                <span className="lang-en">{erasData[eraIdx].title.en}</span>
+              </h4>
+            </div>
+            <span className="px-3 py-1 rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/30 text-xs font-mono font-bold">
+              {erasData[eraIdx].period}
+            </span>
+          </div>
+
+          <p className="text-slate-200 text-xs sm:text-sm leading-relaxed font-medium">
+            <span className="lang-ar">{erasData[eraIdx].summary.ar}</span>
+            <span className="lang-en">{erasData[eraIdx].summary.en}</span>
           </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2 text-xs">
+            {/* Hardware & Infrastructure */}
+            <div className="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800 space-y-1.5">
+              <div className="font-bold text-amber-400 flex items-center gap-1.5">
+                <i className="fa-solid fa-microchip"></i>
+                <span className="lang-ar">البنية التحتية والأجهزة (Hardware):</span>
+                <span className="lang-en">Hardware & Infrastructure:</span>
+              </div>
+              <p className="text-sub leading-relaxed">
+                <span className="lang-ar">{erasData[eraIdx].hardware.ar}</span>
+                <span className="lang-en">{erasData[eraIdx].hardware.en}</span>
+              </p>
+            </div>
+
+            {/* Societal Impact */}
+            <div className="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800 space-y-1.5">
+              <div className="font-bold text-emerald-400 flex items-center gap-1.5">
+                <i className="fa-solid fa-users text-xs"></i>
+                <span className="lang-ar">التأثير على المجتمع والأعمال:</span>
+                <span className="lang-en">Impact on Society & Business:</span>
+              </div>
+              <p className="text-sub leading-relaxed">
+                <span className="lang-ar">{erasData[eraIdx].impact.ar}</span>
+                <span className="lang-en">{erasData[eraIdx].impact.en}</span>
+              </p>
+            </div>
+          </div>
+
+          {/* Key Innovations Bullets */}
+          <div className="pt-2 border-t border-slate-800/60">
+            <span className="font-bold text-slate-300 block text-xs mb-2">
+              <span className="lang-ar">💡 أبرز ابتُكارات وتقنيات هذه الحقبة:</span>
+              <span className="lang-en">💡 Key Innovations & Breakthroughs:</span>
+            </span>
+            <ul className="grid grid-cols-1 sm:grid-cols-3 gap-2 text-xs text-sub">
+              {erasData[eraIdx].keyInnovations.ar.map((inn, idx) => (
+                <li key={idx} className="p-2 rounded-lg bg-slate-950/50 border border-slate-800/80 flex items-start gap-1.5">
+                  <span className="text-blue-400 font-bold shrink-0">•</span>
+                  <span>
+                    <span className="lang-ar">{inn}</span>
+                    <span className="lang-en">{erasData[eraIdx].keyInnovations.en[idx]}</span>
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
 
-        {/* Vacuum Tubes vs Transistor Deep Dive */}
-        <div className="p-4 rounded-2xl bg-amber-500/10 border border-amber-500/20 text-xs space-y-2">
-          <div className="font-bold text-amber-400 flex items-center gap-2">
-            <i className="fa-solid fa-lightbulb"></i>
-            <span className="lang-ar">إضاءة هندسية من كتاب الوزارة (ص 5): الصمامات المفرغة وحاسوب ENIAC</span>
-            <span className="lang-en">Engineering Deep Dive (p. 5): Vacuum Tubes & ENIAC</span>
+        {/* Full 5-Era Comparison Table (جدول الوزارة ص 5 / p. 6) */}
+        <div className="space-y-3 pt-2">
+          <div className="flex items-center justify-between">
+            <h4 className="font-bold text-xs sm:text-sm text-amber-400 flex items-center gap-2">
+              <i className="fa-solid fa-table-list"></i>
+              <span className="lang-ar">جدول المقارنة الشامل للعصور الخمسة (كتاب الوزارة ص 5)</span>
+              <span className="lang-en">Comprehensive 5-Era Comparison Table (Textbook p. 6)</span>
+            </h4>
+            <span className="text-[11px] text-sub">
+              <span className="lang-ar">جدول تلخيصي لكتاب الوزارة</span>
+              <span className="lang-en">Official Summary Table</span>
+            </span>
           </div>
-          <p className="text-sub leading-relaxed">
-            <span className="lang-ar">الصمام المفرغ (Vacuum Tube) هو لمبة زجاجية كبيرة تُمرر الكهرباء أو تمنعها لتمثيل الصفر (0) والواحد (1). كان حاسوب <strong>ENIAC</strong> يزن حوالي <strong>30 طناً</strong>، ويشغل مساحة غرفة ضخمة كاملة، ويحتوي على أكثر من 18 ألف صمام تستهلك طاقة كهربائية هائلة وتنبعث منها حرارة شديدة وتتعرض للتلف المستمر. وبظهور الترانزستور المصنوع من السيليكون تقلصت الأحجام لمليارات المرات.</span>
-            <span className="lang-en">The Vacuum Tube was an incandescent glass bulb acting as an electronic switch (0 or 1). The <strong>ENIAC</strong> computer weighed <strong>30 tons</strong>, occupied an entire room, and consumed massive electrical power for 18,000 tubes that constantly burned out. Silicon transistors revolutionized this by microscopic scaling.</span>
-          </p>
+
+          <div className="overflow-x-auto rounded-2xl border border-slate-800 shadow-sm">
+            <table className="w-full text-xs text-right dir-rtl min-w-[650px] border-collapse">
+              <thead>
+                <tr className="bg-slate-900 border-b border-slate-800 text-blue-400 font-bold">
+                  <th className="p-3 text-center w-28">
+                    <span className="lang-ar">الحقبة الزمنية</span>
+                    <span className="lang-en">Time Period</span>
+                  </th>
+                  <th className="p-3 text-right">
+                    <span className="lang-ar">العصر والتقنية الرئيسية</span>
+                    <span className="lang-en">Era & Major Technologies</span>
+                  </th>
+                  <th className="p-3 text-right">
+                    <span className="lang-ar">التأثير الأبرز على المجتمع والأعمال</span>
+                    <span className="lang-en">Impact on Society & Business</span>
+                  </th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-slate-800/60 bg-slate-950/40">
+                {erasData.map((era, i) => (
+                  <tr 
+                    key={i} 
+                    onClick={() => handlePickEra(i)}
+                    className={`hover:bg-blue-500/5 transition cursor-pointer ${eraIdx === i ? 'bg-blue-500/10 font-medium' : ''}`}
+                  >
+                    <td className="p-3 text-center font-mono font-bold text-amber-400 whitespace-nowrap">
+                      {era.period}
+                    </td>
+                    <td className="p-3">
+                      <div className="font-bold text-slate-200">
+                        <span className="lang-ar">{era.badge.ar}</span>
+                        <span className="lang-en">{era.badge.en}</span>
+                      </div>
+                      <div className="text-[11px] text-sub mt-0.5">
+                        <span className="lang-ar">{era.hardware.ar}</span>
+                        <span className="lang-en">{era.hardware.en}</span>
+                      </div>
+                    </td>
+                    <td className="p-3 text-sub leading-relaxed">
+                      <span className="lang-ar">{era.impact.ar}</span>
+                      <span className="lang-en">{era.impact.en}</span>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        {/* Vacuum Tubes vs Transistor Deep Dive (إضاءة هندسية ص 5 / p. 6) */}
+        <div className="p-4 sm:p-5 rounded-2xl bg-amber-500/10 border border-amber-500/30 text-xs sm:text-sm space-y-3 shadow-sm">
+          <div className="font-bold text-amber-400 flex items-center gap-2 text-sm">
+            <i className="fa-solid fa-lightbulb text-amber-400 text-base"></i>
+            <span className="lang-ar">إضاءة هندسية من كتاب الوزارة (ص 5): الصمامات المفرغة وحاسوب ENIAC والسيليكون</span>
+            <span className="lang-en">Engineering Deep Dive (p. 5): Vacuum Tubes, ENIAC & Silicon Microprocessors</span>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs leading-relaxed text-sub">
+            <div className="p-3 rounded-xl bg-slate-900/90 border border-amber-500/20 space-y-1.5">
+              <strong className="text-amber-300 block font-bold">
+                <span className="lang-ar">💡 الصمام المفرغ (Vacuum Tube) وحاسوب ENIAC:</span>
+                <span className="lang-en">💡 Vacuum Tubes & ENIAC Computer:</span>
+              </strong>
+              <p>
+                <span className="lang-ar">
+                  الصمام المفرغ هو لمبة زجاجية مفرغة تُمرر أو تمنع الشحنة الكهربائية لتمثيل <strong>(0)</strong> و <strong>(1)</strong>. 
+                  كان حاسوب <strong>ENIAC</strong> أول حاسوب إلكتروني رقمي عام، وكان يزن حوالي <strong>30 طناً</strong>، ويحتل مساحة غرفة كاملة، ويحتوي على أكثر من <strong>18,000 صمام مفرغ</strong> تستهلك طاقة كهربائية هائلة وتنبعث منها حرارة مرتفعة جداً وتتلف باستمرار مما يتطلب استبدالها طوال اليوم.
+                </span>
+                <span className="lang-en">
+                  The Vacuum Tube was an incandescent glass bulb acting as an electronic switch (0 or 1). 
+                  The <strong>ENIAC</strong> computer weighed <strong>30 tons</strong>, filled an entire room, and consumed massive electricity to power <strong>18,000 vacuum tubes</strong> that continuously emitted intense heat and frequently burned out.
+                </span>
+              </p>
+            </div>
+
+            <div className="p-3 rounded-xl bg-slate-900/90 border border-amber-500/20 space-y-1.5">
+              <strong className="text-emerald-400 block font-bold">
+                <span className="lang-ar">🔬 ثورة الترانزستور وشريحة السيليكون:</span>
+                <span className="lang-en">🔬 Transistor & Silicon Microchip Revolution:</span>
+              </strong>
+              <p>
+                <span className="lang-ar">
+                  مع اختراع الترانزستور المصنوع من السيليكون في سبعينيات القرن الماضي، استُبدلت اللمبات الزجاجية الضخمة بمكونات مجهرية متناهية الصغر. 
+                  سمح ذلك بدمج الملايين ثم المليارات من الترانزستورات على شريحة دائرة متكاملة واحدة لا تتعدى مساحة ظفر الإبهام، مما أتاح نقل القدرة الحوسبية من السيرفرات العسكرية لغرفة المعيشة وجيب كل إنسان.
+                </span>
+                <span className="lang-en">
+                  With the invention of the silicon transistor in the 1970s, bulky glass bulbs were replaced by microscopic solid-state components. 
+                  This enabled embedding millions and billions of transistors onto a single microchip the size of a fingernail, democratizing computing power from military bunkers to everyday home desks and pockets.
+                </span>
+              </p>
+            </div>
+          </div>
         </div>
       </div>
 

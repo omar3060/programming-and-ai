@@ -54,7 +54,7 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/logo.png" />
         <link rel="stylesheet" href="/fontawesome/css/all.min.css" />
       </head>
-      <body suppressHydrationWarning className="min-h-full flex flex-col antialiased select-none">
+      <body suppressHydrationWarning className="min-h-full flex flex-col antialiased">
         <AppProviders>
           {children}
           <PwaRegister />
