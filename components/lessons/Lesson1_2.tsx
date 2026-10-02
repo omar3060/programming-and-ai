@@ -196,7 +196,7 @@ export function Lesson1_2() {
                 <span className="lang-en">AI Mechanics</span>
               </span>
               <DownloadEvaluationButton
-                pdfUrl="/evaluations/unit1/lesson1_2_eval.pdf"
+                pdfUrl="/evaluations/unit1/lesson1_2_eval.pdf?v=20261002"
                 fileName="حل_تقييمات_الدرس_الثاني_كيف_يعمل_الذكاء_الاصطناعي.pdf"
                 lessonTitle="الدرس الثاني"
               />

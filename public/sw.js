@@ -1,4 +1,4 @@
-const CACHE_NAME = 'prog2sec-offline-v3';
+const CACHE_NAME = 'prog2sec-offline-v4';
 
 // Essential static resources to cache for offline PWA app shell
 const CORE_ASSETS = [
@@ -56,7 +56,23 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  // A. Navigation Mode (Opening app, navigating pages, PWA launch from home screen)
+  // A. PDF Download Handling: Network-First strategy so PDF updates are immediately fetched
+  if (url.pathname.endsWith('.pdf')) {
+    event.respondWith(
+      fetch(event.request)
+        .then((networkResponse) => {
+          if (networkResponse && networkResponse.status === 200) {
+            const responseClone = networkResponse.clone();
+            caches.open(CACHE_NAME).then((cache) => cache.put(event.request, responseClone));
+          }
+          return networkResponse;
+        })
+        .catch(() => caches.match(event.request))
+    );
+    return;
+  }
+
+  // B. Navigation Mode (Opening app, navigating pages, PWA launch from home screen)
   if (event.request.mode === 'navigate' || event.request.headers.get('accept')?.includes('text/html')) {
     event.respondWith(
       fetch(event.request)
@@ -126,7 +142,7 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  // B. Static Assets (JS, CSS, Images, Fonts, Next.js Static Chunks): Cache-First Strategy
+  // C. Static Assets (JS, CSS, Images, Fonts, Next.js Static Chunks): Cache-First Strategy
   event.respondWith(
     caches.match(event.request, { ignoreSearch: true }).then((cachedResponse) => {
       if (cachedResponse) {

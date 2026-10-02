@@ -250,7 +250,7 @@ export function Lesson1_1() {
                 <span className="lang-en">IT and Society</span>
               </span>
               <DownloadEvaluationButton
-                pdfUrl="/evaluations/unit1/lesson1_1_eval.pdf"
+                pdfUrl="/evaluations/unit1/lesson1_1_eval.pdf?v=20261002"
                 fileName="حل_تقييمات_الدرس_الأول_تطور_تكنولوجيا_المعلومات.pdf"
                 lessonTitle="الدرس الأول"
               />

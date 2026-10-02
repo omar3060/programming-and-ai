@@ -59,7 +59,7 @@ export function Lesson1_4() {
                 <span className="lang-en">AI Ethics & Governance</span>
               </span>
               <DownloadEvaluationButton
-                pdfUrl="/evaluations/unit1/lesson1_4_eval.pdf"
+                pdfUrl="/evaluations/unit1/lesson1_4_eval.pdf?v=20261002"
                 fileName="حل_تقييمات_الدرس_الرابع_القضايا_الأخلاقية_للذكاء_الاصطناعي.pdf"
                 lessonTitle="الدرس الرابع"
               />

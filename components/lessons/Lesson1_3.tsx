@@ -53,7 +53,7 @@ export function Lesson1_3() {
                 <span className="lang-en">AI Applications</span>
               </span>
               <DownloadEvaluationButton
-                pdfUrl="/evaluations/unit1/lesson1_3_eval.pdf"
+                pdfUrl="/evaluations/unit1/lesson1_3_eval.pdf?v=20261002"
                 fileName="حل_تقييمات_الدرس_الثالث_الذكاء_الاصطناعي_في_الحياة_اليومية.pdf"
                 lessonTitle="الدرس الثالث"
               />
