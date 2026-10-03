@@ -165,7 +165,7 @@ export function InstructorBioCard() {
               <i className="fa-solid fa-tags"></i>
               <span>أسعار الاشتراك الشهري للدروس التفاعلية المباشرة (حصتين أسبوعياً):</span>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs pt-1 font-bold">
+            {/* <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs pt-1 font-bold">
               <div className="p-2.5 rounded-xl theme-panel border border-amber-500/40 text-slate-900 dark:text-amber-300 flex items-center justify-between shadow-sm">
                 <span>اولى بكالوريا (عربي / لغات):</span>
                 <span className="px-2 py-0.5 rounded bg-amber-500 text-slate-950 font-black text-xs shrink-0">150 جنيه شهريا</span>
@@ -174,7 +174,7 @@ export function InstructorBioCard() {
                 <span>ثانيه بكالوريا (عربي / لغات):</span>
                 <span className="px-2 py-0.5 rounded bg-amber-500 text-slate-950 font-black text-xs shrink-0">250 جنيه شهريا</span>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
 
