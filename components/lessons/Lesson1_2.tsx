@@ -598,206 +598,318 @@ export function Lesson1_2() {
         </div>
       </div>
 
-      {/* TEXTBOOK ENRICHMENT FEATURES (كتاب الوزارة ص 11 - 17) */}
+      {/* TEXTBOOK ENRICHMENT FEATURES (كتاب الوزارة ص 13 - ص 17) */}
       <div className="theme-panel border p-6 sm:p-8 rounded-3xl space-y-6">
         <div className="flex items-center justify-between border-b border-slate-800 pb-3">
           <div>
             <span className="text-[10px] text-amber-400 uppercase font-bold tracking-wider">
-              <span className="lang-ar">ميزات وأنشطة كتاب الوزارة الرسمية للدرس 1-2</span>
-              <span className="lang-en">Official Lesson 1-2 Textbook Enrichment Features</span>
+              <span className="lang-ar">أنشطة كتاب الوزارة الرسمية — الدرس 1-2</span>
+              <span className="lang-en">Official Textbook Activities — Lesson 1-2</span>
             </span>
             <h3 className="text-lg font-black mt-0.5 flex items-center gap-2">
               <i className="fa-solid fa-graduation-cap text-amber-400"></i>
-              <span className="lang-ar">أنشطة: توقف وفكر • استقصِ كمهندس • فكر كمهندس • نمط الامتحان</span>
-              <span className="lang-en">Activities: Pause & Think • Investigate • Exam Style</span>
+              <span className="lang-ar">أنشطة: توقف وفكر • استقصِ بالأزواج • فكر كمهندس • نمط الامتحان</span>
+              <span className="lang-en">Activities: Think It Through • Explore · In Pairs • Think as an Engineer • Exam Style</span>
             </h3>
           </div>
           <span className="text-xs text-sub font-mono">ص 13 - ص 17</span>
         </div>
 
-        {/* 1. Pause & Think (1) */}
-        <div onClick={() => handleToggleCard('pause-think-1-2-1')} className="p-5 rounded-2xl theme-subpanel border border-brand-500/30 space-y-3 cursor-pointer select-none group hover:border-brand-500 transition">
+        {/* 1. Think It Through (1) — p. 13 */}
+        <div onClick={() => handleToggleCard('think-tt-1-2-1')} className="p-5 rounded-2xl theme-subpanel border border-brand-500/30 space-y-3 cursor-pointer select-none group hover:border-brand-500 transition">
           <div className="flex items-center justify-between">
             <span className="px-3 py-1 rounded-full bg-brand-500/20 text-brand-400 text-xs font-bold flex items-center gap-1.5">
-              <i className="fa-solid fa-brain"></i>
-              <span className="lang-ar">🧠 توقف وفكر (1) (كتاب الوزارة ص 13)</span>
-              <span className="lang-en">🧠 Pause & Think (1) (Textbook p. 13)</span>
+              <i className="fa-solid fa-lightbulb"></i>
+              <span className="lang-ar">💡 توقف وفكر (1) — كتاب الوزارة ص 13</span>
+              <span className="lang-en">💡 Think It Through (1) — Textbook p. 13</span>
             </span>
-            <button onClick={(e) => { e.stopPropagation(); handleToggleCard('pause-think-1-2-1'); }} className="text-xs font-bold text-brand-400 hover:underline flex items-center gap-1 cursor-pointer">
-              <span className="lang-ar">{expandedCards['pause-think-1-2-1'] ? 'إخفاء الإجابة' : 'عرض الإجابة والتحليل النموذجي'}</span>
-              <span className="lang-en">{expandedCards['pause-think-1-2-1'] ? 'Hide Answer' : 'Reveal Model Analysis'}</span>
-              <i className={`fa-solid fa-chevron-down text-[10px] transition-transform ${expandedCards['pause-think-1-2-1'] ? 'rotate-180' : ''}`}></i>
+            <button onClick={(e) => { e.stopPropagation(); handleToggleCard('think-tt-1-2-1'); }} className="text-xs font-bold text-brand-400 hover:underline flex items-center gap-1 cursor-pointer">
+              <span className="lang-ar">{expandedCards['think-tt-1-2-1'] ? 'إخفاء الإجابة' : 'عرض الإجابة النموذجية'}</span>
+              <span className="lang-en">{expandedCards['think-tt-1-2-1'] ? 'Hide Answer' : 'Show Model Answer'}</span>
+              <i className={`fa-solid fa-chevron-down text-[10px] transition-transform ${expandedCards['think-tt-1-2-1'] ? 'rotate-180' : ''}`}></i>
             </button>
           </div>
           <p className="text-xs font-bold text-slate-200">
-            <span className="lang-ar">"ما الفرق الجوهري بين البرمجة التقليدية القائمة على القواعد (Rule-Based) والتعلم الآلي (Machine Learning) في أسلوب حل المشكلات؟ ومتى نفضل كل منهما هندسياً؟"</span>
-            <span className="lang-en">"What is the fundamental difference between rule-based programming and machine learning, and when is each preferred?"</span>
+            <span className="lang-ar">فلاتر البريد العشوائي (Spam Filters) وتوصيات المنتجات (Product Recommendations) كلاهما مثالان على التعلم الآلي، لكن المهام التي يؤديانها مختلفة تمامًا. من منظور كيفية عمل الذكاء الاصطناعي، اشرح ما المشترك بين هذين التطبيقين.</span>
+            <span className="lang-en">Spam filters and product recommendations are both examples of machine learning, but the tasks they perform are completely different. From the perspective of how AI works, explain what these two applications have in common.</span>
           </p>
-          {expandedCards['pause-think-1-2-1'] && (
+          {expandedCards['think-tt-1-2-1'] && (
             <div onClick={(e) => e.stopPropagation()} className="p-4 rounded-xl bg-slate-900 border border-brand-500/40 text-xs leading-relaxed text-slate-300 space-y-2 animate-fadeIn cursor-auto select-text">
               <strong className="text-brand-400 block font-bold">
-                <span className="lang-ar">💡 التحليل الهندسي المعتمد (م/ عمر محمود):</span>
-                <span className="lang-en">💡 Engineering Analysis:</span>
+                <span className="lang-ar">💡 الإجابة النموذجية:</span>
+                <span className="lang-en">💡 Model Answer:</span>
               </strong>
               <p>
-                <span className="lang-ar">في <strong>البرمجة التقليدية</strong>، يدخل المبرمج (البيانات + القواعد الصريحة) لينتج الحاسوب (الإجابة). هذه الطريقة مثالية للمسائل الحتمية الثابتة كحساب الضرائب أو كشوف المرتبات. أما في <strong>التعلّم الآلي</strong>، نغذي الحاسوب بـ (البيانات + الإجابات السابقة) ليقوم هو باستنتاج (القواعد والأنماط). وهذا هو الأسلوب الوحيد الممكن للمسائل المعقدة كالتعرف على الوجوه أو فهم اللغات لأن كتابة ملايين القواعد البشرية يدويًا أمر مستحيل.</span>
-                <span className="lang-en">Traditional coding takes (Data + Explicit Rules) to compute (Answers) for deterministic logic. Machine Learning takes (Data + Historical Answers) to infer (Rules and Patterns) for complex tasks like vision and translation.</span>
+                <span className="lang-ar">كلا التطبيقين يعتمدان على <strong>تعلّم الأنماط من البيانات</strong> لإصدار تنبؤات أو أحكام، وهو جوهر التعلم الآلي. فالنظام لا يُبرمَج بقواعد صريحة يكتبها المبرمج مسبقاً، بل يكتشف الأنماط بنفسه من بيانات تدريبية تاريخية. فلتر البريد العشوائي يتعلم من أمثلة رسائل سبق تصنيفها كـ &quot;spam&quot; أو &quot;not spam&quot;، وتوصيات المنتجات تتعلم من سلوك المستخدمين السابق. المشترك هو: <strong>التعلم من البيانات لا من قواعد مكتوبة يدوياً.</strong></span>
+                <span className="lang-en">Both applications share the same fundamental approach: they <strong>learn patterns from data</strong> to make predictions or judgments — the core of machine learning. Neither relies on hand-written explicit rules. The spam filter learns from past labelled examples (&quot;spam&quot; / &quot;not spam&quot;), while the recommendation system learns from previous user behavior. The common ground is: <strong>learning from data rather than following hand-written rules.</strong></span>
               </p>
             </div>
           )}
         </div>
 
-        {/* 2. Pause & Think (2) */}
-        <div onClick={() => handleToggleCard('pause-think-1-2-2')} className="p-5 rounded-2xl theme-subpanel border border-purple-500/30 space-y-3 cursor-pointer select-none group hover:border-purple-500 transition">
+        {/* 2. Explore · In Pairs — p. 14 */}
+        <div onClick={() => handleToggleCard('explore-pairs-1-2')} className="p-5 rounded-2xl theme-subpanel border border-cyan-500/30 space-y-3 cursor-pointer select-none group hover:border-cyan-500 transition">
           <div className="flex items-center justify-between">
-            <span className="px-3 py-1 rounded-full bg-purple-500/20 text-purple-400 text-xs font-bold flex items-center gap-1.5">
-              <i className="fa-solid fa-robot"></i>
-              <span className="lang-ar">🧠 توقف وفكر (2) (كتاب الوزارة ص 16)</span>
-              <span className="lang-en">🧠 Pause & Think (2) (Textbook p. 16)</span>
+            <span className="px-3 py-1 rounded-full bg-cyan-500/20 text-cyan-400 text-xs font-bold flex items-center gap-1.5">
+              <i className="fa-solid fa-people-group"></i>
+              <span className="lang-ar">✎ استقصِ بالأزواج — كتاب الوزارة ص 14</span>
+              <span className="lang-en">✎ Explore · In Pairs — Textbook p. 14</span>
             </span>
-            <button onClick={(e) => { e.stopPropagation(); handleToggleCard('pause-think-1-2-2'); }} className="text-xs font-bold text-purple-400 hover:underline flex items-center gap-1 cursor-pointer">
-              <span className="lang-ar">{expandedCards['pause-think-1-2-2'] ? 'إخفاء الإجابة' : 'عرض الشرح المنهجي'}</span>
-              <span className="lang-en">{expandedCards['pause-think-1-2-2'] ? 'Hide Answer' : 'Reveal Analysis'}</span>
-              <i className={`fa-solid fa-chevron-down text-[10px] transition-transform ${expandedCards['pause-think-1-2-2'] ? 'rotate-180' : ''}`}></i>
+            <button onClick={(e) => { e.stopPropagation(); handleToggleCard('explore-pairs-1-2'); }} className="text-xs font-bold text-cyan-400 hover:underline flex items-center gap-1 cursor-pointer">
+              <span className="lang-ar">{expandedCards['explore-pairs-1-2'] ? 'إخفاء الإجابة' : 'عرض الإجابة النموذجية'}</span>
+              <span className="lang-en">{expandedCards['explore-pairs-1-2'] ? 'Hide Answer' : 'Show Model Answer'}</span>
+              <i className={`fa-solid fa-chevron-down text-[10px] transition-transform ${expandedCards['explore-pairs-1-2'] ? 'rotate-180' : ''}`}></i>
             </button>
           </div>
           <p className="text-xs font-bold text-slate-200">
-            <span className="lang-ar">"لماذا لا يُعد توليد النصوص الفصيحة والمنسقة من نماذج كـ ChatGPT دليلاً على امتلاكه وعياً أو فهماً حقيقياً للمعاني؟"</span>
-            <span className="lang-en">"Why does fluent text synthesis by ChatGPT not indicate actual cognitive consciousness or semantic comprehension?"</span>
+            <span className="lang-ar">مع شريك، اذكر ثلاث مهام يقوم بها الهاتف أو الكمبيوتر تبدو وكأنها تحتاج إلى &quot;ذكاء&quot; (مثال: فرز البريد العشوائي، توصية فيديو، أو ترجمة نص). ثم توقّع: هل يتبع الكمبيوتر قواعد ثابتة، أم يتعلم من أمثلة؟ أعطِ سببًا واحدًا.</span>
+            <span className="lang-en">With a partner, list three tasks a phone or computer does for you that seem to need &quot;intelligence&quot; (for example, sorting spam, recommending a video, or translating text). Then predict: does the computer follow fixed rules, or does it learn from examples? Give one reason.</span>
           </p>
-          {expandedCards['pause-think-1-2-2'] && (
-            <div onClick={(e) => e.stopPropagation()} className="p-4 rounded-xl bg-slate-900 border border-purple-500/40 text-xs leading-relaxed text-slate-300 space-y-2 animate-fadeIn cursor-auto select-text">
-              <strong className="text-purple-300 block font-bold">
-                <span className="lang-ar">💡 التفسير العلمي (منهج ثانية ثانوي):</span>
-                <span className="lang-en">💡 Scientific Explanation:</span>
+          {expandedCards['explore-pairs-1-2'] && (
+            <div onClick={(e) => e.stopPropagation()} className="p-4 rounded-xl bg-slate-900 border border-cyan-500/40 text-xs leading-relaxed text-slate-300 space-y-2 animate-fadeIn cursor-auto select-text">
+              <strong className="text-cyan-400 block font-bold">
+                <span className="lang-ar">💡 إجابة نموذجية:</span>
+                <span className="lang-en">💡 Model Answer:</span>
               </strong>
-              <p>
-                <span className="lang-ar">لأن نماذج اللغة الكبيرة هي محركات رياضية إحصائية للتنبؤ اللفظي (Stochastic Text Predictors)؛ هي تحسب فقط الاحتمال الرياضي لظهور الكلمة التالية بناءً على ملايين النصوص التي تدربت عليها دون أن تمتلك إدراكاً حقيقياً للعالم المادي أو إحساساً بمعنى الكلمات (مثل الببغاء الذكي الذي يقلد فصاحة البشر دون فهم المعنى الواقعي).</span>
-                <span className="lang-en">Large language models are probabilistic mathematical predictors calculating the next token statistically without conscious awareness or grounded physical semantic comprehension.</span>
-              </p>
-            </div>
-          )}
-        </div>
-
-        {/* 3. Investigate Like an Engineer */}
-        <div onClick={() => handleToggleCard('investigate-1-2')} className="p-5 rounded-2xl theme-subpanel border border-emerald-500/30 space-y-3 cursor-pointer select-none group hover:border-emerald-500 transition">
-          <div className="flex items-center justify-between">
-            <span className="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-bold flex items-center gap-1.5">
-              <i className="fa-solid fa-filter-circle-dollar"></i>
-              <span className="lang-ar">🔍 استقصِ كمهندس (كتاب الوزارة ص 14)</span>
-              <span className="lang-en">🔍 Investigate Like an Engineer (p. 14)</span>
-            </span>
-            <button onClick={(e) => { e.stopPropagation(); handleToggleCard('investigate-1-2'); }} className="text-xs font-bold text-emerald-400 hover:underline flex items-center gap-1 cursor-pointer">
-              <span className="lang-ar">{expandedCards['investigate-1-2'] ? 'إخفاء الإجابة' : 'عرض التصميم البرمجي المقترح'}</span>
-              <span className="lang-en">{expandedCards['investigate-1-2'] ? 'Hide Answer' : 'Reveal Pipeline Design'}</span>
-              <i className={`fa-solid fa-chevron-down text-[10px] transition-transform ${expandedCards['investigate-1-2'] ? 'rotate-180' : ''}`}></i>
-            </button>
-          </div>
-          <p className="text-xs font-bold text-slate-200">
-            <span className="lang-ar">"تخيل أنك مهندس برمجيات مسؤول عن نظام ذكاء اصطناعي يقدم استشارات برمجية وطبية للمستخدمين: كيف تصمم خط أنابيب (Pipeline) برمجي تلقائي يكتشف هلوسة الذكاء الاصطناعي ويمنع وصول المعلومات الخاطئة للمستخدمين؟"</span>
-            <span className="lang-en">"Design an automated software pipeline that intercepts and flags AI hallucinations before reaching end-users."</span>
-          </p>
-          {expandedCards['investigate-1-2'] && (
-            <div onClick={(e) => e.stopPropagation()} className="p-4 rounded-xl bg-slate-900 border border-emerald-500/40 text-xs leading-relaxed text-slate-300 space-y-2 animate-fadeIn cursor-auto select-text">
-              <strong className="text-emerald-400 block font-bold">
-                <span className="lang-ar">خطوات خط الأنابيب البرمجي الخمس (م/ عمر محمود):</span>
-                <span className="lang-en">5-Step Engineering Pipeline:</span>
-              </strong>
-              <ol className="space-y-1 list-decimal rtl:pr-4 ltr:pl-4 text-sub">
-                <li><strong>تطبيق تقنية الاسترجاع المعزز (RAG):</strong> ربط النموذج بقاعدة بيانات طبية موثوقة ومفهرسة بحيث لا يولد إجابة إلا من نصوص ومراجع رسمية.</li>
-                <li><strong>فاحص الحقائق التلقائي (Fact-Checking Filter):</strong> تمرير الإجابة على خوارزمية تحقق مستقلة تقارن كل ادعاء بمراجع موثوقة.</li>
-                <li><strong>حساب درجة الثقة (Confidence Scoring):</strong> إذا كانت نسبة احتمالية النص أقل من 90%، يرفض النظام الإجابة تلقائياً.</li>
-                <li><strong>إرفاق المصادر الإلزامية:</strong> إجبار النموذج على وضع رابط ورقم المرجع الطبي المؤكد لكل سطر يكتبه.</li>
-                <li><strong>التأكيد البشري الإلزامي (Human Review):</strong> في الحالات الصحية الحرجة، لا تخرج النتيجة للمريض إلا بعد مراجعة طبيب معتمد.</li>
-              </ol>
-            </div>
-          )}
-        </div>
-
-        {/* 4. Think Like an Engineer */}
-        <div onClick={() => handleToggleCard('think-eng-1-2')} className="p-5 rounded-2xl theme-subpanel border border-amber-500/30 space-y-3 cursor-pointer select-none group hover:border-amber-500 transition">
-          <div className="flex items-center justify-between">
-            <span className="px-3 py-1 rounded-full bg-amber-500/20 text-amber-400 text-xs font-bold flex items-center gap-1.5">
-              <i className="fa-solid fa-network-wired"></i>
-              <span className="lang-ar">💡 فكر كمهندس (كتاب الوزارة ص 17)</span>
-              <span className="lang-en">💡 Think Like an Engineer (p. 17)</span>
-            </span>
-            <button onClick={(e) => { e.stopPropagation(); handleToggleCard('think-eng-1-2'); }} className="text-xs font-bold text-amber-400 hover:underline flex items-center gap-1 cursor-pointer">
-              <span className="lang-ar">{expandedCards['think-eng-1-2'] ? 'إخفاء الإجابة' : 'عرض التصميم التشريحي للشبكة'}</span>
-              <span className="lang-en">{expandedCards['think-eng-1-2'] ? 'Hide Answer' : 'Reveal Architecture Design'}</span>
-              <i className={`fa-solid fa-chevron-down text-[10px] transition-transform ${expandedCards['think-eng-1-2'] ? 'rotate-180' : ''}`}></i>
-            </button>
-          </div>
-          <p className="text-xs font-bold text-slate-200">
-            <span className="lang-ar">"طلب منك مصنع تمور مصري تصميم شبكة عصبية اصطناعية (ANN) لفرز التمور آلياً على سير متحرك: حدد ما هي المدخلات في طبقة الإدخال، وما دور الطبقات المخفية، وما المخرجات في طبقة الإخراج؟"</span>
-            <span className="lang-en">"Design an ANN sorting dates on a factory conveyor: Define Input features, Hidden layer tasks, and Output classifications."</span>
-          </p>
-          {expandedCards['think-eng-1-2'] && (
-            <div onClick={(e) => e.stopPropagation()} className="p-4 rounded-xl bg-slate-900 border border-amber-500/40 text-xs leading-relaxed text-slate-300 space-y-2 animate-fadeIn cursor-auto select-text">
-              <strong className="text-amber-400 block font-bold">
-                <span className="lang-ar">التصميم المعماري الهندسي للشبكة العصبية:</span>
-                <span className="lang-en">ANN Architecture Breakdown:</span>
-              </strong>
-              <div className="space-y-1.5 text-[11px] text-sub">
-                <p>• <strong>طبقة الإدخال (Input Layer):</strong> تستقبل ميزات كل تمرة من الكاميرا والميزان (الحجم، الطول، درجة اللون، نسبة الرطوبة، وجود بقع داكنة أو شقوق).</p>
-                <p>• <strong>الطبقات المخفية (Hidden Layers):</strong> تعالج العلاقات بين هذه الخصائص؛ فالطبقة الأولى تكشف الحواف واللون، والطبقة الثانية تدمج نسبة الرطوبة مع اللون لتمييز النضج والعيوب عبر الأوزان ودوال التنشيط.</p>
-                <p>• <strong>طبقة الإخراج (Output Layer):</strong> تحتوي على 3 خلايا إخراج تمثل جودة التمرة: 1) درجة أولى للتصدير، 2) درجة ثانية للاستهلاك المحلي، 3) تالف للاستبعاد.</p>
+              <div className="space-y-2">
+                <p>
+                  <span className="lang-ar"><strong>المهام الثلاث:</strong><br/>① فرز البريد العشوائي — الهاتف يفصل الرسائل المزعجة تلقائياً.<br/>② توصية مقاطع الفيديو — تطبيقات كـ YouTube تقترح فيديوهات بناءً على سجل المشاهدة.<br/>③ الترجمة التلقائية — تطبيقات مثل Google Translate تحوّل النص من لغة إلى أخرى.</span>
+                  <span className="lang-en"><strong>Three tasks:</strong><br/>① Sorting spam — the phone automatically filters junk messages.<br/>② Recommending videos — apps like YouTube suggest content based on viewing history.<br/>③ Automatic translation — apps like Google Translate convert text between languages.</span>
+                </p>
+                <p>
+                  <span className="lang-ar"><strong>التوقّع:</strong> هذه المهام تعتمد على <strong>التعلم من أمثلة</strong> لا على قواعد ثابتة. السبب: مهمة مثل ترجمة كل جملة في اللغة العربية بقواعد مكتوبة يدوياً أمر مستحيل بشرياً، لذلك يتعلم النظام الأنماط من ملايين الجمل المترجمة سابقاً.</span>
+                  <span className="lang-en"><strong>Prediction:</strong> These tasks rely on <strong>learning from examples</strong>, not fixed rules. Reason: writing rules for translating every possible sentence by hand is impossible — the system instead learns patterns from millions of previously translated sentences.</span>
+                </p>
               </div>
             </div>
           )}
         </div>
 
-        {/* 5. Exam Style Question */}
-        <div onClick={() => handleToggleCard('exam-style-1-2')} className="p-5 rounded-2xl theme-subpanel border border-rose-500/30 space-y-3 cursor-pointer select-none group hover:border-rose-500 transition">
+        {/* 3. Pause & Think — p. 15 */}
+        <div onClick={() => handleToggleCard('pause-think-1-2-3')} className="p-5 rounded-2xl theme-subpanel border border-purple-500/30 space-y-3 cursor-pointer select-none group hover:border-purple-500 transition">
           <div className="flex items-center justify-between">
-            <span className="px-3 py-1 rounded-full bg-rose-500/20 text-rose-400 text-xs font-bold flex items-center gap-1.5">
-              <i className="fa-solid fa-file-pen"></i>
-              <span className="lang-ar">📝 سؤال على نمط الامتحان (6 درجات) — كتاب الوزارة</span>
-              <span className="lang-en">📝 Exam-Style Question (6 Marks)</span>
+            <span className="px-3 py-1 rounded-full bg-purple-500/20 text-purple-400 text-xs font-bold flex items-center gap-1.5">
+              <i className="fa-solid fa-brain"></i>
+              <span className="lang-ar">🧠 توقف وفكر — كتاب الوزارة ص 15</span>
+              <span className="lang-en">🧠 Pause &amp; Think — Textbook p. 15</span>
             </span>
-            <button onClick={(e) => { e.stopPropagation(); handleToggleCard('exam-style-1-2'); }} className="text-xs font-bold text-rose-400 hover:underline flex items-center gap-1 cursor-pointer">
-              <span className="lang-ar">{expandedCards['exam-style-1-2'] ? 'إخفاء الإجابة' : 'عرض جدول المقارنة وتوزيع الدرجات'}</span>
-              <span className="lang-en">{expandedCards['exam-style-1-2'] ? 'Hide Answer' : 'Model Answer Table'}</span>
-              <i className={`fa-solid fa-chevron-down text-[10px] transition-transform ${expandedCards['exam-style-1-2'] ? 'rotate-180' : ''}`}></i>
+            <button onClick={(e) => { e.stopPropagation(); handleToggleCard('pause-think-1-2-3'); }} className="text-xs font-bold text-purple-400 hover:underline flex items-center gap-1 cursor-pointer">
+              <span className="lang-ar">{expandedCards['pause-think-1-2-3'] ? 'إخفاء الإجابة' : 'عرض الشرح النموذجي'}</span>
+              <span className="lang-en">{expandedCards['pause-think-1-2-3'] ? 'Hide Answer' : 'Show Model Answer'}</span>
+              <i className={`fa-solid fa-chevron-down text-[10px] transition-transform ${expandedCards['pause-think-1-2-3'] ? 'rotate-180' : ''}`}></i>
             </button>
           </div>
           <p className="text-xs font-bold text-slate-200">
-            <span className="lang-ar">"قارن في جدول منظم بين التعلّم الآلي التقليدي (Machine Learning) والتعلم العميق (Deep Learning) من حيث: بنية الخوارزمية، الاعتماد على البيانات الضخمة، والقدرة على استخراج الميزات (Feature Extraction)."</span>
-            <span className="lang-en">"Compare traditional ML and DL across: Algorithm structure, Big data dependency, and Feature extraction capability."</span>
+            <span className="lang-ar">التعلم العميق يحتاج إلى بيانات ضخمة النطاق للتعلم. لماذا قد يعاني الذكاء الاصطناعي في التعامل مع شيء نادر الظهور في بياناته؟</span>
+            <span className="lang-en">Deep learning needs large-scale data to learn. Why might an AI struggle with something it has rarely seen in its data?</span>
           </p>
-          {expandedCards['exam-style-1-2'] && (
-            <div onClick={(e) => e.stopPropagation()} className="p-4 rounded-xl bg-slate-900 border border-rose-500/40 text-xs leading-relaxed text-slate-300 space-y-2 animate-fadeIn cursor-auto select-text">
-              <strong className="text-rose-400 block font-bold">
-                <span className="lang-ar">جدول المقارنة النموذجي للحصول على الدرجة الكاملة (6/6):</span>
-                <span className="lang-en">Comparison Table for Full Marks (6/6):</span>
+          {expandedCards['pause-think-1-2-3'] && (
+            <div onClick={(e) => e.stopPropagation()} className="p-4 rounded-xl bg-slate-900 border border-purple-500/40 text-xs leading-relaxed text-slate-300 space-y-2 animate-fadeIn cursor-auto select-text">
+              <strong className="text-purple-300 block font-bold">
+                <span className="lang-ar">💡 الإجابة النموذجية:</span>
+                <span className="lang-en">💡 Model Answer:</span>
               </strong>
-              <div className="overflow-x-auto">
-                <table className="w-full text-start text-[11px] border border-slate-700">
-                  <thead className="bg-slate-950 text-slate-200">
-                    <tr>
-                      <th className="p-2 border border-slate-700">وجه المقارنة</th>
-                      <th className="p-2 border border-slate-700 text-purple-400">التعلّم الآلي التقليدي (ML)</th>
-                      <th className="p-2 border border-slate-700 text-emerald-400">التعلم العميق (DL)</th>
-                    </tr>
-                  </thead>
-                  <tbody className="text-sub">
-                    <tr>
-                      <td className="p-2 border border-slate-700 font-bold text-white">بنية الخوارزمية [درجتان]</td>
-                      <td className="p-2 border border-slate-700">خوارزميات إحصائية أبسط (أشجار القرار، الانحدار الخطي)</td>
-                      <td className="p-2 border border-slate-700">شبكات عصبية اصطناعية عميقة متعددة الطبقات (ANNs)</td>
-                    </tr>
-                    <tr>
-                      <td className="p-2 border border-slate-700 font-bold text-white">حجم البيانات [درجتان]</td>
-                      <td className="p-2 border border-slate-700">يعمل جيداً مع كميات بيانات متوسطة وصغيرة</td>
-                      <td className="p-2 border border-slate-700">يتطلب بيانات ضخمة (Big Data) لتدريبه بدقة</td>
-                    </tr>
-                    <tr>
-                      <td className="p-2 border border-slate-700 font-bold text-white">استخراج الميزات [درجتان]</td>
-                      <td className="p-2 border border-slate-700">يدوي؛ يجب أن يحدد الخبير البشري الميزات المهمة</td>
-                      <td className="p-2 border border-slate-700">تلقائي؛ تكتشف الطبقات المخفية الميزات بنفسها</td>
-                    </tr>
-                  </tbody>
-                </table>
+              <p>
+                <span className="lang-ar">الذكاء الاصطناعي المبني على التعلم العميق يتعلم من الأنماط الإحصائية في بياناته التدريبية. إذا كان شيء ما نادر الظهور في هذه البيانات، فإن النموذج لم يتعرض له بما يكفي لاستخلاص أنماط موثوقة منه. والنتيجة: <strong>قد يعطي حكمًا خاطئًا أو منخفض الثقة</strong> لأنه ببساطة "لم يتدرب" على تلك الحالات النادرة بما يكفي. مثال: نموذج مدرَّب على صور المشاة في الطقس المشمس فقط سيعاني في التعرف عليهم وقت العواصف أو الضباب.</span>
+                <span className="lang-en">A deep learning AI learns from statistical patterns in its training data. If something rarely appeared in that data, the model has not seen enough examples to extract reliable patterns from it. As a result, it may <strong>give wrong or low-confidence judgments</strong> because it simply was not trained enough on those rare cases. Example: a model trained only on pedestrian images in sunny weather will struggle to recognise pedestrians during storms or fog.</span>
+              </p>
+            </div>
+          )}
+        </div>
+
+        {/* 4. Think It Through (2) — Hallucination — p. 17 */}
+        <div onClick={() => handleToggleCard('think-tt-1-2-hall')} className="p-5 rounded-2xl theme-subpanel border border-rose-500/30 space-y-3 cursor-pointer select-none group hover:border-rose-500 transition">
+          <div className="flex items-center justify-between">
+            <span className="px-3 py-1 rounded-full bg-rose-500/20 text-rose-400 text-xs font-bold flex items-center gap-1.5">
+              <i className="fa-solid fa-lightbulb"></i>
+              <span className="lang-ar">💡 توقف وفكر (الهلوسة) — كتاب الوزارة ص 17</span>
+              <span className="lang-en">💡 Think It Through (Hallucination) — Textbook p. 17</span>
+            </span>
+            <button onClick={(e) => { e.stopPropagation(); handleToggleCard('think-tt-1-2-hall'); }} className="text-xs font-bold text-rose-400 hover:underline flex items-center gap-1 cursor-pointer">
+              <span className="lang-ar">{expandedCards['think-tt-1-2-hall'] ? 'إخفاء الإجابة' : 'عرض الإجابة النموذجية'}</span>
+              <span className="lang-en">{expandedCards['think-tt-1-2-hall'] ? 'Hide Answer' : 'Show Model Answer'}</span>
+              <i className={`fa-solid fa-chevron-down text-[10px] transition-transform ${expandedCards['think-tt-1-2-hall'] ? 'rotate-180' : ''}`}></i>
+            </button>
+          </div>
+          <p className="text-xs font-bold text-slate-200">
+            <span className="lang-ar">يمكن للذكاء الاصطناعي التوليدي إنتاج نصوص تبدو معقولة ولكنها خاطئة واقعيًا (تسمى "الهلوسة"). اشرح لماذا يكون من الخطير استخدام هذا الناتج مباشرةً كإجابة في تقرير مدرسي، وحدد ما ينبغي على الطلاب فعله بدلاً من ذلك.</span>
+            <span className="lang-en">Generative AI can produce text that sounds plausible but is factually incorrect (a "hallucination"). Explain why it is dangerous to use such output as the answer to a school report as-is, and state what learners should do instead.</span>
+          </p>
+          {expandedCards['think-tt-1-2-hall'] && (
+            <div onClick={(e) => e.stopPropagation()} className="p-4 rounded-xl bg-slate-900 border border-rose-500/40 text-xs leading-relaxed text-slate-300 space-y-2 animate-fadeIn cursor-auto select-text">
+              <strong className="text-rose-300 block font-bold">
+                <span className="lang-ar">💡 الإجابة النموذجية:</span>
+                <span className="lang-en">💡 Model Answer:</span>
+              </strong>
+              <div className="space-y-2">
+                <p>
+                  <span className="lang-ar"><strong>لماذا هو خطير؟</strong> لأن الذكاء الاصطناعي التوليدي يبني ردوده على توقع الكلمة التالية إحصائياً، لا على التحقق من الحقائق. فقد يصوغ جملاً فصيحة ومقنعة تبدو علمية وهي في الحقيقة خاطئة أو مختلقة تماماً. إذا قدّم الطالب هذا الناتج كإجابة مباشرة في تقريره، فإنه قد ينشر معلومات كاذبة دون أن يدرك ذلك.</span>
+                  <span className="lang-en"><strong>Why is it dangerous?</strong> Generative AI constructs its responses by statistically predicting the next word, not by verifying facts. It can produce fluent, confident-sounding sentences that are entirely incorrect or fabricated. If a student submits this output directly in a school report, they may unknowingly spread false information.</span>
+                </p>
+                <p>
+                  <span className="lang-ar"><strong>ماذا ينبغي أن يفعل الطلاب؟</strong> يجب على الطلاب التحقق من كل معلومة يحصل عليها من الذكاء الاصطناعي من خلال مراجع موثوقة (كتب مدرسية، مقالات علمية محكّمة، مواقع رسمية) قبل تضمينها في أي تقرير أو بحث.</span>
+                  <span className="lang-en"><strong>What should learners do instead?</strong> Students must verify every piece of information obtained from AI against reliable sources (textbooks, peer-reviewed articles, official websites) before including it in any report or assignment.</span>
+                </p>
+              </div>
+            </div>
+          )}
+        </div>
+
+        {/* 5. Exam-Style Question — p. 17 */}
+        <div onClick={() => handleToggleCard('exam-style-1-2')} className="p-5 rounded-2xl theme-subpanel border border-amber-500/30 space-y-3 cursor-pointer select-none group hover:border-amber-500 transition">
+          <div className="flex items-center justify-between">
+            <span className="px-3 py-1 rounded-full bg-amber-500/20 text-amber-400 text-xs font-bold flex items-center gap-1.5">
+              <i className="fa-solid fa-file-pen"></i>
+              <span className="lang-ar">📝 سؤال نمط الامتحان — كتاب الوزارة ص 17 (6 درجات)</span>
+              <span className="lang-en">📝 Exam-Style Question — Textbook p. 17 [6 marks]</span>
+            </span>
+            <button onClick={(e) => { e.stopPropagation(); handleToggleCard('exam-style-1-2'); }} className="text-xs font-bold text-amber-400 hover:underline flex items-center gap-1 cursor-pointer">
+              <span className="lang-ar">{expandedCards['exam-style-1-2'] ? 'إخفاء الإجابة' : 'عرض الإجابة النموذجية'}</span>
+              <span className="lang-en">{expandedCards['exam-style-1-2'] ? 'Hide Answer' : 'Show Model Answer'}</span>
+              <i className={`fa-solid fa-chevron-down text-[10px] transition-transform ${expandedCards['exam-style-1-2'] ? 'rotate-180' : ''}`}></i>
+            </button>
+          </div>
+          <div className="text-xs font-bold text-slate-200 space-y-1.5">
+            <p>
+              <span className="lang-ar">حلّل العلاقة بين الذكاء الاصطناعي (AI)، والتعلم الآلي (Machine Learning)، والتعلم العميق (Deep Learning)، والذكاء الاصطناعي التوليدي (Generative AI). [6 درجات] في إجابتك: استخدم فكرة الفئات المتداخلة (Nested Categories)، وأعطِ مثالاً واحداً لكل منها.</span>
+              <span className="lang-en">Analyze the relationship between AI, machine learning, deep learning, and generative AI. [6 marks] In your answer: use the idea of nested categories, and give one example of each.</span>
+            </p>
+          </div>
+          {expandedCards['exam-style-1-2'] && (
+            <div onClick={(e) => e.stopPropagation()} className="p-4 rounded-xl bg-slate-900 border border-amber-500/40 text-xs leading-relaxed text-slate-300 space-y-3 animate-fadeIn cursor-auto select-text">
+              <strong className="text-amber-400 block font-bold">
+                <span className="lang-ar">💡 الإجابة النموذجية الكاملة (توزيع الدرجات):</span>
+                <span className="lang-en">💡 Full Model Answer (Mark Scheme):</span>
+              </strong>
+              <div className="space-y-2 text-[11px]">
+                <div className="p-2.5 rounded-lg bg-blue-500/10 border border-blue-500/20">
+                  <strong className="text-blue-300">AI (الذكاء الاصطناعي) — [درجة/mark 1]</strong>
+                  <p className="mt-1">
+                    <span className="lang-ar">الفئة الأوسع والأشمل: تقنيات تعيد إنتاج أو تؤدي السلوك الذكي البشري على الحاسوب. مثال: التعرف على الكلام.</span>
+                    <span className="lang-en">The broadest category: technologies that reproduce or perform intelligent human behavior on a computer. Example: speech recognition.</span>
+                  </p>
+                </div>
+                <div className="p-2.5 rounded-lg bg-purple-500/10 border border-purple-500/20">
+                  <strong className="text-purple-300">Machine Learning (التعلم الآلي) — [درجة/mark 2]</strong>
+                  <p className="mt-1">
+                    <span className="lang-ar">فئة داخل AI: تتعلم الأنماط من البيانات لإصدار التوقعات والأحكام. مثال: فلاتر البريد العشوائي.</span>
+                    <span className="lang-en">A subset inside AI: learns patterns from data to make predictions and judgments. Example: spam filters.</span>
+                  </p>
+                </div>
+                <div className="p-2.5 rounded-lg bg-emerald-500/10 border border-emerald-500/20">
+                  <strong className="text-emerald-300">Deep Learning (التعلم العميق) — [درجة/mark 3]</strong>
+                  <p className="mt-1">
+                    <span className="lang-ar">فئة داخل التعلم الآلي: تستخدم الشبكات العصبية لتعلّم الأنماط المعقدة من بيانات ضخمة. مثال: تحليل صور القيادة الذاتية.</span>
+                    <span className="lang-en">A subset inside Machine Learning: uses neural networks to learn complex patterns from large-scale data. Example: image analysis for autonomous driving.</span>
+                  </p>
+                </div>
+                <div className="p-2.5 rounded-lg bg-rose-500/10 border border-rose-500/20">
+                  <strong className="text-rose-300">Generative AI (الذكاء الاصطناعي التوليدي) — [درجة/mark 4]</strong>
+                  <p className="mt-1">
+                    <span className="lang-ar">فئة داخل التعلم العميق: تستخدم التعلم العميق لتوليد بيانات جديدة (نصوص، صور، صوت). مثال: ChatGPT.</span>
+                    <span className="lang-en">A subset inside Deep Learning: uses deep learning to generate new data (text, images, audio). Example: ChatGPT.</span>
+                  </p>
+                </div>
+                <div className="p-2.5 rounded-lg bg-amber-500/10 border border-amber-500/20">
+                  <strong className="text-amber-300">
+                    <span className="lang-ar">فكرة الفئات المتداخلة — [درجتان/2 marks]</span>
+                    <span className="lang-en">Nested Categories idea — [2 marks]</span>
+                  </strong>
+                  <p className="mt-1">
+                    <span className="lang-ar">العلاقة تسلسلية متداخلة وليست متوازية: <strong>AI ⊃ Machine Learning ⊃ Deep Learning ⊃ Generative AI</strong>. كل تقنية هي حالة خاصة أكثر تخصصاً من التي تحتويها.</span>
+                    <span className="lang-en">The relationship is nested, not parallel: <strong>AI ⊃ Machine Learning ⊃ Deep Learning ⊃ Generative AI</strong>. Each technology is a more specialised subfield of the one that contains it.</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
+
+        {/* 6. Think as an Engineer — Investigate & Decide — p. 17 */}
+        <div onClick={() => handleToggleCard('think-eng-1-2')} className="p-5 rounded-2xl theme-subpanel border border-emerald-500/30 space-y-3 cursor-pointer select-none group hover:border-emerald-500 transition">
+          <div className="flex items-center justify-between">
+            <span className="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-bold flex items-center gap-1.5">
+              <i className="fa-solid fa-gears"></i>
+              <span className="lang-ar">⚙ فكر كمهندس — استقصِ وقرر (كتاب الوزارة ص 17)</span>
+              <span className="lang-en">⚙ Think as an Engineer — Investigate &amp; Decide (Textbook p. 17)</span>
+            </span>
+            <button onClick={(e) => { e.stopPropagation(); handleToggleCard('think-eng-1-2'); }} className="text-xs font-bold text-emerald-400 hover:underline flex items-center gap-1 cursor-pointer">
+              <span className="lang-ar">{expandedCards['think-eng-1-2'] ? 'إخفاء الإجابة' : 'عرض الإجابة النموذجية'}</span>
+              <span className="lang-en">{expandedCards['think-eng-1-2'] ? 'Hide Answer' : 'Show Model Answer'}</span>
+              <i className={`fa-solid fa-chevron-down text-[10px] transition-transform ${expandedCards['think-eng-1-2'] ? 'rotate-180' : ''}`}></i>
+            </button>
+          </div>
+          <div className="text-xs font-bold text-slate-200 space-y-1.5">
+            <p>
+              <span className="lang-ar">انطلاقاً من ملاحظة "توقف وفكر" حول الهلوسة، استقصِ وقرر:</span>
+              <span className="lang-en">Starting from the Think It Through note about hallucination, investigate further and decide:</span>
+            </p>
+            <ol className="space-y-1 list-decimal rtl:pr-4 ltr:pl-4 text-sub font-medium">
+              <li>
+                <span className="lang-ar"><strong>استقصِ:</strong> ابحث عن مثال موثّق واحد أعطى فيه الذكاء الاصطناعي التوليدي إجابة بدت صحيحة لكنها خاطئة في الواقع. سجّل مصدرك (مقال إخباري، تقرير رسمي، أو اختبار أجريته بنفسك مع لقطة شاشة).</span>
+                <span className="lang-en"><strong>Investigate:</strong> Find one documented example where a generative AI gave an answer that sounded correct but was actually wrong. Record its source — a news article, official report, or a prompt you tested yourself with a screenshot.</span>
+              </li>
+              <li>
+                <span className="lang-ar"><strong>وازن:</strong> اذكر ميزة واحدة ومخاطرة واحدة من استخدام الذكاء الاصطناعي التوليدي لكتابة تقرير مدرسي — بالنسبة للطالب وبالنسبة للمعلم.</span>
+                <span className="lang-en"><strong>Weigh it up:</strong> Note one benefit and one risk of using generative AI to write a school report — for the student, and for the teacher.</span>
+              </li>
+              <li>
+                <span className="lang-ar"><strong>قرر:</strong> هل ينبغي السماح بالذكاء الاصطناعي التوليدي في الواجبات المنزلية في مدرستك؟ اقترح قاعدة واحدة وأعطِ سببين.</span>
+                <span className="lang-en"><strong>Decide:</strong> Should generative AI be allowed for homework in your school? Recommend one rule and give two reasons.</span>
+              </li>
+            </ol>
+          </div>
+          {expandedCards['think-eng-1-2'] && (
+            <div onClick={(e) => e.stopPropagation()} className="p-4 rounded-xl bg-slate-900 border border-emerald-500/40 text-xs leading-relaxed text-slate-300 space-y-3 animate-fadeIn cursor-auto select-text">
+              <strong className="text-emerald-400 block font-bold">
+                <span className="lang-ar">💡 الإجابة النموذجية (إشراف م/ عمر محمود):</span>
+                <span className="lang-en">💡 Model Answer (Eng. Omar Mahmoud):</span>
+              </strong>
+              <div className="space-y-2.5">
+                <div>
+                  <strong className="text-emerald-300">
+                    <span className="lang-ar">1. مثال الهلوسة الموثّق:</span>
+                    <span className="lang-en">1. Documented hallucination example:</span>
+                  </strong>
+                  <p className="mt-1 text-sub">
+                    <span className="lang-ar">في عام 2023 نشرت وكالة رويترز تقريراً عن محامٍ أمريكي استخدم ChatGPT لإعداد مرافعة قانونية؛ فاخترع النموذج قضايا سابقة وأحكاماً قضائية غير موجودة أصلاً، ما أوقع المحامي في ورطة أمام المحكمة. المصدر: مقال رويترز (Reuters) — مايو 2023.</span>
+                    <span className="lang-en">In 2023, Reuters reported that an American lawyer used ChatGPT to prepare a legal brief — the model fabricated precedent cases and court rulings that never existed, causing the lawyer serious problems in court. Source: Reuters article — May 2023.</span>
+                  </p>
+                </div>
+                <div>
+                  <strong className="text-emerald-300">
+                    <span className="lang-ar">2. الموازنة (للطالب وللمعلم):</span>
+                    <span className="lang-en">2. Weighing it up (student &amp; teacher):</span>
+                  </strong>
+                  <div className="mt-1 grid grid-cols-1 sm:grid-cols-2 gap-2">
+                    <div className="p-2 rounded bg-emerald-500/10 border border-emerald-500/20">
+                      <strong className="text-emerald-300 block">
+                        <span className="lang-ar">ميزة:</span>
+                        <span className="lang-en">Benefit:</span>
+                      </strong>
+                      <span className="lang-ar text-sub">يوفر الوقت ويساعد الطالب على بدء الكتابة بسرعة. يساعد المعلم على اقتراح تصحيح تلقائي لبعض المسودات.</span>
+                      <span className="lang-en text-sub">Saves time and helps the student start writing quickly. Helps the teacher suggest automated feedback on drafts.</span>
+                    </div>
+                    <div className="p-2 rounded bg-rose-500/10 border border-rose-500/20">
+                      <strong className="text-rose-300 block">
+                        <span className="lang-ar">مخاطرة:</span>
+                        <span className="lang-en">Risk:</span>
+                      </strong>
+                      <span className="lang-ar text-sub">قد يقدّم الطالب معلومات مختلقة (هلوسة) على أنها حقائق. يصعب على المعلم التمييز بين ما كتبه الطالب فعلاً وما أنتجه الذكاء الاصطناعي.</span>
+                      <span className="lang-en text-sub">The student may submit hallucinated facts as truth. The teacher struggles to distinguish genuine student work from AI-generated content.</span>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <strong className="text-emerald-300">
+                    <span className="lang-ar">3. القرار والقاعدة المقترحة:</span>
+                    <span className="lang-en">3. Decision &amp; recommended rule:</span>
+                  </strong>
+                  <p className="mt-1 text-sub">
+                    <span className="lang-ar"><strong>القاعدة:</strong> يمكن استخدام الذكاء الاصطناعي التوليدي كأداة مساعدة للبدء والتفكير فقط، بشرط الإشارة إليه صراحةً وإرفاق المصادر الموثوقة للتحقق من كل معلومة.<br/><strong>السبب الأول:</strong> يحافظ على أمانة الطالب الأكاديمية ويدرّبه على التحقق من المعلومات.<br/><strong>السبب الثاني:</strong> يمنع انتشار معلومات مختلقة (هلوسة) غير موثّقة في التقارير المدرسية.</span>
+                    <span className="lang-en"><strong>Rule:</strong> Generative AI may be used only as a starting aid, provided it is explicitly declared and reliable sources are attached to verify every fact.<br/><strong>Reason 1:</strong> Maintains academic integrity and trains students to verify information critically.<br/><strong>Reason 2:</strong> Prevents unverified hallucinated facts from spreading through school reports.</span>
+                  </p>
+                </div>
               </div>
             </div>
           )}
