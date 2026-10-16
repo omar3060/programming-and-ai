@@ -16,6 +16,7 @@ export function Sidebar({ activeView, onNavigate, isOpenMobile, onCloseMobile }:
   const [searchQuery, setSearchQuery] = useState('');
   const [unit1Open, setUnit1Open] = useState(true);
   const [unit2Open, setUnit2Open] = useState(true);
+  const [unit3Open, setUnit3Open] = useState(true);
 
   const handleNav = (viewId: LessonViewId) => {
     playSfx('click');
@@ -88,6 +89,7 @@ export function Sidebar({ activeView, onNavigate, isOpenMobile, onCloseMobile }:
                   <span>YouTube</span>
                 </a>
               </div>
+
             </div>
           </div>
 
@@ -420,25 +422,46 @@ export function Sidebar({ activeView, onNavigate, isOpenMobile, onCloseMobile }:
             )}
           </div>
 
+          {/* UNIT 3 ACCORDION */}
+          <div className="space-y-1">
+            <button onClick={() => { playSfx('click'); setUnit3Open(!unit3Open); }} className="w-full p-2.5 rounded-xl bg-violet-500/10 border border-violet-500/30 text-start flex items-center justify-between font-bold text-xs hover:bg-violet-500/15 transition">
+              <div className="flex items-center gap-2">
+                <span className="w-6 h-6 rounded-lg bg-violet-600 text-white flex items-center justify-center text-xs"><span className="lang-ar">٣</span><span className="lang-en">3</span></span>
+                <div>
+                  <div className="text-[10px] text-violet-400 uppercase tracking-wider font-extrabold"><span className="lang-ar">الوحدة الثالثة</span><span className="lang-en">Unit 3</span></div>
+                  <div className="text-xs font-black"><span className="lang-ar">تطبيقات الويب</span><span className="lang-en">Web Applications</span></div>
+                </div>
+              </div>
+              <i className={`fa-solid fa-chevron-down text-violet-400 text-xs transition-transform ${unit3Open ? '' : '-rotate-90'}`}></i>
+            </button>
+            {unit3Open && (
+              <div className="space-y-1 rtl:pr-2 ltr:pl-2 pt-1">
+                {[
+                  ['lesson-3-1', '3-1', 'البنية العامة لتطبيقات الويب', 'The Overall Structure of Web Applications'],
+                  ['lesson-3-2', '3-2', 'طرق الاتصال في تطبيقات الويب', 'Web Application Communication Methods'],
+                  ['lesson-3-3', '3-3', 'أساسيات تكنولوجيا الواجهة الأمامية', 'Fundamentals of Frontend Technology']
+                ].map(([id, number, ar, en]) => (
+                  <button key={id} onClick={() => handleNav(id as LessonViewId)} className={`nav-lesson-btn w-full p-2.5 rounded-xl theme-subpanel border text-start flex items-start gap-2.5 text-xs hover:border-violet-500 transition ${activeView === id ? 'active-nav' : ''}`}>
+                    <span className="w-5 h-5 rounded-md bg-violet-500/20 text-violet-400 flex items-center justify-center text-[10px] font-bold mt-0.5 shrink-0">{number}</span>
+                    <div className="min-w-0 flex-1">
+                      <div className="font-bold truncate"><span className="lang-ar">{ar}</span><span className="lang-en">{en}</span></div>
+                      <div className="text-[10px] text-sub truncate"><span className="lang-ar">مفاهيم وتطبيقات عملية</span><span className="lang-en">Concepts and practical applications</span></div>
+                    </div>
+                  </button>
+                ))}
+                <button onClick={() => handleNav('unit-3-exam')} className={`nav-lesson-btn w-full p-2.5 rounded-xl bg-gradient-to-r from-violet-500/20 to-cyan-500/20 border border-violet-500/40 text-start flex items-start gap-2.5 text-xs hover:border-violet-400 transition ${activeView === 'unit-3-exam' ? 'active-nav' : ''}`}>
+                  <span className="w-5 h-5 rounded-md bg-violet-600 text-white flex items-center justify-center text-[10px] font-bold mt-0.5 shrink-0"><i className="fa-solid fa-globe"></i></span>
+                  <div className="font-bold text-violet-300 truncate"><span className="lang-ar">الاختبار الشامل للوحدة 3</span><span className="lang-en">Unit 3 Exam (30 Questions)</span></div>
+                </button>
+              </div>
+            )}
+          </div>
+
           {/* Upcoming Units in Roadmap */}
           <div className="pt-2 border-t border-slate-800/80 space-y-1">
             <div className="text-[10px] font-bold text-sub px-2 uppercase tracking-wider">
               <span className="lang-ar">خريطة باقي وحدات المنهج</span>
               <span className="lang-en">Curriculum Roadmap</span>
-            </div>
-
-            <div className="p-2.5 rounded-xl theme-subpanel border opacity-60 flex items-center justify-between text-xs">
-              <div className="flex items-center gap-2">
-                <span className="w-5 h-5 rounded-md bg-slate-800 text-slate-400 flex items-center justify-center text-[10px] font-bold"><span className="lang-ar">٣</span><span className="lang-en">3</span></span>
-                <span className="text-sub font-semibold">
-                  <span className="lang-ar">الوحدة 3: تطبيقات الويب</span>
-                  <span className="lang-en">Unit 3: Web Applications</span>
-                </span>
-              </div>
-              <span className="text-[9px] px-1.5 py-0.5 rounded bg-slate-800 text-slate-400">
-                <span className="lang-ar">قريباً</span>
-                <span className="lang-en">Soon</span>
-              </span>
             </div>
 
             <div className="p-2.5 rounded-xl theme-subpanel border opacity-60 flex items-center justify-between text-xs">

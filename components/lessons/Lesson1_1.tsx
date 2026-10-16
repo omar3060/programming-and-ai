@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import React, { useState } from 'react';
 import { useApp } from '@/components/providers/AppProviders';
@@ -354,159 +354,54 @@ export function Lesson1_1() {
         </div>
 
         <p className="text-xs text-sub leading-relaxed">
-          <span className="lang-ar">على مدى أكثر من ثمانين عاماً، مرت تكنولوجيا المعلومات بخمس مراحل تطورية كبرى، مثلت كل مرحلة منها نقلة نوعية كاملة في حجم الأجهزة وطريقة عملها وتأثيرها المباشر على المجتمع البشري:</span>
-          <span className="lang-en">Over more than eight decades, IT transitioned across five major eras, each marking a complete paradigm shift in hardware size, functionality, and societal adoption:</span>
+          <span className="lang-ar">مرت تكنولوجيا المعلومات بخمس مراحل رئيسية، غيّرت كل مرحلة طريقة تواصل الناس وعملهم وتعلمهم:</span>
+          <span className="lang-en">IT developed through five major stages, each changing how people communicate, work, and learn:</span>
         </p>
 
-        {/* Interactive Eras Selector */}
-        <div className="grid grid-cols-2 sm:grid-cols-5 gap-2 text-xs">
-          {erasData.map((item, i) => (
-            <button
-              key={i}
-              onClick={() => handlePickEra(i)}
-              className={`p-3 rounded-2xl theme-subpanel border text-center space-y-1 transition group ${
-                eraIdx === i ? 'border-blue-500 bg-blue-500/10 font-bold shadow-md ring-1 ring-blue-500/30' : 'hover:border-blue-500/50 opacity-80 hover:opacity-100'
-              } ${i === 4 ? 'col-span-2 sm:col-span-1' : ''}`}
-            >
-              <span className="text-2xl block group-hover:scale-110 transition">{item.icon}</span>
-              <strong className="block text-slate-200 text-[11px] font-mono">{item.period}</strong>
-              <span className="text-[10px] text-sub block line-clamp-1">
-                <span className="lang-ar">{item.badge.ar}</span>
-                <span className="lang-en">{item.badge.en}</span>
-              </span>
-            </button>
-          ))}
-        </div>
-
-        {/* Era Details Dynamic Detailed Card */}
-        <div className="p-5 sm:p-6 rounded-2xl theme-subpanel border border-blue-500/40 text-xs sm:text-sm leading-relaxed space-y-4 shadow-md animate-fadeIn">
-          <div className="flex flex-wrap items-center justify-between gap-2 border-b border-slate-800 pb-3">
-            <div className="flex items-center gap-2">
-              <span className="text-2xl">{erasData[eraIdx].icon}</span>
-              <h4 className="text-base font-black text-blue-400">
-                <span className="lang-ar">{erasData[eraIdx].title.ar}</span>
-                <span className="lang-en">{erasData[eraIdx].title.en}</span>
-              </h4>
-            </div>
-            <span className="px-3 py-1 rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/30 text-xs font-mono font-bold">
-              {erasData[eraIdx].period}
-            </span>
-          </div>
-
-          <p className="text-slate-200 text-xs sm:text-sm leading-relaxed font-medium">
-            <span className="lang-ar">{erasData[eraIdx].summary.ar}</span>
-            <span className="lang-en">{erasData[eraIdx].summary.en}</span>
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2 text-xs">
-            {/* Hardware & Infrastructure */}
-            <div className="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800 space-y-1.5">
-              <div className="font-bold text-amber-400 flex items-center gap-1.5">
-                <i className="fa-solid fa-microchip"></i>
-                <span className="lang-ar">البنية التحتية والأجهزة (Hardware):</span>
-                <span className="lang-en">Hardware & Infrastructure:</span>
-              </div>
-              <p className="text-sub leading-relaxed">
-                <span className="lang-ar">{erasData[eraIdx].hardware.ar}</span>
-                <span className="lang-en">{erasData[eraIdx].hardware.en}</span>
-              </p>
-            </div>
-
-            {/* Societal Impact */}
-            <div className="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800 space-y-1.5">
-              <div className="font-bold text-emerald-400 flex items-center gap-1.5">
-                <i className="fa-solid fa-users text-xs"></i>
-                <span className="lang-ar">التأثير على المجتمع والأعمال:</span>
-                <span className="lang-en">Impact on Society & Business:</span>
-              </div>
-              <p className="text-sub leading-relaxed">
-                <span className="lang-ar">{erasData[eraIdx].impact.ar}</span>
-                <span className="lang-en">{erasData[eraIdx].impact.en}</span>
-              </p>
-            </div>
-          </div>
-
-          {/* Key Innovations Bullets */}
-          <div className="pt-2 border-t border-slate-800/60">
-            <span className="font-bold text-slate-300 block text-xs mb-2">
-              <span className="lang-ar">💡 أبرز ابتُكارات وتقنيات هذه الحقبة:</span>
-              <span className="lang-en">💡 Key Innovations & Breakthroughs:</span>
-            </span>
-            <ul className="grid grid-cols-1 sm:grid-cols-3 gap-2 text-xs text-sub">
-              {erasData[eraIdx].keyInnovations.ar.map((inn, idx) => (
-                <li key={idx} className="p-2 rounded-lg bg-slate-950/50 border border-slate-800/80 flex items-start gap-1.5">
-                  <span className="text-blue-400 font-bold shrink-0">•</span>
-                  <span>
-                    <span className="lang-ar">{inn}</span>
-                    <span className="lang-en">{erasData[eraIdx].keyInnovations.en[idx]}</span>
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-
-        {/* Full 5-Era Comparison Table (جدول الوزارة ص 5 / p. 6) */}
-        <div className="space-y-3 pt-2">
-          <div className="flex items-center justify-between">
-            <h4 className="font-bold text-xs sm:text-sm text-amber-400 flex items-center gap-2">
-              <i className="fa-solid fa-table-list"></i>
-              <span className="lang-ar">جدول المقارنة الشامل للعصور الخمسة (كتاب الوزارة ص 5)</span>
-              <span className="lang-en">Comprehensive 5-Era Comparison Table (Textbook p. 6)</span>
-            </h4>
-            <span className="text-[11px] text-sub">
-              <span className="lang-ar">جدول تلخيصي لكتاب الوزارة</span>
-              <span className="lang-en">Official Summary Table</span>
-            </span>
-          </div>
-
-          <div className="overflow-x-auto rounded-2xl border border-slate-800 shadow-sm">
-            <table className="w-full text-xs text-right dir-rtl min-w-[650px] border-collapse">
-              <thead>
-                <tr className="bg-slate-900 border-b border-slate-800 text-blue-400 font-bold">
-                  <th className="p-3 text-center w-28">
-                    <span className="lang-ar">الحقبة الزمنية</span>
-                    <span className="lang-en">Time Period</span>
-                  </th>
-                  <th className="p-3 text-right">
-                    <span className="lang-ar">العصر والتقنية الرئيسية</span>
-                    <span className="lang-en">Era & Major Technologies</span>
-                  </th>
-                  <th className="p-3 text-right">
-                    <span className="lang-ar">التأثير الأبرز على المجتمع والأعمال</span>
-                    <span className="lang-en">Impact on Society & Business</span>
-                  </th>
+        {/* 5-Era Table (كتاب الوزارة ص 5 / p. 6) */}
+        <div className="overflow-x-auto rounded-2xl border border-slate-800 shadow-sm">
+          <table className="w-full text-xs min-w-[550px] border-collapse">
+            <thead>
+              <tr className="bg-slate-900 border-b border-slate-800 text-blue-400 font-bold">
+                <th className="p-3 text-center w-28">
+                  <span className="lang-ar">الفترة الزمنية</span>
+                  <span className="lang-en">Time Period</span>
+                </th>
+                <th className="p-3 ltr:text-left rtl:text-right">
+                  <span className="lang-ar">التقنيات والأحداث الرئيسية</span>
+                  <span className="lang-en">Major Technologies & Events</span>
+                </th>
+                <th className="p-3 ltr:text-left rtl:text-right">
+                  <span className="lang-ar">التأثير على المجتمع</span>
+                  <span className="lang-en">Impact on Society</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-slate-800/60 bg-slate-950/40">
+              {[
+                { period: "1940s-60s", icon: "💡", techAr: "ظهور الحاسوب الإلكتروني (ENIAC، الصمامات المفرغة)", techEn: "Birth of the computer (ENIAC, vacuum tubes)", impactAr: "استُخدم أساساً للأغراض العسكرية والحسابات العلمية", impactEn: "Mainly used for military and scientific computation" },
+                { period: "1970s-80s", icon: "🖥️", techAr: "انتشار الحواسب الشخصية (PCs)", techEn: "Spread of personal computers (PCs)", impactAr: "بداية استخدام الأفراد للحاسب", impactEn: "Beginning of personal computer use" },
+                { period: "1990s", icon: "🌐", techAr: "إتاحة الإنترنت للاستخدام التجاري؛ ظهور الويب", techEn: "Commercialization of the Internet; the Web", impactAr: "انتشار الوصول العالمي إلى المعلومات والبريد الإلكتروني", impactEn: "Globalization of information; spread of email" },
+                { period: "2000s", icon: "📱", techAr: "ظهور الهواتف الذكية (iPhone وغيره)", techEn: "Rise of smartphones (iPhone, etc.)", impactAr: "انتشار سريع وواسع للإنترنت عبر الهواتف المحمولة", impactEn: "Explosive spread of mobile Internet" },
+                { period: "2010s+", icon: "☁️", techAr: "انتشار الحوسبة السحابية", techEn: "Spread of cloud computing", impactAr: "تحليل البيانات الضخمة والذكاء الاصطناعي؛ تكنولوجيا المعلومات كخدمة", impactEn: "Large-scale data analysis and AI; \"IT as a service\"" }
+              ].map((era, i) => (
+                <tr key={i} className="hover:bg-blue-500/5 transition">
+                  <td className="p-3 text-center font-mono font-bold text-amber-400 whitespace-nowrap">
+                    <span className="block text-lg mb-0.5">{era.icon}</span>
+                    {era.period}
+                  </td>
+                  <td className="p-3 text-slate-200 font-medium">
+                    <span className="lang-ar">{era.techAr}</span>
+                    <span className="lang-en">{era.techEn}</span>
+                  </td>
+                  <td className="p-3 text-sub">
+                    <span className="lang-ar">{era.impactAr}</span>
+                    <span className="lang-en">{era.impactEn}</span>
+                  </td>
                 </tr>
-              </thead>
-              <tbody className="divide-y divide-slate-800/60 bg-slate-950/40">
-                {erasData.map((era, i) => (
-                  <tr 
-                    key={i} 
-                    onClick={() => handlePickEra(i)}
-                    className={`hover:bg-blue-500/5 transition cursor-pointer ${eraIdx === i ? 'bg-blue-500/10 font-medium' : ''}`}
-                  >
-                    <td className="p-3 text-center font-mono font-bold text-amber-400 whitespace-nowrap">
-                      {era.period}
-                    </td>
-                    <td className="p-3">
-                      <div className="font-bold text-slate-200">
-                        <span className="lang-ar">{era.badge.ar}</span>
-                        <span className="lang-en">{era.badge.en}</span>
-                      </div>
-                      <div className="text-[11px] text-sub mt-0.5">
-                        <span className="lang-ar">{era.hardware.ar}</span>
-                        <span className="lang-en">{era.hardware.en}</span>
-                      </div>
-                    </td>
-                    <td className="p-3 text-sub leading-relaxed">
-                      <span className="lang-ar">{era.impact.ar}</span>
-                      <span className="lang-en">{era.impact.en}</span>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+              ))}
+            </tbody>
+          </table>
         </div>
 
         {/* Vacuum Tubes vs Transistor Deep Dive (إضاءة هندسية ص 5 / p. 6) */}

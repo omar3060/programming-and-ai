@@ -1,0 +1,50 @@
+        <p className="text-xs text-sub leading-relaxed">
+          <span className="lang-ar">مرت تكنولوجيا المعلومات بخمس مراحل رئيسية، غيّرت كل مرحلة طريقة تواصل الناس وعملهم وتعلمهم:</span>
+          <span className="lang-en">IT developed through five major stages, each changing how people communicate, work, and learn:</span>
+        </p>
+
+        {/* 5-Era Table (كتاب الوزارة ص 5 / p. 6) */}
+        <div className="overflow-x-auto rounded-2xl border border-slate-800 shadow-sm">
+          <table className="w-full text-xs min-w-[550px] border-collapse">
+            <thead>
+              <tr className="bg-slate-900 border-b border-slate-800 text-blue-400 font-bold">
+                <th className="p-3 text-center w-28">
+                  <span className="lang-ar">الفترة الزمنية</span>
+                  <span className="lang-en">Time Period</span>
+                </th>
+                <th className="p-3 ltr:text-left rtl:text-right">
+                  <span className="lang-ar">التقنيات والأحداث الرئيسية</span>
+                  <span className="lang-en">Major Technologies & Events</span>
+                </th>
+                <th className="p-3 ltr:text-left rtl:text-right">
+                  <span className="lang-ar">التأثير على المجتمع</span>
+                  <span className="lang-en">Impact on Society</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-slate-800/60 bg-slate-950/40">
+              {[
+                { period: "1940s-60s", icon: "💡", techAr: "ظهور الحاسوب الإلكتروني (ENIAC، الصمامات المفرغة)", techEn: "Birth of the computer (ENIAC, vacuum tubes)", impactAr: "استُخدم أساساً للأغراض العسكرية والحسابات العلمية", impactEn: "Mainly used for military and scientific computation" },
+                { period: "1970s-80s", icon: "🖥️", techAr: "انتشار الحواسب الشخصية (PCs)", techEn: "Spread of personal computers (PCs)", impactAr: "بداية استخدام الأفراد للحاسب", impactEn: "Beginning of personal computer use" },
+                { period: "1990s", icon: "🌐", techAr: "إتاحة الإنترنت للاستخدام التجاري؛ ظهور الويب", techEn: "Commercialization of the Internet; the Web", impactAr: "انتشار الوصول العالمي إلى المعلومات والبريد الإلكتروني", impactEn: "Globalization of information; spread of email" },
+                { period: "2000s", icon: "📱", techAr: "ظهور الهواتف الذكية (iPhone وغيره)", techEn: "Rise of smartphones (iPhone, etc.)", impactAr: "انتشار سريع وواسع للإنترنت عبر الهواتف المحمولة", impactEn: "Explosive spread of mobile Internet" },
+                { period: "2010s+", icon: "☁️", techAr: "انتشار الحوسبة السحابية", techEn: "Spread of cloud computing", impactAr: "تحليل البيانات الضخمة والذكاء الاصطناعي؛ تكنولوجيا المعلومات كخدمة", impactEn: "Large-scale data analysis and AI; \"IT as a service\"" }
+              ].map((era, i) => (
+                <tr key={i} className="hover:bg-blue-500/5 transition">
+                  <td className="p-3 text-center font-mono font-bold text-amber-400 whitespace-nowrap">
+                    <span className="block text-lg mb-0.5">{era.icon}</span>
+                    {era.period}
+                  </td>
+                  <td className="p-3 text-slate-200 font-medium">
+                    <span className="lang-ar">{era.techAr}</span>
+                    <span className="lang-en">{era.techEn}</span>
+                  </td>
+                  <td className="p-3 text-sub">
+                    <span className="lang-ar">{era.impactAr}</span>
+                    <span className="lang-en">{era.impactEn}</span>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>

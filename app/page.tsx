@@ -17,6 +17,10 @@ import { TextbookSolutions } from '@/components/practice/TextbookSolutions';
 import { TextbookSolutionsUnit2 } from '@/components/practice/TextbookSolutionsUnit2';
 import { Unit1Exam } from '@/components/practice/Unit1Exam';
 import { Unit2Exam } from '@/components/practice/Unit2Exam';
+import { Lesson3_1 } from '@/components/lessons/Lesson3_1';
+import { Lesson3_2 } from '@/components/lessons/Lesson3_2';
+import { Lesson3_3 } from '@/components/lessons/Lesson3_3';
+import { Unit3Exam } from '@/components/practice/Unit3Exam';
 
 export default function Home() {
   const [mounted, setMounted] = React.useState(false);
@@ -61,6 +65,14 @@ export default function Home() {
         return <TextbookSolutionsUnit2 />;
       case 'unit-2-exam':
         return <Unit2Exam />;
+      case 'lesson-3-1':
+        return <Lesson3_1 />;
+      case 'lesson-3-2':
+        return <Lesson3_2 />;
+      case 'lesson-3-3':
+        return <Lesson3_3 />;
+      case 'unit-3-exam':
+        return <Unit3Exam />;
       default:
         return <Lesson1_1 />;
     }
