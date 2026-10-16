@@ -28,7 +28,7 @@ export function Lesson3_1() {
 
   const handleQuizAnswer = (qIdx: number, oIdx: number, correctAns: number) => {
     if (quizAnswers[qIdx] !== undefined) return;
-    playSfx(oIdx === correctAns ? 'correct' : 'wrong');
+    playSfx(oIdx === correctAns ? 'success' : 'error');
     setQuizAnswers(prev => ({ ...prev, [qIdx]: oIdx }));
   };
 
@@ -369,7 +369,7 @@ export function Lesson3_1() {
           <button
             onClick={() => {
               if (journeyStep < 4) { playSfx('click'); setJourneyStep(s => s + 1); }
-              else { playSfx('correct'); setJourneyStep(0); }
+              else { playSfx('success'); setJourneyStep(0); }
             }}
             className="px-4 py-2.5 rounded-xl text-xs font-bold bg-violet-600 hover:bg-violet-500 text-white transition"
           >
