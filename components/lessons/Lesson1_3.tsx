@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import React, { useState } from 'react';
 import { useApp } from '@/components/providers/AppProviders';
@@ -248,181 +248,279 @@ export function Lesson1_3() {
         </p>
       </div>
 
-      {/* TEXTBOOK ENRICHMENT FEATURES (كتاب الوزارة ص 18 - 23) */}
+      {/* TEXTBOOK ACTIVITIES (كتاب الوزارة ص 21 - ص 24) */}
       <div className="theme-panel border p-6 sm:p-8 rounded-3xl space-y-6">
         <div className="flex items-center justify-between border-b border-slate-800 pb-3">
           <div>
             <span className="text-[10px] text-amber-400 uppercase font-bold tracking-wider">
-              <span className="lang-ar">ميزات وأنشطة كتاب الوزارة الرسمية للدرس 1-3</span>
-              <span className="lang-en">Official Lesson 1-3 Textbook Enrichment Features</span>
+              <span className="lang-ar">أنشطة كتاب الوزارة الرسمية — الدرس 1-3</span>
+              <span className="lang-en">Official Textbook Activities — Lesson 1-3</span>
             </span>
             <h3 className="text-lg font-black mt-0.5 flex items-center gap-2">
               <i className="fa-solid fa-graduation-cap text-amber-400"></i>
-              <span className="lang-ar">أنشطة: توقف وفكر • استقصِ كمهندس • فكر كمهندس • نمط الامتحان</span>
-              <span className="lang-en">Activities: Pause & Think • Investigate • Exam Style</span>
+              <span className="lang-ar">أنشطة: استقصِ بالأزواج • توقف وفكر • فكر كمهندس • نمط الامتحان</span>
+              <span className="lang-en">Activities: Explore · In Pairs • Think It Through • Think as an Engineer • Exam Style</span>
             </h3>
           </div>
-          <span className="text-xs text-sub font-mono">ص 20 - ص 23</span>
+          <span className="text-xs text-sub font-mono">ص 21 - ص 24</span>
         </div>
 
-        {/* 1. Pause & Think (1) */}
-        <div onClick={() => handleToggleCard('pause-think-1-3-1')} className="p-5 rounded-2xl theme-subpanel border border-brand-500/30 space-y-3 cursor-pointer select-none group hover:border-brand-500 transition">
+        {/* 1. Explore · In Pairs — p. 21 */}
+        <div onClick={() => handleToggleCard('explore-pairs-1-3')} className="p-5 rounded-2xl theme-subpanel border border-cyan-500/30 space-y-3 cursor-pointer select-none group hover:border-cyan-500 transition">
           <div className="flex items-center justify-between">
-            <span className="px-3 py-1 rounded-full bg-brand-500/20 text-brand-400 text-xs font-bold flex items-center gap-1.5">
-              <i className="fa-solid fa-brain"></i>
-              <span className="lang-ar">🧠 توقف وفكر (1) (كتاب الوزارة ص 21)</span>
-              <span className="lang-en">🧠 Pause & Think (1) (Textbook p. 21)</span>
+            <span className="px-3 py-1 rounded-full bg-cyan-500/20 text-cyan-400 text-xs font-bold flex items-center gap-1.5">
+              <i className="fa-solid fa-people-group"></i>
+              <span className="lang-ar">✎ استقصِ بالأزواج — كتاب الوزارة ص 21</span>
+              <span className="lang-en">✎ Explore · In Pairs — Textbook p. 21</span>
             </span>
-            <button onClick={(e) => { e.stopPropagation(); handleToggleCard('pause-think-1-3-1'); }} className="text-xs font-bold text-brand-400 hover:underline flex items-center gap-1 cursor-pointer">
-              <span className="lang-ar">{expandedCards['pause-think-1-3-1'] ? 'إخفاء الإجابة' : 'عرض الإجابة والتحليل النموذجي'}</span>
-              <span className="lang-en">{expandedCards['pause-think-1-3-1'] ? 'Hide Answer' : 'Reveal Model Analysis'}</span>
-              <i className={`fa-solid fa-chevron-down text-[10px] transition-transform ${expandedCards['pause-think-1-3-1'] ? 'rotate-180' : ''}`}></i>
+            <button onClick={(e) => { e.stopPropagation(); handleToggleCard('explore-pairs-1-3'); }} className="text-xs font-bold text-cyan-400 hover:underline flex items-center gap-1 cursor-pointer">
+              <span className="lang-ar">{expandedCards['explore-pairs-1-3'] ? 'إخفاء الإجابة' : 'عرض الإجابة النموذجية'}</span>
+              <span className="lang-en">{expandedCards['explore-pairs-1-3'] ? 'Hide Answer' : 'Show Model Answer'}</span>
+              <i className={`fa-solid fa-chevron-down text-[10px] transition-transform ${expandedCards['explore-pairs-1-3'] ? 'rotate-180' : ''}`}></i>
             </button>
           </div>
           <p className="text-xs font-bold text-slate-200">
-            <span className="lang-ar">"لو عُرض عليك الاعتماد على نظام ذكاء اصطناعي بنسبة 100% لإجراء عملية جراحية دقيقة لأحد أقاربك أو إصدار حكم قضائي بالسجن في محكمة دون أي تدخل بشري، فهل توافق؟ ولماذا؟"</span>
-            <span className="lang-en">"Would you authorize an AI system to perform surgery or issue court sentences 100% autonomously without human oversight? Why?"</span>
+            <span className="lang-ar">مع شريك، اذكر ثلاث خدمات استخدمتها هذا الأسبوع وتعتقد أن الذكاء الاصطناعي يُستخدم فيها (مثال: توصية فيديو، مساعد صوتي، أو ترجمة). لكل منها، توقّع ما هي البيانات التي يحتاجها الذكاء الاصطناعي للقيام بمهمته. ثم اقرّرا معاً: أيها ستكون أكثر أهمية لو أخطأ؟</span>
+            <span className="lang-en">With a partner, list three services you used this week that you think used AI (for example, a video recommendation, a voice assistant, or a translation). For each, predict what data the AI needed to do its job. Then decide together: which one would matter most if it made a mistake?</span>
           </p>
-          {expandedCards['pause-think-1-3-1'] && (
-            <div onClick={(e) => e.stopPropagation()} className="p-4 rounded-xl bg-slate-900 border border-brand-500/40 text-xs leading-relaxed text-slate-300 space-y-2 animate-fadeIn cursor-auto select-text">
-              <strong className="text-brand-400 block font-bold">
-                <span className="lang-ar">💡 الرد الهندسي والمنهجي المعتمد (م/ عمر محمود):</span>
-                <span className="lang-en">💡 Certified Engineering Response:</span>
+          {expandedCards['explore-pairs-1-3'] && (
+            <div onClick={(e) => e.stopPropagation()} className="p-4 rounded-xl bg-slate-900 border border-cyan-500/40 text-xs leading-relaxed text-slate-300 space-y-2 animate-fadeIn cursor-auto select-text">
+              <strong className="text-cyan-400 block font-bold">
+                <span className="lang-ar">💡 إجابة نموذجية:</span>
+                <span className="lang-en">💡 Model Answer:</span>
               </strong>
-              <p>
-                <span className="lang-ar"><strong>أرفض ذلك تماماً وبشكل قاطع:</strong> لأن الذكاء الاصطناعي أداة احتمالية غير معصومة من الخطأ وتفتقر إلى الإدراك الأخلاقي والمسؤولية القانونية. في حال ارتكاب الآلة خطأً قاتلاً في غرفة العمليات أو سجن شخص بريء، لا يمكن معاقبة الخوارزمية أو محاسبتها! لذلك يجب أن تظل القرارات عالية الأثر تحت مبدأ <strong>"الإنسان في حلقة القرار" (Human-in-the-loop)</strong> حيث يقتصر دور الـ AI على المعاونة وتقديم التوصيات، بينما يتحمل الإنسان القرار النهائي.</span>
-                <span className="lang-en"><strong>Strictly unacceptable:</strong> AI is probabilistic, lacks moral accountability, and cannot be held legally liable. High-impact decisions demand a "Human-in-the-loop" paradigm.</span>
-              </p>
-            </div>
-          )}
-        </div>
-
-        {/* 2. Pause & Think (2) */}
-        <div onClick={() => handleToggleCard('pause-think-1-3-2')} className="p-5 rounded-2xl theme-subpanel border border-purple-500/30 space-y-3 cursor-pointer select-none group hover:border-purple-500 transition">
-          <div className="flex items-center justify-between">
-            <span className="px-3 py-1 rounded-full bg-purple-500/20 text-purple-400 text-xs font-bold flex items-center gap-1.5">
-              <i className="fa-solid fa-gears"></i>
-              <span className="lang-ar">🧠 توقف وفكر (2) (كتاب الوزارة ص 22)</span>
-              <span className="lang-en">🧠 Pause & Think (2) (Textbook p. 22)</span>
-            </span>
-            <button onClick={(e) => { e.stopPropagation(); handleToggleCard('pause-think-1-3-2'); }} className="text-xs font-bold text-purple-400 hover:underline flex items-center gap-1 cursor-pointer">
-              <span className="lang-ar">{expandedCards['pause-think-1-3-2'] ? 'إخفاء الإجابة' : 'عرض الشرح المنهجي'}</span>
-              <span className="lang-en">{expandedCards['pause-think-1-3-2'] ? 'Hide Answer' : 'Reveal Analysis'}</span>
-              <i className={`fa-solid fa-chevron-down text-[10px] transition-transform ${expandedCards['pause-think-1-3-2'] ? 'rotate-180' : ''}`}></i>
-            </button>
-          </div>
-          <p className="text-xs font-bold text-slate-200">
-            <span className="lang-ar">"كيف تساهم تقنية الصيانة التنبؤية (Predictive Maintenance) في توفير ملايين الجنيهات للمصانع وشركات الطيران مقارنة بالصيانة الدورية التقليدية؟"</span>
-            <span className="lang-en">"How does predictive maintenance save millions compared to conventional scheduled maintenance in manufacturing and aviation?"</span>
-          </p>
-          {expandedCards['pause-think-1-3-2'] && (
-            <div onClick={(e) => e.stopPropagation()} className="p-4 rounded-xl bg-slate-900 border border-purple-500/40 text-xs leading-relaxed text-slate-300 space-y-2 animate-fadeIn cursor-auto select-text">
-              <strong className="text-purple-300 block font-bold">
-                <span className="lang-ar">💡 التحليل الاقتصادي والهندسي:</span>
-                <span className="lang-en">💡 Economic & Engineering Analysis:</span>
-              </strong>
-              <p>
-                <span className="lang-ar">الصيانة الدورية التقليدية إما أن تستبدل قطع غيار سليمة لم تنتهِ صلاحيتها بعد (إهدار للمال)، أو تنتظر حتى يتعطل الجهاز فجأة (مما يوقف خط الإنتاج بالكامل ويكبد المصنع خسائر بالملايين). أما <strong>الصيانة التنبؤية</strong> فتستخدم حساسات الاهتزاز والحرارة لتحليل تآكل التروس بدقة عبر خوارزميات الـ AI، وتحدد موعد الصيانة الدقيق قبل حدوث العطل بوقت وجيز أثناء فترات التوقف المجدولة، مما يمنع الحوادث ويوفر تكلفة قطع الغيار واستمرار الإنتاج.</span>
-                <span className="lang-en">Conventional maintenance either replaces functional parts prematurely or incurs catastrophic unplanned downtime. Predictive maintenance analyzes sensor vibration telemetry to service machinery right before failure without interrupting operations.</span>
-              </p>
-            </div>
-          )}
-        </div>
-
-        {/* 3. Investigate Like an Engineer */}
-        <div onClick={() => handleToggleCard('investigate-1-3')} className="p-5 rounded-2xl theme-subpanel border border-emerald-500/30 space-y-3 cursor-pointer select-none group hover:border-emerald-500 transition">
-          <div className="flex items-center justify-between">
-            <span className="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-bold flex items-center gap-1.5">
-              <i className="fa-solid fa-seedling"></i>
-              <span className="lang-ar">🔍 استقصِ كمهندس (كتاب الوزارة ص 20)</span>
-              <span className="lang-en">🔍 Investigate Like an Engineer (p. 20)</span>
-            </span>
-            <button onClick={(e) => { e.stopPropagation(); handleToggleCard('investigate-1-3'); }} className="text-xs font-bold text-emerald-400 hover:underline flex items-center gap-1 cursor-pointer">
-              <span className="lang-ar">{expandedCards['investigate-1-3'] ? 'إخفاء الإجابة' : 'عرض دراسة الحالة الزراعية في مصر'}</span>
-              <span className="lang-en">{expandedCards['investigate-1-3'] ? 'Hide Answer' : 'Reveal Agri-AI Case Study'}</span>
-              <i className={`fa-solid fa-chevron-down text-[10px] transition-transform ${expandedCards['investigate-1-3'] ? 'rotate-180' : ''}`}></i>
-            </button>
-          </div>
-          <p className="text-xs font-bold text-slate-200">
-            <span className="lang-ar">"تصميم نظام ذكاء اصطناعي زراعي لمزارعي مصر لمكافحة سوسة النخيل الحمراء أو آفات القمح: ما هي المدخلات والحساسات المطلوبة، وما المخاطر التي يجب تجنبها عند نشر النظام؟"</span>
-            <span className="lang-en">"Design an Agri-AI system combating palm weevils and crop pests: What sensors are required and what risks must be mitigated?"</span>
-          </p>
-          {expandedCards['investigate-1-3'] && (
-            <div onClick={(e) => e.stopPropagation()} className="p-4 rounded-xl bg-slate-900 border border-emerald-500/40 text-xs leading-relaxed text-slate-300 space-y-2 animate-fadeIn cursor-auto select-text">
-              <strong className="text-emerald-400 block font-bold">
-                <span className="lang-ar">التصميم الهندسي الميداني (م/ عمر محمود):</span>
-                <span className="lang-en">Field Engineering Specifications:</span>
-              </strong>
-              <div className="space-y-1 text-sub">
-                <p>1. <strong>المدخلات والحساسات:</strong> طائرات بدون طيار (Drones) مجهزة بكاميرات متعددة الأطياف (Multispectral) ترصد انعكاس الكلوروفيل في أوراق الشجر + حساسات صوتية تلتقط أصوات نخر يرقات سوسة النخيل داخل الجذوع.</p>
-                <p>2. <strong>المعالجة:</strong> نموذج شبكة عصبية التفافية (CNN) يقارن الصور بقاعدة بيانات الآفات الزراعية لتحديد بؤرة الإصابة بدقة متر مربع واحد.</p>
-                <p>3. <strong>المخاطر الواجب تجنبها:</strong> رش المبيدات الزائد عن الحد بسبب خطأ التصنيف الإيجابي الكاذب (False Positive)، أو تجاهل بؤرة حقيقية بسبب نقص جودة الكاميرات في ظروف الغبار والشمس الشديدة.</p>
+              <div className="space-y-2">
+                <p>
+                  <span className="lang-ar"><strong>الخدمات الثلاث والبيانات المطلوبة:</strong><br/>① توصية فيديو (YouTube) — تحتاج: سجل المشاهدة، مدة المشاهدة، البحث السابق.<br/>② المساعد الصوتي (Siri/Google) — تحتاج: تسجيل الصوت، الموقع الجغرافي، التقويم.<br/>③ الترجمة التلقائية — تحتاج: النص المُدخَل، اللغة المصدر، بيانات الجمل المترجمة سابقاً.</span>
+                  <span className="lang-en"><strong>Three services and data needed:</strong><br/>① Video recommendation (YouTube) — needs: watch history, watch duration, previous searches.<br/>② Voice assistant (Siri/Google) — needs: voice recording, location, calendar data.<br/>③ Automatic translation — needs: input text, source language, previously translated sentences.</span>
+                </p>
+                <p>
+                  <span className="lang-ar"><strong>الأكثر أهمية عند الخطأ:</strong> المساعد الصوتي — لأن خطأه في فهم أمر مثل "اتصل بالإسعاف" قد يسبب ضرراً فورياً وحقيقياً.</span>
+                  <span className="lang-en"><strong>Which would matter most if wrong:</strong> The voice assistant — because a misunderstood command like "call an ambulance" could cause immediate real-world harm.</span>
+                </p>
               </div>
             </div>
           )}
         </div>
 
-        {/* 4. Think Like an Engineer */}
-        <div onClick={() => handleToggleCard('think-eng-1-3')} className="p-5 rounded-2xl theme-subpanel border border-amber-500/30 space-y-3 cursor-pointer select-none group hover:border-amber-500 transition">
+        {/* 2. Think It Through — Hospital AI — p. 22 */}
+        <div onClick={() => handleToggleCard('think-tt-1-3-1')} className="p-5 rounded-2xl theme-subpanel border border-brand-500/30 space-y-3 cursor-pointer select-none group hover:border-brand-500 transition">
           <div className="flex items-center justify-between">
-            <span className="px-3 py-1 rounded-full bg-amber-500/20 text-amber-400 text-xs font-bold flex items-center gap-1.5">
-              <i className="fa-solid fa-sliders"></i>
-              <span className="lang-ar">💡 فكر كمهندس (كتاب الوزارة ص 23)</span>
-              <span className="lang-en">💡 Think Like an Engineer (p. 23)</span>
+            <span className="px-3 py-1 rounded-full bg-brand-500/20 text-brand-400 text-xs font-bold flex items-center gap-1.5">
+              <i className="fa-solid fa-lightbulb"></i>
+              <span className="lang-ar">💡 توقف وفكر (1) — كتاب الوزارة ص 22</span>
+              <span className="lang-en">💡 Think It Through (1) — Textbook p. 22</span>
             </span>
-            <button onClick={(e) => { e.stopPropagation(); handleToggleCard('think-eng-1-3'); }} className="text-xs font-bold text-amber-400 hover:underline flex items-center gap-1 cursor-pointer">
-              <span className="lang-ar">{expandedCards['think-eng-1-3'] ? 'إخفاء الإجابة' : 'عرض مصفوفة التوازن الهندسي'}</span>
-              <span className="lang-en">{expandedCards['think-eng-1-3'] ? 'Hide Answer' : 'Reveal Balance Matrix'}</span>
-              <i className={`fa-solid fa-chevron-down text-[10px] transition-transform ${expandedCards['think-eng-1-3'] ? 'rotate-180' : ''}`}></i>
+            <button onClick={(e) => { e.stopPropagation(); handleToggleCard('think-tt-1-3-1'); }} className="text-xs font-bold text-brand-400 hover:underline flex items-center gap-1 cursor-pointer">
+              <span className="lang-ar">{expandedCards['think-tt-1-3-1'] ? 'إخفاء الإجابة' : 'عرض الإجابة النموذجية'}</span>
+              <span className="lang-en">{expandedCards['think-tt-1-3-1'] ? 'Hide Answer' : 'Show Model Answer'}</span>
+              <i className={`fa-solid fa-chevron-down text-[10px] transition-transform ${expandedCards['think-tt-1-3-1'] ? 'rotate-180' : ''}`}></i>
             </button>
           </div>
           <p className="text-xs font-bold text-slate-200">
-            <span className="lang-ar">"في خوارزميات التوصية على وسائل التواصل الاجتماعي (كـ YouTube و TikTok): كيف تحقق توازناً هندسياً بين زيادة تفاعل المستخدم (Engagement) وبين منع حبسه داخل 'فقاعة تصفية' (Filter Bubble) أو الترويج لمحتوى مضلل وصادم؟"</span>
-            <span className="lang-en">"In social recommender engines: How do you balance user engagement while preventing filter bubbles and sensationalized misinforming content?"</span>
+            <span className="lang-ar">تفكر مستشفى في استخدام الذكاء الاصطناعي لتشخيص الصور للكشف عن الأمراض من صور الأشعة السينية. اشرح لماذا يجب أن يُؤكَّد التشخيص النهائي من قِبَل طبيب بشري بدلاً من تركه للذكاء الاصطناعي وحده.</span>
+            <span className="lang-en">A hospital is considering using image-diagnosis AI to detect diseases from X-ray images. Explain why the final diagnosis should be confirmed by a human doctor rather than left to AI alone.</span>
           </p>
-          {expandedCards['think-eng-1-3'] && (
-            <div onClick={(e) => e.stopPropagation()} className="p-4 rounded-xl bg-slate-900 border border-amber-500/40 text-xs leading-relaxed text-slate-300 space-y-2 animate-fadeIn cursor-auto select-text">
-              <strong className="text-amber-400 block font-bold">
-                <span className="lang-ar">استراتيجية الضبط الهندسي لخوارزميات التوصية:</span>
-                <span className="lang-en">Recommender Governance Strategy:</span>
+          {expandedCards['think-tt-1-3-1'] && (
+            <div onClick={(e) => e.stopPropagation()} className="p-4 rounded-xl bg-slate-900 border border-brand-500/40 text-xs leading-relaxed text-slate-300 space-y-2 animate-fadeIn cursor-auto select-text">
+              <strong className="text-brand-400 block font-bold">
+                <span className="lang-ar">💡 الإجابة النموذجية:</span>
+                <span className="lang-en">💡 Model Answer:</span>
               </strong>
               <p>
-                <span className="lang-ar">يتم ذلك عبر تقنية <strong>"حقن الاستكشاف والتنوع" (Exploration Injection)</strong>؛ بحيث لا تخصص الخوارزمية 100% من الاقتراحات للموضوعات السابقة نفسها للمستخدم، بل تخصص نسبة (مثلاً 20%) لموضوعات ووجهات نظر جديدة وموثوقة، مع تطبيق فلتر رقابي استباقي يُسقط النقاط التقييمية للمحتوى الصادم أو المضلل لمنعه من الانتشار الفيروسي حتى لو كان يجلب تفاعلاً سريعاً.</span>
-                <span className="lang-en">Enforce Exploration Injection where 20% of recommendations introduce diversified, verified content outside the user's echo chamber, while penalizing sensationalist toxic content regardless of engagement metrics.</span>
+                <span className="lang-ar">يجب تأكيد التشخيص النهائي من طبيب بشري لأن:<br/>① <strong>الذكاء الاصطناعي غير معصوم من الخطأ:</strong> قد يخطئ في تصنيف مرض نادر لم يكن ممثلاً بما يكفي في بيانات التدريب.<br/>② <strong>المسؤولية القانونية والأخلاقية:</strong> لا يمكن مساءلة الخوارزمية قانونياً في حال الخطأ — الطبيب هو من يتحمل المسؤولية.<br/>③ <strong>التقييم السريري الشامل:</strong> الطبيب يأخذ في الاعتبار أعراض المريض وتاريخه المرضي والسياق الإنساني الذي لا يستطيع AI إدراكه.</span>
+                <span className="lang-en">The final diagnosis must be confirmed by a human doctor because:<br/>① <strong>AI is not infallible:</strong> It may misclassify a rare disease underrepresented in training data.<br/>② <strong>Legal and ethical accountability:</strong> An algorithm cannot be held legally responsible — the human doctor bears full accountability.<br/>③ <strong>Holistic clinical assessment:</strong> The doctor considers symptoms, medical history, and human context that AI cannot fully grasp.</span>
               </p>
             </div>
           )}
         </div>
 
-        {/* 5. Exam Style Question */}
-        <div onClick={() => handleToggleCard('exam-style-1-3')} className="p-5 rounded-2xl theme-subpanel border border-rose-500/30 space-y-3 cursor-pointer select-none group hover:border-rose-500 transition">
+        {/* 3. Pause & Think — Privacy — p. 22 */}
+        <div onClick={() => handleToggleCard('pause-think-1-3-priv')} className="p-5 rounded-2xl theme-subpanel border border-purple-500/30 space-y-3 cursor-pointer select-none group hover:border-purple-500 transition">
+          <div className="flex items-center justify-between">
+            <span className="px-3 py-1 rounded-full bg-purple-500/20 text-purple-400 text-xs font-bold flex items-center gap-1.5">
+              <i className="fa-solid fa-brain"></i>
+              <span className="lang-ar">🧠 توقف وفكر — الخصوصية — كتاب الوزارة ص 22</span>
+              <span className="lang-en">🧠 Pause & Think — Privacy — Textbook p. 22</span>
+            </span>
+            <button onClick={(e) => { e.stopPropagation(); handleToggleCard('pause-think-1-3-priv'); }} className="text-xs font-bold text-purple-400 hover:underline flex items-center gap-1 cursor-pointer">
+              <span className="lang-ar">{expandedCards['pause-think-1-3-priv'] ? 'إخفاء الإجابة' : 'عرض الإجابة النموذجية'}</span>
+              <span className="lang-en">{expandedCards['pause-think-1-3-priv'] ? 'Hide Answer' : 'Show Model Answer'}</span>
+              <i className={`fa-solid fa-chevron-down text-[10px] transition-transform ${expandedCards['pause-think-1-3-priv'] ? 'rotate-180' : ''}`}></i>
+            </button>
+          </div>
+          <p className="text-xs font-bold text-slate-200">
+            <span className="lang-ar">خدمات الذكاء الاصطناعي غالباً ما تستخدم بياناتك الشخصية — ما تشاهده وما تشتريه وما تقوله. لماذا يُثير هذا مخاوف تتعلق بالخصوصية؟ ومن ينبغي أن يقرر كيفية استخدام بياناتك؟</span>
+            <span className="lang-en">AI services often use your personal data — what you watch, buy, or say. Why does this raise privacy concerns, and who should decide how your data is used?</span>
+          </p>
+          {expandedCards['pause-think-1-3-priv'] && (
+            <div onClick={(e) => e.stopPropagation()} className="p-4 rounded-xl bg-slate-900 border border-purple-500/40 text-xs leading-relaxed text-slate-300 space-y-2 animate-fadeIn cursor-auto select-text">
+              <strong className="text-purple-300 block font-bold">
+                <span className="lang-ar">💡 الإجابة النموذجية:</span>
+                <span className="lang-en">💡 Model Answer:</span>
+              </strong>
+              <p>
+                <span className="lang-ar"><strong>لماذا تثير مخاوف؟</strong> لأن جمع البيانات الشخصية دون علم المستخدم أو موافقته يعني أن الشركات تستطيع تتبع سلوكه وتحليله لأغراض تجارية، وقد تبيعها لأطراف ثالثة. كما أن تخزين البيانات يعرضها لخطر الاختراق والسرقة.<br/><strong>من ينبغي أن يقرر؟</strong> يجب أن يقرر <strong>المستخدم نفسه</strong> من خلال موافقة واضحة وصريحة (Informed Consent)، مع وجود قوانين حكومية تحمي حقوق الخصوصية وتُلزم الشركات بالشفافية.</span>
+                <span className="lang-en"><strong>Why does it raise concerns?</strong> Collecting personal data without knowledge allows companies to track and analyse behaviour for commercial purposes, potentially selling it. Stored data is also vulnerable to breaches.<br/><strong>Who should decide?</strong> <strong>The user themselves</strong> through clear informed consent, supported by government regulations that protect privacy rights and require transparency.</span>
+              </p>
+            </div>
+          )}
+        </div>
+
+        {/* 4. Think It Through — Agriculture — p. 24 */}
+        <div onClick={() => handleToggleCard('think-tt-1-3-agri')} className="p-5 rounded-2xl theme-subpanel border border-rose-500/30 space-y-3 cursor-pointer select-none group hover:border-rose-500 transition">
           <div className="flex items-center justify-between">
             <span className="px-3 py-1 rounded-full bg-rose-500/20 text-rose-400 text-xs font-bold flex items-center gap-1.5">
-              <i className="fa-solid fa-file-pen"></i>
-              <span className="lang-ar">📝 سؤال على نمط الامتحان (6 درجات) — كتاب الوزارة</span>
-              <span className="lang-en">📝 Exam-Style Question (6 Marks)</span>
+              <i className="fa-solid fa-lightbulb"></i>
+              <span className="lang-ar">💡 توقف وفكر — الزراعة — كتاب الوزارة ص 24</span>
+              <span className="lang-en">💡 Think It Through — Agriculture — Textbook p. 24</span>
             </span>
-            <button onClick={(e) => { e.stopPropagation(); handleToggleCard('exam-style-1-3'); }} className="text-xs font-bold text-rose-400 hover:underline flex items-center gap-1 cursor-pointer">
-              <span className="lang-ar">{expandedCards['exam-style-1-3'] ? 'إخفاء الإجابة' : 'عرض نموذج الإجابة وتوزيع الدرجات'}</span>
-              <span className="lang-en">{expandedCards['exam-style-1-3'] ? 'Hide Answer' : 'Model Answer & Mark Scheme'}</span>
+            <button onClick={(e) => { e.stopPropagation(); handleToggleCard('think-tt-1-3-agri'); }} className="text-xs font-bold text-rose-400 hover:underline flex items-center gap-1 cursor-pointer">
+              <span className="lang-ar">{expandedCards['think-tt-1-3-agri'] ? 'إخفاء الإجابة' : 'عرض الإجابة النموذجية'}</span>
+              <span className="lang-en">{expandedCards['think-tt-1-3-agri'] ? 'Hide Answer' : 'Show Model Answer'}</span>
+              <i className={`fa-solid fa-chevron-down text-[10px] transition-transform ${expandedCards['think-tt-1-3-agri'] ? 'rotate-180' : ''}`}></i>
+            </button>
+          </div>
+          <p className="text-xs font-bold text-slate-200">
+            <span className="lang-ar">في الزراعة، اذكر ميزة واقعية واحدة لاستخدام الذكاء الاصطناعي وقلقاً واحداً يجب مراعاته قبل تطبيقه، مع شرح موجز لسبب كل منهما.</span>
+            <span className="lang-en">In agriculture, give one realistic advantage of introducing AI and one concern that should be considered before introduction, and briefly explain the reason for each.</span>
+          </p>
+          {expandedCards['think-tt-1-3-agri'] && (
+            <div onClick={(e) => e.stopPropagation()} className="p-4 rounded-xl bg-slate-900 border border-rose-500/40 text-xs leading-relaxed text-slate-300 space-y-2 animate-fadeIn cursor-auto select-text">
+              <strong className="text-rose-300 block font-bold">
+                <span className="lang-ar">💡 الإجابة النموذجية:</span>
+                <span className="lang-en">💡 Model Answer:</span>
+              </strong>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                <div className="p-2 rounded bg-emerald-500/10 border border-emerald-500/20">
+                  <strong className="text-emerald-300 block"><span className="lang-ar">الميزة:</span><span className="lang-en">Advantage:</span></strong>
+                  <span className="lang-ar text-sub">الكشف المبكر عن الآفات والأمراض من صور المحاصيل — يقلل استخدام المبيدات ويرفع الإنتاج. السبب: AI يكتشف أنماطاً دقيقة يصعب على الإنسان رؤيتها مبكراً.</span>
+                  <span className="lang-en text-sub">Early detection of pests and diseases from crop images — reduces pesticide use and increases yield. Reason: AI detects subtle patterns hard for humans to spot early.</span>
+                </div>
+                <div className="p-2 rounded bg-rose-500/10 border border-rose-500/20">
+                  <strong className="text-rose-300 block"><span className="lang-ar">القلق:</span><span className="lang-en">Concern:</span></strong>
+                  <span className="lang-ar text-sub">دقة الأحكام عند انحياز بيانات التدريب — إذا دُرّب النظام على محاصيل منطقة بعينها فقد يعطي نتائج خاطئة في مناطق أخرى. السبب: التحيز في البيانات يؤثر على دقة أحكام AI.</span>
+                  <span className="lang-en text-sub">Accuracy when training data is biased — if trained only on one region's crops it may give wrong results elsewhere. Reason: bias in data affects AI judgment accuracy.</span>
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
+
+        {/* 5. Exam-Style Question — p. 23 [6 marks] */}
+        <div onClick={() => handleToggleCard('exam-style-1-3')} className="p-5 rounded-2xl theme-subpanel border border-amber-500/30 space-y-3 cursor-pointer select-none group hover:border-amber-500 transition">
+          <div className="flex items-center justify-between">
+            <span className="px-3 py-1 rounded-full bg-amber-500/20 text-amber-400 text-xs font-bold flex items-center gap-1.5">
+              <i className="fa-solid fa-file-pen"></i>
+              <span className="lang-ar">📝 سؤال نمط الامتحان — كتاب الوزارة ص 23 (6 درجات)</span>
+              <span className="lang-en">📝 Exam-Style Question — Textbook p. 23 [6 marks]</span>
+            </span>
+            <button onClick={(e) => { e.stopPropagation(); handleToggleCard('exam-style-1-3'); }} className="text-xs font-bold text-amber-400 hover:underline flex items-center gap-1 cursor-pointer">
+              <span className="lang-ar">{expandedCards['exam-style-1-3'] ? 'إخفاء الإجابة' : 'عرض الإجابة النموذجية'}</span>
+              <span className="lang-en">{expandedCards['exam-style-1-3'] ? 'Hide Answer' : 'Show Model Answer'}</span>
               <i className={`fa-solid fa-chevron-down text-[10px] transition-transform ${expandedCards['exam-style-1-3'] ? 'rotate-180' : ''}`}></i>
             </button>
           </div>
           <p className="text-xs font-bold text-slate-200">
-            <span className="lang-ar">"وضح بمثالين واقعيين الفرق بين استخدام الذكاء الاصطناعي كـ 'أداة مساعدة' (Augmentative Tool) واستخدامه كـ 'بديل كامل' (Autonomous Replacement)، ولماذا يُحظر الاستبدال الكامل في قطاع الرعاية الصحية؟"</span>
-            <span className="lang-en">"Explain with two examples the difference between AI as an Augmentative Tool vs Autonomous Replacement, and why full replacement is prohibited in healthcare."</span>
+            <span className="lang-ar">حلّل لماذا يكون الذكاء الاصطناعي مناسبًا لبعض المهام لكنه يستوجب الحذر في مهام أخرى. [6 درجات] في إجابتك: أشر إلى ما يبرع فيه AI (إيجاد الأنماط، التعرف، التنبؤ)، وما يستوجب الحذر (الأحكام الأخلاقية، الخصوصية، اتخاذ القرار النهائي).</span>
+            <span className="lang-en">Analyze why AI is well suited to some tasks but requires caution in others. [6 marks] In your answer: refer to what AI is good at (finding patterns, recognition, prediction) and to what needs caution (ethical judgments, privacy, final decision-making).</span>
           </p>
           {expandedCards['exam-style-1-3'] && (
-            <div onClick={(e) => e.stopPropagation()} className="p-4 rounded-xl bg-slate-900 border border-rose-500/40 text-xs leading-relaxed text-slate-300 space-y-2 animate-fadeIn cursor-auto select-text">
-              <strong className="text-rose-400 block font-bold">
-                <span className="lang-ar">نموذج الإجابة للحصول على الدرجة النهائية (6/6):</span>
-                <span className="lang-en">Model Answer for Full Marks (6/6):</span>
+            <div onClick={(e) => e.stopPropagation()} className="p-4 rounded-xl bg-slate-900 border border-amber-500/40 text-xs leading-relaxed text-slate-300 space-y-3 animate-fadeIn cursor-auto select-text">
+              <strong className="text-amber-400 block font-bold">
+                <span className="lang-ar">💡 الإجابة النموذجية الكاملة (توزيع الدرجات):</span>
+                <span className="lang-en">💡 Full Model Answer (Mark Scheme):</span>
               </strong>
-              <ol className="space-y-1.5 list-decimal rtl:pr-4 ltr:pl-4 text-sub">
-                <li><strong>الذكاء الاصطناعي كأداة مساعدة [درجتان]:</strong> مثل نظام فحص الأشعة السينية الذي يضع دائرة حمراء حول ورم محتمل وينبه الطبيب، لكن الطبيب هو من يقرر ويكتب التقرير.</li>
-                <li><strong>الذكاء الاصطناعي كبديل كامل [درجتان]:</strong> مثل روبوت التنظيف في المطار أو مرشح الرسائل المزعجة (Spam) الذي يتخذ القرار ويحذف الرسالة تلقائياً دون تدخل إنسان.</li>
-                <li><strong>سبب حظر الاستبدال في الرعاية الصحية [درجتان]:</strong> لأن الأخطاء الطبية تمس حياة الإنسان، والآلة لا يمكن مساءلتها قانونياً أو أخلاقياً، بالإضافة إلى حاجة المريض للتعاطف الإنساني والتقييم السريري الشامل الذي تعجز عنه الحواسيب.</li>
-              </ol>
+              <div className="space-y-2 text-[11px]">
+                <div className="p-2.5 rounded-lg bg-emerald-500/10 border border-emerald-500/20">
+                  <strong className="text-emerald-300"><span className="lang-ar">ما يبرع فيه AI — [3 درجات]</span><span className="lang-en">What AI is good at — [3 marks]</span></strong>
+                  <ul className="mt-1 space-y-0.5 text-sub list-disc rtl:pr-4 ltr:pl-4">
+                    <li><span className="lang-ar">إيجاد الأنماط وتصنيفها في البيانات المعقدة كالصور والنصوص.</span><span className="lang-en">Finding and classifying patterns in complex data like images and text.</span></li>
+                    <li><span className="lang-ar">التعرف على الصور والأصوات والنصوص وتوليدها.</span><span className="lang-en">Recognition and generation of images, audio, and text.</span></li>
+                    <li><span className="lang-ar">الاستنتاج الاحتمالي والتنبؤ بناءً على البيانات.</span><span className="lang-en">Probabilistic reasoning and prediction based on data.</span></li>
+                  </ul>
+                </div>
+                <div className="p-2.5 rounded-lg bg-rose-500/10 border border-rose-500/20">
+                  <strong className="text-rose-300"><span className="lang-ar">ما يستوجب الحذر — [3 درجات]</span><span className="lang-en">What needs caution — [3 marks]</span></strong>
+                  <ul className="mt-1 space-y-0.5 text-sub list-disc rtl:pr-4 ltr:pl-4">
+                    <li><span className="lang-ar">الأحكام الأخلاقية — قد تؤدي إلى تمييز أو تحيز.</span><span className="lang-en">Ethical judgments — may lead to discrimination or prejudice.</span></li>
+                    <li><span className="lang-ar">القرارات التي تشمل المعلومات الشخصية والخصوصية.</span><span className="lang-en">Judgments involving personal data and privacy.</span></li>
+                    <li><span className="lang-ar">اتخاذ القرار النهائي — يجب أن يظل الإنسان مسؤولاً عن النتيجة.</span><span className="lang-en">Final decision-making — humans must remain responsible for outcomes.</span></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
+
+        {/* 6. Think as an Engineer — Investigate & Decide — p. 24 */}
+        <div onClick={() => handleToggleCard('think-eng-1-3')} className="p-5 rounded-2xl theme-subpanel border border-emerald-500/30 space-y-3 cursor-pointer select-none group hover:border-emerald-500 transition">
+          <div className="flex items-center justify-between">
+            <span className="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-bold flex items-center gap-1.5">
+              <i className="fa-solid fa-gears"></i>
+              <span className="lang-ar">⚙ فكر كمهندس — استقصِ وقرر (كتاب الوزارة ص 24)</span>
+              <span className="lang-en">⚙ Think as an Engineer — Investigate & Decide (Textbook p. 24)</span>
+            </span>
+            <button onClick={(e) => { e.stopPropagation(); handleToggleCard('think-eng-1-3'); }} className="text-xs font-bold text-emerald-400 hover:underline flex items-center gap-1 cursor-pointer">
+              <span className="lang-ar">{expandedCards['think-eng-1-3'] ? 'إخفاء الإجابة' : 'عرض الإجابة النموذجية'}</span>
+              <span className="lang-en">{expandedCards['think-eng-1-3'] ? 'Hide Answer' : 'Show Model Answer'}</span>
+              <i className={`fa-solid fa-chevron-down text-[10px] transition-transform ${expandedCards['think-eng-1-3'] ? 'rotate-180' : ''}`}></i>
+            </button>
+          </div>
+          <div className="text-xs font-bold text-slate-200 space-y-1.5">
+            <p>
+              <span className="lang-ar">ناقشت للتو موضوع الزراعة في ملاحظة "توقف وفكر". الآن استقصِ صناعة مختلفة وقرر:</span>
+              <span className="lang-en">You have just discussed agriculture in the Think It Through note. Now investigate a different industry and decide:</span>
+            </p>
+            <ol className="space-y-1 list-decimal rtl:pr-4 ltr:pl-4 text-sub font-medium">
+              <li>
+                <span className="lang-ar"><strong>استقصِ:</strong> اختر صناعة واحدة من الدرس غير الزراعة — الرعاية الصحية أو التصنيع أو اللوجستيات. ابحث عن مثال واحد موثّق حقيقي لاستخدام AI فيها وسجّل المصدر.</span>
+                <span className="lang-en"><strong>Investigate.</strong> Choose one industry from the lesson other than agriculture — healthcare, manufacturing, or logistics. Find one real, documented example of AI being used in it, and record the source.</span>
+              </li>
+              <li>
+                <span className="lang-ar"><strong>وازن:</strong> اذكر ميزة واحدة وقلقاً واحداً من استخدام AI في تلك الصناعة، مستخدماً أفكار ما يبرع فيه AI وما يستوجب الحذر.</span>
+                <span className="lang-en"><strong>Weigh it up.</strong> Note one benefit and one caution of using AI in that industry, using the ideas of what AI is good at and what needs caution.</span>
+              </li>
+              <li>
+                <span className="lang-ar"><strong>قرر:</strong> هل ينبغي لهذه الصناعة استخدام AI لهذه المهمة بمفرده أم مع إنسان يراجع النتيجة؟ اقترح نهجاً واحداً وأعطِ سببين.</span>
+                <span className="lang-en"><strong>Decide.</strong> Should this industry use AI for this task on its own, or with a human checking the result? Recommend one approach and give two reasons.</span>
+              </li>
+            </ol>
+          </div>
+          {expandedCards['think-eng-1-3'] && (
+            <div onClick={(e) => e.stopPropagation()} className="p-4 rounded-xl bg-slate-900 border border-emerald-500/40 text-xs leading-relaxed text-slate-300 space-y-3 animate-fadeIn cursor-auto select-text">
+              <strong className="text-emerald-400 block font-bold">
+                <span className="lang-ar">💡 الإجابة النموذجية (اختيار: الرعاية الصحية):</span>
+                <span className="lang-en">💡 Model Answer (choice: Healthcare):</span>
+              </strong>
+              <div className="space-y-2.5">
+                <div>
+                  <strong className="text-emerald-300"><span className="lang-ar">1. المثال الموثّق:</span><span className="lang-en">1. Documented example:</span></strong>
+                  <p className="mt-1 text-sub">
+                    <span className="lang-ar">نظام Google DeepMind "AlphaFold" الذي يتنبأ ببنية البروتين لدعم اكتشاف الأدوية. المصدر: مجلة Nature 2021.</span>
+                    <span className="lang-en">Google DeepMind's "AlphaFold" protein structure prediction for drug discovery. Source: Nature journal 2021.</span>
+                  </p>
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                  <div className="p-2 rounded bg-emerald-500/10 border border-emerald-500/20">
+                    <strong className="text-emerald-300 block"><span className="lang-ar">الميزة:</span><span className="lang-en">Benefit:</span></strong>
+                    <span className="lang-ar text-sub">سرعة تحليل الصور الطبية بدقة عالية — يساعد الأطباء في الكشف المبكر عن الأمراض.</span>
+                    <span className="lang-en text-sub">Fast, accurate medical image analysis — helps doctors detect diseases early.</span>
+                  </div>
+                  <div className="p-2 rounded bg-rose-500/10 border border-rose-500/20">
+                    <strong className="text-rose-300 block"><span className="lang-ar">القلق:</span><span className="lang-en">Caution:</span></strong>
+                    <span className="lang-ar text-sub">اتخاذ القرار النهائي — خطأ AI في تشخيص مريض قد تكون عواقبه خطيرة على حياته.</span>
+                    <span className="lang-en text-sub">Final decision-making — AI misdiagnosis could have life-threatening consequences.</span>
+                  </div>
+                </div>
+                <div>
+                  <strong className="text-emerald-300"><span className="lang-ar">3. القرار:</span><span className="lang-en">3. Decision:</span></strong>
+                  <p className="mt-1 text-sub">
+                    <span className="lang-ar"><strong>مع إنسان يراجع النتيجة دائماً.</strong><br/><strong>السبب الأول:</strong> AI جيد في إيجاد الأنماط لكن قد يخطئ في الحالات النادرة — الطبيب يوفر التقييم السريري الشامل.<br/><strong>السبب الثاني:</strong> القرار الطبي يحمل مسؤولية قانونية وأخلاقية لا يمكن لـ AI تحملها.</span>
+                    <span className="lang-en"><strong>With a human always checking the result.</strong><br/><strong>Reason 1:</strong> AI finds patterns well but may fail on rare cases — the doctor provides holistic clinical judgment.<br/><strong>Reason 2:</strong> Medical decisions carry legal and ethical accountability that AI cannot bear.</span>
+                  </p>
+                </div>
+              </div>
             </div>
           )}
         </div>
