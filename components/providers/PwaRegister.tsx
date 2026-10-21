@@ -17,23 +17,58 @@ export function PwaRegister() {
   const [installedSuccess, setInstalledSuccess] = useState(false);
 
   useEffect(() => {
+    const isProduction = process.env.NODE_ENV === 'production';
+
     // Service Worker Registration
-    if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
+    if (typeof window !== 'undefined' && 'serviceWorker' in navigator && isProduction) {
       const registerSW = () => {
         navigator.serviceWorker
-          .register('/sw.js')
-          .then((reg) => {
+          .register('/sw.js', { updateViaCache: 'none' })
+          .then(async (reg) => {
             console.log('SW Registered successfully:', reg.scope);
+            await reg.update();
+
+            if (reg.waiting) {
+              reg.waiting.postMessage({ type: 'SKIP_WAITING' });
+            }
           })
           .catch((err) => {
             console.warn('SW Registration failed:', err);
           });
       };
 
+      const handleControllerChange = () => {
+        window.location.reload();
+      };
+
+      navigator.serviceWorker.addEventListener('controllerchange', handleControllerChange, { once: true });
+
       if (document.readyState === 'complete') {
         registerSW();
       } else {
         window.addEventListener('load', registerSW);
+      }
+
+      window.addEventListener('beforeunload', () => {
+        navigator.serviceWorker.removeEventListener('controllerchange', handleControllerChange);
+      }, { once: true });
+    } else if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
+      // A worker from a previous production run must not control development chunks.
+      navigator.serviceWorker.getRegistrations().then((registrations) => {
+        const hadController = Boolean(navigator.serviceWorker.controller);
+        return Promise.all(registrations.map((registration) => registration.unregister())).then(() => hadController);
+      }).then((hadController) => {
+        if (hadController) {
+          window.location.reload();
+        }
+      }).catch((err) => {
+        console.warn('Development service worker cleanup failed:', err);
+      });
+
+      if ('caches' in window) {
+        caches.keys().then((cacheNames) => Promise.all(cacheNames.map((cacheName) => caches.delete(cacheName)))).catch((err) => {
+          console.warn('Development service worker cache cleanup failed:', err);
+        });
       }
     }
 

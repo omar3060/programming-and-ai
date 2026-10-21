@@ -16,7 +16,30 @@ export type LessonViewId =
   | 'lesson-3-1'
   | 'lesson-3-2'
   | 'lesson-3-3'
-  | 'unit-3-exam';
+  | 'unit-3-overview'
+  | 'unit-3-solutions'
+  | 'unit-3-exam'
+  | 'lesson-4-1'
+  | 'lesson-4-2'
+  | 'lesson-4-3'
+  | 'lesson-4-4'
+  | 'unit-4-solutions'
+  | 'unit-4-exam'
+  | 'lesson-5-1'
+  | 'lesson-5-2'
+  | 'lesson-5-3'
+  | 'unit-5-solutions'
+  | 'unit-5-exam'
+  | 'lesson-6-1'
+  | 'lesson-6-2'
+  | 'lesson-6-3'
+  | 'unit-6-solutions'
+  | 'unit-6-exam'
+  | 'lesson-7-1'
+  | 'lesson-7-2'
+  | 'lesson-7-3'
+  | 'unit-7-solutions'
+  | 'unit-7-exam';
 
 export interface LocalizedText {
   ar: string;
@@ -32,6 +55,7 @@ export interface Question {
   };
   a: number; // 0-indexed correct answer
   exp: LocalizedText;
+  ref?: LocalizedText;
 }
 
 export interface EraItem {

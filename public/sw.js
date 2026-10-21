@@ -1,4 +1,4 @@
-const CACHE_NAME = 'prog2sec-offline-v4';
+const CACHE_NAME = 'prog2sec-offline-v5';
 
 // Essential static resources to cache for offline PWA app shell
 const CORE_ASSETS = [
@@ -44,12 +44,24 @@ self.addEventListener('activate', (event) => {
   );
 });
 
+self.addEventListener('message', (event) => {
+  if (event.data?.type === 'SKIP_WAITING') {
+    self.skipWaiting();
+  }
+});
+
 // 3. SW Fetch Event: Intercept network requests for full offline capability
 self.addEventListener('fetch', (event) => {
   // Only handle GET requests
   if (event.request.method !== 'GET') return;
 
   const url = new URL(event.request.url);
+
+  // Never cache the worker script or Next.js chunks. Serving an old chunk can
+  // combine incompatible module graphs after a deployment.
+  if (url.pathname === '/sw.js' || url.pathname.startsWith('/_next/')) {
+    return;
+  }
 
   // Skip analytics & telemetry requests
   if (url.hostname.includes('vercel-analytics') || url.hostname.includes('analytics')) {
@@ -142,7 +154,7 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  // C. Static Assets (JS, CSS, Images, Fonts, Next.js Static Chunks): Cache-First Strategy
+  // C. Static assets: cache-first with background revalidation.
   event.respondWith(
     caches.match(event.request, { ignoreSearch: true }).then((cachedResponse) => {
       if (cachedResponse) {

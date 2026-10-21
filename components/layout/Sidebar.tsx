@@ -17,6 +17,10 @@ export function Sidebar({ activeView, onNavigate, isOpenMobile, onCloseMobile }:
   const [unit1Open, setUnit1Open] = useState(true);
   const [unit2Open, setUnit2Open] = useState(true);
   const [unit3Open, setUnit3Open] = useState(true);
+  const [unit4Open, setUnit4Open] = useState(true);
+  const [unit5Open, setUnit5Open] = useState(true);
+  const [unit6Open, setUnit6Open] = useState(true);
+  const [unit7Open, setUnit7Open] = useState(true);
 
   const handleNav = (viewId: LessonViewId) => {
     playSfx('click');
@@ -89,6 +93,8 @@ export function Sidebar({ activeView, onNavigate, isOpenMobile, onCloseMobile }:
                   <span>YouTube</span>
                 </a>
               </div>
+
+
 
             </div>
           </div>
@@ -424,59 +430,246 @@ export function Sidebar({ activeView, onNavigate, isOpenMobile, onCloseMobile }:
 
           {/* UNIT 3 ACCORDION */}
           <div className="space-y-1">
-            <button onClick={() => { playSfx('click'); setUnit3Open(!unit3Open); }} className="w-full p-2.5 rounded-xl bg-violet-500/10 border border-violet-500/30 text-start flex items-center justify-between font-bold text-xs hover:bg-violet-500/15 transition">
+            <button onClick={() => { playSfx('click'); setUnit4Open(!unit4Open); }} className="w-full p-2.5 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-start flex items-center justify-between font-bold text-xs hover:bg-emerald-500/15 transition">
               <div className="flex items-center gap-2">
-                <span className="w-6 h-6 rounded-lg bg-violet-600 text-white flex items-center justify-center text-xs"><span className="lang-ar">٣</span><span className="lang-en">3</span></span>
+                <span className="w-6 h-6 rounded-lg bg-emerald-600 text-white flex items-center justify-center text-xs"><span className="lang-ar">٣</span><span className="lang-en">3</span></span>
                 <div>
-                  <div className="text-[10px] text-violet-400 uppercase tracking-wider font-extrabold"><span className="lang-ar">الوحدة الثالثة</span><span className="lang-en">Unit 3</span></div>
+                  <div className="text-[10px] text-emerald-400 uppercase tracking-wider font-extrabold"><span className="lang-ar">الوحدة الثالثة (المنهج الكامل)</span><span className="lang-en">Unit 3 (Full Curriculum)</span></div>
                   <div className="text-xs font-black"><span className="lang-ar">تطبيقات الويب</span><span className="lang-en">Web Applications</span></div>
                 </div>
               </div>
-              <i className={`fa-solid fa-chevron-down text-violet-400 text-xs transition-transform ${unit3Open ? '' : '-rotate-90'}`}></i>
+              <i className={`fa-solid fa-chevron-down text-emerald-400 text-xs transition-transform duration-200 ${unit4Open ? '' : '-rotate-90'}`}></i>
             </button>
-            {unit3Open && (
+            {unit4Open && (
               <div className="space-y-1 rtl:pr-2 ltr:pl-2 pt-1">
+                <button onClick={() => handleNav('unit-3-overview')} className={`nav-lesson-btn w-full p-2.5 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-start text-xs hover:border-emerald-400 transition ${activeView === 'unit-3-overview' ? 'active-nav' : ''}`}>
+                  <span className="lang-ar">نظرة عامة على الوحدة الثالثة</span><span className="lang-en">Unit 3 Overview</span>
+                </button>
                 {[
-                  ['lesson-3-1', '3-1', 'البنية العامة لتطبيقات الويب', 'The Overall Structure of Web Applications'],
-                  ['lesson-3-2', '3-2', 'طرق الاتصال في تطبيقات الويب', 'Web Application Communication Methods'],
-                  ['lesson-3-3', '3-3', 'أساسيات تكنولوجيا الواجهة الأمامية', 'Fundamentals of Frontend Technology']
+                  ['lesson-3-1', '3-1', 'البنية العامة لتطبيقات الويب', 'The Overall Structure of Web Applications', 'emerald'],
+                  ['lesson-3-2', '3-2', 'طرق الاتصال في تطبيقات الويب', 'Web Application Communication Methods', 'cyan'],
+                  ['lesson-3-3', '3-3', 'أساسيات تكنولوجيا الواجهة الأمامية', 'Fundamentals of Frontend Technology', 'teal']
                 ].map(([id, number, ar, en]) => (
-                  <button key={id} onClick={() => handleNav(id as LessonViewId)} className={`nav-lesson-btn w-full p-2.5 rounded-xl theme-subpanel border text-start flex items-start gap-2.5 text-xs hover:border-violet-500 transition ${activeView === id ? 'active-nav' : ''}`}>
-                    <span className="w-5 h-5 rounded-md bg-violet-500/20 text-violet-400 flex items-center justify-center text-[10px] font-bold mt-0.5 shrink-0">{number}</span>
+                  <button key={id} onClick={() => handleNav(id as LessonViewId)} className={`nav-lesson-btn w-full p-2.5 rounded-xl theme-subpanel border text-start flex items-start gap-2.5 text-xs transition ${id === 'lesson-3-1' ? 'hover:border-emerald-500' : id === 'lesson-3-2' ? 'hover:border-cyan-500' : 'hover:border-teal-500'} ${activeView === id ? 'active-nav' : ''}`}>
+                    <span className={`w-5 h-5 rounded-md flex items-center justify-center text-[10px] font-bold mt-0.5 shrink-0 ${id === 'lesson-3-1' ? 'bg-emerald-500/20 text-emerald-400' : id === 'lesson-3-2' ? 'bg-cyan-500/20 text-cyan-400' : 'bg-teal-500/20 text-teal-400'}`}>{number}</span>
                     <div className="min-w-0 flex-1">
                       <div className="font-bold truncate"><span className="lang-ar">{ar}</span><span className="lang-en">{en}</span></div>
                       <div className="text-[10px] text-sub truncate"><span className="lang-ar">مفاهيم وتطبيقات عملية</span><span className="lang-en">Concepts and practical applications</span></div>
                     </div>
                   </button>
                 ))}
-                <button onClick={() => handleNav('unit-3-exam')} className={`nav-lesson-btn w-full p-2.5 rounded-xl bg-gradient-to-r from-violet-500/20 to-cyan-500/20 border border-violet-500/40 text-start flex items-start gap-2.5 text-xs hover:border-violet-400 transition ${activeView === 'unit-3-exam' ? 'active-nav' : ''}`}>
-                  <span className="w-5 h-5 rounded-md bg-violet-600 text-white flex items-center justify-center text-[10px] font-bold mt-0.5 shrink-0"><i className="fa-solid fa-globe"></i></span>
-                  <div className="font-bold text-violet-300 truncate"><span className="lang-ar">الاختبار الشامل للوحدة 3</span><span className="lang-en">Unit 3 Exam (30 Questions)</span></div>
+                <button onClick={() => handleNav('unit-3-solutions')} className={`nav-lesson-btn w-full p-2.5 rounded-xl bg-amber-500/10 border border-amber-500/30 text-start flex items-start gap-2.5 text-xs hover:border-amber-400 transition ${activeView === 'unit-3-solutions' ? 'active-nav' : ''}`}>
+                  <span className="w-5 h-5 rounded-md bg-amber-500/20 text-amber-400 flex items-center justify-center text-[10px] font-bold mt-0.5 shrink-0"><i className="fa-solid fa-book-open"></i></span>
+                  <div className="min-w-0 flex-1">
+                    <div className="font-bold text-amber-400 truncate"><span className="lang-ar">حلول تدريبات كتاب الوزارة كاملة</span><span className="lang-en">Textbook Exercises Solutions</span></div>
+                    <div className="text-[10px] text-sub truncate"><span className="lang-ar">إجابات نموذجية مع الشرح والتفسير</span><span className="lang-en">Full Model Solutions with Rationale</span></div>
+                  </div>
+                </button>
+                <button onClick={() => handleNav('unit-3-exam')} className={`nav-lesson-btn w-full p-2.5 rounded-xl bg-gradient-to-r from-emerald-600/20 to-amber-500/20 border border-emerald-500/40 text-start flex items-start gap-2.5 text-xs hover:border-emerald-400 transition ${activeView === 'unit-3-exam' ? 'active-nav' : ''}`}>
+                  <span className="w-5 h-5 rounded-md bg-emerald-600 text-white flex items-center justify-center text-[10px] font-bold mt-0.5 shrink-0"><i className="fa-solid fa-trophy"></i></span>
+                  <div className="font-bold text-emerald-300 truncate"><span className="lang-ar">الامتحان الشامل (25 سؤالاً) 🏆</span><span className="lang-en">Unit 3 Exam (25 Questions) 🏆</span></div>
                 </button>
               </div>
             )}
           </div>
 
-          {/* Upcoming Units in Roadmap */}
-          <div className="pt-2 border-t border-slate-800/80 space-y-1">
-            <div className="text-[10px] font-bold text-sub px-2 uppercase tracking-wider">
-              <span className="lang-ar">خريطة باقي وحدات المنهج</span>
-              <span className="lang-en">Curriculum Roadmap</span>
-            </div>
-
-            <div className="p-2.5 rounded-xl theme-subpanel border opacity-60 flex items-center justify-between text-xs">
+          {/* UNIT 4 ACCORDION */}
+          <div className="space-y-1">
+            <button onClick={() => { playSfx('click'); setUnit3Open(!unit3Open); }} className="w-full p-2.5 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-start flex items-center justify-between font-bold text-xs hover:bg-emerald-500/15 transition">
               <div className="flex items-center gap-2">
-                <span className="w-5 h-5 rounded-md bg-slate-800 text-slate-400 flex items-center justify-center text-[10px] font-bold"><span className="lang-ar">٤</span><span className="lang-en">4</span></span>
-                <span className="text-sub font-semibold">
-                  <span className="lang-ar">الوحدة 4: تصميم الويب والوسائط المتعددة</span>
-                  <span className="lang-en">Unit 4: Web & Media Design</span>
-                </span>
+                <span className="w-6 h-6 rounded-lg bg-emerald-600 text-white flex items-center justify-center text-xs"><span className="lang-ar">٤</span><span className="lang-en">4</span></span>
+                <div>
+                  <div className="text-[10px] text-emerald-400 uppercase tracking-wider font-extrabold"><span className="lang-ar">الوحدة الرابعة (المنهج الكامل)</span><span className="lang-en">Unit 4 (Full Curriculum)</span></div>
+                  <div className="text-xs font-black"><span className="lang-ar">تصميم الويب والوسائط</span><span className="lang-en">Web and Media Design</span></div>
+                </div>
               </div>
-              <span className="text-[9px] px-1.5 py-0.5 rounded bg-slate-800 text-slate-400">
-                <span className="lang-ar">قريباً</span>
-                <span className="lang-en">Soon</span>
-              </span>
-            </div>
+              <i className={`fa-solid fa-chevron-down text-emerald-400 text-xs transition-transform duration-200 ${unit3Open ? '' : '-rotate-90'}`}></i>
+            </button>
+            {unit3Open && (
+              <div className="space-y-1 rtl:pr-2 ltr:pl-2 pt-1">
+                {[
+                  ['lesson-4-1', '4-1', 'أنواع الوسائط وخصائصها', 'Types & Characteristics of Media', 'التلفزيون، الراديو، الصحف، المواقع، و SNS', 'TV, Radio, Print, Websites, & SNS', 'emerald'],
+                  ['lesson-4-2', '4-2', 'تصميم المعلومات وتجربة المستخدم', 'Information Design & UX', 'الشخصية (Persona)، المخطط الهيكلي، مبادئ CRAP، و UCD', 'Persona, Wireframe, CRAP Principles, & UCD', 'cyan'],
+                  ['lesson-4-3', '4-3', 'طرق تقييم المواقع الإلكترونية', 'Methods for Evaluating Websites', 'التقييم النوعي والكمي، PV، الارتداد، CVR، والتقييم الإرشادي', 'Qualitative vs Quantitative, PV, Bounce, CVR, Heuristics', 'teal'],
+                  ['lesson-4-4', '4-4', 'عملية التحسين التكراري للمواقع', 'Iterative Improvement Process', 'دورة PDCA، التفكير التصميمي، واختبار A/B', 'PDCA Cycle, Design Thinking, & A/B Testing', 'purple']
+                ].map(([id, number, ar, en, descriptionAr, descriptionEn, color]) => (
+                  <button key={id} onClick={() => handleNav(id as LessonViewId)} className={`nav-lesson-btn w-full p-2.5 rounded-xl theme-subpanel border text-start flex items-start gap-2.5 text-xs transition ${color === 'emerald' ? 'hover:border-emerald-500' : color === 'cyan' ? 'hover:border-cyan-500' : color === 'teal' ? 'hover:border-teal-500' : 'hover:border-purple-500'} ${activeView === id ? 'active-nav' : ''}`}>
+                    <span className={`w-5 h-5 rounded-md flex items-center justify-center text-[10px] font-bold mt-0.5 shrink-0 ${color === 'emerald' ? 'bg-emerald-500/20 text-emerald-400' : color === 'cyan' ? 'bg-cyan-500/20 text-cyan-400' : color === 'teal' ? 'bg-teal-500/20 text-teal-400' : 'bg-purple-500/20 text-purple-400'}`}>{number}</span>
+                    <div className="min-w-0 flex-1">
+                      <div className="font-bold truncate"><span className="lang-ar">{ar}</span><span className="lang-en">{en}</span></div>
+                      <div className="text-[10px] text-sub truncate"><span className="lang-ar">{descriptionAr}</span><span className="lang-en">{descriptionEn}</span></div>
+                    </div>
+                  </button>
+                ))}
+                <button onClick={() => handleNav('unit-4-solutions')} className={`nav-lesson-btn w-full p-2.5 rounded-xl bg-amber-500/10 border border-amber-500/30 text-start flex items-start gap-2.5 text-xs hover:border-amber-400 transition ${activeView === 'unit-4-solutions' ? 'active-nav' : ''}`}>
+                  <span className="w-5 h-5 rounded-md bg-amber-500/20 text-amber-400 flex items-center justify-center text-[10px] font-bold mt-0.5 shrink-0"><i className="fa-solid fa-book-open"></i></span>
+                  <div className="min-w-0 flex-1">
+                    <div className="font-bold text-amber-400 truncate"><span className="lang-ar">حلول تدريبات كتاب الوزارة كاملة</span><span className="lang-en">Textbook Exercises Solutions</span></div>
+                    <div className="text-[10px] text-sub truncate"><span className="lang-ar">إجابات نموذجية مع الشرح والتفسير</span><span className="lang-en">Full Model Solutions with Rationale</span></div>
+                  </div>
+                </button>
+                <button onClick={() => handleNav('unit-4-exam')} className={`nav-lesson-btn w-full p-2.5 rounded-xl bg-gradient-to-r from-emerald-600/20 to-amber-500/20 border border-emerald-500/40 text-start flex items-start gap-2.5 text-xs hover:border-emerald-400 transition ${activeView === 'unit-4-exam' ? 'active-nav' : ''}`}>
+                  <span className="w-5 h-5 rounded-md bg-emerald-600 text-white flex items-center justify-center text-[10px] font-bold mt-0.5 shrink-0"><i className="fa-solid fa-trophy"></i></span>
+                  <div className="font-bold text-emerald-300 truncate"><span className="lang-ar">الامتحان الشامل (25 سؤالاً) 🏆</span><span className="lang-en">Unit 4 Exam (25 Questions) 🏆</span></div>
+                </button>
+              </div>
+            )}
+          </div>
+
+          {/* UNIT 5 ACCORDION */}
+          <div className="space-y-1">
+            <button onClick={() => { playSfx('click'); setUnit5Open(!unit5Open); }} className="w-full p-2.5 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-start flex items-center justify-between font-bold text-xs hover:bg-emerald-500/15 transition">
+              <div className="flex items-center gap-2">
+                <span className="w-6 h-6 rounded-lg bg-emerald-600 text-white flex items-center justify-center text-xs"><span className="lang-ar">٥</span><span className="lang-en">5</span></span>
+                <div>
+                  <div className="text-[10px] text-emerald-400 uppercase tracking-wider font-extrabold">
+                    <span className="lang-ar">الوحدة الخامسة (الجزء الثاني)</span>
+                    <span className="lang-en">Unit 5 (Part 2 Curriculum)</span>
+                  </div>
+                  <div className="text-xs font-black">
+                    <span className="lang-ar">جمع البيانات وتنقيتها</span>
+                    <span className="lang-en">Data Collection and Cleaning</span>
+                  </div>
+                </div>
+              </div>
+              <i className={`fa-solid fa-chevron-down text-emerald-400 text-xs transition-transform duration-200 ${unit5Open ? '' : '-rotate-90'}`}></i>
+            </button>
+
+            {unit5Open && (
+              <div className="space-y-1 rtl:pr-2 ltr:pl-2 pt-1">
+                {[
+                  ['lesson-5-1', '5-1', 'طرق جمع البيانات', 'Methods of Data Collection', 'البيانات الأولية والثانوية، أخذ العينات، والتحيز', 'Primary vs Secondary, Sampling & Bias', 'emerald'],
+                  ['lesson-5-2', '5-2', 'تنظيف البيانات وتحويلها', 'Data Cleaning & Transformation', 'القيم المفقودة والشاذة، التطبيع، والمحور Pivot', 'Missing/Outliers, Normalization, Pivot & Join', 'cyan'],
+                  ['lesson-5-3', '5-3', 'البيانات المفتوحة وواجهات API', 'Open Data and APIs', 'البنك الدولي، الأمم المتحدة، Kaggle، JSON والإسناد', 'World Bank, UN, Kaggle, API/JSON & Citation', 'teal'],
+                ].map(([id, number, ar, en, descriptionAr, descriptionEn, color]) => (
+                  <button key={id} onClick={() => handleNav(id as LessonViewId)} className={`nav-lesson-btn w-full p-2.5 rounded-xl theme-subpanel border text-start flex items-start gap-2.5 text-xs transition ${color === 'emerald' ? 'hover:border-emerald-500' : color === 'cyan' ? 'hover:border-cyan-500' : 'hover:border-teal-500'} ${activeView === id ? 'active-nav' : ''}`}>
+                    <span className={`w-5 h-5 rounded-md flex items-center justify-center text-[10px] font-bold mt-0.5 shrink-0 ${color === 'emerald' ? 'bg-emerald-500/20 text-emerald-400' : color === 'cyan' ? 'bg-cyan-500/20 text-cyan-400' : 'bg-teal-500/20 text-teal-400'}`}>{number}</span>
+                    <div className="min-w-0 flex-1">
+                      <div className="font-bold truncate"><span className="lang-ar">{ar}</span><span className="lang-en">{en}</span></div>
+                      <div className="text-[10px] text-sub truncate"><span className="lang-ar">{descriptionAr}</span><span className="lang-en">{descriptionEn}</span></div>
+                    </div>
+                  </button>
+                ))}
+                <button onClick={() => handleNav('unit-5-solutions')} className={`nav-lesson-btn w-full p-2.5 rounded-xl bg-amber-500/10 border border-amber-500/30 text-start flex items-start gap-2.5 text-xs hover:border-amber-400 transition ${activeView === 'unit-5-solutions' ? 'active-nav' : ''}`}>
+                  <span className="w-5 h-5 rounded-md bg-amber-500/20 text-amber-400 flex items-center justify-center text-[10px] font-bold mt-0.5 shrink-0"><i className="fa-solid fa-book-open"></i></span>
+                  <div className="min-w-0 flex-1">
+                    <div className="font-bold text-amber-400 truncate"><span className="lang-ar">حلول تدريبات كتاب الوزارة كاملة</span><span className="lang-en">Textbook Exercises Solutions</span></div>
+                    <div className="text-[10px] text-sub truncate"><span className="lang-ar">إجابات نموذجية مع الشرح والتفسير</span><span className="lang-en">Full Model Solutions with Rationale</span></div>
+                  </div>
+                </button>
+                <button onClick={() => handleNav('unit-5-exam')} className={`nav-lesson-btn w-full p-2.5 rounded-xl bg-gradient-to-r from-emerald-600/20 to-amber-500/20 border border-emerald-500/40 text-start flex items-start gap-2.5 text-xs hover:border-emerald-400 transition ${activeView === 'unit-5-exam' ? 'active-nav' : ''}`}>
+                  <span className="w-5 h-5 rounded-md bg-emerald-600 text-white flex items-center justify-center text-[10px] font-bold mt-0.5 shrink-0"><i className="fa-solid fa-trophy"></i></span>
+                  <div className="min-w-0 flex-1">
+                    <div className="font-bold text-emerald-300 truncate"><span className="lang-ar">الامتحان الشامل (25 سؤالاً) 🏆</span><span className="lang-en">Unit 5 Exam (25 Questions) 🏆</span></div>
+                    <div className="text-[10px] text-sub truncate"><span className="lang-ar">شهادة إتقان معتمدة بدرجة الطالب</span><span className="lang-en">Certified Mastery with Score</span></div>
+                  </div>
+                </button>
+              </div>
+            )}
+          </div>
+
+          {/* UNIT 6 ACCORDION */}
+          <div className="space-y-1">
+            <button onClick={() => { playSfx('click'); setUnit6Open(!unit6Open); }} className="w-full p-2.5 rounded-xl bg-purple-500/10 border border-purple-500/30 text-start flex items-center justify-between font-bold text-xs hover:bg-purple-500/15 transition">
+              <div className="flex items-center gap-2">
+                <span className="w-6 h-6 rounded-lg bg-purple-600 text-white flex items-center justify-center text-xs"><span className="lang-ar">٦</span><span className="lang-en">6</span></span>
+                <div>
+                  <div className="text-[10px] text-purple-400 uppercase tracking-wider font-extrabold">
+                    <span className="lang-ar">الوحدة السادسة (الجزء الثاني)</span>
+                    <span className="lang-en">Unit 6 (Part 2 Curriculum)</span>
+                  </div>
+                  <div className="text-xs font-black">
+                    <span className="lang-ar">التحليل والتواصل</span>
+                    <span className="lang-en">Analysis and Communication</span>
+                  </div>
+                </div>
+              </div>
+              <i className={`fa-solid fa-chevron-down text-purple-400 text-xs transition-transform duration-200 ${unit6Open ? '' : '-rotate-90'}`}></i>
+            </button>
+
+            {unit6Open && (
+              <div className="space-y-1 rtl:pr-2 ltr:pl-2 pt-1">
+                {[
+                  ['lesson-6-1', '6-1', 'الاستدلال الإحصائي', 'Statistical Inference', 'التقدير وفترات الثقة واختبار الفرضيات', 'Estimation, confidence intervals and hypothesis testing'],
+                  ['lesson-6-2', '6-2', 'تحليل الانحدار وتقييم النماذج', 'Regression Analysis and Model Evaluation', 'الانحدار البسيط والمتعدد ومؤشرات التقييم', 'Simple and multiple regression and evaluation metrics'],
+                  ['lesson-6-3', '6-3', 'تصور البيانات والتواصل', 'Data Visualization and Communication', 'الخرائط الحرارية ومخططات الفسيفساء وسرد البيانات', 'Heatmaps, mosaic plots and data storytelling'],
+                ].map(([id, number, ar, en, descriptionAr, descriptionEn]) => (
+                  <button key={id} onClick={() => handleNav(id as LessonViewId)} className={`nav-lesson-btn w-full p-2.5 rounded-xl theme-subpanel border text-start flex items-start gap-2.5 text-xs transition hover:border-purple-500 ${activeView === id ? 'active-nav' : ''}`}>
+                    <span className="w-5 h-5 rounded-md bg-purple-500/20 text-purple-400 flex items-center justify-center text-[10px] font-bold mt-0.5 shrink-0">{number}</span>
+                    <div className="min-w-0 flex-1">
+                      <div className="font-bold truncate"><span className="lang-ar">{ar}</span><span className="lang-en">{en}</span></div>
+                      <div className="text-[10px] text-sub truncate"><span className="lang-ar">{descriptionAr}</span><span className="lang-en">{descriptionEn}</span></div>
+                    </div>
+                  </button>
+                ))}
+                <button onClick={() => handleNav('unit-6-solutions')} className={`nav-lesson-btn w-full p-2.5 rounded-xl bg-amber-500/10 border border-amber-500/30 text-start flex items-start gap-2.5 text-xs hover:border-amber-400 transition ${activeView === 'unit-6-solutions' ? 'active-nav' : ''}`}>
+                  <span className="w-5 h-5 rounded-md bg-amber-500/20 text-amber-400 flex items-center justify-center text-[10px] font-bold mt-0.5 shrink-0"><i className="fa-solid fa-book-open"></i></span>
+                  <div className="min-w-0 flex-1">
+                    <div className="font-bold text-amber-400 truncate"><span className="lang-ar">حلول تدريبات كتاب الوزارة كاملة</span><span className="lang-en">Textbook Exercises Solutions</span></div>
+                    <div className="text-[10px] text-sub truncate"><span className="lang-ar">إجابات نموذجية مع الشرح والتفسير</span><span className="lang-en">Full Model Solutions with Rationale</span></div>
+                  </div>
+                </button>
+                <button onClick={() => handleNav('unit-6-exam')} className={`nav-lesson-btn w-full p-2.5 rounded-xl bg-gradient-to-r from-emerald-600/20 to-amber-500/20 border border-emerald-500/40 text-start flex items-start gap-2.5 text-xs hover:border-emerald-400 transition ${activeView === 'unit-6-exam' ? 'active-nav' : ''}`}>
+                  <span className="w-5 h-5 rounded-md bg-emerald-600 text-white flex items-center justify-center text-[10px] font-bold mt-0.5 shrink-0"><i className="fa-solid fa-trophy"></i></span>
+                  <div className="min-w-0 flex-1">
+                    <div className="font-bold text-emerald-300 truncate"><span className="lang-ar">الامتحان الشامل (25 سؤالاً) 🏆</span><span className="lang-en">Unit 6 Exam (25 Questions) 🏆</span></div>
+                    <div className="text-[10px] text-sub truncate"><span className="lang-ar">شهادة إتقان معتمدة بدرجة الطالب</span><span className="lang-en">Certified Mastery with Score</span></div>
+                  </div>
+                </button>
+              </div>
+            )}
+          </div>
+
+          {/* UNIT 7 ACCORDION */}
+          <div className="space-y-1">
+            <button onClick={() => { playSfx('click'); setUnit7Open(!unit7Open); }} className="w-full p-2.5 rounded-xl bg-cyan-500/10 border border-cyan-500/30 text-start flex items-center justify-between font-bold text-xs hover:bg-cyan-500/15 transition">
+              <div className="flex items-center gap-2">
+                <span className="w-6 h-6 rounded-lg bg-cyan-600 text-white flex items-center justify-center text-xs"><span className="lang-ar">٧</span><span className="lang-en">7</span></span>
+                <div>
+                  <div className="text-[10px] text-cyan-400 uppercase tracking-wider font-extrabold">
+                    <span className="lang-ar">الوحدة السابعة</span>
+                    <span className="lang-en">Unit 7</span>
+                  </div>
+                  <div className="text-xs font-black">
+                    <span className="lang-ar">التعلم الآلي والذكاء الاصطناعي</span>
+                    <span className="lang-en">Machine Learning &amp; Artificial Intelligence</span>
+                  </div>
+                </div>
+              </div>
+              <i className={`fa-solid fa-chevron-down text-cyan-400 text-xs transition-transform duration-200 ${unit7Open ? '' : '-rotate-90'}`}></i>
+            </button>
+
+            {unit7Open && (
+              <div className="space-y-1 rtl:pr-2 ltr:pl-2 pt-1">
+                {[
+                  ['lesson-7-1', '7-1', 'أساسيات التعلم الآلي', 'The Basics of Machine Learning', 'أنواع التعلم الآلي وحدوده', 'Learning types and their limits'],
+                  ['lesson-7-2', '7-2', 'الشبكات العصبية والتعلم العميق', 'Neural Networks and Deep Learning', 'الأوزان والخلايا والسمات الهرمية', 'Weights, neurons and hierarchical features'],
+                  ['lesson-7-3', '7-3', 'نماذج اللغة الكبيرة والذكاء التوليدي', 'Large Language Models & Generative AI', 'توقع الرموز وRLHF والوسائط المتعددة', 'Token prediction, RLHF and multimodality'],
+                ].map(([id, number, ar, en, descriptionAr, descriptionEn]) => (
+                  <button key={id} onClick={() => handleNav(id as LessonViewId)} className={`nav-lesson-btn w-full p-2.5 rounded-xl theme-subpanel border text-start flex items-start gap-2.5 text-xs transition hover:border-cyan-500 ${activeView === id ? 'active-nav' : ''}`}>
+                    <span className="w-5 h-5 rounded-md bg-cyan-500/20 text-cyan-400 flex items-center justify-center text-[10px] font-bold mt-0.5 shrink-0">{number}</span>
+                    <div className="min-w-0 flex-1">
+                      <div className="font-bold truncate"><span className="lang-ar">{ar}</span><span className="lang-en">{en}</span></div>
+                      <div className="text-[10px] text-sub truncate"><span className="lang-ar">{descriptionAr}</span><span className="lang-en">{descriptionEn}</span></div>
+                    </div>
+                  </button>
+                ))}
+                <button onClick={() => handleNav('unit-7-solutions')} className={`nav-lesson-btn w-full p-2.5 rounded-xl bg-amber-500/10 border border-amber-500/30 text-start flex items-start gap-2.5 text-xs hover:border-amber-400 transition ${activeView === 'unit-7-solutions' ? 'active-nav' : ''}`}>
+                  <span className="w-5 h-5 rounded-md bg-amber-500/20 text-amber-400 flex items-center justify-center text-[10px] font-bold mt-0.5 shrink-0"><i className="fa-solid fa-book-open"></i></span>
+                  <div className="min-w-0 flex-1">
+                    <div className="font-bold text-amber-400 truncate"><span className="lang-ar">حلول تدريبات كتاب الوزارة كاملة</span><span className="lang-en">Textbook Exercises Solutions</span></div>
+                    <div className="text-[10px] text-sub truncate"><span className="lang-ar">إجابات نموذجية مع الشرح والتفسير</span><span className="lang-en">Full Model Solutions with Rationale</span></div>
+                  </div>
+                </button>
+                <button onClick={() => handleNav('unit-7-exam')} className={`nav-lesson-btn w-full p-2.5 rounded-xl bg-gradient-to-r from-emerald-600/20 to-amber-500/20 border border-emerald-500/40 text-start flex items-start gap-2.5 text-xs hover:border-emerald-400 transition ${activeView === 'unit-7-exam' ? 'active-nav' : ''}`}>
+                  <span className="w-5 h-5 rounded-md bg-emerald-600 text-white flex items-center justify-center text-[10px] font-bold mt-0.5 shrink-0"><i className="fa-solid fa-trophy"></i></span>
+                  <div className="min-w-0 flex-1">
+                    <div className="font-bold text-emerald-300 truncate"><span className="lang-ar">الامتحان الشامل (25 سؤالاً) 🏆</span><span className="lang-en">Unit 7 Exam (25 Questions) 🏆</span></div>
+                    <div className="text-[10px] text-sub truncate"><span className="lang-ar">شهادة إتقان معتمدة بدرجة الطالب</span><span className="lang-en">Certified Mastery with Score</span></div>
+                  </div>
+                </button>
+              </div>
+            )}
           </div>
 
         </div>
